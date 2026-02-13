@@ -1,0 +1,33 @@
+# Ignored files
+# @see https://git-scm.com/docs/gitignore
+
+# ai
+.claude/*
+!.claude/commands/
+!.claude/rules/
+
+# build
+dist
+server
+
+# ci
+.netlify
+
+# compilation
+*.tsbuildinfo
+
+# dependencies
+node_modules
+
+# environment variables
+.env
+
+# framework
+.astro
+
+# logs
+*-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db

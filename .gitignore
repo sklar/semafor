@@ -2,9 +2,7 @@
 # @see https://git-scm.com/docs/gitignore
 
 # ai
-.claude/*
-!.claude/commands/
-!.claude/rules/
+.claude/*.local.json
 
 # build
 dist

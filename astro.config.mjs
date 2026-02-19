@@ -6,7 +6,11 @@ import starlight from '@astrojs/starlight'
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'My docs',
+			components: {
+				PageTitle: './src/components/PageTitle.astro',
+			},
+			customCss: ['./src/styles/global.css'],
 			social: [
 				{
 					icon: 'github',

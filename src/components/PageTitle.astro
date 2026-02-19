@@ -1,0 +1,91 @@
+---
+const { starlightRoute } = Astro.locals
+const { sidebar } = starlightRoute
+
+interface Crumb {
+	label: string
+	href: string
+}
+
+type SidebarEntry =
+	| { type: 'link'; label: string; href: string; isCurrent: boolean }
+	| { type: 'group'; label: string; entries: SidebarEntry[] }
+
+function findAncestors(
+	entries: SidebarEntry[],
+	path: Crumb[] = [],
+): Crumb[] | undefined {
+	for (const entry of entries) {
+		if (entry.type === 'link') {
+			if (entry.isCurrent) {
+				return path
+			}
+		} else {
+			const found = findAncestors(entry.entries, [
+				...path,
+				{ label: entry.label, href: firstLink(entry.entries) ?? '#' },
+			])
+			if (found) {
+				return found
+			}
+		}
+	}
+}
+
+function firstLink(entries: SidebarEntry[]): string | undefined {
+	for (const entry of entries) {
+		if (entry.type === 'link') {
+			return entry.href
+		}
+		const nested = firstLink(entry.entries)
+		if (nested) {
+			return nested
+		}
+	}
+}
+
+const currentPath = Astro.url.pathname
+
+let ancestors = findAncestors(sidebar as SidebarEntry[]) ?? []
+
+// Drop last ancestor if it links to the current page
+// (e.g. overview page = group entry point)
+if (ancestors.length > 0 && ancestors.at(-1)?.href === currentPath) {
+	ancestors = ancestors.slice(0, -1)
+}
+
+const crumbs: Crumb[] = [
+	{ label: Astro.locals.t('breadcrumbs.home'), href: '/' },
+	...ancestors,
+]
+
+const showBreadcrumbs = ancestors.length > 0
+---
+
+{showBreadcrumbs && (
+	<nav aria-label="Breadcrumbs">
+		<ul>
+			{crumbs.map((crumb, i) => (
+				<li>
+					<a href={crumb.href}>{crumb.label}</a>
+					{i < crumbs.length - 1 && <span aria-hidden="true">/</span>}
+				</li>
+			))}
+		</ul>
+	</nav>
+)}
+
+<h1 id="_top">{starlightRoute.entry.data.title}</h1>
+
+<style>
+	ul {
+		padding: 0;
+	}
+	li {
+		display: inline-block;
+	}
+
+	[aria-hidden="true"] {
+		padding-inline: 1ch;
+	}
+</style>

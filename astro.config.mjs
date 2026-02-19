@@ -8,11 +8,18 @@ export default defineConfig({
 	vite: { plugins: [tailwindcss()] },
 	integrations: [
 		starlight({
-			title: 'My docs',
+			title: 'Semafor',
 			components: {
 				PageTitle: './src/components/PageTitle.astro',
 			},
 			customCss: ['./src/styles/global.css'],
+			defaultLocale: 'root',
+			locales: {
+				root: {
+					label: 'Čeština',
+					lang: 'cs',
+				},
+			},
 			social: [
 				{
 					icon: 'github',
@@ -22,15 +29,25 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Český jazyk',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{
+							label: '01. Subjektivní a objektivní sdělení',
+							collapsed: true,
+							autogenerate: {
+								directory:
+									'cesky-jazyk/01-rozlisuje-subjektivni-a-hodnotici-sdeleni',
+							},
+						},
+						{
+							label: '02. Principy respektující komunikace',
+							slug: 'cesky-jazyk/02-principy-respektujici-komunikace',
+						},
+						{
+							label: '03. Kultivovaný a přiměřený projev',
+							slug: 'cesky-jazyk/03-kultivovany-a-primereny-projev',
+						},
 					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
 				},
 			],
 		}),

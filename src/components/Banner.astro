@@ -1,0 +1,12 @@
+---
+interface Props {
+	text: string
+}
+
+const { text } = Astro.props
+---
+
+<blockquote class="border-s-4 text-xl">
+	<p class="italic">{text}</p>
+</blockquote>
+

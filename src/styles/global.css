@@ -3,3 +3,21 @@
 @import "@astrojs/starlight-tailwind";
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
+
+@layer components {
+	.basic-terms {
+		align-items: baseline;
+		display: grid;
+		gap: 0.5em 1em;
+		grid-template-columns: auto 1fr;
+		line-height: 1.6;
+
+		dt {
+			color: var(--sl-color-white);
+			font-weight: 600;
+		}
+		dd {
+			margin: 0;
+		}
+	}
+}

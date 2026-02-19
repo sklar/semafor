@@ -158,23 +158,70 @@ export default defineConfig({
 				},
 				{
 					label: 'Matematika',
-					slug: 'matematika',
-					collapsed: true,
+					items: [
+						{
+							label: 'Přehled',
+							slug: 'matematika',
+						},
+						{
+							label: '01. Početní operace',
+							collapsed: true,
+							autogenerate: {
+								directory: 'matematika/01-pocetni-operace',
+							},
+						},
+					],
 				},
 				{
 					label: 'Já a svět',
-					slug: 'ja-a-svet',
 					collapsed: true,
+					items: [
+						{
+							label: 'Přehled',
+							slug: 'ja-a-svet',
+						},
+						{
+							label: '01. Věrohodnost informací',
+							collapsed: true,
+							autogenerate: {
+								directory: 'ja-a-svet/01-verohodnost-informaci',
+							},
+						},
+					],
 				},
 				{
 					label: 'Pohyb, umění, kultura',
-					slug: 'pohyb-umeni-kultura',
 					collapsed: true,
+					items: [
+						{
+							label: 'Přehled',
+							slug: 'pohyb-umeni-kultura',
+						},
+						{
+							label: '01. Komplexní dílo',
+							collapsed: true,
+							autogenerate: {
+								directory: 'pohyb-umeni-kultura/01-komplexni-dilo',
+							},
+						},
+					],
 				},
 				{
 					label: 'Hry, relaxace, aktivity',
-					slug: 'hry-relaxace-aktivity',
 					collapsed: true,
+					items: [
+						{
+							label: 'Přehled',
+							slug: 'hry-relaxace-aktivity',
+						},
+						{
+							label: '01. Empatie sám sobě',
+							collapsed: true,
+							autogenerate: {
+								directory: 'hry-relaxace-aktivity/01-empatie-sam-sobe',
+							},
+						},
+					],
 				},
 			],
 		}),

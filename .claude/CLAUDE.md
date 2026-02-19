@@ -1,125 +1,82 @@
-# Code Standards
+# Knowledge Base pro domácí vzdělávání
 
-This project uses **Ultracite**, a zero-config preset that enforces strict code quality standards through automated formatting and linting.
+## O projektu
 
-## Quick Reference
+Webová knowledge base pro rodiče-vzdělavatele, kteří domácí formou vzdělávají děti na úrovni 2. stupně ZŠ (6.–9. ročník). Slouží jako průvodce a překladač mezi formálním jazykem RVP/ŠVP a každodenní realitou domácího vzdělávání.
 
-- **Format code**: `pnpm dlx ultracite fix`
-- **Check for issues**: `pnpm dlx ultracite check`
-- **Diagnose setup**: `pnpm dlx ultracite doctor`
+### Problém
 
-Biome (the underlying engine) provides robust linting and formatting. Most issues are automatically fixable.
+Rodiče mají k dispozici Tabulku pokroku — spreadsheet s výstupy podle ŠVP a semaforem (zvládnuto / rozvíjí / začíná / nepozorováno). Tabulka je určena primárně pro inspektory z MŠMT. Pro rodiče je nesrozumitelná — neříká jim, co konkrétně dítě učit, jak poznat pokrok, ani jaké aktivity zvolit.
 
----
+### Řešení
 
-## Core Principles
+Statický web (Astro Starlight), kde každý výstup ŠVP má vlastní stránku s:
 
-Write code that is **accessible, performant, type-safe, and maintainable**. Focus on clarity and explicit intent over brevity.
+- srozumitelným vysvětlením, co výstup znamená
+- popisem semaforových úrovní pro konkrétní výstup
+- checklistem znalostí a dovedností
+- příklady z reálného světa
+- návrhy aktivit a projektů
+- roadmapou (doporučení, kdy se tématu věnovat s ohledem na kognitivní vývoj)
+- odkazy na volně dostupné zdroje (české i anglické)
+- prerekvizitami a souvislostmi s dalšími výstupy
 
-### Type Safety & Explicitness
+## Obsahové konvence
 
-- Use explicit types for function parameters and return values when they enhance clarity
-- Prefer `unknown` over `any` when the type is genuinely unknown
-- Use const assertions (`as const`) for immutable values and literal types
-- Leverage TypeScript's type narrowing instead of type assertions
-- Use meaningful variable names instead of magic numbers - extract constants with descriptive names
+### Terminologie
 
-### Modern JavaScript/TypeScript
+- **dítě** (nikdy „žák" nebo „student")
+- **rodič** nebo **vzdělavatel** (nikdy „učitel")
+- sekci s tipy pojmenovat **Poznámky** (ne „Poznámky pro učitele")
+- tón: přátelský, praktický, povzbuzující — rodič mluví k rodiči
 
-- Use arrow functions for callbacks and short functions
-- Prefer `for...of` loops over `.forEach()` and indexed `for` loops
-- Use optional chaining (`?.`) and nullish coalescing (`??`) for safer property access
-- Prefer template literals over string concatenation
-- Use destructuring for object and array assignments
-- Use `const` by default, `let` only when reassignment is needed, never `var`
+### Struktura stránek
 
-### Async & Promises
+Každý výstup ŠVP = adresář s **přehledovou stránkou** (`index.mdx`) + **ročníkovými podstránkami** (`6-rocnik.mdx` … `9-rocnik.mdx`).
 
-- Always `await` promises in async functions - don't forget to use the return value
-- Use `async/await` syntax instead of promise chains for better readability
-- Handle errors appropriately in async code with try-catch blocks
-- Don't use async functions as Promise executors
+#### Přehledová stránka (`index.mdx`)
 
-### React & JSX
+1. **Výstup podle ŠVP** — originální znění v Card komponentě
+2. **Co to znamená?** — srozumitelný překlad do lidské řeči
+3. **Kdy se tomu věnovat?** — roadmapa po ročnících, prerekvizity
+4. **Semafor** — úrovně pro daný výstup:
+   - 🔴 Nepozorováno
+   - 🟠 Začíná
+   - 🟡 Rozvíjí
+   - 🟢 Zvládnuto
+5. **Poznámky** — tipy, typické pasti
+6. **Souvislosti** — vazby na další výstupy
 
-- Use function components over class components
-- Call hooks at the top level only, never conditionally
-- Specify all dependencies in hook dependency arrays correctly
-- Use the `key` prop for elements in iterables (prefer unique IDs over array indices)
-- Nest children between opening and closing tags instead of passing as props
-- Don't define components inside other components
-- Use semantic HTML and ARIA attributes for accessibility:
-  - Provide meaningful alt text for images
-  - Use proper heading hierarchy
-  - Add labels for form inputs
-  - Include keyboard event handlers alongside mouse events
-  - Use semantic elements (`<button>`, `<nav>`, etc.) instead of divs with roles
+#### Ročníková podstránka (`6-rocnik.mdx` … `9-rocnik.mdx`)
 
-### Error Handling & Debugging
+1. **Základní pojmy** — `<dl>` definition list, hloubka podle ročníku
+2. **Co by mělo dítě znát** — checklist znalostí a dovedností
+3. **Příklady z reálného světa** — 5 příkladů přiměřených věku
+4. **Aktivity a projekty** — 3–4 aktivity s časovým odhadem
+5. **Odkazy a zdroje** — české i anglické, volně dostupné
 
-- Remove `console.log`, `debugger`, and `alert` statements from production code
-- Throw `Error` objects with descriptive messages, not strings or other values
-- Use `try-catch` blocks meaningfully - don't catch errors just to rethrow them
-- Prefer early returns over nested conditionals for error cases
+### Semafor — obecná logika
 
-### Code Organization
+- **Nepozorováno** — téma jsme neotevřeli nebo dítě nemělo příležitost ukázat dovednost
+- **Začíná** — první kontakt s tématem, základní povědomí, potřebuje hodně podpory
+- **Rozvíjí** — chápe princip, pracuje s podporou, v jednodušších situacích zvládá samostatně
+- **Zvládnuto** — samostatně, plynule, dokáže aplikovat v různých kontextech
 
-- Keep functions focused and under reasonable cognitive complexity limits
-- Extract complex conditions into well-named boolean variables
-- Use early returns to reduce nesting
-- Prefer simple conditionals over nested ternary operators
-- Group related code together and separate concerns
+## Zdrojová data
 
-### Security
+Soubor [`resources/tabulka-pokroku.xlsx`](resources/tabulka-pokroku.xlsx) obsahuje kompletní seznam výstupů podle ŠVP pro všechny předměty. Záložky:
+- **Český jazyk** — 30 výstupů (Komunikační a slohová výchova, Jazyková výchova, Literární výchova, Integrovaná část v JaS)
+- **Matematika 2** — 29 výstupů (Aritmetika a algebra, Geometrie, Integrovaná část v JaS)
+- **JaS (Já a svět)** — nejširší předmět
+- **Anglický jazyk** — 11 výstupů
+- **Španělský jazyk** — 12 výstupů (pouze 8.+9. ročník)
+- **PUK (Pohyb, umění, kultura)** — hudební výchova, výtvarná výchova, tělesná výchova
+- **HRA (Hry, relaxace, aktivity)** — 9 výstupů
 
-- Avoid `dangerouslySetInnerHTML` unless absolutely necessary
-- Don't use `eval()` or assign directly to `document.cookie`
-- Validate and sanitize user input
+Záložka **semafor** popisuje stupně: zelená=zvládnuto, žlutá=rozvíjí, oranžová=začíná, červená=nepozorováno.
 
-### Performance
+Záložku **Matematika** (ne Matematika 2) ignorovat — je to jen zhuštěný souhrn.
 
-- Avoid spread syntax in accumulators within loops
-- Use top-level regex literals instead of creating them in loops
-- Prefer specific imports over namespace imports
-- Avoid barrel files (index files that re-export everything)
+## Aktuální stav
 
-### Framework-Specific Guidance
-
-**Next.js:**
-- Use Next.js `<Image>` component for images
-- Use `next/head` or App Router metadata API for head elements
-- Use Server Components for async data fetching instead of async Client Components
-
-**React 19+:**
-- Use ref as a prop instead of `React.forwardRef`
-
-**Solid/Svelte/Vue/Qwik:**
-- Use `class` and `for` attributes (not `className` or `htmlFor`)
-
----
-
-## Testing
-
-- Write assertions inside `it()` or `test()` blocks
-- Avoid done callbacks in async tests - use async/await instead
-- Don't use `.only` or `.skip` in committed code
-- Keep test suites reasonably flat - avoid excessive `describe` nesting
-
-## When Biome Can't Help
-
-Biome's linter will catch most issues automatically. Focus your attention on:
-
-1. **Business logic correctness** - Biome can't validate your algorithms
-2. **Meaningful naming** - Use descriptive names for functions, variables, and types
-3. **Architecture decisions** - Component structure, data flow, and API design
-4. **Edge cases** - Handle boundary conditions and error states
-5. **User experience** - Accessibility, performance, and usability considerations
-6. **Documentation** - Add comments for complex logic, but prefer self-documenting code
-
----
-
-Most formatting and common issues are automatically fixed by Biome. Run `pnpm dlx ultracite fix` before committing to ensure compliance.
-
-## Development Workflow
-
-- Never use the git commit command after a task is finished.
+Začínáme s předmětem **Český jazyk**. Na něm ladíme formát. Až bude formát ustálený, rozšíříme na další předměty.

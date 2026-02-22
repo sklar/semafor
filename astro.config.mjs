@@ -11,6 +11,9 @@ export default defineConfig({
 			title: 'Semafor',
 			components: {
 				PageTitle: './src/components/PageTitle.astro',
+			logo: {
+				src: './src/assets/logo.svg',
+				replacesTitle: true,
 			},
 			customCss: ['./src/styles/global.css'],
 			defaultLocale: 'root',

@@ -9,13 +9,13 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Semafor',
-			components: {
-				PageTitle: './src/components/PageTitle.astro',
+			titleDelimiter: ' – ',
 			logo: {
 				src: './src/assets/logo.svg',
 				replacesTitle: true,
 			},
-			customCss: ['./src/styles/global.css'],
+
+			// i18n
 			defaultLocale: 'root',
 			locales: {
 				root: {
@@ -23,13 +23,27 @@ export default defineConfig({
 					lang: 'cs',
 				},
 			},
+
+			// other settings
+			credits: true,
+			lastUpdated: true,
 			social: [
 				{
 					icon: 'github',
 					label: 'GitHub',
-					href: 'https://github.com/withastro/starlight',
+					href: 'https://github.com/sklar/semafor',
 				},
 			],
+
+			// overrrides for default components and styles
+			components: {
+				Footer: './src/components/Footer.astro',
+				PageTitle: './src/components/PageTitle.astro',
+				SiteTitle: './src/components/SiteTitle.astro',
+			},
+			customCss: ['./src/styles/global.css'],
+
+			// sidebar
 			sidebar: [
 				{
 					label: 'Český jazyk',

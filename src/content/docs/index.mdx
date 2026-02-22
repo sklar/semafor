@@ -1,27 +1,20 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: "Co učit a jak na to"
+description: "Knowledge base pro domácí rodiče-vzdělavatele: srozumitelné výstupy, aktivity pro 6.–9. ročník."
+template: splash
+lastUpdated: false
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Průvodce Tabulkou pokroku
   image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+    file: ../../assets/hero.webp
 ---
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 <CardGrid>
-	<LinkCard href="/cesky-jazyk/" title="Český jazyk (CJ)" description="Komunikační a slohová výchova, jazyková výchova, literární výchova" />
-	<LinkCard href="/matematika/" title="Matematika (MA)" description="Aritmetika a algebra, geometrie" />
-	<LinkCard href="/ja-a-svet/" title="Já a svět (JAS)" description="Člověk a společnost, příroda, zdraví, svět práce" />
-	<LinkCard href="/pohyb-umeni-kultura/" title="Pohyb, umění, kultura (PUK)" description="Hudební výchova, výtvarná výchova, tělesná výchova" />
+	<LinkCard href="/cesky-jazyk/" title="Český jazyk (CJ)" description="Komunikační a slohová výchova, gramatika a literatura" />
+	<LinkCard href="/matematika/" title="Matematika (MA)" description="Aritmetika, algebra a geometrie" />
+	<LinkCard href="/ja-a-svet/" title="Já a svět (JAS)" description="Člověk a společnost, příroda, zdraví, svět" />
+	<LinkCard href="/pohyb-umeni-kultura/" title="Pohyb, umění, kultura (PUK)" description="Hudební, výtvarná a tělesná výchova" />
 	<LinkCard href="/hry-relaxace-aktivity/" title="Hry, relaxace, aktivity (HRA)" description="Hry, relaxace, aktivity" />
 </CardGrid>

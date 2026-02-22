@@ -4,7 +4,31 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 
+@layer base {
+	@media (prefers-reduced-motion: no-preference) {
+		@view-transition {
+			navigation: auto;
+		}
+	}
+}
+
 @layer components {
+	.hero {
+		@media (min-width: 50rem) {
+			grid-template-columns: repeat(2, auto);
+			justify-content: center;
+			padding-block: clamp(1rem, calc(1rem + 10vmin), 2rem);
+
+			img {
+				block-size: 400px;
+			}
+
+			.tagline {
+				margin-inline-start: 0.5rem;
+			}
+		}
+	}
+
 	.basic-terms {
 		align-items: baseline;
 		display: grid;
@@ -18,6 +42,12 @@
 		}
 		dd {
 			margin: 0;
+		}
+	}
+
+	.sidebar {
+		summary {
+			font-variant-numeric: tabular-nums;
 		}
 	}
 }

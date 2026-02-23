@@ -5,7 +5,11 @@ sidebar:
   label: "Přehled"
 ---
 
+import { Aside, Badge } from '@astrojs/starlight/components'
+
 import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
 
 <Banner text="Dokáže vyjádřit svůj názor a zapojit se do diskuze." />
 
@@ -23,36 +27,28 @@ Nejde o to „mít vždycky pravdu" nebo „umět se hádat". Jde o schopnost **
 | **7.–8.** | **Prohlubujte.** Dítě se učí argumentovat věcně, naslouchat protistraně a reagovat na protiargumenty. Přidejte náročnější témata — společenská, etická. Důraz na férovost diskuze. |
 | **9.** | Dítě by mělo zvládnout strukturovanou debatu, obhájit i nepopulární názor a moderovat diskuzi. Reflektuje kvalitu vlastní argumentace. |
 
-**Prerekvizity:** Pomáhá znát principy respektující komunikace (→ ČJ bod 2) a rozlišovat fakt od názoru (→ ČJ bod 1).
+<Aside title="Prerekvizity" type="tip">Pomáhá znát principy respektující komunikace (<Badge text="ČJ" /> bod 2) a rozlišovat fakt od názoru (<Badge text="ČJ" /> bod 1).</Aside>
 
 ## Poznámky
 
-**Bezpečné prostředí je klíčové.** Dítě se naučí vyjadřovat názor jen tam, kde nemá strach z posměchu nebo odmítnutí. Rodina je ideální prostor — pokud se v ní diskuze vede s respektem.
+<Aside title="Bezpečné prostředí je klíčové">Dítě se naučí vyjadřovat názor jen tam, kde nemá strach z posměchu nebo odmítnutí. Rodina je ideální prostor — pokud se v ní diskuze vede s respektem.</Aside>
 
-**Typická past:** zaměřit se na „vyhrávání" diskuze. Cílem není přesvědčit druhého, ale objasnit vlastní pozici a porozumět pozici protější. Diskuze není souboj — je to společné hledání.
+<Aside title="Typická past" type="caution">Zaměřit se na „vyhrávání" diskuze. Cílem není přesvědčit druhého, ale objasnit vlastní pozici a porozumět pozici protější. Diskuze není souboj — je to společné hledání.</Aside>
 
-**Pozor na introvertní děti.** Ne každé dítě potřebuje mluvit nahlas, aby mělo názor. Písemné vyjádření, pauza na přemýšlení nebo menší skupina mohou pomoct.
+<Aside title="Pozor na introvertní děti" type="danger">Ne každé dítě potřebuje mluvit nahlas, aby mělo názor. Písemné vyjádření, pauza na přemýšlení nebo menší skupina mohou pomoct.</Aside>
 
 ## Souvislosti
 
-- → ČJ bod 1 (rozlišuje subjektivní a objektivní sdělení) — rozlišení faktu a názoru je základ pro diskuzi
-- → ČJ bod 2 (principy respektující komunikace) — fér diskuze vyžaduje respektující komunikaci
-- → ČJ bod 3 (kultivovaný a přiměřený projev) — forma vyjádření názoru
-- → JaS (Výchova k občanství) — diskuze jako občanská dovednost
+- <Badge text="ČJ" /> bod 1 (rozlišuje subjektivní a objektivní sdělení) — rozlišení faktu a názoru je základ pro diskuzi
+- <Badge text="ČJ" /> bod 2 (principy respektující komunikace) — fér diskuze vyžaduje respektující komunikaci
+- <Badge text="ČJ" /> bod 3 (kultivovaný a přiměřený projev) — forma vyjádření názoru
+- <Badge text="JAS" /> (Výchova k občanství) — diskuze jako občanská dovednost
 
 ## Semafor
 
-<table>
-<tbody>
-<tr>
-  <td>🔴</td>
-  <td><strong>Nepozorováno</strong></td>
-  <td>Dítě nemělo příležitost vyjádřit svůj názor ve strukturované diskuzi.</td>
-</tr>
-<tr>
-  <td>🟠</td>
-  <td><strong>Začíná</strong></td>
-  <td>
+<Skill>
+  <SkillItem level="none">Dítě nemělo příležitost vyjádřit svůj názor ve strukturované diskuzi.</SkillItem>
+  <SkillItem level="novice">
     Dítě má názory, ale těžko je formuluje nebo obhajuje.
     <ul>
       <li>Říká „prostě proto" místo argumentů</li>
@@ -60,12 +56,8 @@ Nejde o to „mít vždycky pravdu" nebo „umět se hádat". Jde o schopnost **
       <li>Názor změní pod tlakem skupiny, ne kvůli argumentům</li>
       <li>Nedokáže pojmenovat, proč si myslí to, co si myslí</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟡</td>
-  <td><strong>Rozvíjí</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="adept">
     Dítě formuluje názor a v jednodušších diskuzích argumentuje.
     <ul>
       <li>Dokáže říct, co si myslí, a uvést aspoň jeden důvod</li>
@@ -73,12 +65,8 @@ Nejde o to „mít vždycky pravdu" nebo „umět se hádat". Jde o schopnost **
       <li>V náročnější diskuzi ztrácí nit nebo se nechá unést emocemi</li>
       <li>Začíná rozlišovat silný a slabý argument</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟢</td>
-  <td><strong>Zvládnuto</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="master">
     Dítě se aktivně a věcně zapojuje do diskuze.
     <ul>
       <li>Formuluje srozumitelný názor podpořený argumenty</li>
@@ -86,7 +74,5 @@ Nejde o to „mít vždycky pravdu" nebo „umět se hádat". Jde o schopnost **
       <li>Dokáže změnit názor, pokud narazí na lepší argumenty</li>
       <li>Rozlišuje věcnou diskuzi od hádky</li>
     </ul>
-  </td>
-</tr>
-</tbody>
-</table>
+  </SkillItem>
+</Skill>

@@ -5,7 +5,11 @@ sidebar:
   label: "Přehled"
 ---
 
+import { Aside, Badge } from '@astrojs/starlight/components'
+
 import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
 
 <Banner text="Rozlišuje spisovný jazyk, nářečí a obecnou češtinu v komunikační situaci." />
 
@@ -26,37 +30,29 @@ Klíčová dovednost není „mluvit vždy spisovně". Klíčová dovednost je *
 | **8.** | **Pokročilá úroveň.** Jazykové vrstvy (sociolekty, profesní mluva, argot), jazyková identita. Jak jazyk ukazuje, kam patříme? Proč teenageři mluví jinak než rodiče? Co je jazyková diskriminace? |
 | **9.** | Dítě by mělo samostatně analyzovat jazykovou situaci — rozpoznat, jakou vrstvou jazyka je text psaný, proč autor tuto volbu udělal, a reflektovat vlastní jazykový repertoár. Téma jazykové politiky a prestiže jazykových variet. |
 
-**Prerekvizity:** základní znalost slovních druhů a tvarosloví (→ ČJ bod 9) pomáhá, ale není nutná. Téma lze otevřít od začátku přes přirozené pozorování.
+<Aside title="Prerekvizity" type="tip">Základní znalost slovních druhů a tvarosloví (<Badge text="ČJ" /> bod 9) pomáhá, ale není nutná. Téma lze otevřít od začátku přes přirozené pozorování.</Aside>
 
 ## Poznámky
 
-**Nejdůležitější sdělení celého tématu:** žádná jazyková varieta není „špatná" ani „méněcenná". Spisovná čeština není „lepší" než obecná čeština nebo nářečí — je jen vhodná pro jiné situace. Dítě, které si myslí, že „mluví špatně", protože mluví nespisovně, má zkreslený obraz jazyka.
+<Aside title="Nejdůležitější sdělení celého tématu">Žádná jazyková varieta není „špatná" ani „méněcenná". Spisovná čeština není „lepší" než obecná čeština nebo nářečí — je jen vhodná pro jiné situace. Dítě, které si myslí, že „mluví špatně", protože mluví nespisovně, má zkreslený obraz jazyka.</Aside>
 
-**Typická past:** redukovat téma na „spisovně = správně, nespisovně = chyba". Tohle je přesně opak toho, co chceme. Cílem je funkční pohled — která varianta je vhodná v jaké situaci.
+<Aside title="Typická past" type="caution">Redukovat téma na „spisovně = správně, nespisovně = chyba". Tohle je přesně opak toho, co chceme. Cílem je funkční pohled — která varianta je vhodná v jaké situaci.</Aside>
 
-**Propojení se životem:** dítě samo denně přepíná mezi jazykovými vrstvami (jinak píše kamarádovi, jinak odpovídá na otázku u zkoušky, jinak mluví s prarodiči). Stačí to zviditelnit a pojmenovat.
+<Aside title="Propojení se životem">Dítě samo denně přepíná mezi jazykovými vrstvami (jinak píše kamarádovi, jinak odpovídá na otázku u zkoušky, jinak mluví s prarodiči). Stačí to zviditelnit a pojmenovat.</Aside>
 
-**Pozor na moravské rodiny:** pokud žijete na Moravě, máte obrovskou výhodu — dítě nářečí slyší a používá, takže má přirozený materiál. Naopak v Praze může být nářečí vzdálený pojem — tam pomohou nahrávky a videa.
+<Aside title="Pozor na moravské rodiny" type='caution'>Pokud žijete na Moravě, máte obrovskou výhodu — dítě nářečí slyší a používá, takže má přirozený materiál. Naopak v Praze může být nářečí vzdálený pojem — tam pomohou nahrávky a videa.</Aside>
 
 ## Souvislosti
 
-- → ČJ bod 3 (kultivovaný mluvený a psaný projev) — přepínání mezi vrstvami jazyka je základ kultivovaného projevu
-- → ČJ bod 9 (slovní druhy, tvary slov) — rozdíly mezi vrstvami se projevují v tvarosloví (ty vs. ty, bychom vs. bysme)
-- → ČJ bod 10 (pravopis) — pravopisná norma je vázaná na spisovný jazyk, v obecné češtině a nářečích funguje jinak
+- <Badge text="ČJ" /> bod 3 (kultivovaný mluvený a psaný projev) — přepínání mezi vrstvami jazyka je základ kultivovaného projevu
+- <Badge text="ČJ" /> bod 9 (slovní druhy, tvary slov) — rozdíly mezi vrstvami se projevují v tvarosloví (ty vs. ty, bychom vs. bysme)
+- <Badge text="ČJ" /> bod 10 (pravopis) — pravopisná norma je vázaná na spisovný jazyk, v obecné češtině a nářečích funguje jinak
 
 ## Semafor
 
-<table>
-<tbody>
-<tr>
-  <td>🔴</td>
-  <td><strong>Nepozorováno</strong></td>
-  <td>Téma jsme zatím neotevřeli. Dítě nemělo příležitost ukázat, jestli vnímá rozdíly mezi jazykovými vrstvami.</td>
-</tr>
-<tr>
-  <td>🟠</td>
-  <td><strong>Začíná</strong></td>
-  <td>
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost ukázat, jestli vnímá rozdíly mezi jazykovými vrstvami.</SkillItem>
+  <SkillItem level="novice">
     Dítě tuší, že existuje rozdíl mezi „správnou" a „běžnou" češtinou, ale nerozlišuje jednotlivé vrstvy.
     <ul>
       <li>Ví, že se „má mluvit spisovně", ale neví přesně proč ani kdy</li>
@@ -64,12 +60,8 @@ Klíčová dovednost není „mluvit vždy spisovně". Klíčová dovednost je *
       <li>Pojem nářečí zná, ale nedokáže uvést příklad nebo ho poznat v řeči</li>
       <li>Neuvědomuje si, že samo přepíná mezi vrstvami jazyka</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟡</td>
-  <td><strong>Rozvíjí</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="adept">
     Dítě rozlišuje hlavní vrstvy (spisovná, obecná, nářečí) a začíná chápat, že volba závisí na situaci.
     <ul>
       <li>Rozpozná, jestli je text psaný spisovně nebo nespisovně</li>
@@ -77,12 +69,8 @@ Klíčová dovednost není „mluvit vždy spisovně". Klíčová dovednost je *
       <li>Chápe, že jinak mluvíme doma a jinak na oficiální schůzce</li>
       <li>Začíná vnímat, že nespisovný jazyk není „špatný", ale vhodný pro jiné situace</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟢</td>
-  <td><strong>Zvládnuto</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="master">
     Dítě spolehlivě rozlišuje jazykové vrstvy, chápe jejich funkci a vědomě přepíná podle situace.
     <ul>
       <li>V textu nebo promluvě pozná, o jakou vrstvu jazyka jde, a vysvětlí proč</li>
@@ -90,7 +78,5 @@ Klíčová dovednost není „mluvit vždy spisovně". Klíčová dovednost je *
       <li>Rozumí tomu, že jazyk odráží identitu, region, sociální skupinu</li>
       <li>Reflektuje vlastní jazykový repertoár — ví, kdy a proč přepíná</li>
     </ul>
-  </td>
-</tr>
-</tbody>
-</table>
+  </SkillItem>
+</Skill>

@@ -5,7 +5,11 @@ sidebar:
   label: "Přehled"
 ---
 
+import { Aside, Badge } from '@astrojs/starlight/components'
+
 import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
 
 <Banner text="V písemném projevu se dokáže vyjadřovat tvořivě." />
 
@@ -26,37 +30,29 @@ Tvořivý písemný projev stojí na základech z bodu 6 (koherentní text) — 
 | **8.** | **Styl a žánr.** Dítě experimentuje s žánry (povídka, fejeton, slam poetry), hledá vlastní styl. Dokáže reflektovat, proč píše tak, jak píše. Čte jako spisovatel — všímá si, jak autoři pracují s jazykem. |
 | **9.** | **Osobní hlas.** Dítě má vlastní autorský rukopis, píše delší texty, buduje portfolio. Psaní je pro něj způsob, jak zpracovat svět, vyjádřit se, tvořit. |
 
-**Prerekvizity:** ČJ bod 6 (koherentní text) — dítě musí umět napsat souvislý, srozumitelný text, aby na něm mohlo stavět tvořivou nadstavbu.
+<Aside title="Prerekvizity" type="tip">ČJ bod 6 (koherentní text) — dítě musí umět napsat souvislý, srozumitelný text, aby na něm mohlo stavět tvořivou nadstavbu.</Aside>
 
 ## Poznámky
 
-**Tvořivost se nedá vynutit, ale dá se pěstovat.** Vytvořte prostředí, kde je bezpečné zkoušet a „selhat". Nikdy nehodnoťte tvořivý text jen podle pravopisu nebo gramatiky. Nejdřív oceňte nápad, pak řešte formu.
+<Aside title="Tvořivost se nedá vynutit, ale dá se pěstovat">Vytvořte prostředí, kde je bezpečné zkoušet a „selhat". Nikdy nehodnoťte tvořivý text jen podle pravopisu nebo gramatiky. Nejdřív oceňte nápad, pak řešte formu.</Aside>
 
-**Typická past:** rodič opravuje tvořivý text jako diktát. Výsledek: dítě přestane riskovat a píše jen „bezpečné" věty. Tvořivost potřebuje prostor pro chyby a experimenty.
+<Aside title="Typická past" type="caution">Rodič opravuje tvořivý text jako diktát. Výsledek: dítě přestane riskovat a píše jen „bezpečné" věty. Tvořivost potřebuje prostor pro chyby a experimenty.</Aside>
 
-**Čtení a psaní jdou ruku v ruce.** Dítě, které hodně čte, má přirozeně bohatší jazyk a víc nápadů. Ale pozor — i dítě, které nečte romány, může skvěle tvořit (komiksy, texty písní, scénáře, blogy).
+<Aside title="Čtení a psaní jdou ruku v ruce">Dítě, které hodně čte, má přirozeně bohatší jazyk a víc nápadů. Ale pozor — i dítě, které nečte romány, může skvěle tvořit (komiksy, texty písní, scénáře, blogy).</Aside>
 
-**Důležité:** tvořivý projev neznamená jen beletrii. Tvořivě se dá psát i v publicistice, v popisu, v argumentaci. Kreativita je způsob myšlení, ne žánr.
+<Aside title="Důležité" type="danger">Tvořivý projev neznamená jen beletrii. Tvořivě se dá psát i v publicistice, v popisu, v argumentaci. Kreativita je způsob myšlení, ne žánr.</Aside>
 
 ## Souvislosti
 
-- → ČJ bod 6 (tvořivý koherentní text) — základ, na kterém tvořivý projev staví
-- → ČJ bod 12 (reprodukce a interpretace textu) — porozumění textům druhých obohacuje vlastní tvorbu
-- → ČJ bod 15 (přehled české a světové literatury) — znalost literatury inspiruje a rozšiřuje repertoár
+- <Badge text="ČJ" /> bod 6 (tvořivý koherentní text) — základ, na kterém tvořivý projev staví
+- <Badge text="ČJ" /> bod 12 (reprodukce a interpretace textu) — porozumění textům druhých obohacuje vlastní tvorbu
+- <Badge text="ČJ" /> bod 15 (přehled české a světové literatury) — znalost literatury inspiruje a rozšiřuje repertoár
 
 ## Semafor
 
-<table>
-<tbody>
-<tr>
-  <td>🔴</td>
-  <td><strong>Nepozorováno</strong></td>
-  <td>Dítě zatím nemělo příležitost psát tvořivě. Neví, jestli ho psaní baví, protože to nezkoušelo jinak než jako školní povinnost.</td>
-</tr>
-<tr>
-  <td>🟠</td>
-  <td><strong>Začíná</strong></td>
-  <td>
+<Skill>
+  <SkillItem level="none">Dítě zatím nemělo příležitost psát tvořivě. Neví, jestli ho psaní baví, protože to nezkoušelo jinak než jako školní povinnost.</SkillItem>
+  <SkillItem level="novice">
     Dítě píše, ale zatím spíš mechanicky — text je správný, ale chybí osobitost a invence.
     <ul>
       <li>Příběhy mají děj, ale jsou schematické (začátek–zápletka–konec bez překvapení)</li>
@@ -64,12 +60,8 @@ Tvořivý písemný projev stojí na základech z bodu 6 (koherentní text) — 
       <li>Popis je výčet faktů, chybí atmosféra a smyslové detaily</li>
       <li>Bojí se experimentovat — píše „bezpečně", aby neudělalo chybu</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟡</td>
-  <td><strong>Rozvíjí</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="adept">
     Dítě začíná do textů vkládat vlastní nápady a experimentuje s jazykem.
     <ul>
       <li>V příbězích se objevují originální zápletky nebo nečekané pointy</li>
@@ -77,12 +69,8 @@ Tvořivý písemný projev stojí na základech z bodu 6 (koherentní text) — 
       <li>Dokáže napsat text v různých formách (dopis, deník, báseň), i když ne vždy přirozeně</li>
       <li>Občas překvapí formulací, která je opravdu jeho/její vlastní</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟢</td>
-  <td><strong>Zvládnuto</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="master">
     Dítě píše s vlastním hlasem, vědomě volí prostředky a má radost z tvorby.
     <ul>
       <li>Texty mají osobitý styl — poznáte, že to psal/a právě on/ona</li>
@@ -90,7 +78,5 @@ Tvořivý písemný projev stojí na základech z bodu 6 (koherentní text) — 
       <li>Experimentuje s žánry a formami z vlastní iniciativy</li>
       <li>Dokáže svůj text reflektovat — vysvětlit, proč zvolil/a určitý postup nebo slovo</li>
     </ul>
-  </td>
-</tr>
-</tbody>
-</table>
+  </SkillItem>
+</Skill>

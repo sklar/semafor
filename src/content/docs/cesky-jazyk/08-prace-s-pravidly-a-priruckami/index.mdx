@@ -5,7 +5,11 @@ sidebar:
   label: "Přehled"
 ---
 
+import { Aside, Badge } from '@astrojs/starlight/components'
+
 import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
 
 <Banner text="Samostatně pracuje s Pravidly českého pravopisu, se Slovníkem spisovné češtiny a s dalšími slovníky a příručkami." />
 
@@ -23,64 +27,46 @@ Nejde o memorování pravidel. Jde o dovednost **poradit si** — vědět, kam s
 | **7.–8.** | **Běžné používání.** Dítě používá příručky samostatně — při psaní, při revizi textu, při sporech o pravopis. Přidejte synonymický slovník a slovník cizích slov. |
 | **9.** | Dítě volí správnou příručku pro daný problém (pravopis → Pravidla, význam → SSČ, tvar → IJP). Dokáže si poradit i se složitějšími jazykovými otázkami. |
 
-**Prerekvizity:** Základní čtenářská gramotnost. Souvisí s pravopisem (→ ČJ bod 10).
+<Aside title="Prerekvizity" type="tip">Základní čtenářská gramotnost. Souvisí s pravopisem (<Badge text="ČJ" /> bod 10).</Aside>
 
 ## Poznámky
 
-**Internetová jazyková příručka je klíčový nástroj.** Je zdarma, aktuální a pokrývá pravopis, tvary i výslovnost. Naučte dítě s ní pracovat — je to nejpraktičtější jazyková příručka.
+<Aside title="Internetová jazyková příručka je klíčový nástroj">Je zdarma, aktuální a pokrývá pravopis, tvary i výslovnost. Naučte dítě s ní pracovat — je to nejpraktičtější jazyková příručka.</Aside>
 
-**Typická past:** dítě „ví, že existují Pravidla", ale nikdy je neotevřelo. Dovednost se buduje praxí — dejte dítěti důvod hledat (spor o pravopis, „kdo má pravdu", sázka).
+<Aside title="Typická past" type="caution">Dítě „ví, že existují Pravidla", ale nikdy je neotevřelo. Dovednost se buduje praxí — dejte dítěti důvod hledat (spor o pravopis, „kdo má pravdu", sázka).</Aside>
 
 ## Souvislosti
 
-- → ČJ bod 10 (pravopis) — příručky jako nástroj pro kontrolu pravopisu
-- → ČJ bod 9 (slovní druhy a tvary) — slovníky a příručky pro ověření tvarů
-- → ČJ bod 17 (vyhledávání informací) — práce s příručkami je typ vyhledávání
+- <Badge text="ČJ" /> bod 10 (pravopis) — příručky jako nástroj pro kontrolu pravopisu
+- <Badge text="ČJ" /> bod 9 (slovní druhy a tvary) — slovníky a příručky pro ověření tvarů
+- <Badge text="ČJ" /> bod 17 (vyhledávání informací) — práce s příručkami je typ vyhledávání
 
 ## Semafor
 
-<table>
-<tbody>
-<tr>
-  <td>🔴</td>
-  <td><strong>Nepozorováno</strong></td>
-  <td>Neměli jsme příležitost sledovat, jak dítě pracuje s jazykovými příručkami.</td>
-</tr>
-<tr>
-  <td>🟠</td>
-  <td><strong>Začíná</strong></td>
-  <td>
+<Skill>
+  <SkillItem level="none">Neměli jsme příležitost sledovat, jak dítě pracuje s jazykovými příručkami.</SkillItem>
+  <SkillItem level="novice">
     Dítě ví, že příručky existují, ale nepoužívá je.
     <ul>
       <li>Při nejistotě hádá nebo se ptá, místo aby si odpověď našlo</li>
       <li>Neví, jak v příručce hledat (abecední řazení, hesla)</li>
       <li>IJP nebo slovník nikdy samostatně neotevřelo</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟡</td>
-  <td><strong>Rozvíjí</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="adept">
     Dítě používá příručky s nápovědou nebo v jednodušších případech.
     <ul>
       <li>Dokáže vyhledat slovo v IJP nebo ve slovníku</li>
       <li>Při psaní si občas ověří pravopis — ale ne systematicky</li>
       <li>U složitějších otázek neví, kam se podívat</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟢</td>
-  <td><strong>Zvládnuto</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="master">
     Dítě samostatně a pravidelně používá jazykové příručky.
     <ul>
       <li>Automaticky si ověří pravopis, tvar nebo význam, když si není jisté</li>
       <li>Zvolí správnou příručku pro daný problém</li>
       <li>Zvládne pracovat i se složitějšími hesly a vysvětlivkami</li>
     </ul>
-  </td>
-</tr>
-</tbody>
-</table>
+  </SkillItem>
+</Skill>

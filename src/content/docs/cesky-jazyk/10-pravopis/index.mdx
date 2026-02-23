@@ -5,7 +5,11 @@ sidebar:
   label: "Přehled"
 ---
 
+import { Aside, Badge } from '@astrojs/starlight/components'
+
 import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
 
 <Banner text="Ovládá pravopis; své případné chyby je schopen dostupnými prostředky napravit." />
 
@@ -26,35 +30,27 @@ Důležité je chápat chybu jako **normální součást učení**. Cílem není
 | **8.** | **Pokročilejší jevy.** Interpunkce ve složitějších souvětích, psaní přejatých slov, rozlišení mě/mně, velká písmena ve složitějších případech (názvy institucí, historické události). |
 | **9.** | **Komplexní pravopis a sebekorekce.** Dítě zvládá pravopis v celé šíři a hlavně — umí si text po sobě přečíst, najít chyby a opravit je. Pracuje s příručkami samostatně. |
 
-**Prerekvizity:** Základní znalost slovních druhů (→ ČJ bod 9), práce s příručkami (→ ČJ bod 8).
+<Aside title="Prerekvizity" type="tip">Základní znalost slovních druhů (<Badge text="ČJ" /> bod 9), práce s příručkami (<Badge text="ČJ" /> bod 8).</Aside>
 
 ## Poznámky
 
-**Chybovat je normální.** I dospělí si nejsou jistí pravopisem — proto existují Pravidla a slovníky. Cílem není bezchybnost, ale schopnost si poradit. Dítě, které umí najít a opravit chybu, je na tom lépe než dítě, které se bojí psát.
+<Aside title="Chybovat je normální">I dospělí si nejsou jistí pravopisem — proto existují Pravidla a slovníky. Cílem není bezchybnost, ale schopnost si poradit. Dítě, které umí najít a opravit chybu, je na tom lépe než dítě, které se bojí psát.</Aside>
 
-**Typická past:** drilování pravidel bez kontextu. Dítě zvládne cvičení na vyjmenovaná slova, ale v souvislém textu chybuje, protože pravidlo nedokáže aplikovat v reálné situaci. Řešení: co nejvíc psát — dopisy, příběhy, zápisky, komentáře — a pravopis řešit na vlastním textu.
+<Aside title="Typická past" type="caution">Drilování pravidel bez kontextu. Dítě zvládne cvičení na vyjmenovaná slova, ale v souvislém textu chybuje, protože pravidlo nedokáže aplikovat v reálné situaci. Řešení: co nejvíc psát — dopisy, příběhy, zápisky, komentáře — a pravopis řešit na vlastním textu.</Aside>
 
-**Kontrola pravopisu v počítači není podvod.** Naopak — je to legitimní nástroj, který dospělí běžně používají. Dítě by ale mělo rozumět, *proč* mu oprava navrhuje změnu, ne jen slepě klikat na „opravit".
+<Aside title="Kontrola pravopisu v počítači není podvod">Naopak — je to legitimní nástroj, který dospělí běžně používají. Dítě by ale mělo rozumět, *proč* mu oprava navrhuje změnu, ne jen slepě klikat na „opravit".</Aside>
 
 ## Souvislosti
 
-- → ČJ bod 8 (práce s Pravidly a příručkami) — klíčový nástroj pro kontrolu pravopisu
-- → ČJ bod 9 (slovní druhy a mluvnické kategorie) — pochopení tvarosloví pomáhá s pravopisem
-- → ČJ bod 6 (tvořivý koherentní text) — pravopis je součást kvalitního psaného projevu
+- <Badge text="ČJ" /> bod 8 (práce s Pravidly a příručkami) — klíčový nástroj pro kontrolu pravopisu
+- <Badge text="ČJ" /> bod 9 (slovní druhy a mluvnické kategorie) — pochopení tvarosloví pomáhá s pravopisem
+- <Badge text="ČJ" /> bod 6 (tvořivý koherentní text) — pravopis je součást kvalitního psaného projevu
 
 ## Semafor
 
-<table>
-<tbody>
-<tr>
-  <td>🔴</td>
-  <td><strong>Nepozorováno</strong></td>
-  <td>Neměli jsme příležitost sledovat, jak dítě zvládá pravopis v psaném projevu.</td>
-</tr>
-<tr>
-  <td>🟠</td>
-  <td><strong>Začíná</strong></td>
-  <td>
+<Skill>
+  <SkillItem level="none">Neměli jsme příležitost sledovat, jak dítě zvládá pravopis v psaném projevu.</SkillItem>
+  <SkillItem level="novice">
     Dítě dělá časté pravopisné chyby a neví, jak je hledat.
     <ul>
       <li>Chybuje v základních jevech (i/y po obojetných souhláskách, vyjmenovaná slova)</li>
@@ -62,12 +58,8 @@ Důležité je chápat chybu jako **normální součást učení**. Cílem není
       <li>Text si po sobě nečte a neopravuje</li>
       <li>Pravidla zná „z hlavy", ale nedokáže je aplikovat v textu</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟡</td>
-  <td><strong>Rozvíjí</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="adept">
     Dítě zvládá základní pravopis a začíná si text kontrolovat.
     <ul>
       <li>Základní jevy (i/y, velká písmena) zvládá většinou správně</li>
@@ -75,12 +67,8 @@ Důležité je chápat chybu jako **normální součást učení**. Cílem není
       <li>Při kontrole najde některé chyby, ale ne všechny</li>
       <li>S nápovědou dokáže chybu opravit a vysvětlit pravidlo</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟢</td>
-  <td><strong>Zvládnuto</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="master">
     Dítě píše s minimem chyb a zvládá sebekorekci.
     <ul>
       <li>Pravopis zvládá v celé šíři — včetně interpunkce, přejatých slov a složitějších jevů</li>
@@ -88,7 +76,5 @@ Důležité je chápat chybu jako **normální součást učení**. Cílem není
       <li>Chyby najde a opraví — ví, kam se podívat (IJP, Pravidla, slovník)</li>
       <li>Dokáže vysvětlit, proč se píše tak, jak se píše</li>
     </ul>
-  </td>
-</tr>
-</tbody>
-</table>
+  </SkillItem>
+</Skill>

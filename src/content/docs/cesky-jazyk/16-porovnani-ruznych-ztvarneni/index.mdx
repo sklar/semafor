@@ -5,7 +5,11 @@ sidebar:
   label: "Přehled"
 ---
 
+import { Aside, Badge } from '@astrojs/starlight/components'
+
 import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
 
 <Banner text="Porovnává různá ztvárnění téhož námětu v literárním, dramatickém i filmovém zpracování." />
 
@@ -26,35 +30,27 @@ V praxi to znamená, že když dítě přečte knihu a pak vidí její filmovou 
 | **8.** | **Prohlubte analýzu.** Proč režisér mění děj? Co může kniha, co film nemůže — a naopak? Věrnost předloze vs. tvůrčí interpretace. Dítě porovnává dvě filmové verze téhož příběhu nebo divadelní a filmové zpracování. |
 | **9.** | Dítě samostatně analyzuje a porovnává různá zpracování, formuluje vlastní názor na kvalitu adaptace a dokáže napsat srovnávací úvahu. Pracuje s pojmy jako intermedialita, adaptace, interpretace. |
 
-**Prerekvizity:** základní čtenářská gramotnost, schopnost převyprávět děj a pojmenovat postavy a jejich motivace.
+<Aside title="Prerekvizity" type="tip">Základní čtenářská gramotnost, schopnost převyprávět děj a pojmenovat postavy a jejich motivace.</Aside>
 
 ## Poznámky
 
-**Tohle je téma, které děti baví.** Většina z nich už zažila situaci „četl/a jsem knihu a pak viděl/a film" — stačí na to navázat. Klíčové je nevnucovat hodnocení („kniha je vždycky lepší"), ale vést k porovnávání.
+<Aside title="Tohle je téma, které děti baví">Většina z nich už zažila situaci „četl/a jsem knihu a pak viděl/a film" — stačí na to navázat. Klíčové je nevnucovat hodnocení („kniha je vždycky lepší"), ale vést k porovnávání.</Aside>
 
-**Typická past:** porovnávání sklouzne k prostému výčtu rozdílů („ve filmu nebyla tahle scéna"). Veďte dítě k tomu, aby se ptalo *proč* — proč režisér scénu vynechal? Co tím získal nebo ztratil?
+<Aside title="Typická past" type="caution">Porovnávání sklouzne k prostému výčtu rozdílů („ve filmu nebyla tahle scéna"). Veďte dítě k tomu, aby se ptalo *proč* — proč režisér scénu vynechal? Co tím získal nebo ztratil?</Aside>
 
-**Využijte, co dítě zná.** Nemusíte nutně pracovat s „klasikou". Pokud dítě miluje Harryho Pottera, Marvel nebo anime — skvěle, to je materiál pro porovnávání adaptací.
+<Aside title="Využijte, co dítě zná">Nemusíte nutně pracovat s „klasikou". Pokud dítě miluje Harryho Pottera, Marvel nebo anime — skvěle, to je materiál pro porovnávání adaptací.</Aside>
 
 ## Souvislosti
 
-- → ČJ bod 12 (reprodukce a interpretace) — schopnost převyprávět a interpretovat je základ pro porovnávání
-- → ČJ bod 13 (dojmy z četby a umění) — formulace vlastních dojmů a jejich zdůvodnění
-- → ČJ bod 15 (přehled literatury) — znalost literárních děl, se kterými se porovnává
+- <Badge text="ČJ" /> bod 12 (reprodukce a interpretace) — schopnost převyprávět a interpretovat je základ pro porovnávání
+- <Badge text="ČJ" /> bod 13 (dojmy z četby a umění) — formulace vlastních dojmů a jejich zdůvodnění
+- <Badge text="ČJ" /> bod 15 (přehled literatury) — znalost literárních děl, se kterými se porovnává
 
 ## Semafor
 
-<table>
-<tbody>
-<tr>
-  <td>🔴</td>
-  <td><strong>Nepozorováno</strong></td>
-  <td>Téma jsme zatím neotevřeli. Dítě nemělo příležitost porovnávat různá zpracování téhož námětu.</td>
-</tr>
-<tr>
-  <td>🟠</td>
-  <td><strong>Začíná</strong></td>
-  <td>
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost porovnávat různá zpracování téhož námětu.</SkillItem>
+  <SkillItem level="novice">
     Dítě vnímá, že existují různé verze téhož příběhu, ale porovnávání je povrchní.
     <ul>
       <li>Řekne „film byl jiný než kniha", ale nedokáže říct čím konkrétně</li>
@@ -62,12 +58,8 @@ V praxi to znamená, že když dítě přečte knihu a pak vidí její filmovou 
       <li>Hodnotí adaptaci jednoduše: „líbil / nelíbil se mi"</li>
       <li>Nerozlišuje mezi médii — nepřemýšlí o tom, proč se něco změnilo</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟡</td>
-  <td><strong>Rozvíjí</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="adept">
     Dítě dokáže pojmenovat konkrétní rozdíly a začíná přemýšlet o důvodech změn.
     <ul>
       <li>Popíše několik konkrétních rozdílů mezi knihou a filmem (děj, postavy, prostředí)</li>
@@ -75,12 +67,8 @@ V praxi to znamená, že když dítě přečte knihu a pak vidí její filmovou 
       <li>Dokáže říct, co se mu na které verzi líbí víc a proč</li>
       <li>U jednodušších příkladů rozliší, co je „silná stránka" daného média</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟢</td>
-  <td><strong>Zvládnuto</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="master">
     Dítě samostatně a strukturovaně porovnává různá zpracování a formuluje vlastní hodnocení.
     <ul>
       <li>Systematicky porovná dvě i více verzí téhož příběhu — děj, postavy, atmosféra, prostředky</li>
@@ -88,7 +76,5 @@ V praxi to znamená, že když dítě přečte knihu a pak vidí její filmovou 
       <li>Chápe, že adaptace je tvůrčí interpretace, ne pouhé „překopírování" do jiného média</li>
       <li>Dokáže napsat srovnávací úvahu s argumenty</li>
     </ul>
-  </td>
-</tr>
-</tbody>
-</table>
+  </SkillItem>
+</Skill>

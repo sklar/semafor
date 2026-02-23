@@ -5,7 +5,11 @@ sidebar:
   label: "Přehled"
 ---
 
+import { Aside, Badge } from '@astrojs/starlight/components'
+
 import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
 
 <Banner text="Rozumí textu a je schopen formulovat a zaznamenat jeho hlavní myšlenky." />
 
@@ -23,36 +27,28 @@ Nejde jen o „čtení s porozuměním" v testovém smyslu. Jde o schopnost **pr
 | **7.–8.** | **Složitější texty.** Publicistika, naučné texty, delší příběhy. Dítě se učí rozlišovat hlavní a vedlejší myšlenky, identifikovat strukturu textu a dělat si poznámky. |
 | **9.** | Dítě samostatně analyzuje složité texty, formuluje hlavní myšlenky, rozpoznává autorský záměr a hodnotí kvalitu argumentace v textu. |
 
-**Prerekvizity:** Základní čtenářská gramotnost. Pomáhá rozlišovat fakt od názoru (→ ČJ bod 1).
+<Aside title="Prerekvizity" type="tip">Základní čtenářská gramotnost. Pomáhá rozlišovat fakt od názoru (<Badge text="ČJ" /> bod 1).</Aside>
 
 ## Poznámky
 
-**Nejlepší trénink je čtení.** Žádná technika nenahradí pravidelnou zkušenost s texty různých typů. Diskutujte o přečteném — „o čem to bylo?" je nejlepší otázka.
+<Aside title="Nejlepší trénink je čtení">Žádná technika nenahradí pravidelnou zkušenost s texty různých typů. Diskutujte o přečteném — „o čem to bylo?" je nejlepší otázka.</Aside>
 
-**Typická past:** dítě „rozumí" textu, ale neumí to formulovat. Porozumění bez schopnosti vyjádření je neúplné. Cvičte obojí — tiché porozumění i aktivní formulaci.
+<Aside title="Typická past" type="caution">Dítě „rozumí" textu, ale neumí to formulovat. Porozumění bez schopnosti vyjádření je neúplné. Cvičte obojí — tiché porozumění i aktivní formulaci.</Aside>
 
-**Různé typy textů vyžadují různé strategie.** Návod čtu jinak než příběh, příběh jinak než komentář. Pojmenujte to — a cvičte na různých žánrech.
+<Aside title="Různé typy textů vyžadují různé strategie">Návod čtu jinak než příběh, příběh jinak než komentář. Pojmenujte to — a cvičte na různých žánrech.</Aside>
 
 ## Souvislosti
 
-- → ČJ bod 1 (rozlišuje subjektivní a objektivní sdělení) — rozlišení faktů a názorů pomáhá pochopit text
-- → ČJ bod 6 (umí sepsat tvořivý koherentní text) — kdo rozumí struktuře textu, lépe píše
-- → ČJ bod 12 (reprodukce a interpretace textu) — přímá návaznost v literární výchově
-- → ČJ bod 17 (vyhledávání informací) — porozumění textu jako základ pro práci s informacemi
+- <Badge text="ČJ" /> bod 1 (rozlišuje subjektivní a objektivní sdělení) — rozlišení faktů a názorů pomáhá pochopit text
+- <Badge text="ČJ" /> bod 6 (umí sepsat tvořivý koherentní text) — kdo rozumí struktuře textu, lépe píše
+- <Badge text="ČJ" /> bod 12 (reprodukce a interpretace textu) — přímá návaznost v literární výchově
+- <Badge text="ČJ" /> bod 17 (vyhledávání informací) — porozumění textu jako základ pro práci s informacemi
 
 ## Semafor
 
-<table>
-<tbody>
-<tr>
-  <td>🔴</td>
-  <td><strong>Nepozorováno</strong></td>
-  <td>Neměli jsme příležitost sledovat, jak dítě pracuje s textem a formuluje hlavní myšlenky.</td>
-</tr>
-<tr>
-  <td>🟠</td>
-  <td><strong>Začíná</strong></td>
-  <td>
+<Skill>
+  <SkillItem level="none">Neměli jsme příležitost sledovat, jak dítě pracuje s textem a formuluje hlavní myšlenky.</SkillItem>
+  <SkillItem level="novice">
     Dítě text přečte, ale těžko formuluje, o čem je.
     <ul>
       <li>Převypráví obsah, ale neodliší hlavní myšlenku od detailů</li>
@@ -60,12 +56,8 @@ Nejde jen o „čtení s porozuměním" v testovém smyslu. Jde o schopnost **pr
       <li>U složitějšího textu se ztrácí nebo přeskakuje části</li>
       <li>Nedělá si poznámky, nepoužívá strategie pro porozumění</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟡</td>
-  <td><strong>Rozvíjí</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="adept">
     Dítě rozumí jednodušším textům a začíná formulovat hlavní myšlenky.
     <ul>
       <li>U krátkého textu dokáže říct hlavní myšlenku vlastními slovy</li>
@@ -73,12 +65,8 @@ Nejde jen o „čtení s porozuměním" v testovém smyslu. Jde o schopnost **pr
       <li>U složitějšího textu potřebuje nápovědu nebo otázky</li>
       <li>Začíná si dělat poznámky nebo podtrhávat důležité</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟢</td>
-  <td><strong>Zvládnuto</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="master">
     Dítě spolehlivě rozumí různým typům textů a formuluje hlavní myšlenky.
     <ul>
       <li>Vlastními slovy shrne hlavní myšlenku i u složitějšího textu</li>
@@ -86,7 +74,5 @@ Nejde jen o „čtení s porozuměním" v testovém smyslu. Jde o schopnost **pr
       <li>Identifikuje strukturu textu (úvod, argumenty, závěr)</li>
       <li>Aktivně používá strategie pro porozumění (poznámky, otázky, shrnutí)</li>
     </ul>
-  </td>
-</tr>
-</tbody>
-</table>
+  </SkillItem>
+</Skill>

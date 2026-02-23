@@ -5,7 +5,11 @@ sidebar:
   label: "Přehled"
 ---
 
+import { Aside, Badge } from '@astrojs/starlight/components'
+
 import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
 
 <Banner text="Rozlišuje subjektivní a hodnoticí sdělení od objektivního, rozpozná manipulativní komunikaci a zaujímá k ní kritický postoj." />
 
@@ -25,35 +29,27 @@ Nejde o to být cynický a za vším hledat manipulaci. Jde o zdravou schopnost 
 | **7.–8.** | **Prohlubujte.** Propaganda, politická rétorika, fake news. Dítě je kognitivně připravené chápat složitější manipulativní techniky (apel na emoce, falešné dilema, argumentační fauly). Sociální sítě jsou v tomhle věku čím dál relevantnější materiál. |
 | **9.** | Dítě by mělo být schopné samostatně analyzovat složitější texty — publicistiku, politické projevy, reklamní kampaně — a formulovat vlastní kritický postoj. |
 
-**Prerekvizity:** žádné specifické. Toto je jedno z témat, které lze otevřít hned od začátku.
+<Aside title="Prerekvizity" type="tip">Žádné specifické. Toto je jedno z témat, které lze otevřít hned od začátku.</Aside>
 
 ## Poznámky
 
-**Tohle téma je klíčové:** rostupuje celým vzděláváním a životem. Nejde jen o „český jazyk", jde o základní dovednost pro orientaci ve světě. Propojujte ho s reálnými situacemi, které dítě samo zažívá.
+<Aside title="Tohle téma je klíčové">Prostupuje celým vzděláváním a životem. Nejde jen o „český jazyk", jde o základní dovednost pro orientaci ve světě. Propojujte ho s reálnými situacemi, které dítě samo zažívá.</Aside>
 
-**Typická past:** dítě se naučí teorii (ví, co je manipulace), ale v praxi ji nerozpozná, protože cvičení probíhala na „učebnicových" příkladech. Používejte aktuální, živý materiál — to, co dítě skutečně sleduje a čte.
+<Aside title="Typická past" type="caution">Dítě se naučí teorii (ví, co je manipulace), ale v praxi ji nerozpozná, protože cvičení probíhala na „učebnicových” příkladech. Používejte aktuální, živý materiál — to, co dítě skutečně sleduje a čte.</Aside>
 
-**Důležité:** nejde o to vychovat paranoika. Cílem je zdravý skepticismus, ne nedůvěra ke všemu. Vždy zdůrazňujte, že mít názor je v pořádku — důležité je umět ho odlišit od faktu.
+<Aside title="Důležité" type="danger">Nejde o to vychovat paranoika. Cílem je zdravý skepticismus, ne nedůvěra ke všemu. Vždy zdůrazňujte, že mít názor je v pořádku — důležité je umět ho odlišit od faktu.</Aside>
 
 ## Souvislosti
 
-- → ČJ bod 5 (rozumí textu a formuluje hlavní myšlenky) — základ pro analýzu textu
-- → ČJ bod 4 (dokáže vyjádřit svůj názor) — vlastní postoj navazuje na rozlišení faktů a názorů
-- → JaS bod 9 (kritický přístup k mediálním informacím) — přímý přesah do společenskovědního kontextu
+- <Badge text="ČJ" /> bod 5 (rozumí textu a formuluje hlavní myšlenky) — základ pro analýzu textu
+- <Badge text="ČJ" /> bod 4 (dokáže vyjádřit svůj názor) — vlastní postoj navazuje na rozlišení faktů a názorů
+- <Badge text="JAS" /> bod 9 (kritický přístup k mediálním informacím) — přímý přesah do společenskovědního kontextu
 
 ## Semafor
 
-<table>
-<tbody>
-<tr>
-  <td>🔴</td>
-  <td><strong>Nepozorováno</strong></td>
-  <td>Téma jsme zatím neotevřeli. Dítě nemělo příležitost ukázat, jestli rozlišuje fakt od názoru nebo vnímá manipulaci.</td>
-</tr>
-<tr>
-  <td>🟠</td>
-  <td><strong>Začíná</strong></td>
-  <td>
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost ukázat, jestli rozlišuje fakt od názoru nebo vnímá manipulaci.</SkillItem>
+  <SkillItem level="novice">
     Dítě tuší, že existuje rozdíl mezi faktem a názorem, ale v praxi je často zaměňuje.
     <ul>
       <li>Řekne „to je pravda" i o názoru, pokud s ním souhlasí</li>
@@ -61,12 +57,8 @@ Nejde o to být cynický a za vším hledat manipulaci. Jde o zdravou schopnost 
       <li>Když mu někdo řekne „všichni to dělají", přijme to bez otázek</li>
       <li>Nerozlišuje zpravodajství od komentáře</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟡</td>
-  <td><strong>Rozvíjí</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="adept">
     Dítě rozlišuje fakt a názor v jednoduchých případech a začíná vnímat manipulativní prvky.
     <ul>
       <li>V textu označí, co je fakt a co názor (alespoň u jasných případů)</li>
@@ -74,12 +66,8 @@ Nejde o to být cynický a za vším hledat manipulaci. Jde o zdravou schopnost 
       <li>U složitějších textů (publicistika, sociální sítě) si ještě není jisté</li>
       <li>Začíná klást otázky typu „kdo to říká a proč?"</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟢</td>
-  <td><strong>Zvládnuto</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="master">
     Dítě spolehlivě rozlišuje subjektivní a objektivní sdělení a aktivně si všímá manipulativních technik.
     <ul>
       <li>V textu spolehlivě odliší fakt, názor, hodnocení a manipulaci</li>
@@ -87,7 +75,5 @@ Nejde o to být cynický a za vším hledat manipulaci. Jde o zdravou schopnost 
       <li>Kriticky hodnotí zdroje — ptá se, kdo text napsal, s jakým záměrem, pro koho</li>
       <li>Zaujme vlastní postoj a dokáže ho zdůvodnit</li>
     </ul>
-  </td>
-</tr>
-</tbody>
-</table>
+  </SkillItem>
+</Skill>

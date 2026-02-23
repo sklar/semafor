@@ -5,7 +5,11 @@ sidebar:
   label: "Přehled"
 ---
 
+import { Aside, Badge } from '@astrojs/starlight/components'
+
 import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
 
 <Banner text="Umí vyhledávat informace v různých typech informačních zdrojů." />
 
@@ -26,35 +30,27 @@ Nejde jen o technickou dovednost „umět googlovat". Jde o celý proces: formul
 | **8.** | **Pokročilá úroveň.** Práce s databázemi, systematické hodnocení kvality zdrojů, rozpoznávání zaujatosti, správné odkazování na zdroje. |
 | **9.** | Dítě by mělo zvládnout samostatný výzkum — od formulace otázky přes vyhledání a syntézu informací z více zdrojů až po správné citování a prezentaci výsledků. |
 
-**Prerekvizity:** ČJ bod 5 (porozumění textu) — dítě musí umět přečíst a pochopit text, aby z něj mohlo čerpat informace.
+<Aside title="Prerekvizity" type="tip">ČJ bod 5 (porozumění textu) — dítě musí umět přečíst a pochopit text, aby z něj mohlo čerpat informace.</Aside>
 
 ## Poznámky
 
-**Tohle téma je praktické:** vyhledávání informací je dovednost, kterou dítě využije v každém předmětu a v celém dalším životě. Propojujte ho s reálnými úkoly — ať dítě hledá odpovědi na otázky, které ho skutečně zajímají.
+<Aside title="Tohle téma je praktické">Vyhledávání informací je dovednost, kterou dítě využije v každém předmětu a v celém dalším životě. Propojujte ho s reálnými úkoly — ať dítě hledá odpovědi na otázky, které ho skutečně zajímají.</Aside>
 
-**Typická past:** dítě „umí googlovat", ale neumí posoudit kvalitu výsledků. Přijme první odkaz jako pravdu, nekontroluje zdroj, nekriticky kopíruje. Důležité je budovat návyk ověřování — ne paranoidní, ale zdravý.
+<Aside title="Typická past" type="caution">Dítě „umí googlovat", ale neumí posoudit kvalitu výsledků. Přijme první odkaz jako pravdu, nekontroluje zdroj, nekriticky kopíruje. Důležité je budovat návyk ověřování — ne paranoidní, ale zdravý.</Aside>
 
-**Důležité:** citování není buzerace. Je to způsob, jak říct „tohle jsem si nevymyslel/a, tady je důkaz". Když dítě pochopí proč se cituje (férové odkazování na práci druhých), přijme to mnohem snáz.
+<Aside title="Důležité" type="danger">Citování není buzerace. Je to způsob, jak říct „tohle jsem si nevymyslel/a, tady je důkaz". Když dítě pochopí proč se cituje (férové odkazování na práci druhých), přijme to mnohem snáz.</Aside>
 
 ## Souvislosti
 
-- → ČJ bod 5 (rozumí textu a formuluje hlavní myšlenky) — základ pro práci s jakýmkoli zdrojem
-- → ČJ bod 8 (práce s příručkami a jazykovými zdroji) — konkrétní typ vyhledávání v odborných zdrojích
-- → ČJ bod 1 (subjektivní a objektivní sdělení) — hodnocení důvěryhodnosti zdrojů vyžaduje rozlišení faktů a názorů
+- <Badge text="ČJ" /> bod 5 (rozumí textu a formuluje hlavní myšlenky) — základ pro práci s jakýmkoli zdrojem
+- <Badge text="ČJ" /> bod 8 (práce s příručkami a jazykovými zdroji) — konkrétní typ vyhledávání v odborných zdrojích
+- <Badge text="ČJ" /> bod 1 (subjektivní a objektivní sdělení) — hodnocení důvěryhodnosti zdrojů vyžaduje rozlišení faktů a názorů
 
 ## Semafor
 
-<table>
-<tbody>
-<tr>
-  <td>🔴</td>
-  <td><strong>Nepozorováno</strong></td>
-  <td>Téma jsme zatím neotevřeli. Dítě nemělo příležitost ukázat, jak vyhledává a hodnotí informační zdroje.</td>
-</tr>
-<tr>
-  <td>🟠</td>
-  <td><strong>Začíná</strong></td>
-  <td>
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost ukázat, jak vyhledává a hodnotí informační zdroje.</SkillItem>
+  <SkillItem level="novice">
     Dítě hledá informace, ale nesystematicky a nekriticky.
     <ul>
       <li>Zadá do vyhledávače jednoduchý dotaz a vezme první výsledek</li>
@@ -62,12 +58,8 @@ Nejde jen o technickou dovednost „umět googlovat". Jde o celý proces: formul
       <li>Neví, kde jinde než na internetu hledat</li>
       <li>Informaci nepřezkouší z jiného zdroje</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟡</td>
-  <td><strong>Rozvíjí</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="adept">
     Dítě zvládá základní vyhledávání a začíná hodnotit zdroje.
     <ul>
       <li>Formuluje vyhledávací dotaz tak, aby dostal/a relevantní výsledky</li>
@@ -75,12 +67,8 @@ Nejde jen o technickou dovednost „umět googlovat". Jde o celý proces: formul
       <li>Pozná zjevně nedůvěryhodný zdroj (neznámý web, chybějící autor)</li>
       <li>Umí najít informaci v encyklopedii nebo knize, nejen na internetu</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟢</td>
-  <td><strong>Zvládnuto</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="master">
     Dítě vyhledává systematicky, hodnotí zdroje a správně cituje.
     <ul>
       <li>Volí vhodný typ zdroje podle povahy otázky (encyklopedie, odborná kniha, databáze, internet)</li>
@@ -88,7 +76,5 @@ Nejde jen o technickou dovednost „umět googlovat". Jde o celý proces: formul
       <li>Kriticky hodnotí kvalitu a zaujatost zdroje</li>
       <li>Správně cituje a odkazuje na použité zdroje</li>
     </ul>
-  </td>
-</tr>
-</tbody>
-</table>
+  </SkillItem>
+</Skill>

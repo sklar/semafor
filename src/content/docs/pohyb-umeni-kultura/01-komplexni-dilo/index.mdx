@@ -5,7 +5,11 @@ sidebar:
   label: "Přehled"
 ---
 
+import { Aside, Badge } from '@astrojs/starlight/components'
+
 import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
 
 <Banner text="Tvoří komplexní dílo jako své sebevyjádření." />
 
@@ -25,37 +29,29 @@ Sebevyjádření neznamená, že dílo musí být autobiografické nebo emotivn�
 | **7.–8.** | **Rozvíjejte záměr.** Dítě tvoří cíleněji — skládá s úmyslem, kombinuje prvky, hledá vlastní styl. Delší a propracovanější díla. Spolupráce s ostatními. |
 | **9.** | **Samostatný komplexní projekt.** Originální kompozice nebo multimediální dílo. Dítě projde celým procesem od záměru přes tvorbu k prezentaci. |
 
-**Prerekvizity:** Žádné formální hudební vzdělání není potřeba. Pomáhá, pokud dítě má zkušenost s poslechem různých žánrů a s jakoukoliv formou tvorby (i nehudebn).
+<Aside title="Prerekvizity" type="tip">Žádné formální hudební vzdělání není potřeba. Pomáhá, pokud dítě má zkušenost s poslechem různých žánrů a s jakoukoliv formou tvorby (i nehudební).</Aside>
 
 ## Poznámky
 
-**Nepotřebujete hudební vzdělání.** Toto není o notách a stupnicích. Dnešní digitální nástroje (GarageBand, BandLab, Audacity) umožňují tvořit hudbu i bez znalosti teorie. Důležitý je tvůrčí proces, ne technika.
+<Aside title="Nepotřebujete hudební vzdělání">Toto není o notách a stupnicích. Dnešní digitální nástroje (GarageBand, BandLab, Audacity) umožňují tvořit hudbu i bez znalosti teorie. Důležitý je tvůrčí proces, ne technika.</Aside>
 
-**Proces je důležitější než výsledek.** Výsledná skladba nemusí znít „profesionálně". Podstatné je, že dítě prošlo procesem: mělo nápad → zkoušelo → rozhodovalo se → dokončilo. To je sebevyjádření.
+<Aside title="Proces je důležitější než výsledek">Výsledná skladba nemusí znít „profesionálně". Podstatné je, že dítě prošlo procesem: mělo nápad → zkoušelo → rozhodovalo se → dokončilo. To je sebevyjádření.</Aside>
 
-**Respektujte estetiku dítěte.** Pokud dítě tvoří něco, co vám nezní dobře — to je v pořádku. Sebevyjádření znamená, že rozhoduje autor. Ptejte se „proč jsi to udělal/a takhle?" místo „nemělo by to znít jinak?"
+<Aside title="Respektujte estetiku dítěte">Pokud dítě tvoří něco, co vám nezní dobře — to je v pořádku. Sebevyjádření znamená, že rozhoduje autor. Ptejte se „proč jsi to udělal/a takhle?" místo „nemělo by to znít jinak?"</Aside>
 
-**Navažte na to, co dítě poslouchá.** Nejsnazší cesta k tvorbě je přes hudbu, kterou dítě zná a má rádo. Poslouchá rap? Ať zkusí napsat a nahrát vlastní. Miluje filmovou hudbu? Ať složí soundtrack.
+<Aside title="Navažte na to, co dítě poslouchá">Nejsnazší cesta k tvorbě je přes hudbu, kterou dítě zná a má rádo. Poslouchá rap? Ať zkusí napsat a nahrát vlastní. Miluje filmovou hudbu? Ať složí soundtrack.</Aside>
 
 ## Souvislosti
 
-- → PUK — výtvarná výchova (vizuální tvorba sdílí stejný tvůrčí proces — záměr, experimentování, realizace)
-- → ČJ bod 14 (tvořivý písemný projev) — kreativita a sebevyjádření v jiném médiu
-- → ČJ bod 6 (tvořivý koherentní text) — schopnost vytvořit koherentní celek z více částí
+- <Badge text="PUK" /> — výtvarná výchova (vizuální tvorba sdílí stejný tvůrčí proces — záměr, experimentování, realizace)
+- <Badge text="ČJ" /> bod 14 (tvořivý písemný projev) — kreativita a sebevyjádření v jiném médiu
+- <Badge text="ČJ" /> bod 6 (tvořivý koherentní text) — schopnost vytvořit koherentní celek z více částí
 
 ## Semafor
 
-<table>
-<tbody>
-<tr>
-  <td>🔴</td>
-  <td><strong>Nepozorováno</strong></td>
-  <td>Neměli jsme příležitost sledovat, jak dítě tvoří vlastní hudební nebo zvukové dílo.</td>
-</tr>
-<tr>
-  <td>🟠</td>
-  <td><strong>Začíná</strong></td>
-  <td>
+<Skill>
+  <SkillItem level="none">Neměli jsme příležitost sledovat, jak dítě tvoří vlastní hudební nebo zvukové dílo.</SkillItem>
+  <SkillItem level="novice">
     Dítě experimentuje se zvukem, ale zatím netvoří samostatně.
     <ul>
       <li>Zkouší nástroje nebo aplikace, ale spíš napodobuje než tvoří</li>
@@ -63,12 +59,8 @@ Sebevyjádření neznamená, že dílo musí být autobiografické nebo emotivn�
       <li>Dílo je jednoduché, většinou jeden prvek (jen rytmus, jen melodie)</li>
       <li>Nedokončuje — začne, ale nemá motivaci dotáhnout do konce</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟡</td>
-  <td><strong>Rozvíjí</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="adept">
     Dítě tvoří s určitou originalitou, ale potřebuje podporu při kombinování prvků.
     <ul>
       <li>Vytvoří dílo, které má vlastní charakter — není to pouhá kopie</li>
@@ -76,12 +68,8 @@ Sebevyjádření neznamená, že dílo musí být autobiografické nebo emotivn�
       <li>Dokáže vysvětlit, co chtělo vyjádřit, ale záměr se ne vždy projevuje v díle</li>
       <li>Dokončí dílo, ale bez systematického procesu — spíš metodou pokus-omyl</li>
     </ul>
-  </td>
-</tr>
-<tr>
-  <td>🟢</td>
-  <td><strong>Zvládnuto</strong></td>
-  <td>
+  </SkillItem>
+  <SkillItem level="master">
     Dítě samostatně tvoří komplexní originální dílo vyjadřující osobní záměr.
     <ul>
       <li>Vědomě kombinuje více prvků do propojeného celku</li>
@@ -89,7 +77,5 @@ Sebevyjádření neznamená, že dílo musí být autobiografické nebo emotivn�
       <li>Prochází tvůrčím procesem: záměr → experiment → realizace → reflexe</li>
       <li>Výsledek odráží osobnost a estetiku dítěte</li>
     </ul>
-  </td>
-</tr>
-</tbody>
-</table>
+  </SkillItem>
+</Skill>

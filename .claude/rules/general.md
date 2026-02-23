@@ -16,13 +16,28 @@ Knowledge base built with Astro Starlight.
 
 ```
 src/content/docs/
-  cesky-jazyk/
-    01-rozlisuje-subjektivni-a-hodnotici-sdeleni.md
-    02-principy-respektujici-komunikace.md
-    ...
-  matematika/
-    01-pocetni-operace.md
-    ...
+  cesky-jazyk/          # 17 témat (01–17)
+    01-rozlisuje-subjektivni-a-hodnotici-sdeleni/
+      index.mdx
+      6-rocnik.mdx
+      7-rocnik.mdx
+      8-rocnik.mdx
+      9-rocnik.mdx
+    02-principy-respektujici-komunikace/
+      index.mdx
+      ...
+  matematika/           # 29 témat (01–29)
+    01-pocetni-operace/
+      ...
+  ja-a-svet/            # 131 témat (01–131), 10 sub-oblastí
+    01-verohodnost-informaci/
+      ...
+  pohyb-umeni-kultura/  # 16 témat (01–16)
+    01-komplexni-dilo/
+      ...
+  hry-relaxace-aktivity/ # 9 témat (01–09)
+    01-empatie-sam-sobe/
+      ...
 ```
 
 ### File Names
@@ -35,10 +50,12 @@ src/content/docs/
 ### Frontmatter
 
 - camelCase for custom variables (Starlight convention)
-- Only `title` (required) for now
 
 ```yaml
 ---
 title: "Human-readable topic name"
+sidebar:
+  order: 0
+  label: "Přehled"
 ---
 ```

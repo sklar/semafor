@@ -39,20 +39,15 @@ Write code that is **accessible, performant, type-safe, and maintainable**. Focu
 - Handle errors appropriately in async code with try-catch blocks
 - Don't use async functions as Promise executors
 
-### React & JSX
+### Astro & MDX
 
-- Use function components over class components
-- Call hooks at the top level only, never conditionally
-- Specify all dependencies in hook dependency arrays correctly
-- Use the `key` prop for elements in iterables (prefer unique IDs over array indices)
-- Nest children between opening and closing tags instead of passing as props
-- Don't define components inside other components
-- Use semantic HTML and ARIA attributes for accessibility:
-  - Provide meaningful alt text for images
-  - Use proper heading hierarchy
-  - Add labels for form inputs
-  - Include keyboard event handlers alongside mouse events
-  - Use semantic elements (`<button>`, `<nav>`, etc.) instead of divs with roles
+- Astro components (`.astro`) use frontmatter fences (`---`) for server-side logic
+- MDX files support JSX components — import them at the top after frontmatter
+- Starlight components: `Aside`, `Badge`, `Steps`, `CardGrid`, `LinkCard`, `Tabs`, `TabItem`
+- Custom components: `Banner`, `Skill`, `SkillItem` (import from `@/components/`)
+- Path alias: `@/*` resolves to `./src/*`
+- Avoid `<->`, `<=>` and similar angle-bracket patterns in MDX text — use Unicode arrows
+- Czech curly quotes (`„"`) break inside JSX attribute values — use straight quotes in attributes
 
 ### Error Handling & Debugging
 
@@ -82,39 +77,12 @@ Write code that is **accessible, performant, type-safe, and maintainable**. Focu
 - Prefer specific imports over namespace imports
 - Avoid barrel files (index files that re-export everything)
 
-### Framework-Specific Guidance
+### Accessibility
 
-**Next.js:**
-- Use Next.js `<Image>` component for images
-- Use `next/head` or App Router metadata API for head elements
-- Use Server Components for async data fetching instead of async Client Components
-
-**React 19+:**
-- Use ref as a prop instead of `React.forwardRef`
-
-**Solid/Svelte/Vue/Qwik:**
-- Use `class` and `for` attributes (not `className` or `htmlFor`)
+- Use semantic HTML elements (`<button>`, `<nav>`, etc.)
+- Provide meaningful alt text for images
+- Use proper heading hierarchy
 
 ---
 
-## Testing
-
-- Write assertions inside `it()` or `test()` blocks
-- Avoid done callbacks in async tests - use async/await instead
-- Don't use `.only` or `.skip` in committed code
-- Keep test suites reasonably flat - avoid excessive `describe` nesting
-
-## When Biome Can't Help
-
-Biome's linter will catch most issues automatically. Focus your attention on:
-
-1. **Business logic correctness** - Biome can't validate your algorithms
-2. **Meaningful naming** - Use descriptive names for functions, variables, and types
-3. **Architecture decisions** - Component structure, data flow, and API design
-4. **Edge cases** - Handle boundary conditions and error states
-5. **User experience** - Accessibility, performance, and usability considerations
-6. **Documentation** - Add comments for complex logic, but prefer self-documenting code
-
----
-
-Most formatting and common issues are automatically fixed by Biome. Run `pnpm biome check --write` before committing to ensure compliance.
+Most formatting and common issues are automatically fixed by Biome. Run `pnpm biome check --write` before committing.

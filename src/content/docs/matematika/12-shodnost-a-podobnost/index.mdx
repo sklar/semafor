@@ -1,0 +1,82 @@
+---
+title: "12. Shodnost a podobnost"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Užívá věty o shodnosti a podobnosti trojúhelníků." />
+
+## Co to znamená?
+
+Dítě rozumí dvěma základním vztahům mezi geometrickými útvary: **shodnosti** (útvary mají stejný tvar i velikost) a **podobnosti** (stejný tvar, ale jiná velikost). U trojúhelníků existují přesná pravidla — **věty o shodnosti** (SSS, SUS, USU) a **věty o podobnosti** (uu, sus, sss) — která říkají, kdy dva trojúhelníky jsou shodné nebo podobné.
+
+Nejde jen o teorii. Shodnost je základ pro geometrické konstrukce — když známe tři prvky trojúhelníku (a splňují větu o shodnosti), můžeme ho jednoznačně sestrojit. Podobnost je klíčem k **měřítku** — mapy, modely, technické výkresy, zvětšování fotografií.
+
+Prakticky: *„Když mám trojúhelník se stranami 3, 4, 5 a jiný se stranami 6, 8, 10 — jsou podobné, protože strany jsou v poměru 1:2."* Dítě by mělo umět nejen rozpoznat shodnost a podobnost, ale také je **využít** k výpočtům — například zjistit neznámou délku pomocí poměru podobnosti.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Intuitivní chápání — „stejný tvar, stejná velikost" vs. „stejný tvar, jiná velikost". Porovnávání útvarů, měřítko na mapách. |
+| **7.–8.** | **Prohlubujte.** Formální věty o shodnosti trojúhelníků (SSS, SUS, USU). Úvod do podobnosti — poměr stran, koeficient podobnosti. |
+| **9.** | Věty o podobnosti (uu, sus, sss), aplikace v praxi, výpočty neznámých délek, propojení s trigonometrií. |
+
+<Aside title="Prerekvizity" type="tip">Bezpečná práce s trojúhelníky — znalost stran, úhlů, výšek. Konstrukce trojúhelníků (SSS, SUS, USU). Základy zlomků a poměrů.</Aside>
+
+## Poznámky
+
+<Aside title="Shodnost = konstrukce">Věty o shodnosti přímo říkají, jaké tři údaje stačí k jednoznačnému sestrojení trojúhelníku. SSS = ze tří stran, SUS = ze dvou stran a úhlu mezi nimi, USU = z jedné strany a dvou přilehlých úhlů. Když dítě chápe shodnost, chápe i smysl konstrukčních úloh.</Aside>
+
+<Aside title="Podobnost je všude">Fotky na telefonu (zoom), mapy, modely budov, technické výkresy — to vše pracuje s podobností. Poměr stran se zachovává, mění se jen velikost.</Aside>
+
+<Aside title="Typická past" type="caution">Záměna shodnosti a podobnosti. Shodné útvary musí mít stejnou velikost — nestačí stejný tvar. A pozor na pořadí vrcholů: trojúhelník ABC je shodný s DEF znamená, že A odpovídá D, B odpovídá E, C odpovídá F.</Aside>
+
+<Aside title="Dulezite" type="danger">Věty o shodnosti platí jen pro trojúhelníky — u čtyřúhelníků nestačí znát strany a úhly ve stejném pořadí (představte si obdélník a rovnoběžník se stejnými stranami). Trojúhelník je „tuhý" útvar — nelze ho deformovat.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 11 (náčrt a konstrukce) — věty o shodnosti určují, kdy je konstrukce trojúhelníku jednoznačná
+- <Badge text="MAT" /> bod 09 (obsah a obvod) — podobné útvary mají obsahy v poměru k², kde k je koeficient podobnosti
+- <Badge text="JAS" /> (mapy, měřítko, plány — praktická podobnost)
+- <Badge text="PUK" /> (výtvarná výchova — proporce, zvětšování/zmenšování předloh)
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli nebo dítě nemělo příležitost ukázat, jak rozumí shodnosti a podobnosti trojúhelníků.</SkillItem>
+  <SkillItem level="novice">
+    Dítě intuitivně chápe „stejný tvar", ale formální věty jsou nejisté.
+    <ul>
+      <li>Pozná, že dva útvary vypadají stejně, ale neumí to formálně zdůvodnit</li>
+      <li>Zná názvy vět (SSS, SUS), ale neví přesně, co znamenají</li>
+      <li>Měřítko na mapě používá, ale nepropojuje ho s podobností</li>
+      <li>Nerozlišuje spolehlivě shodnost a podobnost</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě používá věty o shodnosti a rozumí základům podobnosti.
+    <ul>
+      <li>Správně aplikuje věty o shodnosti trojúhelníků (SSS, SUS, USU)</li>
+      <li>Rozpozná shodné a podobné trojúhelníky ve cvičeních</li>
+      <li>Spočítá koeficient podobnosti a použije ho k výpočtu neznámé strany</li>
+      <li>V reálných situacích (mapy, modely) pracuje s měřítkem</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě samostatně využívá shodnost i podobnost v různých kontextech.
+    <ul>
+      <li>Rozhodne, kterou větu o shodnosti nebo podobnosti v dané situaci použít</li>
+      <li>Využívá podobnost k výpočtu nedostupných vzdáleností (výška stromu, šířka řeky)</li>
+      <li>Chápe vztah mezi koeficientem podobnosti a poměrem obsahů (k²)</li>
+      <li>Zdůvodní, proč pro čtyřúhelníky věty o shodnosti neplatí ve stejné formě</li>
+    </ul>
+  </SkillItem>
+</Skill>

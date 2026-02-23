@@ -1,0 +1,82 @@
+---
+title: "17. Zobrazeni teles"
+sidebar:
+  order: 0
+  label: "Prehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Nacrtne a sestroji obraz jednoduchych teles v rovine." />
+
+## Co to znamena?
+
+Dite dokaze **nakreslit trojrozmerne teleso na papir** tak, aby kresba vypadala prostorove a vystihla tvar a rozmery telesa. Jinymi slovy — umi prevest 3D objekt do 2D obrazku.
+
+Tohle delame vsichni, kdyz kreslime krychli, dum nebo krabici. Ale v matematice to ma pravidla — existuji **zpusoby zobrazeni** (volne rovnobezne promitani, axonometrie), ktere zajisti, ze kresba je nejen hezka, ale i **spravna**. Rovnobezne hrany zustanou rovnobezne, pomery se zachovaji podle dohodnutych pravidel.
+
+Proc je to dulezite? Protoze spousta realne prace funguje pres vykresy — architektura, strojirenstvi, design, nabytek. Dite se uci **cist** technicke obrazky a samo je **vytvareti**. A pri tom rozviji prostorovou predstavivost, ktera je zakladem pro dalsi geometrii.
+
+## Kdy se tomu venovat?
+
+| Rocnik | Doporuceni |
+|--------|-----------|
+| **6.** | **Zacnete zde.** Nacrty od ruky — krychle, kvader. Dite se uci naznacit hloubku a prostorovy dojem. |
+| **7.–8.** | **Prohlubujte.** Volne rovnobezne promitani s pravidly (uhly, zkracovani). Zobrazeni hranolu a jehlanu. |
+| **9.** | Axonometricke pohledy, jednoduche technicke vykresy, kombinace teles. |
+
+<Aside title="Prerekvizity" type="tip">Znalost zakladnich teles (krychle, kvader, hranol, jehlan) a jejich vlastnosti. Zakladni rysovaci dovednosti — prace s pravitkem, kruzitkem a uhelnukem.</Aside>
+
+## Poznamky
+
+<Aside title="Od ruky i s pravitkem">Zacnete nacrty od ruky — dite se uci videt a zachytit prostorovy tvar. Teprve potom prejdete k presnym konstrukcim s pravitkem. Obe dovednosti jsou dulezite.</Aside>
+
+<Aside title="Realne predmety jako predlohy">Nechte dite kreslit podle skutecnych veci — krabice, knihy, lahve. Je to mnohem efektivnejsi nez kreslit podle abstraktnich zadani. Dite vidi, co kresli, a muze porovnat vysledek.</Aside>
+
+<Aside title="Typicka past" type="caution">Dite kresli „co vi" misto „co vidi". Napr. nakresli vsechny steny krychle jako ctverce, protoze vi, ze jsou ctvercove — ale v prostorovem zobrazeni nektere vypadaji jako rovnobezniky. Pomaha porovnavani s fotkou nebo skutecnym predmetem.</Aside>
+
+<Aside title="Dulezite" type="danger">Zobrazeni telesa neni umelecka kresba. Ma pravidla: rovnobezne hrany zustanou rovnobezne, urcite hrany se zkracuji, neviditelne hrany se kresli carkhovane. Tato pravidla je treba dodrzovat.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 15 (zakladni telesa) — dite musi znat telesa, aby je mohlo zobrazit
+- <Badge text="MAT" /> bod 16 (site teles) — sit a zobrazeni jsou dva ruzne zpusoby, jak zachytit teleso na papir
+- <Badge text="PUK" /> (vytvarna vychova) — perspektiva, kresba podle skutecnosti
+- <Badge text="JAS" /> (technika, svet prace) — technicke vykresy, plany
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Tema jsme zatim neotevreli. Dite nemelo prilezitost kreslit telesa na papir systematicky.</SkillItem>
+  <SkillItem level="novice">
+    Dite zkusi nakreslit teleso, ale vysledek neodpovida realite.
+    <ul>
+      <li>Krychli kresli jako ctverec — bez prostoroveho dojmu</li>
+      <li>Nevi, jake hrany zkratit nebo naklonit</li>
+      <li>Nerozlisuje viditelne a neviditelne hrany</li>
+      <li>Kresba je neprehledna, hrany se kriziz nesrozumitelne</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dite zvlada zakladni zobrazeni, u slozitejsich teles jeste tapa.
+    <ul>
+      <li>Nakresli krychli a kvader s prostorovym dojmem</li>
+      <li>Dodrzuje rovnobeznost hran</li>
+      <li>Neviditelne hrany naznaci carkhovane</li>
+      <li>U hranolu a jehlanu jeste obcas chybuje v proporcich</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dite kresli telesa presne a prehledne, vcetne slozitejsich utvaru.
+    <ul>
+      <li>Zobrazuje krychli, kvader, hranol, jehlan, valec v rovnobeznem promitani</li>
+      <li>Dodrzuje pravidla (uhly, zkracovani, carkhovani)</li>
+      <li>Kresba je prehledna, presna a srozumitelna i pro druheho cloveka</li>
+      <li>Dokaze nakreslit i kombinaci teles (napr. dum = kvader + hranol)</li>
+    </ul>
+  </SkillItem>
+</Skill>

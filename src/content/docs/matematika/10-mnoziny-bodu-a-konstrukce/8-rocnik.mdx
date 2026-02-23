@@ -1,0 +1,106 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Konstrukční úloha</dt>
+  <dd>Úloha, kde máme sestrojit geometrický útvar splňující dané podmínky — pouze kružítkem a pravítkem (bez měření úhlů).</dd>
+
+  <dt>Rozbor úlohy</dt>
+  <dd>Prvni krok konstrukce — nakreslíme si náčrtek, identifikujeme neznámé prvky a ke každému přiřadíme množinu bodů. Průnikem množin najdeme řešení.</dd>
+
+  <dt>Postup konstrukce</dt>
+  <dd>Zapsaný seznam kroků — co přesně rýsujeme a proč. Každý krok musí být zdůvodněný.</dd>
+
+  <dt>Diskuze řešení</dt>
+  <dd>Rozbor, kolik řešení úloha má — žádné, jedno, dvě, nebo nekonečně mnoho. Závisí na tom, jak se množiny bodů protínají.</dd>
+
+  <dt>Apolloniova kružnice</dt>
+  <dd>Množina bodů, které mají od dvou daných bodů vzdálenosti v daném poměru (jiném než 1:1). Je to kružnice.</dd>
+
+  <dt>Pás kolem přímky</dt>
+  <dd>Množina bodů ve vzdálenosti ≤ d od přímky. Tvoří pás šířky 2d — d na každou stranu.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Provést rozbor konstrukční úlohy — identifikovat podmínky a přiřadit množiny bodů
+- Sestrojit trojúhelník z různých kombinací prvků (SSS, SUS, USU, Ssú)
+- Zapsat postup konstrukce a zdůvodnit každý krok
+- Provést diskuzi řešení — kolik řešení úloha má a proč
+- Kombinovat více množin bodů (kružnice, osy, přímky) v jedné úloze
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Kde postavit vysílač?
+   Vysílač musí být 5 km od města A a 3 km od města B. Navíc musí být alespoň 1 km od dálnice (přímka). Kde ho postavíte? — Průnik kružnice, kružnice a polopásu.
+
+2. ### Návrh parku
+   Park ve tvaru trojúhelníku — známe dvě strany a úhel mezi nimi. Sestrojte ho. Uprostřed má být fontána (střed kružnice vepsané). — Konstrukce trojúhelníku + aplikace.
+
+3. ### Radar na letišti
+   Dva radary s dosahem 50 km a 30 km. Kde všude zachytí letadlo oba najednou? V průniku dvou kruhů. — Průnik množin bodů v bezpečnosti.
+
+4. ### Optimální trasa
+   Chcete jít od domu k řece a zpět k chatě nejkratší cestou. Kde na řece se zastavit? — Konstrukce využívající osovou souměrnost a množiny bodů.
+
+5. ### Trojúhelníkový pozemek
+   Stavební parcela: známe délku plotu u silnice (8 m), celkový obvod (24 m) a úhel u jednoho rohu (60°). Jaký tvar má pozemek? Sestrojte ho. — Reálná konstrukční úloha.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Konstrukční detektiv
+
+   ⏱️ _1 hodina_
+
+   Série úloh s rostoucí obtížností. U každé: 1) rozbor — jaké množiny bodů potřebuji? 2) náčrtek 3) konstrukce 4) diskuze — kolik je řešení? Začněte lehkými (trojúhelník SSS) a pokračujte k složitějším.
+
+2. ### Kolik řešení?
+
+   ⏱️ _45 minut_
+
+   Zadejte úlohy, které mají 0, 1 nebo 2 řešení. Dítě nejdřív tipne, pak sestrojí a ověří. Příklad: trojúhelník se stranami 3, 4, 8 cm — proč nejde sestrojit? (Trojúhelníková nerovnost.) — Rozvoj geometrické intuice.
+
+3. ### GeoGebra laboratoř
+
+   ⏱️ _1 hodina_
+
+   V GeoGebře dítě sestrojí konstrukci a pak pohybuje vstupními parametry. Jak se mění počet řešení? Kdy průsečík zmizí? — Dynamické pochopení diskuze řešení.
+
+4. ### Stavba mostu
+
+   ⏱️ _1,5 hodiny_
+
+   Dvě břehy řeky (rovnoběžky). Most musí být kolmý na řeku a mít jeden konec 200 m od kostela. Sestrojte, kde bude most. — Aplikace množin bodů v „inženýrském" kontextu.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Konstrukční úlohy](https://www.matematika.cz/konstrukcni-ulohy)<br />
+  Postup řešení a příklady s řešením.
+
+- [GeoGebra](https://www.geogebra.org/geometry)<br />
+  Interaktivní rýsování — ideální pro zkoumání počtu řešení.
+
+- [Euclidea](https://www.euclidea.xyz/) <Badge text="EN" variant="tip" /><br />
+  Gamifikované geometrické konstrukce — postupně rostoucí obtížnost.
+
+- [Matematika.cz — Konstrukce trojúhelníku](https://www.matematika.cz/konstrukce-trojuhelniku)<br />
+  Přehled všech typů konstrukcí trojúhelníku.
+
+- [Art of Problem Solving — Constructions](https://artofproblemsolving.com/wiki/index.php/Compass_and_straightedge_constructions) <Badge text="EN" variant="tip" /><br />
+  Wiki s pokročilejšími konstrukcemi pro zvídavé děti.

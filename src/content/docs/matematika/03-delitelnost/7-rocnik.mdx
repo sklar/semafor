@@ -1,0 +1,103 @@
+---
+title: "7. ročník"
+sidebar:
+  order: 7
+  label: "7. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Prvočíselný rozklad</dt>
+  <dd>Rozložení čísla na součin prvočísel. 60 = 2 × 2 × 3 × 5 = 2² × 3 × 5. Každé složené číslo má právě jeden prvočíselný rozklad (až na pořadí činitelů).</dd>
+
+  <dt>Největší společný dělitel (NSD)</dt>
+  <dd>Největší číslo, které dělí dvě (nebo více) čísla beze zbytku. NSD(12, 18) = 6, protože 6 je největší číslo, které dělí 12 i 18. Používáme ho pro krácení zlomků.</dd>
+
+  <dt>Nejmenší společný násobek (NSN)</dt>
+  <dd>Nejmenší číslo, které je násobkem dvou (nebo více) čísel. NSN(4, 6) = 12, protože 12 je nejmenší číslo dělitelné 4 i 6. Používáme ho pro společný jmenovatel zlomků.</dd>
+
+  <dt>Krácení zlomku</dt>
+  <dd>Dělení čitatele i jmenovatele stejným číslem (jejich NSD). 12/18 = (12÷6)/(18÷6) = 2/3. Zkrácený zlomek je jednodušší, ale vyjadřuje stejnou hodnotu.</dd>
+
+  <dt>Společný jmenovatel</dt>
+  <dd>Pro sčítání zlomků s různými jmenovateli potřebujeme společný jmenovatel — hledáme NSN jmenovatelů. 1/4 + 1/6: NSN(4,6) = 12, takže 3/12 + 2/12 = 5/12.</dd>
+
+  <dt>Rozkladový strom</dt>
+  <dd>Vizuální pomůcka pro prvočíselný rozklad. Číslo nahoře, dělíme ho na dvě větve (jeden dělitel a podíl), pokračujeme, dokud nezůstanou jen prvočísla.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Rozložit číslo na prvočinitele (pomocí rozkladového stromu nebo postupného dělení)
+- Najít NSD dvou čísel pomocí prvočíselného rozkladu
+- Najít NSN dvou čísel pomocí prvočíselného rozkladu
+- Použít NSD pro krácení zlomků
+- Použít NSN pro hledání společného jmenovatele
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Krácení receptu
+   Recept je na 12 porcí, potřebujeme 8. Poměr 8/12 zkrátíme: NSD(8,12) = 4, takže 8/12 = 2/3. Stačí vzít dvě třetiny každé ingredience.
+
+2. ### Společný rozvrh
+   Ema má trénink každých 6 dní, Jakub každých 8 dní. Dnes trénují oba. Za kolik dní se zase potkají? NSN(6,8) = 24 dní.
+
+3. ### Dělení dortu
+   Dort chceme rozdělit tak, aby šel krájet na třetiny i čtvrtiny (pro různě velké porce). Na kolik dílů ho nakrájet? NSN(3,4) = 12 dílů. Třetina = 4 dílky, čtvrtina = 3 dílky.
+
+4. ### Dlaždičkování
+   Místnost 360 × 480 cm. Jakou největší čtvercovou dlaždici použít? NSD(360, 480) = 120 cm. Dlaždice 120 × 120 cm — 3 × 4 = 12 dlaždic.
+
+5. ### Balení dárků
+   Máme 18 čokolád a 24 bonbonů. Chceme vytvořit stejné balíčky (v každém stejný počet čokolád a bonbonů, žádné nezbydou). Kolik balíčků nejvíce? NSD(18,24) = 6. V každém 3 čokolády a 4 bonbony.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Rozkladová soutěž
+
+   ⏱️ _30 minut_
+
+   Připravte 10 čísel (např. 36, 48, 72, 100, 84, 120, 90, 56, 150, 180). Dítě na čas rozloží každé na prvočinitele. Kontrola: vynásobit prvočinitele zpět — vyjde původní číslo?
+
+2. ### NSD a NSN v kuchyni
+
+   ⏱️ _45 minut_
+
+   Vyberte 3 recepty na různý počet porcí. Dítě přepočítává ingredience nahoru i dolů — krátí a rozšiřuje zlomky. U každého přepočtu identifikuje, kde používá NSD a kde NSN.
+
+3. ### Záhadné číslo
+
+   ⏱️ _20–30 minut_
+
+   Vymyslete číslo a dejte dítěti nápovědy: „Je dělitelné 3 a 5, ale ne 2. Leží mezi 30 a 60. Má přesně 4 dělitele." Dítě číslo hádá logickým vylučováním. Pak si vymýšlí záhady pro vás.
+
+4. ### Vizuální NSD
+
+   ⏱️ _30 minut_
+
+   Na čtverečkovaném papíře nakreslete obdélník (např. 12 × 18 čtverečků). Dítě hledá největší čtverec, kterým lze obdélník přesně vydláždit. NSD(12,18) = 6, takže čtverec 6 × 6. Kolik čtverců potřebujeme?
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — NSD a NSN](https://www.matematika.cz/nejmensi-spolecny-nasobek)<br />
+  Výklad s příklady a online cvičeními.
+
+- [Khanova škola — Prvočíselný rozklad](https://cs.khanacademy.org/math/pre-algebra/pre-algebra-factors-multiples/pre-algebra-prime-factorization-primes/v/prime-factorization)<br />
+  Videa o rozkladu na prvočinitele.
+
+- [Math is Fun — Greatest Common Factor](https://www.mathsisfun.com/greatest-common-factor.html) <Badge text="EN" variant="tip" /><br />
+  Interaktivní výklad NSD.
+
+- [Khan Academy — LCM and GCF](https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-factors-and-multiples) <Badge text="EN" variant="tip" /><br />
+  Kompletní kurz NSD a NSN.

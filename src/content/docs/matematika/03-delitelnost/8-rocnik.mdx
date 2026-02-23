@@ -1,0 +1,106 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Dělitelnost součtu a rozdílu</dt>
+  <dd>Pokud a i b jsou dělitelné číslem c, pak i a + b a a − b jsou dělitelné c. Například: 12 a 18 jsou dělitelné 3, takže 12 + 18 = 30 je taky dělitelné 3.</dd>
+
+  <dt>Dělitelnost součinu</dt>
+  <dd>Pokud alespoň jeden činitel je dělitelný číslem c, pak i celý součin je dělitelný c. 7 × 12 je dělitelné 3 (protože 12 je dělitelné 3), i když 7 dělitelné 3 není.</dd>
+
+  <dt>Nesoudělná čísla</dt>
+  <dd>Dvě čísla, jejichž NSD je 1 — nemají žádného společného dělitele kromě jedničky. Například 8 a 15 jsou nesoudělná (NSD = 1). Zlomek 8/15 nelze zkrátit.</dd>
+
+  <dt>Dělitelnost 4, 6, 8, 9</dt>
+  <dd>Dělitelné 4: poslední dvě cifry tvoří číslo dělitelné 4. Dělitelné 9: ciferný součet dělitelný 9. Dělitelné 6: dělitelné 2 a zároveň 3. Dělitelné 8: poslední tři cifry dělitelné 8.</dd>
+
+  <dt>Eukleidův algoritmus</dt>
+  <dd>Rychlý způsob hledání NSD bez prvočíselného rozkladu. NSD(48, 18): 48 ÷ 18 = 2, zbytek 12. NSD(18, 12): 18 ÷ 12 = 1, zbytek 6. NSD(12, 6): 12 ÷ 6 = 2, zbytek 0. NSD = 6.</dd>
+
+  <dt>Základní věta aritmetiky</dt>
+  <dd>Každé přirozené číslo větší než 1 lze jednoznačně rozložit na součin prvočísel (až na pořadí). 360 = 2³ × 3² × 5 a žádný jiný prvočíselný rozklad neexistuje.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Používat rozšířená pravidla dělitelnosti (4, 6, 8, 9)
+- Rozumět dělitelnosti součtu, rozdílu a součinu
+- Poznat nesoudělná čísla a vědět, co to znamená pro zlomky
+- Najít NSD pomocí Eukleidova algoritmu
+- Využívat dělitelnost při řešení slovních úloh
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Organizace turnaje
+   Na turnaj přijelo 36 fotbalistů a 48 basketbalistů. Chceme vytvořit smíšené týmy, kde v každém je stejný počet fotbalistů i basketbalistů. Kolik týmů nejvíce? NSD(36, 48) = 12 týmů.
+
+2. ### Ozubená kola
+   Jedno kolo má 24 zubů, druhé 36. Po kolika otáčkách malého kola se oba zuby zase potkají na stejném místě? NSN(24, 36) = 72. Malé kolo: 72/24 = 3 otáčky, velké: 72/36 = 2 otáčky.
+
+3. ### Rozvrh autobusů
+   Autobus A jezdí každých 12 minut, autobus B každých 18 minut. V 8:00 odjely oba. Kdy znovu odjede oba najednou? NSN(12, 18) = 36 minut → v 8:36.
+
+4. ### Šifrování na internetu
+   Bezpečnost na internetu (HTTPS) je založená na tom, že rozložit obrovské číslo na prvočinitele trvá počítači miliardy let. Malá prvočísla vynásobit umíme snadno — ale zpětný rozklad je extrémně těžký.
+
+5. ### Parkety v sále
+   Sál 720 × 540 cm. Chceme čtvercové parkety co největší. NSD(720, 540) = 180. Parkety 180 × 180 cm = 4 × 3 = 12 parket. A co kdyby parkety měly být obdélníkové?
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Eukleidův algoritmus na papíře
+
+   ⏱️ _30 minut_
+
+   Dítě dostane 8 dvojic čísel a hledá NSD Eukleidovým algoritmem. Porovná s prvočíselným rozkladem — výsledek je stejný, ale který postup byl rychlejší? Kdy se hodí který?
+
+2. ### Ozubená kola z kartonu
+
+   ⏱️ _1–2 hodiny_
+
+   Vystřihněte z kartonu dvě „ozubená kola" (s různým počtem zubů) a připevněte je na špejle. Otáčejte a počítejte, po kolika otáčkách se zuby sejdou. Ověřte výpočtem NSN.
+
+3. ### Kryptografie pro začátečníky
+
+   ⏱️ _45 minut_
+
+   Vysvětlete princip: vynásobte dvě prvočísla (např. 17 × 23 = 391). Dítě dostane číslo 391 a hledá, která dvě prvočísla ho tvoří. U malých čísel to jde, ale co 7 919 × 6 271? Proto je šifrování bezpečné.
+
+4. ### Nesoudělné nebo ne?
+
+   ⏱️ _20 minut_
+
+   Připravte 15 dvojic čísel. Dítě u každé rozhodne, zda jsou nesoudělná (NSD = 1). Pokud ne, najde NSD. Bonus: zlomky s nesoudělnými čísly jsou už ve základním tvaru — propojení s prací se zlomky.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Eukleidův algoritmus](https://www.matematika.cz/eukliduv-algoritmus)<br />
+  Výklad s krokovými příklady.
+
+- [Khanova škola — Společní dělitelé a násobky](https://cs.khanacademy.org/math/pre-algebra/pre-algebra-factors-multiples)<br />
+  Rozšiřující cvičení.
+
+- [Math is Fun — Prime Factorization](https://www.mathsisfun.com/prime-factorization.html) <Badge text="EN" variant="tip" /><br />
+  Interaktivní rozkladový strom.
+
+- [Khan Academy — Cryptography](https://www.khanacademy.org/computing/computer-science/cryptography) <Badge text="EN" variant="tip" /><br />
+  Úvod do kryptografie — jak prvočísla chrání internet.
+
+- [Numberphile — videa o prvočíslech](https://www.youtube.com/user/numberphile) <Badge text="EN" variant="tip" /><br />
+  Fascinující videa o číslech a prvočíslech.

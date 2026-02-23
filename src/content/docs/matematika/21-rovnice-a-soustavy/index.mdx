@@ -1,0 +1,82 @@
+---
+title: "21. Rovnice a soustavy"
+sidebar:
+  order: 0
+  label: "Prehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Formuluje a resi realnou situaci pomoci rovnic a jejich soustav." />
+
+## Co to znamena?
+
+Dite dokaze **prepsat problem z realneho sveta do rovnice** — a pak ji vyresit. Rovnice je vlastne „matematicka veta", ktera rika, ze dve veci se rovnaji. Kdyz dite resi hadanku „Mysli si cislo, pricti 5 a vyjde 12 — jake cislo si myslim?", resi rovnici x + 5 = 12.
+
+Klicove neni jen „resit rovnice" mechanicky, ale umet **preformulovat realnou situaci** do matematickeho jazyka. Kolik kilometru musim ujet, aby cesta stala mene nez 500 Kc? Kolik jablek a hrusek koupim za 200 Kc? Tady uz potrebuji rovnici — nebo dokonce soustavu dvou rovnic.
+
+**Soustava rovnic** resi situace, kde mame **dve nezname** a **dve podminky**. Napr.: koupil jsem jablka a hrusky, celkem 10 kusu za 74 Kc. Jablko stoji 6 Kc, hruska 8 Kc. Kolik jsem koupil jablek a kolik hrusek? Dve rovnice, dve nezname — a jednoznacne reseni.
+
+## Kdy se tomu venovat?
+
+| Rocnik | Doporuceni |
+|--------|-----------|
+| **6.** | **Zacnete zde.** Jednoduche rovnice s jednou neznamou — intuitivne, bez formalnich metod. Hadanky, zkouseni. |
+| **7.–8.** | **Prohlubujte.** Ekvivalentni upravy rovnic, rovnice se zlomky, slovni ulohy. Uvod do soustav. |
+| **9.** | Soustavy dvou rovnic o dvou neznamych, scitaci a dosazovaci metoda. Komplexni slovni ulohy. |
+
+<Aside title="Prerekvizity" type="tip">Bezpecne pocetni operace (scitani, odcitani, nasobeni, deleni vcetne zlomku). Zaklady prace s promennymi — chápe, ze „x" znamená neznanie cislo.</Aside>
+
+## Poznamky
+
+<Aside title="Rovnice je preklad">Nejtezsi neni rovnici vyresit — nejtezsi je ji spravne zapsat. Vetsinu casu venujte „prekladu" ze slovniho zadani do rovnice. Kdyz je rovnice spravne zapsana, reseni je uz jen technika.</Aside>
+
+<Aside title="Zkouska je povinnost">Po kazdem vyreseni rovnice — zkouska. Dosadime reseni zpet do puvodni rovnice a overime, ze leva strana se rovna prave. Trvejte na tom od zacatku, stane se to automatickym.</Aside>
+
+<Aside title="Typicka past" type="caution">Dite zapomene „udelat totez na obou stranach". Rovnice je vahy — co pridam na jednu stranu, musim pridat i na druhou. Vizualni pomucka (skutecne vahy nebo obrazek) pomaha pochopit princip.</Aside>
+
+<Aside title="Dulezite" type="danger">Rovnice neni vyraz. Rovnice MUSI mit znak „=" a neco na obou stranach. Vyraz „2x + 3" neni rovnice. „2x + 3 = 11" je rovnice. Tento rozdil je zakladni.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 1 (pocetni operace) — aritmetika jako zaklad pro reseni rovnic
+- <Badge text="MAT" /> bod 22 (reseni problemu) — rovnice jako nastroj pro reseni slovnich uloh
+- <Badge text="MAT" /> bod 20 (procenta) — ulohy na procenta se casto resi rovnicemi
+- <Badge text="JAS" /> (fyzika — vzorce, ekonomie — vypocty) — rovnice vsude v prirodnich a spolecenskych vedach
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Tema jsme zatim neotevreli. Dite nemelo prilezitost pracovat s rovnicemi systematicky.</SkillItem>
+  <SkillItem level="novice">
+    Dite resi jednoduche rovnice, ale formalní zapis a slozitejsi ulohy mu delaji potize.
+    <ul>
+      <li>Hadanku „mysli si cislo" vyresi zkousenim, ale neumi zapsat rovnici</li>
+      <li>Jednoduchou rovnici (x + 5 = 12) vyresi, ale neumi vysvetlit postup</li>
+      <li>Nerozumi ekvivalentnim upravam — proc „presouvame" na druhou stranu</li>
+      <li>Zapomina na zkousku</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dite resi rovnice s jednou neznamou a zvlada jednodussi slovni ulohy.
+    <ul>
+      <li>Resi lineární rovnice ekvivalentními upravami</li>
+      <li>Preformulujeslovni ulohu do rovnice v jednodussich pripadech</li>
+      <li>Provadi zkousku</li>
+      <li>U soustav rovnic a slozitejsich slovních uloh jeste tapa</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dite samostatne formuluje a resi rovnice i soustavy v ruznych kontextech.
+    <ul>
+      <li>Prevede realnou situaci do rovnice nebo soustavy rovnic</li>
+      <li>Resi soustavy dvou rovnic scitaci i dosazovací metodou</li>
+      <li>Vzdy provadi zkousku a interpretuje vysledek v kontextu ulohy</li>
+      <li>Rovnice pouziva jako prirozeny nastroj pro reseni problemu</li>
+    </ul>
+  </SkillItem>
+</Skill>

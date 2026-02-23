@@ -1,0 +1,103 @@
+---
+title: "7. ročník"
+sidebar:
+  order: 7
+  label: "7. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Zaokrouhlování desetinných čísel</dt>
+  <dd>Stejný princip jako u celých čísel, ale zaokrouhlujeme na desetiny, setiny atd. 3,847 zaokrouhlené na desetiny je 3,8 (sedmička za čtyřkou → dolů? Ne — koukáme na cifru za řádem: 4 → dolů, ale pozor: 3,847 na desetiny → 3,8).</dd>
+
+  <dt>Chyba zaokrouhlení</dt>
+  <dd>Rozdíl mezi přesnou a zaokrouhlenou hodnotou. Když zaokrouhlím 3,847 na 3,8, chyba je 0,047. Čím přesněji zaokrouhluji, tím menší chyba.</dd>
+
+  <dt>Horní a dolní odhad</dt>
+  <dd>Horní odhad — zaokrouhlím tak, aby výsledek byl určitě větší než skutečný. Dolní odhad — aby byl určitě menší. 48 × 12: horní odhad 50 × 12 = 600, dolní odhad 48 × 10 = 480. Skutečný výsledek je mezi nimi.</dd>
+
+  <dt>Odhad procent</dt>
+  <dd>Rychlý výpočet procenta v hlavě. 10 % z 480 = 48. 20 % = dva × 10 % = 96. 5 % = polovina z 10 % = 24. Trik: najdi 10 % a z toho odvozuj.</dd>
+
+  <dt>Rozumná přesnost</dt>
+  <dd>Přesnost, která odpovídá situaci. Vzdálenost na mapě stačí na kilometry, délku prkna potřebujeme na milimetry, teplotu stačí na stupně.</dd>
+
+  <dt>Kontrola kalkulačkou</dt>
+  <dd>Postup: (1) odhadni výsledek, (2) spočítej na kalkulačce, (3) porovnej s odhadem. Pokud se výsledek výrazně liší, hledej chybu v zadání.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Zaokrouhlit desetinné číslo na požadovaný počet desetinných míst
+- Odhadnout výsledek násobení a dělení desetinných čísel
+- Spočítat v hlavě 10 %, 20 %, 50 % z daného čísla (a odvodit jiná procenta)
+- Rozlišit horní a dolní odhad a vědět, kdy který použít
+- Posoudit, jaká přesnost je v dané situaci rozumná
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Sleva v obchodě
+   Bunda stojí 1 290 Kč a je na ni sleva 30 %. Kolik ušetříme? Odhad: 10 % = 129, takže 30 % ≈ 390 Kč. Zaplatíme asi 900 Kč. Na kalkulačce: 903 Kč. Odhad seděl.
+
+2. ### Cena benzínu na cestu
+   Auto spotřebuje 6,5 litru na 100 km, jedeme 340 km, benzín stojí 38,90 Kč/l. Odhad: 7 × 3,4 × 40 ≈ 950 Kč. Přesně: 859,26 Kč. Odhad je vyšší — to je v pořádku, raději počítáme s rezervou.
+
+3. ### Průměrná známka
+   Dítě má z testů 78, 85, 62, 91, 73 bodů. Průměr? Odhad: pět čísel kolem 80, takže průměr ≈ 78. Přesně: 77,8. Zaokrouhleno na celé: 78. Odhad funguje.
+
+4. ### Měření pokoje
+   Pokoj je 4,35 × 3,82 m. Potřebujeme koberec. Odhad: 4,5 × 4 = 18 m². Přesně: 16,62 m². Odhad je záměrně vyšší — kupujeme raději víc koberce než míň.
+
+5. ### Populace města
+   Říkáme „Brno má 400 tisíc obyvatel", ne „Brno má 382 405 obyvatel". V jakých situacích stačí zaokrouhlená hodnota a kdy potřebujeme přesné číslo?
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Slevový maraton
+
+   ⏱️ _45 minut_
+
+   Vytiskněte si letáky s cenami a slevami (nebo je najděte online). Dítě u každé položky odhadne sníženou cenu v hlavě (pomocí 10% triku), pak ověří kalkulačkou. Kdo je přesnější — rodič nebo dítě?
+
+2. ### Cestovní rozpočet
+
+   ⏱️ _1 hodina_
+
+   Naplánujte fiktivní víkendový výlet. Dítě odhaduje náklady: benzín, ubytování, jídlo, vstupné. Nejdřív hrubý odhad (zaokrouhleno), pak přesnější výpočet. O kolik se liší? Jaká přesnost je pro plánování rozpočtu dostatečná?
+
+3. ### Horní a dolní odhad
+
+   ⏱️ _30 minut_
+
+   Připravte 8 příkladů s násobením (např. 37 × 84). Dítě pro každý najde horní odhad (zaokrouhlí obě čísla nahoru) a dolní odhad (obě dolů). Skutečný výsledek musí ležet mezi nimi. Pak ověří kalkulačkou.
+
+4. ### Desetinný kvíz
+
+   ⏱️ _20 minut_
+
+   Napište 10 desetinných čísel. Dítě je zaokrouhlí na celé, na desetiny a na setiny. Které zaokrouhlení změní číslo nejvíc? Nejméně? Kdy na přesnosti záleží?
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Zaokrouhlování desetinných čísel](https://www.matematika.cz/zaokrouhlovani-desetinnych-cisel)<br />
+  Výklad a cvičení pro zaokrouhlování desetinných čísel.
+
+- [Khanova škola — Procenta](https://cs.khanacademy.org/math/pre-algebra/xb4832e56:percentages)<br />
+  Videa a interaktivní cvičení pro počítání s procenty.
+
+- [Math is Fun — Estimation Tips and Tricks](https://www.mathsisfun.com/estimation-tips-tricks.html) <Badge text="EN" variant="tip" /><br />
+  Praktické tipy pro odhadování.
+
+- [Khan Academy — Rounding Decimals](https://www.khanacademy.org/math/cc-fifth-grade-math/powers-of-ten/imp-rounding-decimals/v/rounding-decimals) <Badge text="EN" variant="tip" /><br />
+  Zaokrouhlování desetinných čísel — videa a cvičení.

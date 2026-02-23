@@ -1,0 +1,99 @@
+---
+title: "8. rocnik"
+sidebar:
+  order: 8
+  label: "8. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Rovnice se zlomky</dt>
+  <dd>Rovnice, ktera obsahuje zlomky. Napr. x/3 + 2 = 5 nebo (2x − 1)/4 = 3. Resime vynaasobenim spolecnym jmenovatelem — zlomky zmizi a ziskame beznou linearni rovnici.</dd>
+
+  <dt>Spolecny jmenovatel</dt>
+  <dd>Nejmensi cislo, ktere je nasobkem vsech jmenovatelu v rovnici. U zlomku s jmenovateli 3 a 4 je spolecny jmenovatel 12. Vynasobenim celé rovnice cislem 12 zlomky odstranime.</dd>
+
+  <dt>Soustava rovnic</dt>
+  <dd>Dve (nebo vice) rovnice se dvema (nebo vice) neznamymi, ktere plati zaroven. Resenim je dvojice cisel, ktera splnuje obe rovnice soucasne. Napr. x + y = 10 a x − y = 4 → x = 7, y = 3.</dd>
+
+  <dt>Dosazovaci metoda</dt>
+  <dd>Zpusob reseni soustavy: z jedne rovnice vyjadrime jednu neznamou (napr. y = 10 − x) a dosadime do druhe. Tím ziskame rovnici s jednou neznamou, kterou uz umime resit.</dd>
+
+  <dt>Nerovnice</dt>
+  <dd>Podobna rovnici, ale misto „=" pouziva znaky < (mensi), > (vetsi), ≤ (mensi nebo rovno), ≥ (vetsi nebo rovno). Resenim neni jedno cislo, ale cela mnozina cisel. Napr. x + 3 > 7 → x > 4.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Resit rovnice se zlomky (vynnasobenim spolecnym jmenovatelem)
+- Pochopit princip soustavy dvou rovnic — proc potrebujeme dve rovnice pro dve nezname
+- Resit jednoduchou soustavu dosazovaci metodou
+- Resit jednoduche nerovnice
+- Formulovat slozitejsi slovni ulohy jako rovnice nebo soustavy
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Jablka a hrusky
+   Koupil jsem jablka a hrusky, celkem 10 kusu za 74 Kc. Jablko stoji 6 Kc, hruska 8 Kc. Kolik jsem koupil jablek a kolik hrusek? Soustava: x + y = 10 a 6x + 8y = 74. Reseni: 3 jablka, 7 hrusek.
+
+2. ### Dva tarify
+   Tarif A: 0 Kc mesicne + 3 Kc/min. Tarif B: 150 Kc mesicne + 1 Kc/min. Od kolika minut se vyplati tarif B? Rovnice: 3x = 150 + x → 2x = 150 → x = 75 minut. Nerovnice: od 76 minut je B levnejsi.
+
+3. ### Slouceni dvou skupin
+   V prvni skupine je o 4 deti vic nez ve druhe. Dohromady je jich 28. Kolik je v kazde? x + (x + 4) = 28 → x = 12. Skupiny: 12 a 16 deti.
+
+4. ### Smesovani caju
+   Cerny caj stoji 80 Kc/100 g, zeleny 120 Kc/100 g. Chceme 200 g smesi za 95 Kc/100 g. Kolik gramu kazdeho? Soustava: x + y = 200 a 80x + 120y = 19 000.
+
+5. ### Pracovni doba
+   Pexeso (oprava po hodine) stoji 250 Kc/h. Elektrikar 350 Kc/h. Oba pracovali dohromady 8 hodin a celkem stalo 2 400 Kc. Kolik hodin pracoval kazdy?
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Obchod s rovnicemi
+
+   ⏱️ _1 hodina_
+
+   Simulace obchodu: dite „nakupuje" produkty za nezname ceny. Z uctenek (x + 2y = 50, 3x + y = 45) musi zjistit cenu kazdeho produktu. Resi soustavy rovnic s realnou motivaci.
+
+2. ### Tarifova kalkulacka
+
+   ⏱️ _45 minut_
+
+   Dite porovnava 3 realne mobilni tarify. Pro kazdy zapise rovnici nakladu (fixni cast + promenna). Najde body, kde se tarify vyrovnaji (rovnice). Nakresli graf. Ktery tarif se vyplati pro malego, stredniho a velkeho uzivatele?
+
+3. ### Detektivni hadanka
+
+   ⏱️ _30 minut_
+
+   „Detektiv zjistil: podezrely A a B byli na miste celkem 5 hodin. A byl 2× dele nez B. Kolik hodin byl kazdy?" Pripravte 8 takovych hadanek — kazda vede na soustavu. Dite resi jako detektiv.
+
+4. ### Rovnice se zlomky — trenink
+
+   ⏱️ _30 minut_
+
+   8 rovnic se zlomky serazenych od jednoduchych po slozite. Dite u kazde: najde spolecny jmenovatel, vynasobi, zjednodusi, vyresi, provede zkousku. Cil: automatizovat postup „zbavit se zlomku".
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Soustavy rovnic](https://www.matematika.cz/soustavy-rovnic)<br />
+  Dosazovaci a scitaci metoda s priklady.
+- [Matematika.cz — Nerovnice](https://www.matematika.cz/nerovnice)<br />
+  Zaklady nerovnic s priklady.
+- [Khanova skola — Soustavy rovnic](https://cs.khanacademy.org/math/algebra/x2f8bb11595b61c86:systems-of-equations)<br />
+  Videa a cviceni o soustavach v cestine.
+- [Desmos — Graphing Calculator](https://www.desmos.com/calculator) <Badge text="EN" variant="tip" /><br />
+  Graficka kalkulacka — zadejte dve rovnice a uvidite prunik (reseni soustavy).
+- [Khan Academy — Systems of Equations](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:systems-of-equations) <Badge text="EN" variant="tip" /><br />
+  Kompletni kurz o soustavach rovnic.

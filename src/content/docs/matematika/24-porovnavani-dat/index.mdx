@@ -1,0 +1,82 @@
+---
+title: "24. Porovnávání dat"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Porovnává soubory dat." />
+
+## Co to znamená?
+
+Dítě umí vzít dva nebo více souborů dat a **smysluplně je porovnat**. Nejde jen o to říct „tohle číslo je větší" — jde o to použít správné nástroje (průměr, medián, rozsah) a vyvodit z porovnání závěr.
+
+V praxi to znamená: *Jsou výsledky chlapců a dívek ve sportovním testu opravdu rozdílné, nebo se to jen zdá?* *Byl letošní leden teplejší než loňský?* *Která prodejna má lepší ceny — ta levnější v průměru, nebo ta s menšími výkyvy?* Porovnávání dat učí dítě **argumentovat čísly** místo dojmů.
+
+Tato dovednost přímo navazuje na vyhledávání a zpracování dat (bod 23). Teprve když dítě umí data sebrat a uspořádat, může je začít porovnávat. A teprve porovnáním zjistí, jestli mezi daty existují zajímavé rozdíly nebo vzory.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Jednoduché porovnání dvou souborů — větší/menší průměr, větší/menší rozsah. Vizuální porovnání grafů vedle sebe. |
+| **7.–8.** | **Prohlubujte.** Porovnání pomocí mediánu a průměru, rozsahu a rozložení. Kdy je průměr zavádějící? Porovnání skupin v kontextu (na obyvatele, v procentech). |
+| **9.** | Komplexní porovnání s využitím více statistických ukazatelů. Argumentace daty — formulování a ověřování hypotéz. |
+
+<Aside title="Prerekvizity" type="tip">Zvládnuté vyhledávání a zpracování dat (bod 23), výpočet průměru, znalost mediánu a rozsahu. Procenta (pro relativní porovnání).</Aside>
+
+## Poznámky
+
+<Aside title="Porovnávejte to, co se porovnávat dá">Porovnávat průměrnou teplotu v Praze a počet turistů v Brně nemá smysl. Ale porovnávat teploty ve dvou městech nebo návštěvnost dvou muzeí — to ano. Učte dítě rozlišovat smysluplné a nesmyslné porovnání.</Aside>
+
+<Aside title="Grafy vedle sebe">Nejlepší způsob, jak porovnat dva soubory dat, je položit grafy vedle sebe (nebo do jednoho grafu s legendou). Vizuální porovnání je rychlejší a intuitivnější než porovnávání čísel v tabulce.</Aside>
+
+<Aside title="Typická past" type="caution">Porovnávat absolutní čísla bez kontextu. „Česko má víc nakažených než Island" — samozřejmě, má 30× víc obyvatel. Vždy přepočítat na srovnatelnou jednotku (na obyvatele, na km², v procentech).</Aside>
+
+<Aside title="Dulezite" type="danger">Stejná data, různý příběh. Ze stejného datového souboru lze vyčíst protichůdné závěry — záleží na tom, jaký ukazatel zvolíme a jak data prezentujeme. Učte dítě být k číslům kritické.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 23 (vyhledávání dat) — bez sebraných a zpracovaných dat nelze nic porovnávat
+- <Badge text="MAT" /> bod 25 (přímá a nepřímá úměrnost) — porovnávání poměrů a vztahů mezi veličinami
+- <Badge text="MAT" /> bod 1 (početní operace) — výpočty pro porovnání (rozdíly, podíly, procenta)
+- <Badge text="JAS" /> (mediální gramotnost) — kritické hodnocení srovnání v médiích
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost porovnávat soubory dat pomocí statistických ukazatelů.</SkillItem>
+  <SkillItem level="novice">
+    Dítě porovnává data intuitivně, ale bez systematického přístupu.
+    <ul>
+      <li>Pozná, který soubor má „větší čísla", ale nepoužívá průměr ani medián</li>
+      <li>Porovnává vizuálně (vyšší sloupec v grafu), ale neargumentuje čísly</li>
+      <li>Nerozlišuje absolutní a relativní porovnání</li>
+      <li>Závěry formuluje vágně: „tohle je lepší" bez zdůvodnění</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě porovnává data pomocí základních ukazatelů, v jednodušších případech samostatně.
+    <ul>
+      <li>Spočítá průměr a rozsah dvou souborů a porovná je</li>
+      <li>Vytvoří porovnávací graf (dva soubory v jednom grafu)</li>
+      <li>Chápe rozdíl mezi absolutním a relativním porovnáním</li>
+      <li>Formuluje závěry, ale u složitějších dat potřebuje pomoc</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě samostatně a kriticky porovnává datové soubory.
+    <ul>
+      <li>Volí vhodný ukazatel pro porovnání (průměr, medián, rozsah) a zdůvodní proč</li>
+      <li>Porovnává data v kontextu — přepočítává na srovnatelnou jednotku</li>
+      <li>Formuluje a ověřuje hypotézy o rozdílech mezi soubory</li>
+      <li>Rozpozná zavádějící porovnání v médiích a vysvětlí, v čem je problém</li>
+    </ul>
+  </SkillItem>
+</Skill>

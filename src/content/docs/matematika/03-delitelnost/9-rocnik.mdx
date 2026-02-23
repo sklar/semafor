@@ -1,0 +1,106 @@
+---
+title: "9. ročník"
+sidebar:
+  order: 9
+  label: "9. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Dělitelnost v algebře</dt>
+  <dd>Pravidla dělitelnosti platí i pro výrazy s proměnnými. Pokud a je dělitelné 3 a b je dělitelné 3, pak a + b je dělitelné 3. Totéž platí pro algebraické výrazy: 6x + 9y je vždy dělitelné 3.</dd>
+
+  <dt>Rozklad na součin</dt>
+  <dd>Hledání společného dělitele ve výrazu — „vytýkání". 12x + 18y = 6(2x + 3y). NSD(12, 18) = 6, takže 6 vytkneme. Princip je stejný jako u čísel.</dd>
+
+  <dt>Čínská věta o zbytcích</dt>
+  <dd>Pokud znám zbytek po dělení dvěma nesoudělnými čísly, mohu jednoznačně určit zbytek po dělení jejich součinem. Číslo dává zbytek 2 po dělení 3 a zbytek 1 po dělení 5 → je to 11 (nebo 11 + 15k).</dd>
+
+  <dt>Modulární aritmetika</dt>
+  <dd>Počítání se zbytky. „Je 3 hodiny a za 14 hodin bude…?" 3 + 14 = 17, 17 mod 12 = 5 → bude 5 hodin. Hodiny fungují modulo 12, dny v týdnu modulo 7.</dd>
+
+  <dt>Dokonalé číslo</dt>
+  <dd>Číslo, jehož dělitelé (kromě sebe sama) dávají v součtu právě to číslo. 6 = 1 + 2 + 3. 28 = 1 + 2 + 4 + 7 + 14. Další je 496. Dokonalých čísel je velmi málo a nejsou dobře prozkoumaná.</dd>
+
+  <dt>Goldachova hypotéza</dt>
+  <dd>Každé sudé číslo větší než 2 lze zapsat jako součet dvou prvočísel. 4 = 2 + 2, 6 = 3 + 3, 8 = 3 + 5, 10 = 5 + 5. Nikdo to dodnes nedokázal — jeden z nejslavnějších nevyřešených problémů.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Využívat dělitelnost při zjednodušování algebraických výrazů
+- Rozumět modulární aritmetice v praktických kontextech (hodiny, kalendář)
+- Řešit složitější úlohy kombinující dělitelnost s dalšími oblastmi matematiky
+- Argumentovat o dělitelnosti — zdůvodnit, proč číslo je nebo není dělitelné
+- Vidět dělitelnost jako přirozenou součást matematického myšlení
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Kalendářní cykly
+   Rok má 365 dní = 52 týdnů + 1 den. Pokud je letos pondělí 1. ledna, příští rok to bude úterý (posun o 1 den). Přestupný rok posune o 2. Za kolik let se kalendář zopakuje? Modulární aritmetika v praxi.
+
+2. ### ISBN kód
+   Každá kniha má ISBN — 13místný kód. Poslední cifra je kontrolní: spočítá se ze zbylých cifer pomocí dělitelnosti. Pokud se při opisování spletete v jedné cifře, kontrola to odhalí.
+
+3. ### Vytýkání při výpočtech
+   Potřebujeme spočítat 47 × 8 + 53 × 8. Nemusíme počítat dvakrát — vytkneme 8: (47 + 53) × 8 = 100 × 8 = 800. Dělitelnost a rozklad na součin šetří práci.
+
+4. ### Směnný provoz
+   Tři zaměstnanci mají směny po 5, 6 a 8 dnech. Dnes pracují všichni. Za kolik dní budou zase všichni ve stejný den? NSN(5, 6, 8) = 120 dní.
+
+5. ### Digitální hodiny
+   Hodiny ukazují čas modulo 24 (nebo 12). Teď je 22:00 a za 7 hodin bude… 29 mod 24 = 5:00. Celá denní rutina je modulární aritmetika, jen o ní nemluvíme tímto slovem.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Modulární hodiny
+
+   ⏱️ _30 minut_
+
+   Dítě řeší úlohy typu: „Je středa. Jaký den bude za 100 dní?" (100 mod 7 = 2, středa + 2 = pátek). „Je 15:00. Kolik hodin bude za 50 hodin?" Trénuje modulární myšlení.
+
+2. ### ISBN detektiv
+
+   ⏱️ _45 minut_
+
+   Vezměte 5 knih. Dítě opíše jejich ISBN a ověří kontrolní cifru podle algoritmu. Pak zkusí „rozbít" kód — změní jednu cifru a zkontroluje, zda kontrola odhalí chybu. Jak funguje ochrana proti překlepům?
+
+3. ### Goldachova laboratoř
+
+   ⏱️ _30–45 minut_
+
+   Dítě bere sudá čísla od 4 do 100 a hledá, jako součet kterých dvou prvočísel je lze zapsat. Má každé sudé číslo víc možností? Existuje vzor? Připomeňte, že tohle nikdo nedokázal obecně — dítě pracuje na stejném problému jako nejlepší matematici.
+
+4. ### Algebraický rozklad
+
+   ⏱️ _30 minut_
+
+   Připravte 10 numerických výpočtů, které jdou zjednodušit vytýkáním: 7 × 13 + 7 × 17, 25 × 48 + 25 × 52 atd. Dítě hledá společný dělitel a zjednodušuje. Přechod od čísel k algebraickým výrazům.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Dělitelnost přirozených čísel](https://www.matematika.cz/delitelnost-prirozenych-cisel)<br />
+  Souhrnný výklad pro pokročilé.
+
+- [Khanova škola — Modulární aritmetika](https://cs.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic)<br />
+  Úvod do modulární aritmetiky.
+
+- [Numberphile — Perfect Numbers](https://www.youtube.com/watch?v=ZfKTD5lvToE) <Badge text="EN" variant="tip" /><br />
+  Video o dokonalých číslech.
+
+- [Khan Academy — Modular Arithmetic](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic) <Badge text="EN" variant="tip" /><br />
+  Kompletní kurz modulární aritmetiky.
+
+- [Project Euler](https://projecteuler.net/) <Badge text="EN" variant="tip" /><br />
+  Matematické úlohy řešitelné programováním — mnoho z nich staví na dělitelnosti.

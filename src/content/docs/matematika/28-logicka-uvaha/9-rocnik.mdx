@@ -1,0 +1,103 @@
+---
+title: "9. ročník"
+sidebar:
+  order: 9
+  label: "9. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Pravdepodobnost</dt>
+  <dd>Číslo od 0 do 1 (nebo 0 % až 100 %), které říká, jak „pravděpodobná" je událost. 0 = nemožná, 1 = jistá. Pravděpodobnost hodů šestky na kostce = 1/6 ≈ 17 %.</dd>
+
+  <dt>Nezavisle jevy</dt>
+  <dd>Dva jevy jsou nezávislé, když výsledek jednoho neovlivní druhý. Hod mincí a hod kostkou jsou nezávislé. Pravděpodobnost obou najednou = součin jejich pravděpodobností.</dd>
+
+  <dt>Doplnkova pravdepodobnost</dt>
+  <dd>Pravděpodobnost, že se něco nestane = 1 − pravděpodobnost, že se to stane. Snazší počítat „nestane se" a odečíst od 1, než počítat všechny případy „stane se".</dd>
+
+  <dt>Ocekavana hodnota</dt>
+  <dd>Průměrný výsledek, kdybychom experiment opakovali mnohokrát. Hod kostkou: očekávaná hodnota = (1+2+3+4+5+6)/6 = 3,5. Neznamená, že hodíme 3,5 — ale průměr mnoha hodů se tam blíží.</dd>
+
+  <dt>Formalni dukaz</dt>
+  <dd>Logický argument, kde každý krok vyplývá z předchozího na základě pravidel. Na ZŠ v jednodušší formě — ale princip je stejný: tvrzení, zdůvodnění, závěr. Žádné „to je přece jasné".</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Spočítat pravděpodobnost jednoduché události (hod kostkou, tah z balíčku)
+- Aplikovat pravidlo součinu na nezávislé jevy
+- Používat doplňkovou pravděpodobnost
+- Rozlišit „pravděpodobné" od „jisté" — chápat, že i nepravděpodobná věc se může stát
+- Sestavit přesvědčivý logický argument s explicitními kroky
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Kostky a karetní hry
+   Jaká je pravděpodobnost, že hodíte dvě šestky za sebou? 1/6 × 1/6 = 1/36 ≈ 2,8 %. Jaká je pravděpodobnost, že vytáhnete z balíčku 2 esa za sebou?
+
+2. ### Předpověď počasí
+   „70 % šance deště" — co to přesně znamená? Že 7 z 10 dnů s touto předpovědí opravdu prší. Neznamená to, že bude 70 % dne pršet.
+
+3. ### Pojištění
+   Pojišťovna ví, že pravděpodobnost nehody je 2 %. Pojistka stojí 5 000 Kč, škoda při nehodě je 200 000 Kč. Očekávaná hodnota škody = 0,02 × 200 000 = 4 000 Kč. Proč pojistka stojí víc?
+
+4. ### Genetika
+   Oba rodiče nesou gen pro modré oči (recesivní). Pravděpodobnost modrookého dítěte = 1/4. Co u dvou dětí? Jaká je pravděpodobnost, že alespoň jedno bude mít modré oči?
+
+5. ### Fair play v loterii
+   Loterie: ticket stojí 50 Kč, hlavní výhra 10 000 000 Kč, pravděpodobnost 1/14 000 000. Očekávaná hodnota = 10 000 000/14 000 000 ≈ 0,71 Kč. Za 50 Kč ticket získáte „v průměru" 71 haléřů. Je loterie „férová"?
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Hazardní laboratoř
+
+   ⏱️ _1–2 hodiny_
+
+   Experimentovat s kostkami a mincemi. Hodit 100× kostkou a zapsat výsledky. Porovnat skutečné četnosti s teoretickými (1/6 pro každé číslo). Jak blízko jsou? Co kdybychom hodili 1 000×?
+
+2. ### Měl bych se pojistit?
+
+   ⏱️ _1 hodina_
+
+   Vybrat si životní situaci (cestovní pojištění, pojištění telefonu). Zjistit cenu pojistky a pravděpodobnost události. Spočítat očekávanou hodnotu. Vyplatí se pojistka? Kdy ano, kdy ne?
+
+3. ### Logický tribunál
+
+   ⏱️ _1–2 hodiny_
+
+   Připravit „kauzu" s důkazy a indicemi. Dítě hraje roli soudce/detektiva — musí z indicií logicky vyvodit závěr. Každý krok argumentu musí být zdůvodněný. Žádné „to je jasné" — jen „z toho plyne, protože…"
+
+4. ### Pravděpodobnost vs. jistota
+
+   ⏱️ _45 minut_
+
+   Diskuze: „Je bezpečnější letadlo, nebo auto?" Data říkají letadlo — ale lidé se víc bojí letadla. Proč? Diskuze o vnímání rizika vs. skutečné pravděpodobnosti. Logika vs. emoce.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Pravděpodobnost](https://www.matematika.cz/pravdepodobnost)<br />
+  Základy pravděpodobnosti s příklady a cvičeními.
+
+- [Khanova škola — Pravděpodobnost](https://cs.khanacademy.org/math/statistics-probability/probability-library)<br />
+  Komplexní kurz pravděpodobnosti v češtině.
+
+- [Seeing Theory — Probability](https://seeing-theory.brown.edu/basic-probability/index.html) <Badge text="EN" variant="tip" /><br />
+  Interaktivní vizualizace pravděpodobnostních konceptů (anglicky).
+
+- [3Blue1Brown — Probability](https://www.youtube.com/watch?v=HZGCoVF3YvM) <Badge text="EN" variant="tip" /><br />
+  Vizuálně skvělá videa o pravděpodobnosti a statistice (anglicky).
+
+- [Khan Academy — Probability](https://www.khanacademy.org/math/statistics-probability/probability-library) <Badge text="EN" variant="tip" /><br />
+  Kompletní kurz pravděpodobnosti s interaktivními cvičeními (anglicky).

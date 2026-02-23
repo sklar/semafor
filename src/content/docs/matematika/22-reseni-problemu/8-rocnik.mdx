@@ -1,0 +1,99 @@
+---
+title: "8. rocnik"
+sidebar:
+  order: 8
+  label: "8. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Vicekrokovy problem</dt>
+  <dd>Problem, ktery vyzaduje vice nez jeden vypocetni krok. Nejdriv spocitam jedno, vysledek pouziju v dalsim kroku, pak v dalsim. Klicove je neztratiut nit — vedeni, co je dalsi krok.</dd>
+
+  <dt>Rozlozeni na podproblemy</dt>
+  <dd>Slozity problem rozdelim na mensi, zvladnutelne casti. Kazdy podproblem vyresim zvlast, pak vysledky spojim. Jako stavet dum — nejdriv zaklady, pak steny, pak strecha.</dd>
+
+  <dt>Protipriklad</dt>
+  <dd>Priklad, ktery vyvraci tvrzeni. „Vsechna suda cisla jsou delitelna 4" — protipriklad: 6 (sude, ale neni delitelne 4). Jeden protipriklad staci k vyvraceni. Silny nastroj argumentace.</dd>
+
+  <dt>Dulkaz (zakladni)</dt>
+  <dd>Logicky retez tvrzeni, ktery ukazuje, ze neco MUSI platit (ne jen ze to „vycha" v par prikladech). Pokud x je sude, pak x = 2k pro nejake cele k. Pak x² = 4k² — taky sude. Presvedcivy argument.</dd>
+
+  <dt>Zobecneni</dt>
+  <dd>Od konkretniho prikladu k obecnemu pravidlu. Soucet 1 + 3 = 4, 1 + 3 + 5 = 9, 1 + 3 + 5 + 7 = 16. Vzdy vyjde druha mocnina! Soucet prvnich n lichych cisel = n². To je zobecneni.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Rozlozit slozity problem na mensi casti a resit systematicky
+- Pracovat s racionalni cisly (zlomky, desetinna cisla, procenta) ve slovnich ulohach
+- Najit protipriklad k nepravdivemu tvrzeni
+- Zobecnit vzor z konkretních prikladu
+- Argumentovat a zduvodnit svuj postup — nejen „spocital jsem", ale „proto, ze..."
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Rodinny rozpocet
+   Mesicni prijem 45 000 Kc. Najem 13 500 Kc, jidlo 9 000 Kc, pojisteni 2 800 Kc, sport deti 1 500 Kc, benzin 3 200 Kc, sporeni 5 000 Kc. Kolik zbude? Staci na dovolenou za 35 000 Kc (za 3 mesice nasporene z „volnych" penez)?
+
+2. ### Vyber tarifu
+   Internet: tarif A 499 Kc/mesic, rychlost 100 Mbit. Tarif B 699 Kc/mesic, rychlost 250 Mbit. Tarif C 399 Kc/mesic + 2 Kc za kazdy GB nad 100 GB. Rodina spotrebuje 180 GB mesicne. Co je nejvyhodnejsi? (C: 399 + 80 × 2 = 559 Kc.)
+
+3. ### Ciselna tvrzeni
+   „Soucin dvou zapornych cisel je vzdy kladny." Pravda? Proc? „Soucet dvou prvocisel je vzdy sude." Pravda? Ne — protipriklad: 2 + 3 = 5 (liche). Kriticke mysleni o matematickych tvrzeniach.
+
+4. ### Optimalizace cesty
+   Z domu do skoly vedou 3 cesty: A (2,1 km po rovine), B (1,8 km do kopce), C (2,5 km po cyklostezce). Pesky rychlost 5 km/h na rovine, 3,5 km/h do kopce. Na kole 15 km/h. Ktera cesta je nejrychlejsi pesky? Na kole?
+
+5. ### Vzor v ciselnem trojuhelniku
+   Pascaluv trojuhelnik: 1 / 1 1 / 1 2 1 / 1 3 3 1 / ... Jaky je vzor? Co kdyz secktu kazdy radek? (1, 2, 4, 8, 16 — mocniny dvou!) Zobecneni: soucet n-teho radku = 2ⁿ⁻¹.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Rozpoctova simulace
+
+   ⏱️ _1–2 hodiny_
+
+   Dite dostane fiktivni rodinny rozpocet (prijem, fixni vydaje). Behem „roku" (12 kol) prichazeji udalosti: auto se rozbilo (−15 000), bonus v praci (+8 000), zdrazeni energii (+500/mesic). Dite musi reagovat, prepocítavat, plánovat. Realny vicekrokovy problem.
+
+2. ### Pravda nebo lez?
+
+   ⏱️ _45 minut_
+
+   Pripravte 12 matematickych tvrzeni (nektere pravdive, nektere ne). Dite u kazdeho rozhodne a zduvodni. U nepravdivych najde protipriklad. U pravdivych zkusi jednoduche zduvodneni. Trenujesie logicka argumentace.
+
+3. ### Vzory a zobecneni
+
+   ⏱️ _45 minut_
+
+   Dejte dítěti 5 ciselnych vzorcu k proskouzakumani. U kazdeho: najdi vzor, zapis pravidlo, over na dalsich cisláech, zkus zobecnit. Napr.: soucet prvnich n prirozenih cisel = n(n+1)/2. Plati to vzdy? Proc?
+
+4. ### Resitelsky workshop
+
+   ⏱️ _1 hodina_
+
+   3–4 slozitejsi ulohy. Dite u kazde: 1) zapise, co vi a co hleda, 2) rozlozi na podproblemy, 3) zvoli strategii, 4) resi krok po kroku, 5) kontroluje, 6) argumentuje. Cil: systematicky pristup jako navyk.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Slovni ulohy](https://www.matematika.cz/slovni-ulohy)<br />
+  Pokrocile slovni ulohy s resenim.
+- [Matematicky korespondenicky seminar](https://mks.mff.cuni.cz/)<br />
+  Cesky korespondenickny seminar — zajimave ulohy pro motivovane deti.
+- [Logicke hadanky — Reckon](https://www.reckon.cz)<br />
+  Cesky web s hlavolamy a logickymi ulohami.
+- [Nrich — Secondary Problems](https://nrich.maths.org/secondary) <Badge text="EN" variant="tip" /><br />
+  Problemy pro stredoskolaky z Cambridge — ruzne obtiznosti.
+- [Project Euler](https://projecteuler.net/) <Badge text="EN" variant="tip" /><br />
+  Matematicke problemy resitelne programovanim — pro pokrocile (propojeni s informatikou).

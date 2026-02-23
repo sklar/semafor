@@ -1,0 +1,106 @@
+---
+title: "9. ročník"
+sidebar:
+  order: 9
+  label: "9. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Analytický popis množiny bodů</dt>
+  <dd>Popis množiny bodů pomocí rovnice nebo nerovnice. Kružnice o středu [m, n] a poloměru r: (x − m)² + (y − n)² = r².</dd>
+
+  <dt>Apolloniova kružnice</dt>
+  <dd>Množina bodů, jejichž vzdálenosti od dvou pevných bodů jsou v konstantním poměru k ≠ 1. Tvoří kružnici (pro k = 1 je to osa úsečky).</dd>
+
+  <dt>Geometrické místo bodů</dt>
+  <dd>Jiný název pro množinu všech bodů dané vlastnosti — používá se ve formálnější matematice.</dd>
+
+  <dt>Průnik a sjednocení množin</dt>
+  <dd>Průnik = body splňující obě podmínky najednou. Sjednocení = body splňující alespoň jednu podmínku.</dd>
+
+  <dt>Diskuze řešení podle parametru</dt>
+  <dd>Jak se mění počet řešení, když měníme vstupní údaj (např. délku strany)? Pro jaké hodnoty má úloha 0, 1, 2 řešení?</dd>
+
+  <dt>Parabola jako množina bodů</dt>
+  <dd>Množina bodů stejně vzdálených od bodu (ohnisko) a přímky (řídící přímka). Setkáte se s ní v analytické geometrii na střední škole.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Řešit složitější konstrukční úlohy se třemi a více podmínkami
+- Provést kompletní rozbor, postup, konstrukci i diskuzi
+- Diskutovat řešitelnost úlohy v závislosti na parametru
+- Chápat analytický popis základních množin bodů (kružnice, přímka)
+- Propojit geometrické a algebraické myšlení
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Plánování města
+   Nová čtvrť: škola musí být ≤ 1 km od každého domu, park ≤ 500 m od školy, obchod na hlavní ulici. Kde co postavit? — Komplexní úloha s více množinami bodů.
+
+2. ### Satelitní pokrytí
+   Tři satelity, každý pokrývá kruhovou oblast. Kde je pokrytí od všech tří? Kde jen od dvou? — Průniky a sjednocení kruhů.
+
+3. ### Parabolická anténa
+   Signál dopadá rovnoběžně, anténa ho soustředí do ohniska. Tvar antény je parabola — množina bodů stejně vzdálených od ohniska a řídící přímky. — Parabola v technologii.
+
+4. ### Seismologie
+   Zemětřesení zaznamenají 3 stanice. Každá změří vzdálenost od epicentra → 3 kružnice. Epicentrum = průsečík. — Reálná triangulace.
+
+5. ### Optimální umístění skladu
+   Tři továrny, sklad má minimalizovat součet vzdáleností. Kde ho postavit? (Fermatův bod trojúhelníku.) — Pokročilá aplikace pro zvídavé.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Parametrická konstrukce
+
+   ⏱️ _1 hodina_
+
+   Trojúhelník ABC: |AB| = 8 cm, výška na AB = 5 cm, |BC| = d. Pro jaké hodnoty d existuje trojúhelník? Kdy má úloha dvě řešení? Jedno? Žádné? Dítě zkouší různá d a mapuje výsledky. — Diskuze řešení podle parametru.
+
+2. ### Od geometrie k algebře
+
+   ⏱️ _1 hodina_
+
+   V souřadnicové soustavě: kružnice x² + y² = 25 a přímka y = 3. Kde se protínají? Dítě vyřeší algebraicky i graficky (v GeoGebře). Co když přímka je y = 6? — Propojení geometrie a algebry.
+
+3. ### Městský plánovač
+
+   ⏱️ _2 hodiny_
+
+   Dítě navrhne malé město na papíře. Zadání: 3 obytné zóny, škola (max. 1 km od každé zóny), park (min. 200 m od hlavní silnice), obchod (na hlavní silnici, max. 500 m od školy). Narýsuje množiny bodů a najde řešení. — Komplexní projekt.
+
+4. ### Křivky jako množiny bodů
+
+   ⏱️ _45 minut_
+
+   Dítě v GeoGebře experimentuje: co je množina bodů stejně vzdálených od bodu a přímky? (Parabola.) Od dvou bodů v poměru 2:1? (Apolloniova kružnice.) — Objevování nových množin bodů.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Konstrukční úlohy pokročilé](https://www.matematika.cz/konstrukcni-ulohy)<br />
+  Složitější příklady s kompletním řešením.
+
+- [GeoGebra — analytická geometrie](https://www.geogebra.org/graphing)<br />
+  Grafický kalkulátor — rovnice kružnic a přímek.
+
+- [Desmos](https://www.desmos.com/calculator)<br />
+  Vizualizace rovnic — kružnice, paraboly, průsečíky.
+
+- [3Blue1Brown — Essence of linear algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) <Badge text="EN" variant="tip" /><br />
+  Pro zvídavé — vizuální lineární algebra jako příprava na analytickou geometrii.
+
+- [Brilliant.org — Geometry](https://brilliant.org/courses/geometry-fundamentals/) <Badge text="EN" variant="tip" /><br />
+  Interaktivní úlohy na množiny bodů a konstrukce.

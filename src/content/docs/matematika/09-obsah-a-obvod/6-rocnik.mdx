@@ -1,0 +1,103 @@
+---
+title: "6. ročník"
+sidebar:
+  order: 6
+  label: "6. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Obvod</dt>
+  <dd>Délka okraje rovinného útvaru — kdybychom kolem něj obtáhli provázek, obvod je délka toho provázku.</dd>
+
+  <dt>Obsah</dt>
+  <dd>Velikost plochy útvaru — kolik čtvercových jednotek (např. cm²) se do něj vejde.</dd>
+
+  <dt>Čtvereční jednotky</dt>
+  <dd>Jednotky pro měření obsahu: mm², cm², dm², m². Jeden cm² je čtvereček o straně 1 cm.</dd>
+
+  <dt>Výška trojúhelníku</dt>
+  <dd>Kolmá vzdálenost od vrcholu k protější straně (základně). Potřebujeme ji pro výpočet obsahu trojúhelníku.</dd>
+
+  <dt>Základna</dt>
+  <dd>Strana útvaru, ke které měříme výšku. U trojúhelníku si můžeme jako základnu zvolit libovolnou stranu.</dd>
+
+  <dt>Převod jednotek obsahu</dt>
+  <dd>1 dm² = 100 cm², 1 m² = 100 dm² = 10 000 cm². Pozor — převodní faktor je vždy násobek 100, ne 10.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Spočítat obvod obdélníku, čtverce a trojúhelníku sečtením všech stran
+- Spočítat obsah obdélníku (a × b) a čtverce (a × a)
+- Spočítat obsah trojúhelníku (a × v / 2) a umět vysvětlit, proč dělíme dvěma
+- Převádět mezi cm², dm² a m²
+- Odhadnout obsah a obvod jednoduchého útvaru dřív, než začne počítat
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Koberec do pokoje
+   Dětský pokoj má rozměry 3,5 m × 4 m. Kolik metrů čtverečních koberce potřebujete? A kolik metrů lišty kolem dokola? — Obsah vs. obvod v jedné úloze.
+
+2. ### Papír na dárek
+   Zabalte krabici — kolik papíru spotřebujete? Změřte strany a spočítejte plochy jednotlivých obdélníků. — Praktické měření a sčítání obsahů.
+
+3. ### Záhon na zahradě
+   Trojúhelníkový záhon u plotu — kolik zeminy potřebujete (obsah) a kolik obrubníků (obvod)? — Trojúhelník v praxi.
+
+4. ### Dlaždice na podlahu
+   Koupelna 2 m × 3 m, dlaždice 30 × 30 cm. Kolik dlaždic potřebujete? — Propojení obsahu s dělením.
+
+5. ### Nátěr dveří
+   Kolik barvy potřebujete na natření dveří? Změřte dveře a spočítejte obsah. Na plechovce je uvedena vydatnost v m² na litr. — Reálná aplikace s jednotkami.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Pokojový geometr
+
+   ⏱️ _1 hodina_
+
+   Dítě změří svůj pokoj (délka, šířka), spočítá obsah podlahy a obvod stěn. Pak nakreslí půdorys v měřítku 1:50. Pokud je pokoj nepravidelný (výklenek, šikmina), tím lépe — musí ho rozdělit na obdélníky.
+
+2. ### Trojúhelníky v obdélníku
+
+   ⏱️ _30 minut_
+
+   Na čtverečkovaném papíře narýsujte obdélník a různými způsoby ho rozdělte na dva trojúhelníky. Spočítejte obsah každého trojúhelníku. Proč je to vždy polovina? — Pochopení vzorce pro obsah trojúhelníku.
+
+3. ### Odhad a měření
+
+   ⏱️ _45 minut_
+
+   Vyberte 5 předmětů v domácnosti (knížka, stůl, okno, dlaždice, talíř). Dítě nejdřív odhadne obvod a obsah, pak změří a spočítá. Jak přesné byly odhady? — Budování geometrické intuice.
+
+4. ### Jednotky obsahu — skládačka
+
+   ⏱️ _30 minut_
+
+   Vystříhejte čtverec 1 dm × 1 dm. Kolik čtverečků 1 cm × 1 cm se do něj vejde? Dítě si fyzicky ověří, že 1 dm² = 100 cm². Pak zkuste: kolik dm² je 1 m²?
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Obsah a obvod](https://www.matematika.cz/obsah-obvod)<br />
+  Přehled vzorců s obrázky a příklady.
+
+- [GeoGebra — interaktivní geometrie](https://www.geogebra.org/geometry)<br />
+  Rýsování útvarů a okamžitý výpočet obsahu a obvodu.
+
+- [Khan Academy — Area and perimeter](https://www.khanacademy.org/math/geometry-home/geometry-area-perimeter) <Badge text="EN" variant="tip" /><br />
+  Video lekce s vizuálními vysvětleními.
+
+- [Mathigon — Polypad](https://mathigon.org/polypad) <Badge text="EN" variant="tip" /><br />
+  Virtuální manipulativy — skládání tvarů a zkoumání obsahu.

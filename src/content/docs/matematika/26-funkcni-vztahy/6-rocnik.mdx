@@ -1,0 +1,103 @@
+---
+title: "6. ročník"
+sidebar:
+  order: 6
+  label: "6. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Vstup a výstup</dt>
+  <dd>Vstup je číslo, které „zadáme" do pravidla. Výstup je to, co nám pravidlo vrátí. Třeba pravidlo „vynásob dvěma": vstup 5 → výstup 10, vstup 3 → výstup 6.</dd>
+
+  <dt>Pravidlo (předpis)</dt>
+  <dd>Popis toho, co s číslem uděláme — „přičti 4", „vynásob třemi a odečti 1". Každé pravidlo dává pro stejný vstup vždy stejný výstup.</dd>
+
+  <dt>Tabulka hodnot</dt>
+  <dd>Dva řádky (nebo sloupce): jeden pro vstupy, druhý pro výstupy. Z tabulky můžeme vyčíst pravidlo — stačí si všimnout vzoru.</dd>
+
+  <dt>Souřadnice bodu</dt>
+  <dd>Dvojice čísel [x, y], která říká, kde bod leží. První číslo (x) říká, jak daleko doprava, druhé (y) jak daleko nahoru. Bod [3, 5] je 3 doprava a 5 nahoru.</dd>
+
+  <dt>Souřadnicová soustava</dt>
+  <dd>Mřížka se dvěma osami (vodorovná = osa x, svislá = osa y). Do ní zakreslujeme body podle jejich souřadnic. Jako mapa s GPS souřadnicemi.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Doplnit chybějící hodnoty v tabulce podle pravidla (vzoru)
+- Odhalit pravidlo z tabulky hodnot („pokaždé se přičte 3")
+- Zakreslit body do souřadnicové soustavy podle souřadnic
+- Přečíst souřadnice bodu z grafu
+- Popsat jednoduchý vztah slovy: „Výstup je vždy o 5 víc než vstup"
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Automat na lízátka
+   Vhodíš 10 Kč, vypadne 1 lízátko. Vhodíš 20 Kč, vypadnou 2. Kolik lízátek za 50 Kč? Tabulka: peníze → lízátka. Pravidlo: počet = peníze ÷ 10.
+
+2. ### Věk a třída
+   Kolik je ti let, když jsi v 6. třídě? V 7.? V 9.? Tabulka: třída → věk. Pravidlo: věk = třída + 6 (přibližně). Platí to vždy?
+
+3. ### Schodiště
+   Každý schod má 18 cm. Po 1 schodu jsi 18 cm vysoko, po 2 schodech 36 cm, po 10 schodech 180 cm. Tabulka a pravidlo: výška = 18 × počet schodů.
+
+4. ### Teplota během dne
+   Ráno 5 °C, v 10 hodin 12 °C, v poledne 18 °C, večer 10 °C. Zapsat do tabulky (čas → teplota) a zakreslit body do souřadnicové soustavy.
+
+5. ### Kapesné a měsíce
+   Dítě dostává 200 Kč měsíčně a šetří vše. Po 1 měsíci 200 Kč, po 2 měsících 400 Kč. Tabulka, pravidlo, zakreslení bodů.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Hádej pravidlo
+
+   ⏱️ _30 minut_
+
+   Jeden hráč vymyslí pravidlo (třeba „vynásob 3 a přičti 1"). Druhý říká vstupy, první odpovídá výstupy. Druhý hráč hádá pravidlo. Kdo uhádne z méně pokusů?
+
+2. ### Tabulka a body
+
+   ⏱️ _45 minut_
+
+   Vybrat 3 jednoduchá pravidla (y = x + 3, y = 2x, y = 10 − x). Pro každé vytvořit tabulku 5 hodnot a zakreslit body do souřadnicové soustavy. Leží body na přímce?
+
+3. ### Funkční stroj
+
+   ⏱️ _30 minut_
+
+   Nakreslit na papír „stroj" (krabice se vstupem a výstupem). Napsat dovnitř pravidlo. Rodič podává kartičky s čísly — dítě vrací výstup. Pak si role vymění.
+
+4. ### Grafy kolem nás
+
+   ⏱️ _30 minut_
+
+   Najít v domácnosti 3 příklady vztahů, které by šly zapsat do tabulky: čas vaření a teplota jídla, počet lidí a počet talířů, hodiny a teplota venku. Zapsat do tabulky a zkusit zakreslit.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Khanova škola — Souřadnicová soustava](https://cs.khanacademy.org/math/basic-geo/basic-geo-coord-plane)<br />
+  Zakreslování bodů do souřadnicové soustavy — videa a cvičení v češtině.
+
+- [Matematika.cz — Funkce](https://www.matematika.cz/funkce)<br />
+  Úvod do funkcí s příklady a grafy.
+
+- [GeoGebra — Souřadnicová soustava](https://www.geogebra.org/graphing)<br />
+  Interaktivní nástroj pro zakreslování bodů a grafů.
+
+- [Math is Fun — Function Machine](https://www.mathsisfun.com/sets/function.html) <Badge text="EN" variant="tip" /><br />
+  Co je funkce — vysvětleno jako „stroj" (anglicky).
+
+- [Khan Academy — Coordinate Plane](https://www.khanacademy.org/math/cc-fifth-grade-math/imp-geometry-3/imp-coordinate-plane/v/graphing-points-exercise) <Badge text="EN" variant="tip" /><br />
+  Souřadnicová soustava a zakreslování bodů (anglicky).

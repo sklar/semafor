@@ -1,0 +1,106 @@
+---
+title: "7. ročník"
+sidebar:
+  order: 7
+  label: "7. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Osa úhlu</dt>
+  <dd>Polopřímka, která dělí úhel na dvě stejné části. Každý bod na ose úhlu je stejně daleko od obou ramen úhlu.</dd>
+
+  <dt>Kružnice opsaná trojúhelníku</dt>
+  <dd>Kružnice, která prochází všemi třemi vrcholy trojúhelníku. Její střed leží v průsečíku os stran.</dd>
+
+  <dt>Kružnice vepsaná trojúhelníku</dt>
+  <dd>Kružnice, která se dotýká všech tří stran trojúhelníku zevnitř. Její střed leží v průsečíku os úhlů.</dd>
+
+  <dt>Thaletova kružnice</dt>
+  <dd>Kružnice, jejímž průměrem je úsečka AB. Každý bod na této kružnici (kromě A a B) „vidí" úsečku AB pod pravým úhlem.</dd>
+
+  <dt>Průsečík množin bodů</dt>
+  <dd>Bod (nebo body), kde se dvě množiny bodů protínají. Tento bod splňuje obě podmínky najednou.</dd>
+
+  <dt>Konstrukce trojúhelníku</dt>
+  <dd>Sestrojení trojúhelníku ze zadaných prvků (strany, úhly, výšky) pomocí kružítka a pravítka. Klíčem je rozpoznat, které množiny bodů použít.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Sestrojit osu úhlu a vědět, co znamená (body stejně daleko od obou ramen)
+- Znát Thaletovu kružnici a její vlastnost (pravý úhel)
+- Sestrojit trojúhelník ze tří stran (SSS) pomocí kružnic
+- Najít střed kružnice opsané trojúhelníku (průsečík os stran)
+- V jednoduché úloze rozpoznat potřebné množiny bodů
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Kde postavit nemocnici?
+   Tři vesnice tvoří trojúhelník. Nemocnice má být stejně daleko od všech tří. Kde ji postavit? V průsečíku os stran — středu kružnice opsané. — Reálná aplikace osy úsečky.
+
+2. ### Kruhový objezd mezi třemi ulicemi
+   Tři ulice se sbíhají. Kruhový objezd se má dotýkat všech tří — to je kružnice vepsaná trojúhelníku. — Osa úhlu v dopravním plánování.
+
+3. ### Pravý úhel bez úhelníku
+   Tesař potřebuje pravý úhel. Narýsuje půlkružnici nad úsečkou a z libovolného bodu na ní vede přímky ke koncům — vždy dostane 90°. To je Thaletova věta! — Historicky starý trik.
+
+4. ### Triangulace polohy
+   GPS určuje polohu ze vzdáleností od satelitů. Každý satelit definuje kružnici — vaše poloha je průsečík kružnic. — Průnik množin bodů v technologii.
+
+5. ### Dělení dortu
+   Kulatý dort, tři lidé chtějí stejný díl. Kde vést řezy? Osy úhlů 120° ve středu — každý dostane třetinu. — Osa úhlu v kuchyni.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Thaletova věta experimentálně
+
+   ⏱️ _45 minut_
+
+   Narýsujte úsečku AB a nad ní půlkružnici. Dítě zvolí 5 různých bodů C na půlkružnici a u každého změří úhel ACB. Co zjistí? Vždy 90°. Pak zkusí bod mimo kružnici — úhel je jiný. — Experimentální ověření Thaletovy věty.
+
+2. ### Konstrukce trojúhelníku ze tří stran
+
+   ⏱️ _30 minut_
+
+   Strany a = 7 cm, b = 5 cm, c = 6 cm. Dítě narýsuje stranu c, pak kružnici o poloměru a z jednoho konce a kružnici o poloměru b z druhého. Průsečík = třetí vrchol. Proč to funguje? — Průnik dvou kružnic.
+
+3. ### Najdi středy
+
+   ⏱️ _1 hodina_
+
+   Dítě narýsuje trojúhelník a najde: a) střed kružnice opsané (průsečík os stran), b) střed kružnice vepsané (průsečík os úhlů), c) těžiště (průsečík těžnic). Jsou to různé body! — Porovnání tří „středů" trojúhelníku.
+
+4. ### Navigační výzva
+
+   ⏱️ _45 minut_
+
+   Na mapě: „Jsi 500 m od kostela a 300 m od řeky." Dítě narýsuje kružnici (500 m od kostela) a rovnoběžku (300 m od řeky). Průsečíky = možné polohy. Kolik jich je? — Množiny bodů v orientaci.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Thaletova věta](https://www.matematika.cz/thaletova-veta)<br />
+  Vysvětlení s obrázky a příklady.
+
+- [GeoGebra — Thaletova kružnice](https://www.geogebra.org/m/yPExUf7b)<br />
+  Interaktivní applet pro experimentování s Thaletovou větou.
+
+- [Matematika.cz — Osa úhlu](https://www.matematika.cz/osa-uhlu)<br />
+  Konstrukce a vlastnosti osy úhlu.
+
+- [Euclidea](https://www.euclidea.xyz/) <Badge text="EN" variant="tip" /><br />
+  Hra — geometrické konstrukce jen kružítkem a pravítkem. Návyková a vzdělávací.
+
+- [Khan Academy — Triangle construction](https://www.khanacademy.org/math/geometry/hs-geo-congruence) <Badge text="EN" variant="tip" /><br />
+  Konstrukce trojúhelníků — video návody.

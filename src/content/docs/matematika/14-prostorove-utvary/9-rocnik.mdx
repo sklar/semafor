@@ -1,0 +1,106 @@
+---
+title: "9. ročník"
+sidebar:
+  order: 9
+  label: "9. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Eulerův vzorec</dt>
+  <dd>Pro každý konvexní mnohostěn platí: V − H + S = 2, kde V = počet vrcholů, H = počet hran, S = počet stěn. Krychle: 8 − 12 + 6 = 2. Platí vždy!</dd>
+
+  <dt>Konvexní těleso</dt>
+  <dd>Těleso, kde úsečka spojující libovolné dva body uvnitř leží celá uvnitř — žádné „prohlubně" nebo „výčnělky".</dd>
+
+  <dt>Rovnoběžné promítání</dt>
+  <dd>Způsob zobrazení 3D tělesa na papír (2D). Rovnoběžné hrany zůstávají rovnoběžné, ale úhly a délky se mohou zkreslovat.</dd>
+
+  <dt>Volné rovnoběžné promítání</dt>
+  <dd>Typ promítání, kde přední stěna se zobrazí v reálné velikosti a „odcházející" hrany se kreslí pod úhlem 45° v poloviční délce.</dd>
+
+  <dt>Komolý jehlan/kužel</dt>
+  <dd>Jehlan nebo kužel s uříznutou špičkou — řez rovnoběžný s podstavou. Vzniknou dvě podstavy (malá nahoře, velká dole).</dd>
+
+  <dt>Duální tělesa</dt>
+  <dd>Dvojice těles, kde jedno vznikne z druhého spojením středů stěn. Krychle ↔ osmistěn, dvanáctistěn ↔ dvacetistěn. Čtyřstěn je duální sám sobě.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Aplikovat Eulerův vzorec na libovolný konvexní mnohostěn
+- Zobrazit těleso v rovnoběžném promítání (volném)
+- Klasifikovat tělesa systematicky — mnohostěny vs. rotační tělesa
+- Popsat komolá tělesa a jejich vlastnosti
+- Propojit vlastnosti těles s výpočty objemu a povrchu
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Architektonické modely
+   Architekti kreslí budovy v rovnoběžném promítání (axonometrii) — 3D pohled na papíře. Naučit se číst i kreslit tyto výkresy je praktická dovednost. — Promítání v profesi.
+
+2. ### Geodetická kopule
+   Kopule z trojúhelníků (geodesic dome) — aproximace koule mnohostěnem. Čím víc trojúhelníků, tím víc to vypadá jako koule. Eulerův vzorec platí pro každou verzi. — Architektura a geometrie.
+
+3. ### Komolý kužel — kbelík
+   Kbelík na vodu = komolý kužel. Nahoře širší, dole užší. Kolik vody se do něj vejde? — Komolé těleso v praxi.
+
+4. ### Krystalografie
+   Krystaly minerálů mají tvar mnohostěnů — pyrit tvoří krychle, fluorit osmistěny, granát dvanáctistěny. Geometrie určuje vzhled minerálu. — Tělesa v přírodě.
+
+5. ### 3D tisk
+   Každý 3D model je rozložen na trojúhelníky (mesh). Eulerův vzorec pomáhá ověřit, že model je „uzavřený" a dá se vytisknout. — Moderní technologie a geometrie.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Eulerův vzorec
+
+   ⏱️ _45 minut_
+
+   Dítě ověří Eulerův vzorec na 8 různých tělesech: krychle, čtyřstěn, osmistěn, trojboký hranol, čtyřboký jehlan, pětiboký hranol, dvanáctistěn, dvacetistěn. Vždy V − H + S = 2. Funguje to pro válec? (Ne — válec není mnohostěn.) — Pochopení rozsahu platnosti.
+
+2. ### Kreslení v promítání
+
+   ⏱️ _1,5 hodiny_
+
+   Dítě nakreslí v rovnoběžném promítání: a) krychli, b) kvádr, c) trojboký hranol, d) čtyřboký jehlan. Přední stěna v reálné velikosti, „odcházející" hrany pod 45° v poloviční délce. Viditelné hrany plnou čarou, neviditelné čárkovaně. — Technické kreslení.
+
+3. ### Duální tělesa
+
+   ⏱️ _1 hodina_
+
+   Dítě vezme krychli (z papíru nebo plastelíny) a najde středy všech 6 stěn. Spojí je — co vznikne? Osmistěn! Pak totéž s osmistěnem — vznikne krychle. Duální dvojice. — Překvapivá symetrie.
+
+4. ### 3D design
+
+   ⏱️ _2 hodiny_
+
+   V Tinkercad (online 3D editor) dítě navrhne jednoduchý objekt skládáním základních těles — kvádrů, válců, kuželů, koulí. Popíše, která tělesa použilo a jaké mají vlastnosti. Volitelně: vytiskněte na 3D tiskárně. — Praktická aplikace znalosti těles.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Eulerův vzorec](https://www.matematika.cz/euleruv-vzorec-pro-mnohosteny)<br />
+  Vzorec s příklady a důkazem.
+
+- [GeoGebra — 3D](https://www.geogebra.org/3d)<br />
+  Interaktivní 3D modely s Eulerovým vzorcem.
+
+- [Tinkercad](https://www.tinkercad.com/) <Badge text="EN" variant="tip" /><br />
+  Online 3D editor — navrhování objektů z základních těles.
+
+- [Mathigon — Polyhedra](https://mathigon.org/course/polyhedra) <Badge text="EN" variant="tip" /><br />
+  Interaktivní kurz mnohostěnů — Platónská tělesa, Eulerův vzorec, duální tělesa.
+
+- [Matematika.cz — Rovnoběžné promítání](https://www.matematika.cz/rovnobezne-promitani)<br />
+  Jak kreslit tělesa na papír.

@@ -1,0 +1,100 @@
+---
+title: "9. rocnik"
+sidebar:
+  order: 9
+  label: "9. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Komplexni uloha</dt>
+  <dd>Uloha, ktera vyzaduje kombinaci vice geometrickych poznatku a vice vypocetnich kroku. Napr.: navrhnete nadrz o danem objemu, spocitejte povrch a naklady na material — potrebujete objem, povrch, prevod jednotek i aritmetiku.</dd>
+
+  <dt>Geometricky model</dt>
+  <dd>Zjednoduseny geometricky popis realne situace. Mistnost = kvader, strecha = hranol, studna = valec. Prvni krok aplikacni ulohy: rozpoznat, jaky geometricky utvar situaci nejlepe popisuje.</dd>
+
+  <dt>Prevod jednotek obsahu a objemu</dt>
+  <dd>1 m² = 10 000 cm². 1 m³ = 1 000 000 cm³ = 1 000 dm³ = 1 000 litru. Chyba v prevodu = chyba o rady velikosti. Toto musi sedet.</dd>
+
+  <dt>Goniometrie (zaklady)</dt>
+  <dd>Vztahy mezi uhly a stranami v pravouhlem trojuhelniku — sinus, kosinus, tangens. Rozsireni Pythagorovy vety: kdyz zname uhel a jednu stranu, muzeme spocitat ostatni strany.</dd>
+
+  <dt>Optimalizacni uloha</dt>
+  <dd>Hledani rozmeru, ktere daji nejlepsi vysledek — napr. maximalni objem pri danem povrchu, minimalni materialnina dany objem. V praxi: co je nejupornejsi tvar obalu?</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Resit komplexni aplikacni ulohy o vice krocich
+- Vytvorit geometricky model realne situace
+- Kombinovat rovinnou a prostorovou geometrii v jedne uloze
+- Pouzit goniometricke funkce v jednoduchych ulohach
+- Resit jednoduche optimalizacni problemy (najit nejlepsi rozmery)
+- Formulovat vlastni ulohy na zaklade realnych situaci
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Rekonstrukce pokoje
+   Pokoj 4,5 × 3,8 × 2,7 m. Spocitejte: objem vzduchu (pro klimatizaci), plochu sten minus okna a dvere (pro barvu), plochu podlahy (pro parkety), delku list (pro obvod). Kolik to vse bude stat?
+
+2. ### Zahradni jezirko
+   Jezirko ma tvar komoleho kuzele — horni prumer 2,5 m, spodni 1,5 m, hloubka 0,8 m. Kolik litru vody? Kolik m² folie na dno a steny? Toto je realna uloha pro kazdeho zahra dnikare.
+
+3. ### Solarni panely na strechu
+   Strecha meri 12 × 8 m, sklon 30°. Jaka je skutecna plocha (ne pudorysna)? Kolik panelu 1,7 × 1,0 m se vejde? Kolik energie vyrobia? (Panel = 400 W, 4 hodiny slunce denne.)
+
+4. ### Nadrz na destovou vodu
+   Rodina potrebuje nadrz o objemu 3 000 litru. Jaké rozmery ma mit valcovita nadrz, aby se vesla do prostoru 1,5 × 1,5 m? (Polomer max. 0,75 m → vyska = ?)
+
+5. ### Planovani cesty
+   Na mape v meritku 1:50 000 meri cesta 14 cm. Skutecna vzdalenost? Cesta vede do kopce — prevyseni 300 m na vodorovnou vzdalenost 5 km. Jaka je skutecna (sikma) delka? (Pythagorova veta.)
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Projekt „Novy pokoj"
+
+   ⏱️ _3–4 hodiny_
+
+   Dite navrhne kompletni rekonstrukci sveho pokoje. Zmeri vsechny rozmery, nakresli pudorys v meritku, navrhne rozmisteni nabytku (vejde se?), spocita mnozstvi barvy, podlahoviny, list. Vytvori rozpocet s realnyni cenami. Prezentuje rodine.
+
+2. ### Geometrie v terenu
+
+   ⏱️ _2 hodiny_
+
+   Vyjdete ven s pasmem a uhlednikem. Dite zmeri vysku stromu (pomoci stinu a pomeru), sirku reky (pomoci podobnych trojuhelniku), sklon kopce. Vse zaznamena a spocita — geometrie bez ucebnice.
+
+3. ### Optimalizace obalu
+
+   ⏱️ _1 hodina_
+
+   Pro daný objem (napr. 500 ml) navrhněte obal ruznych tvaru: kvader, valec, koule. Ktery ma nejmensi povrch? (= nejmene materialu.) Proc jsou plechovky kulateé? Proc jsou krabice hranate? Diskuse o kompromisu mezi matematickou optimalitou a praktickym designem.
+
+4. ### Stavebni kalkulator
+
+   ⏱️ _1–2 hodiny_
+
+   Dite vytvori tabulku (Excel/Google Sheets), ktera po zadani rozmeru mistnosti spocita: objem, plochu sten, plochu podlahy, mnozstvi barvy a podlahoviny. Propoji geometrii s informatickymi dovednostmi.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Goniometrie](https://www.matematika.cz/goniometrie)<br />
+  Uvod do goniometrickych funkci s priklady.
+- [Matematika.cz — Aplikacni ulohy](https://www.matematika.cz/slovni-ulohy-geometrie)<br />
+  Sbirka slovnich uloh z geometrie s resenim.
+- [Desmos — Geometrie](https://www.desmos.com/geometry)<br />
+  Online geometricky nastroj pro konstrukce a experimentovani.
+- [Khan Academy — Trigonometry](https://www.khanacademy.org/math/trigonometry) <Badge text="EN" variant="tip" /><br />
+  Kompletni kurz goniometrie od zakladu.
+- [Math is Fun — Trigonometry](https://www.mathsisfun.com/algebra/trigonometry.html) <Badge text="EN" variant="tip" /><br />
+  Srozumitelny uvod do goniometrie s interaktivnimi ukazkami.

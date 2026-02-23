@@ -1,0 +1,103 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Nerovnice</dt>
+  <dd>Jako rovnice, ale místo „=" je „menší než", „větší než" nebo „nejvýše". 2x + 3 &lt; 15 říká: hledám čísla, pro která je výsledek menší než 15. Řešení může být celý interval.</dd>
+
+  <dt>Optimalizace</dt>
+  <dd>Hledání nejlepšího řešení za daných podmínek. Jaké rozměry záhonu dají největší plochu při daném obvodu? Která trasa je nejkratší? Který tarif je nejlevnější?</dd>
+
+  <dt>Omezujici podminka</dt>
+  <dd>Pravidlo, které musíme dodržet. „Rozpočet je 5 000 Kč" je omezující podmínka. „Zavazadlo nesmí vážit víc než 20 kg" je omezující podmínka. Řešení musí podmínku splnit.</dd>
+
+  <dt>Soustava rovnic (v kontextu)</dt>
+  <dd>Dvě rovnice se dvěma neznámými. „Petr a Jana mají dohromady 500 Kč. Petr má o 100 víc než Jana." Kolik má každý? x + y = 500 a x = y + 100.</dd>
+
+  <dt>Citlivost modelu</dt>
+  <dd>Jak moc se změní výsledek, když trochu změníme vstup. Pokud malá změna vstupu (cena benzínu +5 %) výrazně změní výsledek (celková cena cesty), model je citlivý na tento vstup.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Sestavit a řešit jednoduchou nerovnici ze slovního zadání
+- Formulovat optimalizační úlohu: co chci maximalizovat/minimalizovat za jakých podmínek
+- Sestavit soustavu dvou rovnic ze slovního zadání
+- Posoudit citlivost modelu — co se stane, když změním předpoklady
+- Rozlišit přesný výpočet od odhadu a vědět, kdy stačí odhad
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Balení kufru
+   Limit 20 kg. Oblečení 8 kg, boty 3 kg, toaletní potřeby 2 kg. Kolik kilogramů suvenýrů si můžeš přivézt? Nerovnice: 8 + 3 + 2 + x ≤ 20.
+
+2. ### Optimální záhon
+   Máme 20 metrů pletiva na plot. Jaké rozměry obdélníkového záhonu dají největší plochu? (Spoiler: čtverec 5 × 5 = 25 m². Obdélník 2 × 8 = 16 m².)
+
+3. ### Dva pracovníci
+   Adam natře plot za 6 hodin, Bára za 4 hodiny. Za jak dlouho ho natřou společně? Adam udělá 1/6 za hodinu, Bára 1/4. Dohromady 1/6 + 1/4 = 5/12 za hodinu → 12/5 = 2,4 hodiny.
+
+4. ### Investiční rozhodování
+   Ušetřili jsme 50 000 Kč. Spořicí účet: 3 % ročně. Termínovaný vklad: 4,5 % na 2 roky. Kolik vyděláme v každém případě? Co když peníze budeme potřebovat za rok?
+
+5. ### Cestovní dilema
+   Do Vídně: auto (benzín 600 Kč, 2,5 h) vs. vlak (800 Kč, 4 h) vs. bus (400 Kč, 5 h). Pro 1 osobu, 2, 4. Kdy se vyplatí auto (dělení nákladů)?
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Optimalizace party
+
+   ⏱️ _1–2 hodiny_
+
+   Naplánovat párty s rozpočtem 3 000 Kč a 15 hostů. Podmínky: každý musí mít jídlo i pití, nesmíme překročit rozpočet, chceme maximalizovat zábavu (stolní hry, dekorace). Zapsat podmínky nerovnicemi, najít řešení.
+
+2. ### Soustava rovnic ze života
+
+   ⏱️ _1 hodina_
+
+   Vymyslet 3 situace, kde potřebujeme soustavu rovnic: „Dva výrobky dohromady stojí… rozdíl cen je…" Sestavit rovnice, vyřešit, ověřit.
+
+3. ### Co kdyz analyza
+
+   ⏱️ _1 hodina_
+
+   Vzít model z předchozího ročníku (rozpočet, cesta, tarif) a systematicky měnit vstupy: co když cena vzroste o 10 %, 20 %, 50 %? Kdy se model „rozbije"? Tabulka a graf závislosti výsledku na změně vstupu.
+
+4. ### Zásilkový problém
+
+   ⏱️ _45 minut_
+
+   E-shop A: výrobek 500 Kč, doprava 99 Kč. E-shop B: výrobek 450 Kč, doprava 149 Kč. Při 1 kusu je levnější B. Při kolika kusech se to změní? Co když přidáme třetí e-shop? Sestavit model, nakreslit graf.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Nerovnice](https://www.matematika.cz/nerovnice)<br />
+  Výklad nerovnic s řešenými příklady.
+
+- [Matematika.cz — Soustavy rovnic](https://www.matematika.cz/soustavy-rovnic)<br />
+  Soustavy rovnic — metody řešení a slovní úlohy.
+
+- [Khanova škola — Nerovnice](https://cs.khanacademy.org/math/algebra/x2f8bb11595b61c86:inequalities-systems-graphs)<br />
+  Videa o nerovnicích a jejich řešení.
+
+- [Math is Fun — Inequalities](https://www.mathsisfun.com/algebra/inequality.html) <Badge text="EN" variant="tip" /><br />
+  Nerovnice vysvětlené vizuálně (anglicky).
+
+- [Khan Academy — Systems of Equations Word Problems](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:systems-of-equations/x2f8bb11595b61c86:systems-of-equations-word-problems/v/systems-of-equations-word-problems-example-1) <Badge text="EN" variant="tip" /><br />
+  Slovní úlohy na soustavy rovnic (anglicky).

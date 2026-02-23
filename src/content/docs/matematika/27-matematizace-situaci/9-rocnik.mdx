@@ -1,0 +1,103 @@
+---
+title: "9. ročník"
+sidebar:
+  order: 9
+  label: "9. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Matematicke modelovani</dt>
+  <dd>Celý cyklus: identifikace problému → formulace modelu → výpočet → interpretace → ověření → zpřesnění. Na ZŠ v jednodušší podobě, ale princip je stejný jako v inženýrství nebo ekonomii.</dd>
+
+  <dt>Linearni model</dt>
+  <dd>Model, kde vztah popisuje přímka (y = kx + q). Předpokládá rovnoměrnou změnu — stálá rychlost, stálá cena za jednotku. Nejjednodušší model, ale ne vždy stačí.</dd>
+
+  <dt>Nelinearni model</dt>
+  <dd>Model, kde vztah není přímka — parabola, hyperbola, exponenciála. Realita je často nelineární: růst populace se zrychluje, brzdná dráha roste se čtvercem rychlosti.</dd>
+
+  <dt>Aproximace</dt>
+  <dd>Přiblížení se správné hodnotě, když přesný výpočet je příliš složitý. „Přibližně 3 hodiny" je aproximace. V praxi je rozumná aproximace často užitečnější než přesný výpočet s pochybným modelem.</dd>
+
+  <dt>Rozhodovaci analyza</dt>
+  <dd>Porovnání variant na základě dat a výpočtů. Místo „myslím, že A je lepší" říkáme „při našich podmínkách vychází A o 15 % levnější, ale B je spolehlivější". Matematika jako podpora rozhodování.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Identifikovat matematický problém v komplexní reálné situaci
+- Zvolit vhodný typ modelu (lineární, nelineární) a zdůvodnit volbu
+- Projít celý modelovací cyklus samostatně
+- Porovnat výsledky různých modelů pro stejnou situaci
+- Prezentovat matematickou analýzu srozumitelně pro „nematematiky"
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Podnikatelský plán
+   Chci prodávat domácí limonádu. Náklady: 500 Kč fixně (stánek) + 15 Kč za kus. Prodej za 35 Kč. Od kolika kusů jsem v zisku? Kolik musím prodat, abych vydělal 2 000 Kč? Rovnice: zisk = 35x − (500 + 15x) = 20x − 500.
+
+2. ### Ekologická stopa
+   Rodina jezdí autem 15 000 km ročně, auto spotřebuje 7 l/100 km. Kolik CO₂ vyprodukuje (1 l benzínu = 2,3 kg CO₂)? Co kdyby přešli na elektromobil? Na MHD pro polovinu cest?
+
+3. ### Populační model
+   Městská čtvrť roste o 3 % ročně. Teď má 20 000 obyvatel. Za kolik let bude mít 30 000? Lineární model (+ 600/rok) vs. exponenciální (× 1,03/rok) — kdy se začnou lišit?
+
+4. ### Půjčka a úroky
+   Půjčka 100 000 Kč s úrokem 8 % ročně. Splátka 2 000 Kč měsíčně. Kolik zaplatíme celkem? Jak dlouho budeme splácet? Co když zvýšíme splátku na 3 000?
+
+5. ### Energetická bilance domu
+   Dům spotřebuje 15 000 kWh ročně. Solární panely vyrobí 4 500 kWh. Kolik energie musíme dokoupit? Panely stojí 200 000 Kč, elektřina 6 Kč/kWh. Za kolik let se panely zaplatí?
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Mini podnikatelský plán
+
+   ⏱️ _3–4 hodiny_
+
+   Dítě vymyslí produkt nebo službu. Spočítá náklady (fixní + variabilní), stanoví cenu, určí bod zvratu. Nakreslí graf nákladů a příjmů. Kolik musí prodat? Co když cena suroviny vzroste?
+
+2. ### Rozhodovací matice
+
+   ⏱️ _2 hodiny_
+
+   Porovnat 3 varianty reálného rozhodnutí (třeba dovolená: hory vs. moře vs. město). Kritéria: cena, čas cesty, zábava, počasí. Každé kritérium ohodnotit, vážit podle důležitosti. Matematicky podložené rozhodnutí.
+
+3. ### Ekologický model
+
+   ⏱️ _2–3 hodiny_
+
+   Spočítat uhlíkovou stopu rodiny za měsíc (auto, letadlo, vytápění, jídlo). Najít data o emisích. Navrhnout 3 opatření a spočítat, kolik CO₂ ušetří. Prezentovat výsledky.
+
+4. ### Modelovací soutěž
+
+   ⏱️ _2 hodiny_
+
+   Dostat reálný problém (třeba: „Kolik kontejnerů na tříděný odpad potřebuje naše ulice?"). Navrhnout model, sesbírat data (odhady), spočítat, prezentovat. Porovnat s realitou.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Slovní úlohy pro 9. ročník](https://www.matematika.cz/slovni-ulohy)<br />
+  Komplexní slovní úlohy s řešením.
+
+- [Khanova škola — Algebra](https://cs.khanacademy.org/math/algebra)<br />
+  Rovnice, nerovnice, soustavy a jejich aplikace.
+
+- [Kalkulator.cz — Finanční kalkulačky](https://www.kalkulator.cz)<br />
+  Kalkulačky půjček, úroků, spoření — dítě si může ověřit své výpočty.
+
+- [NCTM Illuminations](https://illuminations.nctm.org) <Badge text="EN" variant="tip" /><br />
+  Matematické aktivity a modelovací úlohy od americké asociace učitelů matematiky.
+
+- [Khan Academy — Linear Models](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:linear-equations-graphs/x2f8bb11595b61c86:modeling-with-linear-equations/v/constructing-linear-models-for-real-world-relationships) <Badge text="EN" variant="tip" /><br />
+  Modelování reálných situací lineárními funkcemi (anglicky).

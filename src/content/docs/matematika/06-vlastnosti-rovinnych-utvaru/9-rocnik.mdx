@@ -1,0 +1,106 @@
+---
+title: "9. ročník"
+sidebar:
+  order: 9
+  label: "9. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Podobnost</dt>
+  <dd>Dva útvary jsou podobné, pokud mají stejný tvar, ale mohou mít různou velikost. Všechny strany jsou ve stejném poměru (koeficient podobnosti k). Podobné trojúhelníky mají stejné úhly.</dd>
+
+  <dt>Koeficient podobnosti</dt>
+  <dd>Poměr odpovídajících stran podobných útvarů. Trojúhelník se stranami 3, 4, 5 a trojúhelník 6, 8, 10 mají koeficient k = 2. Obsahy se mění jako k², objemy jako k³.</dd>
+
+  <dt>Věty o podobnosti trojúhelníků</dt>
+  <dd>uu (dva úhly stejné), sus (dvě strany v poměru a úhel mezi nimi stejný), sss (všechny strany v poměru). Stačí uu — pokud mají dva stejné úhly, třetí musí být taky stejný.</dd>
+
+  <dt>Thaletova věta</dt>
+  <dd>Každý úhel vepsaný do půlkružnice je pravý (90°). Obráceně: pokud je úhel u vrcholu trojúhelníku pravý, leží na kružnici s průměrem = přepona.</dd>
+
+  <dt>Obvodový a středový úhel</dt>
+  <dd>Středový úhel je v středu kružnice, obvodový na kružnici. Středový úhel je vždy dvojnásobkem obvodového úhlu příslušejícímu témuž oblouku. Thaletova věta je speciální případ.</dd>
+
+  <dt>Obsahy složených útvarů</dt>
+  <dd>Složený útvar rozdělíme na jednodušší (trojúhelníky, obdélníky, kruhy), spočítáme obsahy částí a sečteme. Nebo: obsah velkého útvaru minus obsah vyříznuté části.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Rozpoznat podobné útvary a určit koeficient podobnosti
+- Využít podobnost pro výpočet neznámých délek
+- Rozumět Thaletově větě a umět ji použít v konstrukcích
+- Spočítat obsah složeného útvaru (kombinace základních tvarů)
+- Zdůvodnit vlastnost útvaru pomocí shodnosti nebo podobnosti
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Měření výšky budovy
+   Tyč 2 m vrhá stín 1,5 m. Budova vrhá stín 12 m. Výška budovy? Podobné trojúhelníky: budova/tyč = stín budovy/stín tyče. Výška = 2 × 12/1,5 = 16 m. Thales z Milétu takto měřil pyramidy.
+
+2. ### Zvětšení fotografie
+   Fotka 10 × 15 cm. Chceme zvětšit na plakát s delší stranou 90 cm. Koeficient: 90/15 = 6. Kratší strana: 10 × 6 = 60 cm. Obsah plakátu: 6² = 36× větší. Potřebujeme 36× víc inkoustu.
+
+3. ### Thaletova věta v praxi
+   Jak narýsovat pravý úhel bez úhelníku? Narýsujte kružnici, veďte průměr. Zvolte libovolný bod na kružnici. Trojúhelník z tohoto bodu a konců průměru má vždy pravý úhel. Thaletova věta.
+
+4. ### Mapové měřítko
+   Mapa v měřítku 1 : 25 000. Na mapě je jezero tvaru přibližného kruhu s průměrem 2 cm. Ve skutečnosti: 2 × 25 000 = 50 000 cm = 500 m. Plocha: π × 250² ≈ 196 000 m² ≈ 19,6 hektarů.
+
+5. ### Design a proporce
+   Formát A4 (210 × 297 mm) má poměr stran 1 : √2 ≈ 1 : 1,414. Když ho přeložíte na polovinu, dostanete A5 — se stejným poměrem stran! Podobnost v papírovém formátu.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Měření stínem
+
+   ⏱️ _1 hodina (venku, za slunce)_
+
+   Dítě měří výšku stromu, sloupu a budovy pomocí stínů a podobnosti trojúhelníků. Potřebuje: tyč známé výšky, metr, slunce. Výsledky porovná s údaji z mapy nebo Google Earth.
+
+2. ### Thaletova konstrukce
+
+   ⏱️ _30 minut_
+
+   Dítě pomocí Thaletovy věty narýsuje pravý úhel, trojúhelník vepsaný do půlkružnice a tečnu ke kružnici. Ověří pravý úhel úhelníkem. Thaletova věta jako konstrukční nástroj.
+
+3. ### Fraktály a podobnost
+
+   ⏱️ _1 hodina_
+
+   Nakreslete Sierpinského trojúhelník: trojúhelník, vyberte středový, opakujte. Každý díl je podobný celku — soběpodobnost (fraktál). Kolik trojúhelníků v každém kroku? 3, 9, 27, 81… Geometrická řada.
+
+4. ### Obsahy složených útvarů
+
+   ⏱️ _45 minut_
+
+   Nakreslete půdorys bytu (nebo použijte skutečný). Dítě spočítá obsah každé místnosti (rozloží na obdélníky), celkovou plochu bytu, a kolik procent zabírají jednotlivé místnosti. Porovná s údajem z katastru.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Podobnost](https://www.matematika.cz/podobnost)<br />
+  Výklad podobnosti trojúhelníků a útvarů.
+
+- [Khanova škola — Podobnost](https://cs.khanacademy.org/math/geometry/hs-geo-similarity)<br />
+  Videa o podobnosti a jejím využití.
+
+- [GeoGebra — Thaletova věta](https://www.geogebra.org/m/yVhpfJre)<br />
+  Interaktivní vizualizace Thaletovy věty.
+
+- [Math is Fun — Similar Triangles](https://www.mathsisfun.com/geometry/triangles-similar.html) <Badge text="EN" variant="tip" /><br />
+  Přehledný výklad podobnosti.
+
+- [Khan Academy — Similarity](https://www.khanacademy.org/math/geometry/hs-geo-similarity) <Badge text="EN" variant="tip" /><br />
+  Kompletní kurz podobnosti.

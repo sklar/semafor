@@ -1,0 +1,83 @@
+---
+title: "14. Prostorové útvary"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Určuje a charakterizuje základní prostorové útvary (tělesa)." />
+
+## Co to znamená?
+
+Dítě umí **pojmenovat, popsat a rozlišit** základní trojrozměrná tělesa — krychli, kvádr, hranol, jehlan, válec, kužel a kouli. Nejen „to je krychle", ale i: *kolik má stěn, hran, vrcholů, jaký tvar mají její stěny, je souměrná, dá se rozložit na síť*.
+
+Prostorová geometrie je pro mnoho dětí náročnější než rovinná, protože vyžaduje **prostorovou představivost** — schopnost myslet ve 3D. Dobrá zpráva: prostorová představivost se dá trénovat. Stavebnice, origami, skládání sítí těles — to vše pomáhá.
+
+Na 2. stupni se postupuje od **rozpoznávání a popisu** (6. ročník) přes **vlastnosti a klasifikaci** (7.–8.) až k **výpočtům a zobrazování** (9.). Důraz je na porozumění — dítě by mělo umět vysvětlit, čím se liší hranol od jehlanu, a proč je koule jiná než ostatní tělesa.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Pojmenování těles, rozpoznávání v okolí. Krychle, kvádr — stěny, hrany, vrcholy. Sítě krychle a kvádru. |
+| **7.–8.** | **Prohlubujte.** Hranoly a jehlany — obecné, trojboké, čtyřboké. Válec, kužel, koule. Vlastnosti, sítě, řezy. |
+| **9.** | Systematická klasifikace. Eulerův vzorec (V − H + S = 2). Propojení s objemem a povrchem. Zobrazování těles (rovnoběžné promítání). |
+
+<Aside title="Prerekvizity" type="tip">Znalost rovinných útvarů (trojúhelník, čtverec, obdélník, kruh). Základní měření a výpočty obsahu a obvodu.</Aside>
+
+## Poznámky
+
+<Aside title="Sahejte na tělesa">Abstraktní obrázky těles nestačí. Nechte dítě tělesa držet v ruce — kostky, krabice, plechovky, míče, kornouty. Modelujte z plastelíny, stavte z papíru. Hmat a manipulace budují prostorovou představivost mnohem efektivněji než obrázky.</Aside>
+
+<Aside title="Site telesa">Síť tělesa = rozložení povrchu do roviny. Krychle má 11 různých sítí! Skládání sítí je výborný způsob, jak propojit 2D a 3D myšlení.</Aside>
+
+<Aside title="Typická past" type="caution">Záměna hranolu a jehlanu. Hranol má dvě shodné podstavy spojené obdélníkovými stěnami. Jehlan má jednu podstavu a trojúhelníkové stěny sbíhající se do špičky. Pomůcka: hranol = „tunel", jehlan = „pyramida".</Aside>
+
+<Aside title="Dulezite" type="danger">Koule nemá stěny, hrany ani vrcholy v klasickém smyslu. Je to zcela jiný typ tělesa než mnohostěny (krychle, hranoly, jehlany). Nepokoušejte se ji nacpat do stejného schématu.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 15 (objem a povrch) — výpočty navazují na znalost těles
+- <Badge text="MAT" /> bod 09 (obsah a obvod) — povrch tělesa = součet obsahů stěn
+- <Badge text="MAT" /> bod 13 (souměrnost) — souměrnost prostorových těles
+- <Badge text="PUK" /> (výtvarná výchova — modelování, sochařství, prostorová tvorba)
+- <Badge text="JAS" /> (architektura, design, technika — tělesa v reálném světě)
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli nebo dítě nemělo příležitost ukázat, jak rozumí prostorovým útvarům.</SkillItem>
+  <SkillItem level="novice">
+    Dítě pojmenuje základní tělesa, ale popsat jejich vlastnosti neumí.
+    <ul>
+      <li>Pozná krychli a kouli, ale hranol a jehlan si plete</li>
+      <li>Nedokáže spočítat stěny, hrany a vrcholy</li>
+      <li>Síť tělesa neskládá nebo ji skládá jen s velkou pomocí</li>
+      <li>Prostorová představivost je slabá — neumí si představit těleso z obrázku</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě pojmenuje a popíše základní tělesa, u složitějších potřebuje podporu.
+    <ul>
+      <li>Bezpečně rozlišuje krychli, kvádr, hranol, jehlan, válec, kužel, kouli</li>
+      <li>Spočítá stěny, hrany a vrcholy u mnohostěnů</li>
+      <li>Složí síť krychle a kvádru, u dalších těles s nápovědou</li>
+      <li>Najde příklady těles v okolí a popíše jejich tvar</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě systematicky charakterizuje tělesa a pracuje s nimi na abstraktní úrovni.
+    <ul>
+      <li>Popíše vlastnosti všech základních těles (stěny, hrany, vrcholy, souměrnost)</li>
+      <li>Nakreslí a složí síť libovolného hranolu a jehlanu</li>
+      <li>Používá Eulerův vzorec a ověří ho na různých tělesech</li>
+      <li>Zobrazí těleso v rovnoběžném promítání a rozumí řezům těles</li>
+    </ul>
+  </SkillItem>
+</Skill>

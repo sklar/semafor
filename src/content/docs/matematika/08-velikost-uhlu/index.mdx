@@ -1,0 +1,82 @@
+---
+title: "08. Velikost úhlu"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Určuje velikost úhlu měřením a výpočtem." />
+
+## Co to znamená?
+
+Dítě umí **změřit úhel** úhloměrem a **spočítat** velikost úhlu z vlastností útvarů — aniž by ho měřilo. Zná základní vztahy: součet úhlů v trojúhelníku je 180°, vedlejší úhly dávají 180°, vrcholové úhly jsou stejné. A tyto vztahy umí **využít** k nalezení neznámých úhlů.
+
+Úhly jsou všude kolem nás: nakloněná střecha, otevřené dveře, odbočka na křižovatce, sklon svahu. Dítě, které rozumí úhlům, lépe chápe geometrii, trigonometrii (v budoucnu) a má lepší prostorovou orientaci.
+
+Důležité je propojení **měření** (praktická dovednost s úhloměrem) a **výpočtu** (logický úsudek z vlastností). Dítě by mělo zvládnout obojí a vědět, kdy se hodí které.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Měření úhloměrem, typy úhlů (ostrý, pravý, tupý, přímý), vrcholové a vedlejší úhly. Součet úhlů v trojúhelníku. |
+| **7.–8.** | **Prohlubujte.** Úhly při rovnoběžkách (souhlasné, střídavé), úhly v mnohoúhelnících. Výpočet neznámého úhlu z vlastností. Středový a obvodový úhel. |
+| **9.** | **Propojte.** Úhly v kružnici, úhlové vztahy v složitějších útvarech. Dítě kombinuje více vztahů v jedné úloze. Příprava na trigonometrii. |
+
+<Aside title="Prerekvizity" type="tip">Znalost základních rovinných útvarů. Představa o tom, co je úhel (otočení, rozevření). Sčítání a odčítání do 360.</Aside>
+
+## Poznámky
+
+<Aside title="Uhel je otoceni">Úhel není jen „špička" — je to míra otočení. Otevřete dveře o 90° = pravý úhel. Otočte se celým tělem = 360°. Tato dynamická představa pomáhá pochopit i úhly větší než 180°.</Aside>
+
+<Aside title="Uhloměr chce cvik">Měření úhloměrem je motorická dovednost — vyžaduje praxi. Dejte dítěti úhloměr a nechte ho měřit všechno kolem: rozevření nůžek, sklon knihy, úhel větve stromu. Čím víc měří, tím přesnější bude.</Aside>
+
+<Aside title="Typická past" type="caution">Dítě čte úhloměr ze špatné stupnice (vnější místo vnitřní). Tip: vždy nejdřív odhadnout — je úhel ostrý (menší než 90°) nebo tupý (větší)? Pak ověřit, že čtení odpovídá odhadu.</Aside>
+
+<Aside title="Dulezite" type="danger">Úhly se nesčítají intuitivně jako délky. Součet úhlů v trojúhelníku je vždy 180° — nehledě na velikost trojúhelníku. Součet vnějších úhlů je vždy 360°. Tyto konstanty jsou překvapivé a krásné — ukažte dítěti, proč platí.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 06 (vlastnosti útvarů) — úhly jako klíčová vlastnost trojúhelníků a mnohoúhelníků
+- <Badge text="MAT" /> bod 07 (třídění útvarů) — úhly jako kritérium třídění (ostroúhlý, pravoúhlý, tupoúhlý)
+- <Badge text="PUK" /> (tělesná výchova) — úhel dopadu míče, sklon svahu, úhel odrazu
+- <Badge text="JAS" /> (geografie, astronomie) — zeměpisné souřadnice, deklinace hvězd, azimut
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli nebo dítě nemělo příležitost ukázat, jak pracuje s úhly.</SkillItem>
+  <SkillItem level="novice">
+    Dítě zná pojem úhel a rozlišuje základní typy, ale měření a výpočet jsou nejisté.
+    <ul>
+      <li>Rozliší ostrý, pravý a tupý úhel pohledem</li>
+      <li>Úhloměr používá, ale často chybuje (špatná stupnice, nepřesné přiložení)</li>
+      <li>Ví, že součet úhlů v trojúhelníku je 180°, ale neumí to využít k výpočtu</li>
+      <li>Vrcholové a vedlejší úhly zaměňuje</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě měří úhly správně a počítá neznámé úhly v jednodušších situacích.
+    <ul>
+      <li>Přesně měří úhly úhloměrem</li>
+      <li>Využívá součet úhlů v trojúhelníku a čtyřúhelníku pro výpočet</li>
+      <li>Zná a používá vztahy vrcholových a vedlejších úhlů</li>
+      <li>U složitějších útvarů (úhly při rovnoběžkách) potřebuje podporu</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě plynule měří i počítá úhly a kombinuje více vztahů v jedné úloze.
+    <ul>
+      <li>Spolehlivě měří i počítá úhly v různých kontextech</li>
+      <li>Využívá úhly při rovnoběžkách, středové a obvodové úhly</li>
+      <li>Řeší složitější úlohy kombinací více úhlových vztahů</li>
+      <li>Odhadne velikost úhlu pohledem s přesností ±10°</li>
+    </ul>
+  </SkillItem>
+</Skill>

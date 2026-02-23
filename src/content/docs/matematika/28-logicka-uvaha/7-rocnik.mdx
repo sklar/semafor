@@ -1,0 +1,106 @@
+---
+title: "7. ročník"
+sidebar:
+  order: 7
+  label: "7. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Pravidlo soucinu</dt>
+  <dd>Pokud máme k voleb v prvním kroku a l voleb v druhém, celkový počet kombinací je k × l. 3 trička × 4 kalhoty = 12 outfitů. Funguje pro libovolný počet kroků.</dd>
+
+  <dt>Permutace</dt>
+  <dd>Počet způsobů, jak seřadit n věcí. 3 knihy na poličce: 3 × 2 × 1 = 6 uspořádání. Značíme 3! (čteme „tři faktoriál"). Záleží na pořadí — ABC ≠ BAC.</dd>
+
+  <dt>Faktoríal</dt>
+  <dd>Součin všech přirozených čísel od 1 do n. 5! = 5 × 4 × 3 × 2 × 1 = 120. Roste neuvěřitelně rychle: 10! = 3 628 800.</dd>
+
+  <dt>Negace</dt>
+  <dd>Opak výroku. Negace „Všichni jsou doma" je „Alespoň jeden není doma" (ne „Nikdo není doma"!). Správná negace je klíč k logickému myšlení.</dd>
+
+  <dt>Implikace</dt>
+  <dd>„Pokud A, pak B." Třeba: „Pokud prší, silnice je mokrá." Pozor: silnice může být mokrá i z jiného důvodu. Implikace neplatí pozpátku — to je častá chyba.</dd>
+
+  <dt>Dukaz sporem</dt>
+  <dd>Chceme dokázat, že něco platí. Předpokládáme opak. Pokud dojdeme ke sporu (nesmyslu), opak neplatí — a tedy platí to, co jsme chtěli dokázat.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Používat pravidlo součinu pro počítání kombinací
+- Spočítat počet permutací malé množiny (do 6–7 prvků)
+- Správně negovat jednoduché výroky (včetně „všichni" a „existuje")
+- Chápat implikaci a vědět, že neplatí pozpátku
+- Řešit logické úlohy s více kroky a podmínkami
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### PIN kód
+   Čtyřmístný PIN (0–9). Kolik existuje možných kódů? 10 × 10 × 10 × 10 = 10 000. Co kdyby se číslice nemohly opakovat? 10 × 9 × 8 × 7 = 5 040.
+
+2. ### Sestava týmu
+   Z 12 hráčů vybereme kapitána a jeho zástupce. Kolik možností? 12 × 11 = 132 (záleží na tom, kdo je kapitán a kdo zástupce). Co kdyby na pozici nezáleželo?
+
+3. ### SPZ
+   Formát české SPZ: 1 číslo, 2 písmena, 4 čísla (zjednodušeně). Kolik existuje kombinací? Pravidlo součinu v praxi.
+
+4. ### Detektivní logika
+   „Pokud byl zloděj vysoký, dosáhl na okno. Okno je netknuté." Co z toho plyne? Zloděj nebyl vysoký (nebo se dostal jinudy). Implikace a její použití.
+
+5. ### Zasedací pořádek
+   6 lidí kolem kulatého stolu. Kolik různých zasedacích pořádků existuje? U kulatého stolu záleží jen na vzájemné pozici — (6−1)! = 120.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Heslo pod lupou
+
+   ⏱️ _45 minut_
+
+   Kolik různých hesel lze vytvořit z 8 znaků (malá písmena, velká písmena, čísla)? Co když přidáme speciální znaky? Proč je delší heslo bezpečnější? Pravidlo součinu v kybernetické bezpečnosti.
+
+2. ### Logická hra Mastermind
+
+   ⏱️ _1 hodina_
+
+   Hrát Mastermind (nebo jeho variantu). Jeden hráč vymyslí kód, druhý hádá a dostává indicie. Klíč: systematické vylučování, ne náhodné hádání. Po hře diskuze: jaká strategie funguje nejlépe?
+
+3. ### Negační výzva
+
+   ⏱️ _30 minut_
+
+   Připravit 10 výroků a dítě formuluje jejich negaci. „Všichni mají rádi čokoládu" → „Existuje někdo, kdo nemá rád čokoládu." Pozor na typické chyby (negace „všichni" není „nikdo").
+
+4. ### Faktoriálový boom
+
+   ⏱️ _30 minut_
+
+   Spočítat 1!, 2!, 3!, … až do 10!. Zakreslit do grafu. Jak rychle roste? Porovnat s lineárním (10, 20, 30…) a kvadratickým (1, 4, 9…) růstem. Proč je faktoriál „výbušný"?
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Kombinatorika](https://www.matematika.cz/kombinatorika)<br />
+  Přehled kombinatorických pojmů s řešenými příklady.
+
+- [Khanova škola — Permutace a kombinace](https://cs.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations)<br />
+  Videa o permutacích a kombinacích v češtině.
+
+- [Logic Puzzles — BrainBashers](https://www.brainbashers.com/logic.asp)<br />
+  Sbírka logických hádanek online (anglicky, ale většina je jazykově jednoduchá).
+
+- [Math is Fun — Permutations](https://www.mathsisfun.com/combinatorics/combinations-permutations.html) <Badge text="EN" variant="tip" /><br />
+  Permutace a kombinace krok za krokem (anglicky).
+
+- [Brilliant.org — Combinatorics](https://brilliant.org/courses/combinatorics/) <Badge text="EN" variant="tip" /><br />
+  Interaktivní kurz kombinatoriky (anglicky, částečně zdarma).

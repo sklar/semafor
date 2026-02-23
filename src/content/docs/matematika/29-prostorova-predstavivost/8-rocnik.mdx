@@ -1,0 +1,106 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Kuzel</dt>
+  <dd>Těleso s kruhovou podstavou, jehož plášť se sbíhá do jednoho vrcholu. Zmrzlinový kornout, párty čepice. Síť kužele = kruh + výseč kruhu.</dd>
+
+  <dt>Koule</dt>
+  <dd>Těleso, kde všechny body na povrchu mají stejnou vzdálenost od středu. Míč, zeměkoule. Koule nemá hrany ani vrcholy a její síť neexistuje (nelze rozvinout bez deformace).</dd>
+
+  <dt>Prunik teles</dt>
+  <dd>Oblast, kde se dvě tělesa překrývají. Když prostrčíte válec krychlí, průnik je válcový „tunel" v krychli. V reálném světě: dveřní otvor v zdi.</dd>
+
+  <dt>Perspektiva</dt>
+  <dd>Způsob kreslení, kde vzdálenější objekty jsou menší — jako ve skutečnosti. Na rozdíl od axonometrie respektuje úběžné body. Železniční koleje se „sbíhají" v dálce.</dd>
+
+  <dt>Souradnice v prostoru</dt>
+  <dd>Tři čísla [x, y, z] určující pozici bodu v prostoru. x = doprava, y = do hloubky, z = nahoru. Jako GPS, ale se třetím rozměrem — výškou.</dd>
+
+  <dt>Symetrie v prostoru</dt>
+  <dd>Těleso je symetrické, pokud existuje rovina, která ho rozdělí na dvě zrcadlové poloviny. Krychle má 9 rovin souměrnosti. Člověk má (přibližně) jednu.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Rozlišit kužel a kouli a popsat jejich vlastnosti
+- Nakreslit síť kužele a pochopit, proč koule síť nemá
+- Představit si průnik dvou jednoduchých těles
+- Kreslit v perspektivě s jedním úběžným bodem
+- Pracovat se souřadnicemi v prostoru (umístit bod [x, y, z])
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Zmrzlinový kornout
+   Kornout je kužel. Jaká je jeho síť? Kolik zmrzliny (objem kužele) se do něj vejde? A co kopečky nahoře (polokoule)?
+
+2. ### Zeměkoule a mapy
+   Proč je nemožné vytvořit dokonale přesnou plohou mapu zeměkoule? Koule se nedá „rozvinout" bez deformace. Proto jsou všechny mapy nějak zkreslené (Mercator, Peters…).
+
+3. ### Průnik v architektuře
+   Okno ve zdi = průnik kvádru (zdi) a kvádru (otvoru). Oblý vchod = průnik kvádru a válce. Kopule na budově = polokoule na kvádru. Architektura je průnik těles.
+
+4. ### Perspektiva ve fotografii
+   Proč silnice na fotce „mizí v dálce"? Perspektivní zkreslení. Dítě si zkusí nakreslit silnici s úběžným bodem a porovnat s fotografií.
+
+5. ### 3D souřadnice v hrách
+   Minecraft a podobné hry používají souřadnice [x, y, z]. Kde stojíš? Kam jdeš? Prostorové myšlení v digitálním světě.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Perspektivní kresba
+
+   ⏱️ _1–2 hodiny_
+
+   Naučit se kreslit místnost s jedním úběžným bodem: zadní stěna = obdélník, hrany jdou do úběžného bodu. Přidat nábytek, okna, dveře. Porovnat s fotografií místnosti.
+
+2. ### Řezy ovoce
+
+   ⏱️ _30 minut_
+
+   Vzít různé plody (jablko, pomeranč, okurku, mrkev) a krájet v různých směrech. Před řezem odhadnout tvar řezu. Překvapení: šikmý řez válcovou mrkví je elipsa!
+
+3. ### 3D modelování na počítači
+
+   ⏱️ _1–2 hodiny_
+
+   Vyzkoušet Tinkercad (zdarma, v prohlížeči) — jednoduchý 3D modelář. Vytvořit jednoduchý objekt (hrneček, domek) kombinací a průniky základních těles.
+
+4. ### Koule, kterou nelze rozvinout
+
+   ⏱️ _45 minut_
+
+   Pokusit se obalit míč papírem bez přehybů a překryvů — nejde to. Proč? Diskuze o Gaussově křivosti a o tom, proč mapy zkreslují. Porovnat různé mapové projekce.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [GeoGebra 3D](https://www.geogebra.org/3d)<br />
+  Interaktivní 3D geometrie — průniky, řezy, souřadnice.
+
+- [Tinkercad](https://www.tinkercad.com)<br />
+  Bezplatný 3D modelář v prohlížeči — skvělý pro začátečníky, kombinace a průniky těles.
+
+- [Matematika.cz — Kužel a koule](https://www.matematika.cz/kuzel)<br />
+  Vlastnosti kužele a koule s vzorci a obrázky.
+
+- [Math is Fun — Cones, Spheres](https://www.mathsisfun.com/geometry/cone.html) <Badge text="EN" variant="tip" /><br />
+  Interaktivní přehled kuželů a koulí (anglicky).
+
+- [Map Projections — xkcd](https://xkcd.com/977/) <Badge text="EN" variant="tip" /><br />
+  Zábavný (a poučný) přehled mapových projekcí — proč koule nejde rozvinout.

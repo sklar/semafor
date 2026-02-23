@@ -1,0 +1,99 @@
+---
+title: "9. rocnik"
+sidebar:
+  order: 9
+  label: "9. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Slozeny urok — vzorec</dt>
+  <dd>K = K₀ × (1 + p/100)ⁿ, kde K₀ je pocatecni jistina, p je urokova sazba v % a n je pocet obdobi. Zakladni vzorec financni matematiky.</dd>
+
+  <dt>Opaklovane procentni zmeny</dt>
+  <dd>Postupne nasobení koeficienty. Zvyseni o 10 % a pak snizeni o 10 %: × 1,10 × 0,90 = × 0,99. Vysledek neni 100 %, ale 99 %. Kazda zmena se pocita z aktualní hodnoty.</dd>
+
+  <dt>Relativni zmena</dt>
+  <dd>Procentualni zmena oproti puvodni hodnote. Relativni zmena = (nova − stara) ÷ stara × 100 %. Prodej vzrostl z 200 na 250: (250 − 200) ÷ 200 × 100 = 25 %.</dd>
+
+  <dt>Absolutni zmena</dt>
+  <dd>Zmena v konkretnih jednotkach (ne v procentech). Prodej vzrostl z 200 na 250: absolutni zmena = 50 kusu. Relativni zmena = 25 %. Oba udaje jsou dulezite.</dd>
+
+  <dt>RPSN</dt>
+  <dd>Rocni procentni sazba nakladu — ukazatel skutecnych nakladu uveru vcetne poplatku, ne jen uroku. Banka nabizi urok 5 %, ale RPSN je 8,5 % — rozdil jsou poplatky. RPSN je fer zpusob porovnani pujcek.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Pouzivat vzorec pro slozeny urok a resit ulohy na sporeni a pujcky
+- Pocitat s opakovanymi procentnimi zmenami (retezeni koeficientu)
+- Rozlisit relativni a absolutni zmenu a vedet, kdy ktera dava smysl
+- Kriticky hodnotit procentualni udaje v mediich, reklame a politice
+- Resit komplexni financni ulohy (sporeni, pujcky, investice)
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Dlouhodobe sporeni
+   Dite od 15 let sporí 500 Kc mesicne pri 5 % rocne. V 18 letech ma? V 25? V 65? Slozeny urok v dlouhodobem horizontu — male castky vyrostou v obrovske sumy. Motivace k casnemuspoken.
+
+2. ### Hypoteka
+   Rodina si bere hypoteku 3 000 000 Kc na 30 let pri 5 % p.a. Mesicni splatka ≈ 16 100 Kc. Celkem zaplati ≈ 5 800 000 Kc. Uroky = skoro dvojnasobek pujcene castky. RPSN 5,3 %.
+
+3. ### Klamava reklama
+   „Nase ceny klesly o 50 %!" Ale minuly mesic je zvysili o 100 %. Puvodni cena 100, zvyseni na 200, snizeni o 50 % na 100. Cena je stejna — ale reklama tvrdi slevu. Kritickejmysleni.
+
+4. ### Epidemiologicka data
+   Pocet nakazenych vzrostl o 30 % za tyden. Minuly tyden bylo 1 000 pripadu. Tento tyden 1 300. Pristi tyden? 1 690 (ne 1 600!). Exponencialni rust v praxi — proto jsou epidemie nebezpecne.
+
+5. ### Investice do akcii
+   Akcie koupena za 1 000 Kc. 1. rok +20 %, 2. rok −15 %, 3. rok +10 %. Konecna hodnota = 1 000 × 1,20 × 0,85 × 1,10 = 1 122 Kc. Zisk 12,2 % za 3 roky. Prumerny rocni zisk? Ne 5 % (aritmeticky prumer), ale 3,9 % (geometricky prumer).
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Financni planovac
+
+   ⏱️ _2 hodiny_
+
+   Dite v tabulkovem procesoru vytvori financni planovac: zadá pocatecni castku, mesicni vklad a urokovou sazbu. Tabulka spocita zustatek pro kazdy mesic na 10 let. Graf ukazuje rust. Co se stane pri zmene sazby? Při zvyseni vkladu?
+
+2. ### Pujcková past
+
+   ⏱️ _1 hodina_
+
+   Porovnejte 3 nabidky pujcek z internetu. U kazde dite spocita: celkovou zaplacenou castku, celkove uroky, RPSN. Ktera je nejhorsi? Casto ta s „nejnizsimi splatkami" (ale nejdelsim obdobim). Financni gramotnost v praxi.
+
+3. ### Procentualni manipulace
+
+   ⏱️ _45 minut_
+
+   Pripravte 10 titulku z novin s procentuálnimi udaji. Dite u kazdeho analyzuje: co je zaklad, je to relativni nebo absolutni zmena, je titulek zavadejici? Pise vlastni „ferovy" titulek. Mediální gramotnost + matematika.
+
+4. ### Pravidlo 72
+
+   ⏱️ _30 minut_
+
+   Pravidlo 72: za kolik let se zdvojnasobi penize pri slozenom uroku? Priblizne 72 ÷ urokova sazba. Pri 6 % = 12 let. Pri 3 % = 24 let. Dite overi vzorcem a diskutuje, proc to funguje.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Ceska narodni banka — Financni vzdelavani](https://www.cnb.cz/cs/o_cnb/financni-vzdelavani/)<br />
+  Materialy o financni gramotnosti od CNB.
+- [Matematika.cz — Slozeny urok](https://www.matematika.cz/slozeny-urok)<br />
+  Vzorce, priklady a kalkulacka slozeneho uroku.
+- [Desmos — Calculator](https://www.desmos.com/calculator)<br />
+  Graficka kalkulacka — skvela pro vizualizaci exponencialniho rustu.
+- [Khan Academy — Compound Interest](https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial/compound-interest-tutorial) <Badge text="EN" variant="tip" /><br />
+  Kompletni kurz o slozenem uroku a financni matematice.
+- [Investopedia — Rule of 72](https://www.investopedia.com/terms/r/ruleof72.asp) <Badge text="EN" variant="tip" /><br />
+  Vysvetleni pravidla 72 s priklady.

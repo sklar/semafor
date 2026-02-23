@@ -1,0 +1,82 @@
+---
+title: "63. Sily"
+sidebar:
+  order: 0
+  label: "Prehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Rozpozna zakladni pusobici sily." />
+
+## Co to znamena?
+
+Dite rozumi, ze **sila** je to, co meni pohyb telesa -- rozjizdi ho, brdi, meni smer, deformuje. Dokaze v beznych situacich rozpoznat, jake sily pusobi: gravitacni sila taha veci k zemi, treci sila brdi pohyb, pruzna sila vraci pruzinu do puvodniho tvaru.
+
+V praxi to znamena, ze kdyz dite hazi mickem, chape, proc mic leti obloukem (gravitace ho stahuje dolu), proc se zastavy po dopadu (treni), a proc se odrazi (pruznost). Kdyz stoji na vaze, vi, ze vaha meri gravitacni silu, kterou Zeme pusobi na jeho telo.
+
+Sily jsou vsude -- kazdy pohyb, kazda zmena tvaru, kazde drzeni rovnovahy je vysledkem pusobeni sil. Tohle tema je zaklad mechaniky a prosta cesta k pochopeni fyziky kolem nas.
+
+## Kdy se tomu venovat?
+
+| Rocnik | Doporuceni |
+|--------|-----------|
+| **6.** | **Zacnete zde.** Gravitacni sila, treci sila, pruzna sila. Sila jako velicina (newton). Jednoduche experimenty s merakem sil (silomerem). |
+| **7.--8.** | **Prohlubujte.** Skladani sil, rovnovazna sila. Newtonovy zakony pohybu (1. a 3. zakon intuitivne). Tlakova sila, vztlakova sila. Paka a jednoduche stroje. |
+| **9.** | **Systematizace.** Vektorova povaha sily. 2. Newtonuv zakon (F = m * a). Gravitacni zakon. Odstredivy a dostredivy efekt. Propojeni se vsemi oblastmi fyziky. |
+
+<Aside title="Prerekvizity" type="tip">Zakladni pojem pohybu (rychlost, draha). Dite by melo intuitivne chapat, ze k pohybu je treba "nejaka pricina" -- to je prave sila.</Aside>
+
+## Poznamky
+
+<Aside title="Sily jsou neviditelne, ale dusledky vidime">Silu nevidime, ale vidime, co zpusobi -- zmena pohybu, deformace. Pomahejte diteti pojmenovat sily v beznych situacich: co te drzi na zidli? Co brzdi kolo? Proc pada jablko?</Aside>
+
+<Aside title="Silomer je skvely nastroj">Jednoduchy pruzinovy silomer (nebo digitalni) umozni diteti merit sily vlastnima rukama. Stoji par korun a otevre dvere k experimentum.</Aside>
+
+<Aside title="Typicka past" type="caution">Deti si mysli, ze k pohybu je vzdy treba sila. Ve skutecnosti sila meni pohyb -- teleso v pohybu pokracuje v pohybu, dokud na nej nezapusobi sila (1. Newtonuv zakon). Tohle je neintuitivni a stoji za to se k tomu vracet.</Aside>
+
+<Aside title="Dulezite" type="danger">Hmotnost a sila nejsou totez! Dite ma hmotnost 40 kg vzdy a vsude. Ale gravitacni sila na nej na Mesici je sestinova oproti Zemi. Vaha meri silu, ne hmotnost -- i kdyz na ni cteme "kg".</Aside>
+
+## Souvislosti
+
+- <Badge text="JAS" /> bod 61 -- meridla a veliciny (mereni sily v newtonech)
+- <Badge text="JAS" /> bod 64 -- energie (prace = sila na draze)
+- <Badge text="JAS" /> bod 65 -- zvuk (zvuk jako dusledek kmitani -- sily v pruznem prostredi)
+- <Badge text="MAT" /> bod 01 -- pocetni operace (dosazovani do vzorcu)
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Tema jsme zatim neotevreli. Dite nemelo prilezitost ukazat, jestli rozumi pusobeni sil.</SkillItem>
+  <SkillItem level="novice">
+    Dite tuby vi, ze sila existuje, ale neumi ji popsat ani rozpoznat v konkretni situaci.
+    <ul>
+      <li>Nevi, co je newton jako jednotka sily</li>
+      <li>Nedokaze pojmenovat sily pusobici na padajici predmet</li>
+      <li>Zamenu hmotnost a silu (vahy a gravitaci)</li>
+      <li>Mysli si, ze nepohybujici se teleso neni pod vlivem zadne sily</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dite rozpoznava zakladni sily v beznych situacich a umi merit silou silomerem.
+    <ul>
+      <li>Pojmenuje gravitacni, treci a pruznou silu v jednoduchych situacich</li>
+      <li>Umi pouzit silomer a precist hodnotu v newtonech</li>
+      <li>Chape, ze sila meni pohyb nebo tvar telesa</li>
+      <li>Skladani sil a slozitejsi situace potrebuje vysvetlit</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dite samostatne analyzuje silove pusobeni v ruznych situacich a pouziva fyzikalni vztahy.
+    <ul>
+      <li>Nakresli diagram sil pro bezne situace (knizka na stole, auto na svahu)</li>
+      <li>Rozumi rovnovaze sil a Newtonovym zakonum</li>
+      <li>Vypocita silu z hmotnosti a zrychleni</li>
+      <li>Propojuje sily s energii, praci a dalsimi oblastmi fyziky</li>
+    </ul>
+  </SkillItem>
+</Skill>

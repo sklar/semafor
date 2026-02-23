@@ -1,0 +1,103 @@
+---
+title: "7. ročník"
+sidebar:
+  order: 7
+  label: "7. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Čárový graf (liniový)</dt>
+  <dd>Graf, kde jsou datové body spojeny čarou. Ideální pro zobrazení vývoje v čase — teploty během roku, růst populace, změny HDP. Ukazuje trend: roste, klesá, stagnuje.</dd>
+
+  <dt>Relativní údaj</dt>
+  <dd>Hodnota vztažená k něčemu — typicky na obyvatele, na km2, v procentech. Absolutní údaj: Česko má 10 milionů obyvatel. Relativní: hustota zalidnění je 130 obyvatel/km2. Pro porovnání různě velkých zemí potřebujeme relativní údaje.</dd>
+
+  <dt>Kartogram</dt>
+  <dd>Mapa, kde jsou oblasti vybarveny podle hodnoty jevu — čím tmavší barva, tím vyšší hodnota. Kartogram ukazuje prostorové rozložení dat — kde je hodnota vysoká, kde nízká.</dd>
+
+  <dt>Trend</dt>
+  <dd>Dlouhodobý směr vývoje dat — rostoucí, klesající nebo stagnující. V jednom roce může teplota klesnout, ale trend za 50 let ukazuje oteplování.</dd>
+
+  <dt>Infografika</dt>
+  <dd>Vizuální zpracování informací kombinující text, čísla, grafy a obrázky. Cíl: sdělit složité téma přehledně a rychle. Dobrá infografika nahradí celou stránku textu.</dd>
+
+  <dt>Popisky os</dt>
+  <dd>Text u vodorovné (x) a svislé (y) osy grafu, který říká, co osa zobrazuje a v jakých jednotkách. Bez popisků je graf nečitelný: co jsou ta čísla vlevo? Roky? Kilometry? Miliony lidí?</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Vytvořit čárový graf pro zobrazení vývoje v čase
+- Rozlišit absolutní a relativní údaje a vědět, kdy který použít
+- Vytvořit jednoduchý kartogram (vybarvit slepou mapu podle dat)
+- Identifikovat trend v datech — roste, klesá, kolísá
+- Porovnat dva jevy v jednom grafu (dvě čáry, dvě sady sloupců)
+- Rozpoznat zavádějící graf a vysvětlit, v čem klame
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Jak rosteme
+   Dítě zpracuje svou výšku a váhu za posledních 5 let do čárového grafu. Vidí vlastní růstový trend. Může porovnat s průměrnými hodnotami pro svůj věk — kde je vůči průměru?
+
+2. ### Turistická sezóna
+   Kolik turistů navštíví Prahu v jednotlivých měsících? Dítě najde data, vytvoří čárový graf a interpretuje: kdy je sezóna, kdy mrtvé období, proč. Data propojená s ekonomikou.
+
+3. ### Hustota zalidnění v krajích
+   Dítě spočítá hustotu zalidnění pro české kraje (obyvatelé / rozloha) a vybarví slepou mapu — vlastní kartogram. Praha vs. Jihočeský kraj — proč tak obrovský rozdíl?
+
+4. ### Klamavý graf v médiích
+   Najděte v novinách nebo na internetu graf, který zkresluje — zkrácená osa, chybějící nula, nerovnoměrné intervaly. Dítě identifikuje problém a překreslí graf korektně.
+
+5. ### Srážky vs. teploty
+   Dítě do jednoho grafu zakreslí průměrné měsíční teploty a srážky pro své město (tzv. klimadiagram). Dva jevy v jednom grafu — složitější, ale mnohem výmluvnější.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Absolutní vs. relativní
+
+   ⏱️ _45 minut_
+
+   Připravte tabulku s daty o 10 státech: rozloha, počet obyvatel, HDP. Dítě spočítá relativní údaje (hustota zalidnění, HDP na obyvatele), seřadí tabulku a porovná: změní se pořadí oproti absolutním číslům? Proč?
+
+2. ### Kartogram českých krajů
+
+   ⏱️ _1–2 hodiny_
+
+   Dítě najde data pro české kraje (nezaměstnanost, průměrná mzda nebo podíl lesů), spočítá hodnoty a vybarví slepou mapu. Přidá legendu s barevnou škálou. Napíše komentář: co kartogram ukazuje, jaké jsou regionální rozdíly.
+
+3. ### Lovci klamů
+
+   ⏱️ _45 minut_
+
+   Najděte nebo vytvořte 5 zavádějících grafů (zkrácená osa, koláč s procenty nad 100 %, 3D graf zkreslující proporce). Dítě každý graf analyzuje: co je špatně, jak by měl vypadat správně, proč autor zkreslil.
+
+4. ### Klimadiagram mého města
+
+   ⏱️ _1 hodina_
+
+   Dítě najde průměrné měsíční teploty a srážky pro své město. Vytvoří kombinovaný graf — sloupce pro srážky, čára pro teploty. Přidá popisky os, legendu a komentář: kdy je nejtepleji, kdy nejvlhčeji.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Datawrapper](https://www.datawrapper.de) <Badge text="EN" variant="tip" /><br />
+  Jednoduchý nástroj pro tvorbu profesionálně vypadajících grafů, map a tabulek.
+- [ČHMÚ — historická data](https://www.chmi.cz)<br />
+  Klimatická data pro česká města — teploty, srážky, vítr.
+- [Český statistický úřad — kraje](https://www.czso.cz)<br />
+  Statistiky po krajích — obyvatelstvo, ekonomika, zaměstnanost.
+- [Spurious Correlations](https://tylervigen.com/spurious-correlations) <Badge text="EN" variant="tip" /><br />
+  Humorné příklady falešných korelací — skvělé pro pochopení, že korelace neznamená kauzalitu.
+- [Gapminder](https://www.gapminder.org) <Badge text="EN" variant="tip" /><br />
+  Interaktivní vizualizace světových dat — ukazuje, jak se svět mění v čase.

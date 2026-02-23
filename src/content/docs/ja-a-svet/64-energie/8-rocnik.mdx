@@ -1,0 +1,101 @@
+---
+title: "8. rocnik"
+sidebar:
+  order: 8
+  label: "8. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Zakon zachovani energie</dt>
+  <dd>Energie nevznika z niceho a neznika -- jen se premena z jedne formy na druhou. Celkova energie v uzavrenem systemu zustava stejna. Nejdulezitejsi zakon fyziky.</dd>
+
+  <dt>Ucinnost</dt>
+  <dd>Pomer uzitecne energie k celkove dodane energii. Vzorec: eta = W_uzitecna / W_dodana. Vyjadruje se v procentech. Zarovka 5 %, LED 30 %, elektromotor 90 %. Zbytek je teplo.</dd>
+
+  <dt>Teplo (Q)</dt>
+  <dd>Energie prenesena z teplejsiho telesa na chladnejsi. Jednotka: joule (J). Neni to totez co teplota! Teplota je stav, teplo je proces prenosu energie.</dd>
+
+  <dt>Merna tepelna kapacita</dt>
+  <dd>Kolik energie potrebujeme na ohrati 1 kg latky o 1 °C. Voda ma velmi vysokou (4180 J/kg*°C) -- proto se pomalu zahrilva a pomalu chladne. Kov ma nizkou -- rychle se zahreje i ochladii.</dd>
+
+  <dt>Vedeni, proudeni, zareni</dt>
+  <dd>Tri zpusoby prenosu tepla: vedeni (kov v hrnci), proudeni (horky vzduch stoupy), zareni (slunce hreje pres vakuum). V praxi se casto kombinuji.</dd>
+
+  <dt>Jaderna energie</dt>
+  <dd>Energie ulozena v jadrech atomu. Uvolnni se pri stiepeni (jadernaa elektrarna) nebo synteze (slunce). Obrovske mnozstvi energie z maleho mnozstvi latky -- 1 kg uranu = energie z 2500 tun uhli.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Formulovat zakon zachovani energie a uplatnit ho na bezne situace
+- Vypocitat ucinnost jednoducheho zarizzeni
+- Rozlisit teplo a teplotu jako ruzne pojmy
+- Popsat tri zpusoby prenosu tepla a uved priklad ke kazdemu
+- Spocitat energii potrebnou k ohrati vody (Q = m * c * delta_T)
+- Chapat, co je jaderna energie a jak se uvolnuje
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Termoska
+   Termoska kombinuje vsechny tri zpusoby omezeni tepelnych ztrat: vakuum (zabranuji vedeni a proudeni), leskliy povrch (odrazzi zareni). Proto udrzuje kavu teplou hodiny. -- Inzenyrstvii zalozene na fyzice.
+
+2. ### Proc more ochlazuje mesto
+   Voda ma vysokou mernou tepelnou kapacitu -- akumuluje hodne tepla a uvolnuje ho pomalu. Primo u morskou mesto maji mirnejsi klima: v lete chladnejs, v zime tepleji nez ve vnitrozemii.
+
+3. ### Jadernay elektrarna
+   V reaktoru se stiepi uran -- jadra se rozpadaji a uvolnuji teplo. Teplo ohreje vodu na paru, para toci turbinou, turbina pohani generator. Retez premen: jaderna -> tepelna -> mechanicka -> elektricka.
+
+4. ### Auto a ucinnost
+   Spalovaci motor premeni priblizne 30 % energie benzinu na pohyb. Zbytek (70 %) je teplo -- proto auto potrebuje chladic. Elektromobil ma ucinnost priblizne 85 % -- mnohem mene ztrty.
+
+5. ### Radiator v pokoji
+   Radiator ohreve vzduch kolem sebe (vedeni). Horky vzduch stoupy ke stropu, studeny klesna k podlaze (proudeni). Radiator take vysilaa infracervene zareni (zareni). Tri mechanismy spolecne ohrejuji pokoj.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Mereni ucinnosti konvice
+
+   ⏱️ _1 hodina_
+
+   Dite zmeri: hmotnost vody, pocatecni a konecnou teplotu, cas vareni. Spocita energii potrebnou na ohriati vody (Q = m * c * delta_T). Z elektromeru (nebo stitku konvice) zjistii celkovou dodanou energii. Ucinnost = Q / E_dodana. Proc neni 100 %?
+
+2. ### Experiment s vedenim tepla
+
+   ⏱️ _45 minut_
+
+   Na jeden konec kovove tyce, drevene tycky a plastove lziyce prilepte kousky masla (nebo vosku). Druhy konec ponorte do horke vody. Na ktere tycce se maslo roztavi nejdriiv? Kov vede teplo nejlip, plast neijhur. Dite zapise poradii a vysvetli.
+
+3. ### Energetickay bilance domu
+
+   ⏱️ _1,5 hodiny_
+
+   Dite zjistii rocni spotrebu energie domacnosti (plyn, elektrina) z uctenek. Spocita celkovou energii v kWh. Kolik z toho je topeni, ohrev vody, spotrebice? Kde by slo setrit? Vytvori kolacoviy graf a navrhy na usporu.
+
+4. ### Debata: Jadernay energie -- ano, nebo ne?
+
+   ⏱️ _1 hodina_
+
+   Dite pripravii argumenty pro (hodne energie, malo CO₂) i proti (odpad, havarie, uran neni neomezeny). Uspodra kratkou prezentaci. Diskutujte jako rodina -- jde o dulezite spolecenske tema.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Zakon zachovani energie -- Fyzika](https://fyzika.jreichl.com/main.article/view/37-energie)<br />
+  Vysvetleni zaklonu zachovani energie s priklady.
+- [CEZ -- Jak funguje elektrarna](https://www.cez.cz)<br />
+  Informace o ruznych typech elektrarenn a premenach energie.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- Thermodynamics](https://www.khanacademy.org/science/physics/thermodynamics)<br />
+  Videa o teple, teplote a prenotu tepla.
+- English: <Badge text="EN" variant="tip" /> [PhET -- Energy Forms and Changes](https://phet.colorado.edu/en/simulations/energy-forms-and-changes)<br />
+  Simulace energetickych premen a prenosu tepla.

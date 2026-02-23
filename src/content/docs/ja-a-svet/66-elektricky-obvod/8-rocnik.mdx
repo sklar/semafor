@@ -1,0 +1,101 @@
+---
+title: "8. rocnik"
+sidebar:
+  order: 8
+  label: "8. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Kirchhoffovy zakony</dt>
+  <dd>Zakladni pravidla pro obvody: (1) Soucet proudu do uzlu = soucet proudu z uzlu. (2) Soucet napeti v uzavreme smycce = 0. Intuitivne: proud se nikde neztrati a napeti se "spotrebe" na soucastkach.</dd>
+
+  <dt>Seriove zapojeni odporu</dt>
+  <dd>Odpory za sebou: celkovy odpor = R₁ + R₂ + R₃... Proud je vsude stejny, napeti se rozdelii. Cim vic odporu v serii, tim vetsi celkovy odpor.</dd>
+
+  <dt>Paralelni zapojeni odporu</dt>
+  <dd>Odpory vedle sebe: 1/R_celk = 1/R₁ + 1/R₂... Napeti je vsude stejne, proud se rozdelii. Celkovy odpor je mensi nez nejmensi jednotlivy odpor.</dd>
+
+  <dt>Elektricka prace</dt>
+  <dd>Energie, ktere spotrebic premeni. Vzorec: W = U * I * t. Jednotka: joule (J) nebo kilowatthodina (kWh). Na uctence za elektrinu platite za kWh.</dd>
+
+  <dt>Elektricky vykon</dt>
+  <dd>Jak rychle spotrebic premena energii. Vzorec: P = U * I. Jednotka: watt (W). Zarovka 60 W premena 60 joulu za sekundu. Varny konvice 2000 W je "silnejsi" nez zarovka.</dd>
+
+  <dt>Striadvy proud (AC)</dt>
+  <dd>Proud, ktery meni smer 50krat za sekundu (50 Hz). Proudii ze zasuvky. Vyhodnejsi pro prenos na velke vzdalenosti. Vetsina domacich spotrebicu pouziva striadvy proud.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Vypocitat celkovy odpor serioveho a paralelniho zapojeni
+- Pouzit vzorec pro elektrickou praci a vykon
+- Chapat rozdil mezi stejnosmernym a striadvym proudem
+- Spocitat spotrebu elektrickeho spotrebice v kWh
+- Intuitivne rozumet Kirchhoffovym zakonum (proud se neztraci, napeti se "spotrebuje")
+- Nakreslit a analyzovat slozitejsi schema obvodu
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Uctenka za elektrinu
+   Spotreba 250 kWh za mesic. Cena 6 Kc/kWh = 1500 Kc. Kolik z toho spotrebuje lednicka (150 W * 24 h * 30 dni = 108 kWh = 648 Kc)? -- Elektricka prace a vykon v penezich.
+
+2. ### Proc zasuvka ma 230 V
+   V Cesku je v zasuvkach striadvy proud 230 V / 50 Hz. Americky standard je 120 V / 60 Hz. Vyssi napeti umoznuje tensi dryty (mensi proud pro stejny vykon). Proto evropske zasuvky a vidlice vypadaji jinak.
+
+3. ### Pojistka 16 A
+   Jistic v rozvodne skrinni prepne pri 16 A. Maximalni vykon: P = U * I = 230 * 16 = 3680 W. Kdyz zapojite konvici (2000 W) a topeni (2000 W) na stejny okruh, 4000 W > 3680 W -- jistic vypadne.
+
+4. ### Vanocni retez -- seriove vs. paralelni
+   Stariy retez (seriove): jedna zarovka prashala = vsechny zhasly. Novy retez (paralelne): kazda zarovka sviti nezavisle. Navic v paralelnim zapojeni kazda zarovka dostane plne napeti -- sviti jasneji.
+
+5. ### Stejnosmerny vs. striadvy
+   Baterie dava stejnosmerny proud (DC) -- proud tece stale jednim smerem. Zasuvka dava striadvy (AC) -- smer se meni 50x za sekundu. Elektronika (telefon, pocitac) potrebuje DC -- proto ma nabijecka prevodnyk.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Vypocet spotreby domacnosti
+
+   ⏱️ _1 hodina_
+
+   Dite zapise vykon vsech spotrebicu (ze stitku) a odhadne denni dobu provozu. Spocita denni spotrebu v kWh a mesicniii ucet. Porovna s realnou uctenkou. Ktery spotrebic je nejdrazsi? Kde se da setrit?
+
+2. ### Seriove a paralelni odpory
+
+   ⏱️ _1 hodina_
+
+   S elektrostavebnicii (nebo simulaci PhET) dite zapoji rezistory seriove a paralelne. Meri celkovy odpor multimetrem. Overuje vzorce: R_ser = R₁ + R₂, 1/R_par = 1/R₁ + 1/R₂. Zapise vysledky a porovna s vypoctem.
+
+3. ### Stavba obvodu s merenim
+
+   ⏱️ _1,5 hodiny_
+
+   Dite sestavi obvod se dvema zarovkami (seriove a paralelne). Meri napeti na kazde zarovce voltmetrem a proud ampermetrem. Overuje Kirchhoffovy zakony: soucet napeti v serii = napeti zdroje, proud v paralelnim zapojeni se rozdelii.
+
+4. ### Projekt: Kolik stoji nas den?
+
+   ⏱️ _1 hodina_
+
+   Dite sleduje 1 den vsechny elektricke spotrebice, ktere pouziva. Zapise: co, jak dlouho, jaky vykon. Vecer spocita celkovou spotrebu a "cenu dne". Vytvori graf: kolik energie pada na svetlo, vareniii, zabavu, nabijeni.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Kirchhoffovy zakony -- Fyzika](https://fyzika.jreichl.com/main.article/view/244-kirchhoffovy-zakony)<br />
+  Vysvetleni Kirchhoffovych zakonu s priklady a schematy.
+- [Spotreba elektriny -- ERU](https://www.eru.cz)<br />
+  Energeticky regulacni urad -- informace o cenach a spotrebe.
+- English: <Badge text="EN" variant="tip" /> [PhET -- Circuit Construction Kit: AC+DC](https://phet.colorado.edu/en/simulations/circuit-construction-kit-ac)<br />
+  Simulace obvodu vcetne striadveho proudu.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- DC circuit analysis](https://www.khanacademy.org/science/physics/circuits-topic)<br />
+  Videa o analyze obvodu, Kirchhoffovych zakonech.

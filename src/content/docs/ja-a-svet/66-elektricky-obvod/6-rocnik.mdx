@@ -1,0 +1,101 @@
+---
+title: "6. rocnik"
+sidebar:
+  order: 6
+  label: "6. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Elektricky obvod</dt>
+  <dd>Uzavrena cesta, kterou proteka elektricky proud. Zakladni obvod ma tri casti: zdroj (baterie), vodic (drat) a spotrebic (zarovka). Kdyz se cesta preruseni, proud netece.</dd>
+
+  <dt>Zdroj napeti</dt>
+  <dd>Dodava energii do obvodu. Nejcasteji baterie (1,5 V tusenkova, 9 V hranolova) nebo akumulator. Ma dva poly: kladny (+) a zaporny (-).</dd>
+
+  <dt>Spotrebic</dt>
+  <dd>Premena elektrickou energii na jinou formu: zarovka na svetlo, motorek na pohyb, buzzer na zvuk. Bez spotrebice by byl obvod nakratko (zkrat).</dd>
+
+  <dt>Vodic</dt>
+  <dd>Material, ktery vede elektricky proud -- nejcasteji medeny drat. Propojuje zdroj se spotrebicem. Proud tece celym vodicem soucasne.</dd>
+
+  <dt>Vypinac</dt>
+  <dd>Soucastka, ktera prerusi nebo spoji obvod. Kdyz je zaply, obvod je uzavreny a proud tece. Kdyz je vyply, obvod je otevreny a proud netece.</dd>
+
+  <dt>Seriove zapojeni</dt>
+  <dd>Spotrebice jsou zapojeny za sebou -- proud prochazi jednim a pak druhym. Kdyz jedna zarovka zhane, zhasnou vsechny (jako starsi vanocni retez).</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Pojmenovat zakladni casti obvodu: zdroj, vodic, spotrebic, vypinac
+- Sestavit jednoduchy obvod z baterie, dratku a zarovky
+- Vysvetlit, proc musi byt obvod uzavreny, aby proud tekl
+- Nakreslit jednoduche schema obvodu
+- Vedet, co je seriove zapojeni a proc pri nem zhasnuti jedne zarovky zhasne vse
+- Vysvetlit funkci vypinace
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Baterka (svitilna)
+   Uvnitr baterky je baterie, vodice, vypinac a zarovka (nebo LED). Kdyz zmacknete tlacitko, uzavrete obvod a zarovka se rozsviti. Pustite tlacitko, obvod se prerusui a zhasne. Cely princip v dlani.
+
+2. ### Vanocni retez
+   Starsi vanocni retezy mely zarovky zapojene seriove -- kdyz jedna preshala, zhasly vsechny. Moderni retez ma paralelni zapojeni -- kazda zarovka sviti nezavisle. Rozdil v zapojeni = rozdil v chovani.
+
+3. ### Vypinac v pokoji
+   Zmacknete vypinac a svetlo se rozsviti. Vypinac prerusi nebo spoji drat ve stene -- jednoduse otevre nebo zavre obvod. Zadna magie, jen fyzika.
+
+4. ### Proc baterka prestane svitit
+   Baterie ma omezenou zasobu chemicke energie. Kdyz se vycerpa, prestane dodavat napeti a proud prestane tect. Baterka neshorelaa -- dosla ji "sila" (energie).
+
+5. ### Autobus a dvere
+   V autobuse se dvere otevrou a motor se zastavui -- bezpecnostni obvod. Otevrene dvere prerusui obvod motoru. Zavrene dvere uzavrou obvod a autobus muze jet. Elektricke obvody ridii bezpecnost.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Sestav svuj prvni obvod
+
+   ⏱️ _30 minut_
+
+   Z plochy baterie (4,5 V nebo 3x AA), dvou dratku a male zarovky (nebo LED) dite sestavi obvod tak, aby zarovka svitila. Pak prida vypinac (staci dva kancelarske sponky a gumicka). Nakresli schema toho, co postavilo.
+
+2. ### Co vede proud?
+
+   ⏱️ _45 minut_
+
+   Do obvodu s bateriii a zarovkou vlozte "testovaci misto" -- dva volne konce dratku. Dite pripoji ruzne predmety (lzicka, klicek, guma, mince, papir, tuha z tuzky). Co rozsviti zarovku? Vodic vs. izolant -- empiricky dukaz.
+
+3. ### Seriovy retez
+
+   ⏱️ _45 minut_
+
+   Dite zapoji dve zarovky seriove (za sebou). Sviti obeas? Jak jasne ve srovnani s jednou zarovkou? Co se stane, kdyz jednu vyroubujete? Dite zapise pozorovani a nakresli schema.
+
+4. ### Plakat: Elektricky obvod kolem nas
+
+   ⏱️ _1 hodina_
+
+   Dite najde 5 spotrebicu v domacnosti a ke kazdemu nakresi jednoduche schema obvodu (zdroj -> vodic -> spotrebic -> zpet). Vysvetli, co je zdroj (zasuvka/baterie) a co je spotrebic (motor, zarovka, topne teleso).
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Elektricky obvod -- Fyzika pro ZS](https://fyzika.jreichl.com/main.article/view/233-elektricky-obvod)<br />
+  Zakladni vysvetleni obvodu se schematy.
+- [Boffin -- elektrostavebnice](https://www.boffin.cz)<br />
+  Ceska elektrostavebnice pro deti -- bezpecne experimenty bez pajecky.
+- English: <Badge text="EN" variant="tip" /> [PhET -- Circuit Construction Kit](https://phet.colorado.edu/en/simulations/circuit-construction-kit-dc)<br />
+  Interaktivni simulace -- stavba obvodu na obrazovce. Skvele pro experimentovani.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- Circuits](https://www.khanacademy.org/science/physics/circuits-topic)<br />
+  Videa o elektrickych obvodech od zakladu.

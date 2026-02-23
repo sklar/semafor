@@ -1,0 +1,79 @@
+---
+title: "69. Chemické rovnice"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Aplikuje některé základní chemické rovnice." />
+
+## Co to znamená?
+
+Dítě dokáže přečíst a pochopit zápis chemické reakce — co reaguje, co vzniká a proč. Umí zapsat jednoduché rovnice a vyčíslit je (zajistit, že na obou stranách je stejný počet atomů). Chápe, že chemická rovnice je vlastně "recept" — říká, co smíchat a co dostanete.
+
+V praxi to znamená, že dítě rozumí, co se děje, když hoří svíčka (vosk + kyslík = oxid uhličitý + voda), proč při pečení kypří soda těsto (reakce s kyselinou) nebo proč rez "požírá" železo (oxidace).
+
+Nejde o složité výpočty — jde o pochopení principu, že atomy se při reakci nepřetvářejí ani neztrácejí, jen se přeskupují.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **8.** | **Začněte zde.** Pojem chemická reakce, reaktanty a produkty. Zápis jednoduchých rovnic. Vyčíslování — proč musí být na obou stranách stejný počet atomů (zákon zachování hmotnosti). Základní typy reakcí: slučování, rozklad, hoření. |
+| **9.** | **Prohlubujte.** Složitější rovnice, reakce kyselin se zásadami (neutralizace), reakce kovů s kyselinami. Exotermní a endotermní reakce — proč některé reakce zahřívají a jiné ochlazují. Rychlost reakce a co ji ovlivňuje (teplota, koncentrace, katalyzátor). |
+
+<Aside title="Prerekvizity" type="tip">Chemická terminologie (bod 67) — dítě musí znát značky prvků a rozumět vzorcům. Základy matematiky — vyčíslování rovnic je vlastně řešení jednoduché rovnosti.</Aside>
+
+## Poznámky
+
+<Aside title="Rovnice je příběh">Každou rovnici lze vyprávět jako příběh: "Železo se potkalo s kyslíkem a vznikla rez." Když dítě vidí rovnici jako příběh, ne jako abstraktní vzorec, zapamatuje si ji mnohem lépe.</Aside>
+
+<Aside title="Typická past" type="caution">Vyčíslování rovnic se často učí jako mechanický postup bez porozumění. Dítě přidává koeficienty, ale nechápe proč. Vždy se vraťte k základu: atomy se nevytvářejí ani neztrácejí, jen se přerovnají.</Aside>
+
+<Aside title="Důležité" type="danger">Nikdy neměňte indexy ve vzorcích, abyste rovnici vyčíslili! H₂O je voda, ale H₂O₂ je peroxid vodíku — úplně jiná látka. Při vyčíslování se mění jen koeficienty (čísla před vzorci), nikdy indexy.</Aside>
+
+## Souvislosti
+
+- <Badge text="JAS" /> bod 67 (chemická terminologie) — značky a vzorce jsou jazyk rovnic
+- <Badge text="JAS" /> bod 70 (kyseliny, zásady, pH) — neutralizace je klíčový typ reakce
+- <Badge text="JAS" /> bod 71 (látky v běžném životě) — chemické reakce probíhají všude kolem nás
+- <Badge text="MAT" /> bod 01 (početní operace) — vyčíslování rovnic vyžaduje počítání
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost pracovat s chemickými rovnicemi.</SkillItem>
+  <SkillItem level="novice">
+    Dítě tuší, že chemické reakce existují, ale neumí je zapsat ani přečíst.
+    <ul>
+      <li>Nerozlišuje reaktanty a produkty</li>
+      <li>Nedokáže přečíst jednoduchou rovnici a říct, co se děje</li>
+      <li>Nechápe, proč musí být rovnice vyčíslená</li>
+      <li>Zaměňuje koeficienty a indexy</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě rozumí principu chemické rovnice a zvládne jednoduché případy.
+    <ul>
+      <li>Přečte rovnici a popíše, co reaguje a co vzniká</li>
+      <li>Vyčíslí jednoduchou rovnici (hoření, slučování)</li>
+      <li>Chápe zákon zachování hmotnosti — "nic se neztrácí, nic nevzniká"</li>
+      <li>U složitějších rovnic potřebuje nápovědu</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě pracuje s rovnicemi samostatně a chápe je v širším kontextu.
+    <ul>
+      <li>Vyčíslí i složitější rovnice bez pomoci</li>
+      <li>Rozpozná typ reakce (slučování, rozklad, neutralizace, oxidace)</li>
+      <li>Dokáže zapsat rovnici podle slovního popisu reakce</li>
+      <li>Chápe energetickou stránku reakcí (exo- vs. endotermní)</li>
+    </ul>
+  </SkillItem>
+</Skill>

@@ -1,0 +1,79 @@
+---
+title: "70. Kyseliny, zásady a pH"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Rozlišuje kyseliny a zásady, orientuje se na stupnici pH." />
+
+## Co to znamená?
+
+Dítě chápe, že kyseliny a zásady (louhy) jsou dvě základní skupiny chemických látek s opačnými vlastnostmi. Umí je rozlišit, ví, jak se chovají, a orientuje se na stupnici pH — číselném vyjádření, jak moc je roztok kyselý nebo zásaditý.
+
+V praxi to znamená, že dítě rozumí, proč citron štípe v ranče (kyselina), proč mýdlo klouže (zásada), proč si měříme pH v bazénu nebo v akváriu, a proč má žaludek kyselé prostředí. Ví, že pH 7 je neutrální, pod 7 kyselé, nad 7 zásadité.
+
+Tohle téma je krásně propojitelné s běžným životem — kyseliny a zásady jsou doslova na každém kroku.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **8.** | **Začněte zde.** Co je kyselina a zásada, jak je poznat. Stupnice pH 0–14. Indikátory (lakmusový papírek, fenolftalein, červené zelí). Běžné kyseliny a zásady v domácnosti. Neutralizace — kyselina + zásada = sůl + voda. |
+| **9.** | **Prohlubujte.** Silné vs. slabé kyseliny a zásady. pH a jeho logaritmická povaha. Pufry — proč krev udržuje pH kolem 7,4. Kyseliny a zásady v průmyslu, zemědělství, ekologii (kyselé deště). Titrace jako metoda měření. |
+
+<Aside title="Prerekvizity" type="tip">Chemická terminologie (bod 67) — značky a vzorce. Chemické rovnice (bod 69) — neutralizace je chemická reakce. Základy matematiky — stupnice pH je logaritmická.</Aside>
+
+## Poznámky
+
+<Aside title="Začněte ochutnáváním (bezpečně!)">Kyselá chuť = kyselina (citron, ocet, jogurt). Hořká/mýdlová chuť = zásada (jedlá soda ve vodě). Tohle je nejintuitivnější úvod do tématu — dítě má přímou smyslovou zkušenost.</Aside>
+
+<Aside title="Typická past" type="caution">Myslet si, že kyseliny jsou vždy nebezpečné a zásady neškodné (nebo naopak). Kyselina citronová je neškodná, ale hydroxid sodný (louh v čističi odpadů) je extrémně žíravá zásada. Nebezpečnost závisí na koncentraci a typu, ne na tom, jestli jde o kyselinu nebo zásadu.</Aside>
+
+<Aside title="Důležité" type="danger">Při práci s koncentrovanými kyselinami a louhy vždy ochranné brýle a rukavice. Při ředění kyseliny platí železné pravidlo: kyselinu lijeme do vody, nikdy naopak! (Pamatovačka: "Nikdy nelij vodu do kyseliny, to by byl konec tvého krásného bytí.")</Aside>
+
+## Souvislosti
+
+- <Badge text="JAS" /> bod 67 (chemická terminologie) — vzorce kyselin, zásad a solí
+- <Badge text="JAS" /> bod 68 (bezpečné zacházení s látkami) — kyseliny a louhy jsou běžné nebezpečné látky
+- <Badge text="JAS" /> bod 69 (chemické rovnice) — neutralizace jako typ reakce
+- <Badge text="JAS" /> bod 71 (látky v běžném životě) — kyseliny a zásady v potravinách, čisticích prostředcích
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost ukázat, jestli rozlišuje kyseliny a zásady nebo rozumí stupnici pH.</SkillItem>
+  <SkillItem level="novice">
+    Dítě ví, že existují kyseliny a zásady, ale nedokáže je rozlišit ani pracovat s pH.
+    <ul>
+      <li>Neví, co je pH a k čemu slouží stupnice</li>
+      <li>Nedokáže uvést příklady kyselin a zásad z běžného života</li>
+      <li>Nerozumí, co je neutralizace</li>
+      <li>S indikátory nepracovalo nebo neví, co ukazují</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě rozlišuje kyseliny a zásady, orientuje se na stupnici pH v běžných situacích.
+    <ul>
+      <li>Ví, že pH 7 je neutrální, pod 7 kyselé, nad 7 zásadité</li>
+      <li>Uvede příklady kyselin (ocet, citron) a zásad (mýdlo, jedlá soda) z domácnosti</li>
+      <li>Umí použít indikátor (lakmus, pH papírek) a přečíst výsledek</li>
+      <li>Chápe neutralizaci — kyselina + zásada se vzájemně "zruší"</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě pracuje s konceptem pH jistě a chápe ho v širším kontextu.
+    <ul>
+      <li>Rozlišuje silné a slabé kyseliny/zásady a ví, proč na tom záleží</li>
+      <li>Chápe pH jako logaritmickou stupnici — pH 3 je 10x kyselejší než pH 4</li>
+      <li>Rozumí, proč je pH důležité v biologii (krev, půda), ekologii (kyselé deště) i technice (bazén)</li>
+      <li>Dokáže zapsat rovnici neutralizace a vysvětlit, co při ní vzniká</li>
+    </ul>
+  </SkillItem>
+</Skill>

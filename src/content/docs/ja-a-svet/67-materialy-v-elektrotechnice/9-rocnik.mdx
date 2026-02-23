@@ -1,0 +1,102 @@
+---
+title: "9. rocnik"
+sidebar:
+  order: 9
+  label: "9. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Supravodivost</dt>
+  <dd>Nektery materialy pri extrremne nizkych teplotach ztraci elektricky odpor uplne -- proud tece bez ztrat. Vyuziti: MRI v nemocnicich, urychlovace castic, magneticke levitace. Zatim vyzaduji chlazeni kapalnym heliem.</dd>
+
+  <dt>Dopovani polovodicu</dt>
+  <dd>Pridanim nepatrneho mnozstvi "cizi" latky do kremiku zmenime jeho vodivost. Fosfor prida volne elektrony (typ N), bor prida "diry" (typ P). Zaklad vsech cipu, solarnych clanku a LED.</dd>
+
+  <dt>PN prechod</dt>
+  <dd>Rozhrani mezi polovodicem typu P a typu N. Proud tece snadno jednim smerem (propustny), tezko opacnym (zaverny). Zaklad diody. Dva PN prechody = tranzistor.</dd>
+
+  <dt>Integrovany obvod (cip)</dt>
+  <dd>Miliardy tranzistoru na jednem kousku kremiku (velikost nehtu). Vyyroba: fotolitografie -- svetlem se "kresli" vzory na kremikovou desticky. Nejslozitejsi vec, co lidstvo vyrabi.</dd>
+
+  <dt>Piezoelektricky jev</dt>
+  <dd>Nektery krystaly (kremen) pri mechanickem stlaceni vytvori napeti, a naopak -- pri privedeni napeti se deformuji. Pouziti: hodinky (kremenovy oscilator), zapalovacc, ultrazvukove senzory.</dd>
+
+  <dt>Nanomaterialy</dt>
+  <dd>Materialy s castecemi mensimi nez 100 nanometru (100 miliontinnn metru). Na tak male skale se materialy chovaji jinak -- zlato je cervene, uhlik je pevnejsi nez ocel (grafen). Budoucnost elektroniky a medicine.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Vysvetlit, co je supravodivost a kde se vyuziva
+- Chapat princip dopovani a proc je dulezity pro elektroniku
+- Popsat PN prechod a jeho funkci v diode
+- Vedet, co je integrovany obvod a proc je tak dulezity
+- Vysvetlit piezoelektricky jev na beznem prikladu
+- Chapat, co jsou nanomaterialy a proc se chovaji jinak nez velke kusy stejneho materialu
+- Propojit materialy s jejich vyuzitim v moderni technologii
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### MRI v nemocnici
+   Magneticka rezonance pouziva supravodivy magnet -- proud krouzi civkou bez odporu a vytvari silne magneticke pole. Bez supravodivosti by MRI spotrebovalo obrovske mnozstvi energie a magnet by se zahhrival.
+
+2. ### Procesor -- 10 miliard tranzistoru
+   Moderni procesor obsahuje priblizne 10 miliard tranzistoru na plose 1 cm². Kazdy je mensi nez virus. Vyroba vyzaduje cistee prostory 1000x cistejsi nez operacni sal. -- Integrovany obvod je vrchol lidske technologie.
+
+3. ### Solarni clanek
+   Slunecni svetlo dopada na PN prechod v kremiku. Fotony "vyrazejii" elektrony -- vznika proud. Jeden clanek dava priblizne 0,5 V. Panel je stovky clanku propojenyych. -- Polovodic premena svetlo na elektrinu.
+
+4. ### Kremenove hodinky
+   Krystal kremene kmita na presne frekvenci (32 768 Hz) diky piezoelektrickemu jevu. Elektronika pocita kmity a kazdu sekundu posune rucicku. Presnost: +/- 1 sekunda za mesic. Jednoduchy princip, skvely vysledek.
+
+5. ### Grafen -- material budoucnosti
+   Jedna vrstva atomu uhliku usporadanych do sestiuhelniku. 200x pevnejsi nez ocel, vede elektrinu lip nez med, je pruhledny a ohebny. Zatim drahy na vyrobu, ale potencial je obrovsky -- ohebne displeje, filtery vody, superkondenzatory.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Solarni clanek -- experiment
+
+   ⏱️ _1 hodina_
+
+   Dite pripoji maly solarni clanek k multimetru a meri napeti pri ruznem osvetleni: prime slunce, stin, umele svetlo, pokryti pulky clanku. Jak se meni napeti? Proc zakryti pulky snizi vykon vic nez na polovinu? (Hint: seriove zapojeni clanku.)
+
+2. ### Piezoelektricky zapalovacc
+
+   ⏱️ _30 minut_
+
+   Rozeberte stary piezoelektricky zapalovacc (z plinoveho sporaaku). Dite identifikuji piezoelektricky krystal a vysvetli, jak udeer vytvari jiskru. Bez baterie, bez siriek -- jen mechanicky tlak na krystal = vysoke napeti.
+
+3. ### Casova osa elektroniky
+
+   ⏱️ _1,5 hodiny_
+
+   Dite vytvori casovou osu od prvniho tranzistoru (1947) po moderni procesory: elektronka -> tranzistor -> integrovany obvod -> mikroprocesor -> dnesnii cipy. U kazdeho milniku popise material, velikost a pocet soucastek.
+
+4. ### Referat: Technologie budoucnosti
+
+   ⏱️ _2 hodiny_
+
+   Dite vybere jeden material/technologiii (grafen, supravodicc pri pokojove teplote, kvantovy pocitac) a zpracuje kratky referat: co to je, jak to funguje, co by to zmenilo. Prezentuje rodine a odpovidna na otazky.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Polovodice -- Fyzika pro ZS](https://fyzika.jreichl.com/main.article/view/260-polovodicova-dioda)<br />
+  Dopovani, PN prechod, dioda, tranzistor.
+- [Nanotechnologie -- Akademie ved](https://www.avcr.cz)<br />
+  Popularne o nanomaterialech a jejich vyuziti.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- Semiconductors and diodes](https://www.khanacademy.org/science/physics/circuits-topic)<br />
+  Videa o polovodicich, dopovani a PN prechodu.
+- English: <Badge text="EN" variant="tip" /> [Veritasium -- How Transistors Work](https://www.youtube.com/watch?v=IcrBqCFLHIY) <br />
+  Srozumitelne video o fungovaniii tranzistoru.

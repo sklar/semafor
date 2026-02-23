@@ -1,0 +1,83 @@
+---
+title: "125. Experimenty"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Prakticky využívá vhodné pracovní postupy pro experimenty" />
+
+## Co to znamená?
+
+Dítě umí naplánovat a provést jednoduchý experiment — formulovat otázku, navrhnout postup, provést měření, zaznamenat výsledky a vyvodit závěr. Nejde o laboratorní vědu, ale o systematické zkoumání světa kolem sebe.
+
+V praxi to znamená, že když dítě chce zjistit, jaký prací prostředek pere nejlíp, která rostlina roste nejrychleji nebo jestli slaná voda zamrzá pomaleji, dokáže si navrhnout jednoduchý pokus, provést ho a výsledky srozumitelně prezentovat.
+
+Experimentování je klíčová dovednost, která propojuje přírodní vědy s praktickým životem. Učí dítě myslet kriticky, sbírat důkazy a rozhodovat se na základě dat, ne domněnek.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Jednoduché pokusy s jasným postupem — měření, pozorování, záznam. Důraz na bezpečnost a systematičnost. |
+| **7.–8.** | **Prohlubujte.** Vlastní návrh experimentu, kontrolní skupina, opakování pokusu, grafické zpracování výsledků. |
+| **9.** | **Samostatná práce.** Komplexní experiment s hypotézou, metodikou, analýzou dat a prezentací závěrů. |
+
+<Aside title="Prerekvizity" type="tip">Základní matematické dovednosti (měření, průměr), schopnost zaznamenat pozorování. Pomáhá i základní práce s tabulkovým editorem pro zpracování dat.</Aside>
+
+## Poznámky
+
+<Aside title="Otázka je důležitější než odpověď">Naučte dítě klást otázky: Proč? Co se stane, když...? Jak to funguje? Dobrý experiment začíná dobrou otázkou. Nechte dítě formulovat vlastní otázky — ne vždy musíte dávat zadání.</Aside>
+
+<Aside title="Chyba je součást procesu">Experiment, který "nefunguje", není neúspěch. Neočekávaný výsledek je často zajímavější než potvrzení hypotézy. Učte dítě, že chyby a překvapení jsou cenné.</Aside>
+
+<Aside title="Typická past" type="caution">Dělat experimenty jen "na papíře" — přečíst si postup a výsledek místo skutečného provedení. Dítě si musí sáhnout na materiály, měřit, pozorovat. Hands-on zkušenost je nenahraditelná.</Aside>
+
+<Aside title="Důležité" type="danger">Bezpečnost je absolutní priorita. Žádný experiment bez dohledu dospělého, pokud zahrnuje oheň, chemikálie, ostré předměty nebo elektrický proud. Vždy ochranné pomůcky (brýle, rukavice) při práci s jakýmikoli chemikáliemi — i běžnými domácími.</Aside>
+
+## Souvislosti
+
+- <Badge text="JAS" /> bod 126 (zdroje pro experimenty) — vyhledávání podkladů a inspirace
+- <Badge text="JAS" /> bod 128 (bezpecnost pri praci) — bezpečnostní postupy při experimentech
+- <Badge text="MAT" /> bod 01 (pocetni operace) — měření, výpočty, zpracování dat
+- <Badge text="JAS" /> bod 02 (textove a graficke editory) — dokumentace a prezentace výsledků
+- <Badge text="ČJ" /> bod 06 (tvorivy koherentni text) — psaní protokolů a závěrů
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost provádět experimenty nebo systematicky zkoumat otázky.</SkillItem>
+  <SkillItem level="novice">
+    Dítě provede experiment podle návodu, ale nedokáže ho samostatně navrhnout.
+    <ul>
+      <li>Postupuje podle zadání krok za krokem, ale nerozumí, proč se co dělá</li>
+      <li>Zaznamenává výsledky, ale nesystematicky — chybí struktura</li>
+      <li>Nedokáže formulovat vlastní otázku nebo hypotézu</li>
+      <li>Výsledky komentuje, ale nevyvozuje z nich závěr</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě rozumí principu experimentu a zvládne jednodušší pokusy samostatně.
+    <ul>
+      <li>Formuluje jednoduchou hypotézu a navrhne postup k jejímu ověření</li>
+      <li>Systematicky zaznamenává data — tabulky, měření, fotografie</li>
+      <li>Rozumí pojmu kontrolní skupina a proč je důležitá</li>
+      <li>Výsledky zpracuje do grafu a vyvodí základní závěr</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě samostatně navrhuje, provádí a vyhodnocuje experimenty.
+    <ul>
+      <li>Formuluje přesnou výzkumnou otázku a ověřitelnou hypotézu</li>
+      <li>Navrhuje metodiku včetně kontrolních skupin a opakování</li>
+      <li>Zpracovává data statisticky a vizualizuje je přehledně</li>
+      <li>Kriticky hodnotí vlastní výsledky, rozpoznává limity a navrhuje vylepšení</li>
+    </ul>
+  </SkillItem>
+</Skill>

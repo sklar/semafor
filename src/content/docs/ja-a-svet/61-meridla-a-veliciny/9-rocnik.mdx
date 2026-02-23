@@ -1,0 +1,102 @@
+---
+title: "9. rocnik"
+sidebar:
+  order: 9
+  label: "9. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Merici rozsah</dt>
+  <dd>Minimalni a maximalni hodnota, kterou meridlo zmeri. Kuchynske vahy s rozsahem 0--5 kg nezvazi 10kg pytel. Voltmeter do 10 V nezmeri 230 V ze zasuvky.</dd>
+
+  <dt>Systematicka chyba</dt>
+  <dd>Chyba, ktera se opakuje pri kazdem mereni stejnym smerem -- napr. spatne kalibrovanene vahy vzdy ukazuji o 5 g vice. Lze ji odhalit a opravit.</dd>
+
+  <dt>Nahodna chyba</dt>
+  <dd>Chyba, ktera se meni pri kazdem mereni -- jednou je vysledek o trochu vetsi, podruhe mensi. Zmensi se opakovanym merenim a prumerovanim.</dd>
+
+  <dt>Platne cifry</dt>
+  <dd>Cifry, ktere nesou informaci o presnosti mereni. Vysledek 3,14 m ma tri platne cifry. Nema smysl psat 3,14159 m, kdyz merime pravitkem s presnosti na milimetry.</dd>
+
+  <dt>Fyzikalni vzorec</dt>
+  <dd>Matematicky zapis vztahu mezi velicinami. Napr. v = s / t spojuje rychlost, drahu a cas. Ze vzorce lze vyjadrit jakoukoli velicinu: s = v * t, t = s / v.</dd>
+
+  <dt>Kalibrace</dt>
+  <dd>Overeni a nastaveni meridla, aby ukazovalo spravne hodnoty. Kuchynske vahy kalibrujete polozenim znameho zavazi. Bez kalibrace nemuzete vysledkum verit.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Vyjadrovat jakoukoli velicinu ze zakladnich vzorcu (v = s/t -> s = v*t, t = s/v)
+- Rozlisit systematickou a nahodnou chybu mereni
+- Zapsat vysledek s primerenym poctem platnych cifer
+- Prevadet jednotky se vsemi predponami SI (nano az giga)
+- Navrhnout jednoduchy experiment -- co merit, cim, kolikrat, jak vyhodnotit
+- Pouzivat tabulky fyzikalnich konstant a vlastnosti latek
+- Kriticky posoudit, jestli namerena hodnota "dava smysl"
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Presnost GPS
+   GPS urcuje polohu s presnosti 3--5 metru. Pro navigaci v aute staci, pro meridla pozemku ne. Pro stavbu mostu uz vubec ne -- tam se meri na milimetry specialnimi pristroji. -- Kazda situace vyzaduje jinou presnost.
+
+2. ### Nutricni hodnoty na obale
+   Na obale je "energie 1520 kJ / 100 g". To neni presne cislo -- je to prumer z vice mereni s urcitou chybou. Kdyz sni dite 80 g, musi prepocitat. A vysledek nebude presnejsi nez vstupni data. -- Platne cifry v praxi.
+
+3. ### Rychlost svetla a vzdalenosti ve vesmiru
+   Svetlo leti 299 792 458 m/s. Jak daleko dojde za rok? Svetelny rok = priblizne 9,46 * 10^15 m. Bez predpon SI a mocnin bychom takova cisla neupsali. -- Extremni veliciny a jak s nimi pracovat.
+
+4. ### Nefunkcni teplomer
+   Teplomer ukazuje 38 °C, ale dite se citi zdrave. Muze byt teplomer spatne zkalibrovan? Jak to overit? Zmerit teplotu jinym teplomerem, porovnat vysledky. -- Systematicka chyba v praxi.
+
+5. ### Sportovni vysledky a presnost
+   Sprinter zabehl 100 m za 10,23 s. Proc ne za 10,2 nebo 10,234 s? Protoze presnost stopek na zavodech je na setiny sekundy. Vice desetinnych mist by nedavalo smysl. -- Presnost zapisu odpovida presnosti mereni.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Navrh vlastniho experimentu
+
+   ⏱️ _2 hodiny_
+
+   Dite si vybere otazku (napr. "Jak daleko doskoci muj pes?" nebo "Jak rychle chladne caj?"). Navrne experiment: co merit, cim, kolikrat. Provede mereni, zapise do tabulky, vypocita prumer. Diskutuje mozne zdroje chyb. -- Kompletni vedecky postup.
+
+2. ### Prevody velicin -- kviz
+
+   ⏱️ _30 minut_
+
+   Pripravte karty s otazkami: "5 km/h = ? m/s", "2,5 MJ = ? kJ", "0,003 A = ? mA". Dite resi na cas. Cil: plynulost v prevodech vcetne predpon SI a odvozenych jednotek.
+
+3. ### Kalibrace kuchynskych vah
+
+   ⏱️ _45 minut_
+
+   Dite zvazi 5 predmetu na kuchynskych vahach a pak na postovnich vahach (nebo v obchode). Porovne vysledky. Jsou kuchynske vahy presne? O kolik se lisi? Je to systematicka chyba? -- Prakticka kalibrace.
+
+4. ### Referat: Jak se meril cas v historii
+
+   ⏱️ _2 hodiny_
+
+   Dite zpracuje kratky referat o historii mereni casu -- slunenicni hodiny, presypaci hodiny, kyvadlove hodiny, atomove hodiny. Jak se zvysovala presnost? Proc je to dulezite? -- Mereni jako zaklad vedeckeho pokroku.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [BIPM -- Mezinarodni urad pro vahy a miry](https://www.bipm.org)<br />
+  Oficilani stranky organizace, ktera spravuje soustavu SI. Zajimave pro pokrocile.
+- [Fyzikalni tabulky](https://www.converter.cz)<br />
+  Online prevodnik jednotek a fyzikalni tabulky -- prakticke pro rychle prevody.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- Significant figures](https://www.khanacademy.org/math/arithmetic-home/arith-review-decimals/arithmetic-significant-figures-tutorial)<br />
+  Videa o platnych cifrach a presnosti vypoctu.
+- English: <Badge text="EN" variant="tip" /> [Veritasium -- How We Measure](https://www.youtube.com/c/veritasium)<br />
+  Popularne-vedecka videa o mereni, jednotkach a fyzikalnich konstantach.

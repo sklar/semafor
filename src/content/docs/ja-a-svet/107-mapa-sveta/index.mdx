@@ -1,0 +1,82 @@
+---
+title: "107. Mapa světa"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Orientuje se na mapě světa" />
+
+## Co to znamená?
+
+Dítě se dokáže orientovat na mapě světa — najde kontinenty, oceány, velké státy, pohoří, řeky a další zeměpisné objekty. Umí pracovat se souřadnicemi, poledníky a rovnoběžkami. Chápe, jak mapa funguje jako zjednodušený model reality a jaká zkreslení přináší.
+
+Nejde o memorování stovek názvů, ale o **prostorovou orientaci** — schopnost zasadit informaci na správné místo na mapě, představit si vzdálenosti a směry, pochopit geografické vztahy. Když dítě slyší zprávu o zemětřesení v Chile, mělo by vědět, kde Chile leží, v jaké je to části světa a jak daleko je to od nás.
+
+Orientace na mapě je základní geografická dovednost, která se prolíná se všemi ostatními zeměpisnými tématy.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Kontinenty, oceány, základní směry (S, J, V, Z). Velké státy Evropy a světa. Práce s glóbem a nástěnnou mapou. Rovník, obratníky, polární kruhy. |
+| **7.–8.** | **Prohlubujte.** Podrobnější znalost regionů — Asie, Afrika, Amerika. Pohoří, řeky, pouště, ostrovy. Zeměpisné souřadnice pro přesné určení polohy. Různé kartografické projekce a jejich zkreslení. |
+| **9.** | **Komplexní orientace.** Dítě se orientuje na jakékoli mapě — tematické, historické, topografické. Chápe politické změny na mapě (nové státy, sporná území). Pracuje s digitálními mapovými nástroji. |
+
+<Aside title="Prerekvizity" type="tip">Základní znalost světových stran (sever, jih, východ, západ). Pomáhá, pokud dítě vidělo glóbus a ví, že Země je kulatá.</Aside>
+
+## Poznámky
+
+<Aside title="Mapa na zdi">Pověste doma nástěnnou mapu světa. Pokaždé, když se v konverzaci nebo ve zprávách objeví nějaké místo, dítě ho na mapě ukáže. Denní kontakt s mapou je nejlepší cesta k orientaci.</Aside>
+
+<Aside title="Hrajte si s mapou">Kvízy, soutěže, hry jako Seterra nebo GeoGuessr. Orientace na mapě se nejlépe učí opakováním a hrou, ne drilem.</Aside>
+
+<Aside title="Typická past" type="caution">Mercatorova projekce (běžná nástěnná mapa) zkresluje velikosti — Grónsko vypadá jako Afrika, přitom je 14x menší. Ukažte dítěti různé projekce a porovnejte s glóbem.</Aside>
+
+<Aside title="Důležité" type="danger">Mapa není neutrální obraz světa. Každá mapa volí, co ukázat a co vynechat, kde je střed, jaké je měřítko. Naučte dítě, že mapa je vždy interpretace reality, ne realita sama.</Aside>
+
+## Souvislosti
+
+- <Badge text="JAS" /> bod 104 (zeměpisné informace) — orientace na mapě je základ pro vyhledávání zeměpisných informací
+- <Badge text="JAS" /> bod 106 (Země ve vesmíru) — pochopení tvaru Země pomáhá chápat mapy a projekce
+- <Badge text="JAS" /> bod 112 (Česká republika) — podrobná orientace na mapě Česka
+- <Badge text="JAS" /> bod 108 (přírodní podmínky a sídla) — mapa ukazuje, kde lidé žijí a proč
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost ukázat, jak se orientuje na mapě světa.</SkillItem>
+  <SkillItem level="novice">
+    Dítě zná kontinenty a některé státy, ale orientace na mapě je nejistá.
+    <ul>
+      <li>Najde Evropu a Česko, ale ostatní kontinenty zaměňuje</li>
+      <li>Nezná oceány a základní pohoří</li>
+      <li>Nerozumí měřítku — neodhadne vzdálenosti</li>
+      <li>S glóbem pracuje jako s "obrázkem", ne jako s modelem Země</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě se orientuje na mapě světa a najde hlavní zeměpisné objekty.
+    <ul>
+      <li>Spolehlivě ukáže všechny kontinenty, oceány, velká pohoří a řeky</li>
+      <li>Najde na mapě většinu evropských a větších světových států</li>
+      <li>Pracuje se souřadnicemi — určí přibližnou polohu podle šířky a délky</li>
+      <li>Rozumí zkreslení Mercatorovy projekce</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě se suverénně orientuje na jakékoli mapě a chápe mapu jako nástroj.
+    <ul>
+      <li>Orientuje se na fyzické, politické i tematické mapě</li>
+      <li>Dokáže zasadit aktuální události do prostorového kontextu</li>
+      <li>Chápe kartografické projekce a jejich zkreslení</li>
+      <li>Pracuje s digitálními mapami a GIS na pokročilé úrovni</li>
+    </ul>
+  </SkillItem>
+</Skill>

@@ -1,0 +1,82 @@
+---
+title: "66. Elektricky obvod"
+sidebar:
+  order: 0
+  label: "Prehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Rozumi principu sestaveni elektrickeho obvodu." />
+
+## Co to znamena?
+
+Dite chape, ze **elektricky obvod** je uzavrena cesta, kterou proteka elektricky proud. Rozumi tomu, ze obvod potrebuje **zdroj** (baterie), **spotrebic** (zarovka, motorek) a **vodice** (draty), ktere vse propoji do uzavrene smycky. Kdyz se obvod preruseni, proud netece a zarovka nesviti.
+
+V praxi to znamena, ze dite dokaze sestavit jednoduchy obvod z baterie, dratku a zarovky. Chape, proc baterka nesviti, kdyz neni zavreny obvod. Vi, k cemu slouzi vypinac -- prerusi nebo spoji obvod.
+
+Elektrina je tema, ktere deti fascinuje, protoze s ni mohou experimentovat a videt okamzity vysledek. Zaroven je to zaklad pro pochopeni cele moderni technologie -- od mobilnich telefonu po elektromobily.
+
+## Kdy se tomu venovat?
+
+| Rocnik | Doporuceni |
+|--------|-----------|
+| **6.** | **Zacnete zde.** Jednoduchy obvod: baterie, vodic, zarovka. Uzavreny vs. otevreny obvod. Vypinac. Seriove zapojeni. |
+| **7.--8.** | **Prohlubujte.** Napeti (V), proud (A), odpor (ohm). Ohmuv zakon. Paralelni zapojeni. Mereni ampere-metrem a voltmetrem. Zkrat a pojistka. |
+| **9.** | **Systematizace.** Slozitejsi obvody, Kirchhoffovy zakony (intuitivne). Striadvy a stejnosmerny proud. Elektricka prace a vykon. Domaci elektroinstalace. |
+
+<Aside title="Prerekvizity" type="tip">Zakladni pojem energie (bod 64) -- elektricka energie se premena na svetlo, teplo, pohyb. Pojem casticoveho slozeni latek (bod 62) -- elektrony jako nosice naboje.</Aside>
+
+## Poznamky
+
+<Aside title="Stavebnice jsou skvely zacatek">Elektrostavebnice (Boffin, snap circuits) umozni diteti experimentovat bezpecne. Neni treba pajecku ani slozite soucastky -- staci kliknout a sviti.</Aside>
+
+<Aside title="Kreslete schemata">Od zacatku zvykejte dite kreslit schema obvodu se znackami. Je to "jazyk elektrotechniky" a pomaha organizovat mysleni. Staci zakladni znacky: baterie, zarovka, vodic, vypinac.</Aside>
+
+<Aside title="Typicka past" type="caution">Deti si mysli, ze proud "vyrazze" z baterie a "dojde" k zarovce. Ve skutecnosti proud tece celym obvodem soucasne -- jako voda v uzavrenem potrubi. Zarovka nekonzumuje proud, jen premena energii.</Aside>
+
+<Aside title="Dulezite" type="danger">Bezpecnost! Experimentujte POUZE s bateriemi (1,5 V az 9 V). NIKDY nezapojujte dite do experimentu se sitovym napetim (230 V). Sitove napeti je zivotu nebezpecne. Tohle je absolutni pravidlo bez vyjimek.</Aside>
+
+## Souvislosti
+
+- <Badge text="JAS" /> bod 64 -- energie (elektricka energie a jeji premeny)
+- <Badge text="JAS" /> bod 67 -- materialy v elektrotechnice (vodice, izolaty, polovodice)
+- <Badge text="JAS" /> bod 68 -- svetlo (zarovka premena elektrickou energii na svetlo)
+- <Badge text="MAT" /> bod 01 -- pocetni operace (Ohmuv zakon, vypocty v obvodu)
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Tema jsme zatim neotevreli. Dite nemelo prilezitost ukazat, jestli rozumi principu elektrickeho obvodu.</SkillItem>
+  <SkillItem level="novice">
+    Dite vi, ze "elektrina" existuje, ale nechape, jak obvod funguje.
+    <ul>
+      <li>Neumi sestavit jednoduchy obvod z baterie a zarovky</li>
+      <li>Nechape, proc musi byt obvod uzavreny</li>
+      <li>Nezna rozdil mezi napatim a proudem</li>
+      <li>S elektrickymi soucatkami nema zkusenost</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dite sestavi jednoduchy obvod a rozumi zakladnim principum.
+    <ul>
+      <li>Propoji baterii, vodic a zarovku tak, aby svitila</li>
+      <li>Chape funkci vypinace a serioveho zapojeni</li>
+      <li>Vi, ze napeti je "tlak" a proud je "tok" elektriny</li>
+      <li>Slozitejsi obvody (paralelni zapojeni, mereni) potrebuje vysvetlit</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dite samostatne navrhuje a analyzuje obvody, pouziva Ohmuv zakon.
+    <ul>
+      <li>Kresli schemata obvodu se spravnymi znackami</li>
+      <li>Meri napeti a proud v obvodu</li>
+      <li>Vypocita odpor, napeti nebo proud pomoci Ohmova zakona</li>
+      <li>Rozumi rozdilu serioveho a paralelniho zapojeni a jejich praktickeho vyuziti</li>
+    </ul>
+  </SkillItem>
+</Skill>

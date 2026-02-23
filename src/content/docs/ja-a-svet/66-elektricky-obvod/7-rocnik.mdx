@@ -1,0 +1,101 @@
+---
+title: "7. rocnik"
+sidebar:
+  order: 7
+  label: "7. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Napeti (U)</dt>
+  <dd>Rozdil elektrickeho potencialu -- "tlak", ktery zene elektrony obvodem. Jednotka: volt (V). Baterie AA ma 1,5 V, zasuvka 230 V. Vetsi napeti = vetsi "tlak" na elektrony.</dd>
+
+  <dt>Proud (I)</dt>
+  <dd>Mnozstvi elektrinu, ktere protece vodicem za sekundu. Jednotka: amper (A). Zarovka spotrebuje zlomky amperu, varny konvice nekolik amperu.</dd>
+
+  <dt>Odpor (R)</dt>
+  <dd>Jak moc material brzdi proud. Jednotka: ohm (omega). Tenky drat ma vetsi odpor nez tlusty. Delsi drat ma vetsi odpor nez kratsi. Med ma maly odpor, grafit velky.</dd>
+
+  <dt>Ohmuv zakon</dt>
+  <dd>U = R * I (napeti = odpor krat proud). Kdyz znate dve veliciny, spocitate treti. Zakladni vzorec elektrotechniky.</dd>
+
+  <dt>Paralelni zapojeni</dt>
+  <dd>Spotrebice zapojene vedle sebe -- kazdy ma svou vlastni vetev. Kdyz jedna zarovka zhasne, ostatni sviti dal. Tak je zapojena vetsina spotrebicu v domacnosti.</dd>
+
+  <dt>Zkrat</dt>
+  <dd>Situace, kdy proud tece primo ze zdroje zpet bez spotrebice -- odpor je temer nulovy, proud obrovksiy. Hrozi pozar nebo poskozeni. Proto mame pojistky -- prerusui obvod pri prilis velkeem proudu.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Vysvetlit, co je napeti, proud a odpor na jednoduche analogii (napr. voda v potrubi)
+- Pouzit Ohmuv zakon k vypoctu napeti, proudu nebo odporu
+- Popsat rozdil mezi seriovym a paralelnim zapojenim
+- Vednet, k cemu slouzi pojistka a proc je zkrat nebezpecny
+- Nakreslit schema obvodu se spravnymi znackami
+- Chapat, ze vetsi odpor = mensi proud (pri stejnem napeti)
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Vodni analogie
+   Napeti je jako vyska vodniho sloupce (tlak). Proud je jako mnozstvi tekouch vody. Odpor je jako zuuzena trubka -- cim uzsi, tim mene vody protece. Ohmuv zakon je jako zakon proudeni vody.
+
+2. ### Pojistky v rozvodne skrni
+   V byte je rozvodna skrin s pojistkami (jistici). Kazdy jistic chranii jeden obvod (kuchyn, svetla, zasuvky). Kdyz je proud prilis velky (zkrat nebo pretizeni), jistic obvod prerusui. Bez nej by hroz'il pozar.
+
+3. ### Proc zarovky v byte sviti nezavisle
+   V byte jsou spotrebice zapojeny paralelne. Kdyz vypnete svetlo v kuchyni, televize v obyvaku sviti dal. Kazdy spotrebic ma svou vetev obvodu -- jsou na sobe nezavisle.
+
+4. ### Prodluzovacka a pretizeni
+   Prodluzovacka ma maximalni zatizeni (napr. 3500 W). Kdyz do ni zapojite varnou konvici (2000 W), topeni (2000 W) a vysavac (1500 W), celkoviy odber je 5500 W -- pretizeni. Kabel se zahrilva, hrozi pozar.
+
+5. ### Baterie v ovladaci
+   Dva clanky AA (kazdy 1,5 V) jsou v ovladaci zapojeny seriove -- napeti se secte: 3 V. Diky tomu ovladac funguje. Kdyby byly paralelne, napeti by bylo stale 1,5 V, ale vydrzel by del.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Ohmuv zakon v praxi
+
+   ⏱️ _1 hodina_
+
+   S elektrostavebnici nebo jednoduchym obvodem (baterie 4,5 V, rezistory, LED) dite meri napeti voltmetrem a proud ampermetrem. Meni odpor (ruzne rezistory) a sleduje, jak se meni proud. Zapisuje do tabulky a overuje U = R * I.
+
+2. ### Seriove vs. paralelni
+
+   ⏱️ _45 minut_
+
+   Dite zapoji dve zarovky seriove a zmeri jas (nebo proud). Pak je zapoji paralelne. V kterem zapojeni sviti jasneji? Co se stane, kdyz jednu vymontujeme? Vysledky zapise a nakresli schemata obou zapojeni.
+
+3. ### Mapa obvodu v byte
+
+   ⏱️ _1 hodina_
+
+   Dite nakresli plan bytu a zanesite, kde jsou zasuvky, vypinace a svetla. Pak zkouisi: kdyz vypne jistic c. 1, co prestane fungovat? A jistic c. 2? Rekonstruuje, ktere spotrebice patri do ktereho obvodu.
+
+4. ### Stavba slozitiiiho obvodu
+
+   ⏱️ _1,5 hodiny_
+
+   Z elektrostavebnice (Boffin, snap circuits) dite sestavi obvod s vypinaceem, dvema zarovkami (jednou seriove, jednou paralelne) a buzzerem. Nakresli schema. Diskutujte, co se stane, kdyz ruzne casti odpojite.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Ohmuv zakon -- Fyzika pro ZS](https://fyzika.jreichl.com/main.article/view/242-ohmuv-zakon)<br />
+  Srozumitelne vysvetleni s priklady a obrazky.
+- [Boffin elektrostavebnice](https://www.boffin.cz)<br />
+  Ceska stavebnice pro experimenty s obvody.
+- English: <Badge text="EN" variant="tip" /> [PhET -- Circuit Construction Kit](https://phet.colorado.edu/en/simulations/circuit-construction-kit-dc)<br />
+  Virtualni stavba obvodu s voltmetrem a ampermetrem.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- Ohm's law](https://www.khanacademy.org/science/physics/circuits-topic/circuits-resistance)<br />
+  Videa o Ohmove zakonu, odporu a zapojenich.

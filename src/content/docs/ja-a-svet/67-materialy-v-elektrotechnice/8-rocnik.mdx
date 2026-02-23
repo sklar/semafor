@@ -1,0 +1,101 @@
+---
+title: "8. rocnik"
+sidebar:
+  order: 8
+  label: "8. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Dioda</dt>
+  <dd>Polovodicova soucastka, ktera propousti proud jen jednim smerem. Jako jednosmerka pro elektriny. Pouziva se v usmernovacich (premena AC na DC), v nabijeckach a v ochrannych obvodech.</dd>
+
+  <dt>LED (Light Emitting Diode)</dt>
+  <dd>Dioda, ktera pri pruchodu proudu vysilaa svetlo. Ucinnejsi nez zarovka (mene tepla, vice svetla). Pouziva se vsude: displeje, osvetleni, signalizace. Ruzne materialy = ruzne barvy.</dd>
+
+  <dt>Tranzistor</dt>
+  <dd>Polovodicovy "ventil" -- malym proudem na vstupu ridime velky proud na vystupu. Zaklad vsech pocitacu a elektroniky. V jednom procesoru jsou miliardy tranzistoru.</dd>
+
+  <dt>Rezistivita (merny odpor)</dt>
+  <dd>Vlastnost materialu -- urcuje, jak dobre vede proud. Med ma nizkou rezistivitu (dobre vede), grafit stredni, sklo vysokou (nevede). Jednotka: ohm * metr.</dd>
+
+  <dt>Vodive plasty</dt>
+  <dd>Specialne upravene plasty, ktere vedou proud. Objev odmeneny Nobelovou cenou (2000). Pouzivaji se v ohebniyych displejich, solarnych clancich a antistatickych obalech.</dd>
+
+  <dt>Recyklace elektroniky</dt>
+  <dd>Elektronika obsahuje vzacne kovy (zlato, striibro, med, lithium, kobalt). Recyklaci ziskame suroviny zpet. Bez recyklace konci toxicke latky v prirode -- olovo, rtut', kadmium.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Vysvetlit funkci diody a proc propousti proud jen jednim smerem
+- Vedet, co je LED a proc je ucinnejsi nez zarovka
+- Chapat princip tranzistoru jako "elektronickeho spinace"
+- Rozumet pojmu rezistivita a jak ovlivnuje vyber materialu
+- Vedet, proc je recyklace elektroniky dulezita (vzacne kovy, toxicke latky)
+- Propojit vlastnosti materialu s jejich vyuzitim v technologii
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### LED vsude
+   LED osvetleni, LED displej telefonu, LED na routeru, LED na nabijecce. Za posledych 20 let LED nahradily zarovky temer vsude. Duvod: 10x ucinnejsi, 50x delsi zivotnost, mene tepla. -- Polovodic zmenil osvetleni sveta.
+
+2. ### Procesor v telefonu
+   V procesoru mobilu je priblizne 10 miliard tranzistoru na plose nehtu. Kazdy funguje jako spinac (0 nebo 1). Vsechny dohromady pocitaji, zobrazuji video, hraji hudbu. -- Tranzistor je zaklad digitalni civilizace.
+
+3. ### Nabijecka telefonu
+   Nabijecka premena striadvy proud (230 V AC ze zasuvky) na stejnosmerny (5 V DC pro telefon). Uvnitr jsou diody (usmerneni), tranzistory (regulace) a transformator (zmena napeti). -- Vsechny polovodicove soucastky v jedne krabicce.
+
+4. ### E-waste -- elektronicky odpad
+   Svet rocne vyprodukouje 50 milionu tun elektronickeho odpadu. V jedne tune mobilnich telefonu je vic zlata nez v tune zlate rudy. Recyklace dava ekonomicky i ekologicky smysl.
+
+5. ### Ohebny displej
+   Nektere telefony maji ohebny displej -- je to mozne diky vodivym plastum a tenkym polovodicovym vrstvam. Klasicke sklo a kremik by se zlomily. Novy materialy = nove moznosti.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### LED vs. zarovka -- porovnani
+
+   ⏱️ _45 minut_
+
+   V obvodu zapojte LED a zarovku se stejnym svetelnym vykonem. Merte proud (ampermetrem) a napeti (voltmetrem). Spocitejte priikon (P = U * I). LED spotrebuje mnohem min -- dite spocita, kolik by usetrrila rodina za rok, kdyz vymeni vsechny zarovky.
+
+2. ### Dioda -- jednosmerka
+
+   ⏱️ _30 minut_
+
+   Zapojte LED do obvodu. Sviti. Otocte ji. Nesviti. Proc? Dioda propousti proud jen jednim smerem. Dite nakresli schema, oznaci anodu a katodu a vysvetli, proc je to uzitecne (nabijecka, ochrana obvodu).
+
+3. ### Rozebiranie stareho pristroje
+
+   ⏱️ _1 hodina_
+
+   Vezmete stary nepotrebny pristroj (stary telefon, radio, kalkulacku -- ODPOJENY od site!). Dite opatrne rozebere a identifikuji soucastky: rezistory, kondenzatory, diody, tranzistory, LED, civky. Ke kazdemu napise, co to je a k cemu slouzi.
+
+4. ### Referat: Recyklace elektroniky
+
+   ⏱️ _1,5 hodiny_
+
+   Dite zjistii, jak se v CR recykluji mobilni telefony a pocitace. Jaky kovy se ziskavaji zpet? Co se deje s toxickymi latkami? Kde je nejblizsi sberny dvur? Vytvori plakat nebo kratkou prezentaci.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Polovodicove soucastky -- Fyzika](https://fyzika.jreichl.com/main.article/view/260-polovodicova-dioda)<br />
+  Vysvetleni diody, LED a tranzistoru.
+- [Recyklace -- Elektrowin](https://www.elektrowin.cz)<br />
+  Cesky system recyklace elektrozarizeni -- kde a jak oddalvat.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- Semiconductors](https://www.khanacademy.org/science/physics/circuits-topic)<br />
+  Videa o polovodicich a jejich vyuziti v elektronice.
+- English: <Badge text="EN" variant="tip" /> [PhET -- Semiconductor](https://phet.colorado.edu/en/simulations/semiconductor)<br />
+  Simulace chovani polovodicu -- dopovani, PN prechod, dioda.

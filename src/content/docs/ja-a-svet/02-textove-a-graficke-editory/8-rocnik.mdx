@@ -1,0 +1,107 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Hromadná korespondence</dt>
+  <dd>Funkce textového editoru, která spojí šablonu dopisu s tabulkou adresátů a automaticky vygeneruje personalizované dokumenty — pozvánky, certifikáty, dopisy. Jeden vzor, stovky výstupů.</dd>
+
+  <dt>Funkce IF (v tabulce)</dt>
+  <dd>Vzorec s podmínkou: <code>=IF(A1&gt;50, "splněno", "nesplněno")</code>. Pokud je hodnota větší než 50, napíše "splněno", jinak "nesplněno". Základ pro automatické vyhodnocování dat.</dd>
+
+  <dt>Kontingenční tabulka (pivot table)</dt>
+  <dd>Nástroj pro rychlé shrnutí velkého množství dat. Z tabulky se stovkami řádků vytvoří přehled — třeba součty prodejů podle kategorií nebo průměrné známky podle předmětů.</dd>
+
+  <dt>Vrstva (layer)</dt>
+  <dd>V grafickém editoru jsou jednotlivé prvky (text, obrázek, pozadí) na samostatných vrstvách — jako průhledné fólie naskládané na sobě. Každou vrstvu upravujete nezávisle na ostatních.</dd>
+
+  <dt>Rozlišení (DPI/PPI)</dt>
+  <dd>Kolik bodů (pixelů) je na jednom palci obrázku. 72 DPI stačí na obrazovku, 300 DPI je potřeba pro kvalitní tisk. Proto fotka z webu vypadá na vytištěném plakátu rozmazaně.</dd>
+
+  <dt>Formát souboru a komprese</dt>
+  <dd>JPG zmenšuje velikost souboru, ale ztrácí kvalitu (ztrátová komprese). PNG zachová kvalitu, ale soubor je větší (bezztrátová komprese). Vybíráte podle účelu — web vs. tisk.</dd>
+
+  <dt>VLOOKUP / SVYHLEDAT</dt>
+  <dd>Funkce tabulkového editoru, která hledá hodnotu v jedné tabulce a vrátí odpovídající údaj z jiné. Třeba: zadáte kód produktu a tabulka vrátí jeho název a cenu.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Vytvořit dokument s automatickým obsahem, křížovými odkazy a poznámkami pod čarou
+- Používat hromadnou korespondenci pro generování více dokumentů z jedné šablony
+- V tabulkovém editoru pracovat s funkcí IF a vnořenými funkcemi
+- Vytvořit kontingenční tabulku pro analýzu většího souboru dat
+- V grafickém editoru pracovat s vrstvami a rozumět rozlišení pro různé účely
+- Vybrat správný formát souboru podle účelu (web vs. tisk, sdílení vs. archivace)
+- Kombinovat data z tabulkového editoru s textovým dokumentem a grafickými prvky
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Certifikáty pro soutěž
+   Rodina organizuje soutěž nebo akci. Dítě vytvoří šablonu certifikátu a pomocí hromadné korespondence vygeneruje personalizované diplomy pro všechny účastníky. Jméno, umístění, datum — vše se vyplní automaticky.
+
+2. ### Analýza rodinných výdajů
+   Dítě dostane výpis z rodinného účtu (anonymizovaný) za 3 měsíce. V tabulce kategorizuje výdaje, pomocí kontingenční tabulky zjistí, kolik se utratilo v každé kategorii, a podmínkami IF označí, kde se překročil rozpočet.
+
+3. ### Plakát na akci ve vysokém rozlišení
+   Dítě navrhuje plakát, který se bude tisknout na A3. Musí pracovat ve 300 DPI, hlídat si velikosti obrázků a formáty. Poprvé narazí na to, že fotka z internetu nestačí na kvalitní tisk.
+
+4. ### Porovnání produktů
+   Dítě porovnává mobilní telefony (nebo jiný produkt, který ho zajímá). Data z různých zdrojů zapíše do tabulky, pomocí podmíněného formátování zvýrazní nejlepší hodnoty v každé kategorii, pomocí grafů vizualizuje rozdíly.
+
+5. ### Fotomontáž s vrstvami
+   Dítě v GIMPu nebo Photopea vytvoří koláž z vlastních fotek — pracuje s vrstvami, průhledností, maskami. Výsledek exportuje v různých formátech a porovná kvalitu a velikost souboru.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Hromadná korespondence v praxi
+
+   ⏱️ _1–2 hodiny_
+
+   Dítě připraví pozvánku na rodinnou akci. V tabulce má seznam pozvaných (jméno, oslovení, alergie na jídlo). V textovém editoru vytvoří šablonu s proměnnými poli. Výstup: sada personalizovaných pozvánek. Bonus: přidat podmínku (vegetariánské menu pro alergiky).
+
+2. ### Datová analýza s kontingenční tabulkou
+
+   ⏱️ _2 hodiny_
+
+   Stáhněte veřejně dostupný dataset (třeba otevřená data ČR, data o počasí, sportovní statistiky). Dítě ho zpracuje: čištění dat, kontingenční tabulka, 3 grafy s popisky, krátké textové shrnutí zjištění.
+
+3. ### Tisk vs. web — grafický experiment
+
+   ⏱️ _1 hodina_
+
+   Dítě vytvoří jednu grafiku ve dvou verzích: pro web (72 DPI, RGB, PNG) a pro tisk (300 DPI, CMYK, PDF). Porovná velikosti souborů, vytiskne obě verze a uvidí rozdíl na vlastní oči.
+
+4. ### Komplexní dokument
+
+   ⏱️ _odpoledne_
+
+   Dítě vytvoří "malou knihu" (10+ stránek) na téma podle výběru. Požadavky: titulní strana, automatický obsah, nadpisy pomocí stylů, vložené obrázky s popisky, tabulka s daty, poznámky pod čarou, záhlaví a zápatí. Export do PDF.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Hromadná korespondence v Google Docs](https://support.google.com/docs/answer/7686129)<br />
+  Návod na mail merge s Google nástroji.
+- [Photopea — online grafický editor](https://www.photopea.com)<br />
+  Bezplatná alternativa k Photoshopu přímo v prohlížeči. Podporuje vrstvy, masky, PSD soubory.
+- [Otevřená data ČR](https://data.gov.cz)<br />
+  Veřejně dostupné datasety — skvělý materiál pro cvičení s tabulkami.
+- [GCFGlobal — Pivot Tables](https://edu.gcfglobal.org/en/excel/intro-to-pivot-tables/1/) <Badge text="EN" variant="tip" /><br />
+  Přehledný úvod do kontingenčních tabulek s příklady.
+- [GIMP — dokumentace](https://docs.gimp.org/2.10/cs/) <br />
+  Oficiální dokumentace GIMPu v češtině, podrobné návody na práci s vrstvami.

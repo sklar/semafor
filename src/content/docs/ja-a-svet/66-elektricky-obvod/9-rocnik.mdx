@@ -1,0 +1,102 @@
+---
+title: "9. rocnik"
+sidebar:
+  order: 9
+  label: "9. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Kondenzator</dt>
+  <dd>Soucastka, ktera uklada elektricky naboj. Dve vodive desky oddelene izolantem. Nabije se rychle, vybije se rychle. Pouziti: vyhlazeni napeti, casovace, blesk fotoaparatu. Kapacita se meri ve faradech (F).</dd>
+
+  <dt>Civka (induktor)</dt>
+  <dd>Draat navinuty do spiraly. Kdyz jim proteka proud, vytvari magneticke pole. Kdyz se pole meni, indukuje napeti (elektromagneticka indukce). Zaklad transformatoru, motoru a generatoru.</dd>
+
+  <dt>Elektromagneticka indukce</dt>
+  <dd>Zmena magnetickeho pole v civce indukuje napeti (a proud). Princip generatoru: otacime civkou v magnetickem poli a vyrabi se elektrina. Objev Michaela Faradaye -- zaklad cele energetiky.</dd>
+
+  <dt>Transformator</dt>
+  <dd>Dve civky na spolecnem jadru. Striadvy proud v primarnii civce indukuje napeti v sekundarni. Pomer napeti = pomer zavitu. Zvysuje napeti pro prenos (400 kV) a snizuje pro domacnost (230 V).</dd>
+
+  <dt>Elektromotor a generator</dt>
+  <dd>Elektromotor: proud vytvari magneticke pole, ktere otaci hrideli (elektricka -> mechanicka energie). Generator: opacne -- otaceni vytvari proud (mechanicka -> elektricka). Jsou to v podstate stejne stroje pouzite opacne.</dd>
+
+  <dt>Bezpecnost a elektrina</dt>
+  <dd>Proud nad 30 mA je zivotu nebezpecny. Proudovy chranic (FI) odpoji obvod za 0,03 s pri uniku proudu. Mokre ruce snizuji odpor tela -- vetsi nebezpeci. Nikdy nesahat do rozvodne skrine.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Vysvetlit, co je kondenzator a kde se pouziva
+- Chapat princip elektromagneticke indukce
+- Popsat, jak funguje transformator a proc je dulezity pro prenos elektriny
+- Vysvetlit souvislost mezi elektromotorem a generatorem
+- Chapat zasady bezpecnosti pri praci s elektrinou
+- Nakreslit schema obvodu s kondenzatorem, civkou a transformatorem
+- Propojit poznatky do celku: vyroba -> prenos -> spotreba elektriny
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Cesta elektriny do zasuvky
+   Generator v elektrarne (mechanicka -> elektricka). Transformator zvysi napeti na 400 kV (mensi ztraty pri prenosu). Dalsi transformator snizi na 230 V pred domem. Zasuvka. -- Cely retezec zalozeny na elektromagneticke indukci.
+
+2. ### Nabijeni telefonu
+   Bezdratova nabijecka pouziva elektromagnetickou indukci -- civka v nabijecce vytvari meniccii se magneticke pole, civka v telefonu ho "zachyti" a indukuje proud. Princip jako transformator, ale bez dratu.
+
+3. ### Blesk fotoaparatu
+   Kondenzator se pomalu nabije z baterie (sekundy). Pri bleskku se vybije naraz -- velky proud za zlomek sekundy rozsviti xenonovou trubici. Kondenzator = "zasobnik" energie pro rychle uvolneni.
+
+4. ### Elektricky vlak
+   Vlak odebira striadvy proud z troleeje (25 kV). Transformator snizi napeti, usmernovac premeni na stejnosmerny, menic vytvori spravny striadvy proud pro motory. Motory tociii koly. -- Vsechny soucastky v jednom stroji.
+
+5. ### Proudovy chranic zachranuje zivoty
+   Kdyz se vadny spotrebic "probije" na kostru a vy se ji dotknete, proud tece pres vas do zeme. Proudovy chranic detekuje tento unik (rozdil proudu v fazovem a nulovem vodici) a odpoji obvod za 30 ms. Bez nej by vas proud mohl zabit.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Vyyroba jednoducheho generatoru
+
+   ⏱️ _1,5 hodiny_
+
+   Z civky dratu, magnetu a kartonu dite postavi jednoduchy generator. Otacenim magnetu uvnitr civky indukuje napeti -- zmeri ho multimetrem. Zkusi ruznou rychlost otaceni a ruzny pocet zavitu. Vice zavitu = vetsi napeti.
+
+2. ### Kondenzator v akci
+
+   ⏱️ _45 minut_
+
+   V obvodu s bateriii, kondenzatorem a LED dite pozoruje: po pripojeni LED blikne a zhasne (kondenzator se nabil). Po odpojeni baterie a propojeni kondenzatoru s LED -- znovu blikne (kondenzator se vybil). Dite zmeri, jak dlouho sviti pri ruznych kapacitach.
+
+3. ### Transformator z hrebiku
+
+   ⏱️ _1 hodina_
+
+   Na zelezny hrebik dite navine 2 civky: primarni (100 zavitu) a sekundarni (50 zavitu). Pripoji striadvy zdroj na primarni, meri napeti na sekundarni. Pomer by mel odpovidat pomeru zavitu. Transformator svepomoci!
+
+4. ### Projekt: Jak funguje elektrarna
+
+   ⏱️ _2 hodiny_
+
+   Dite zpracuje schema cele cesty elektriny: palivo/voda/vitr -> turbina -> generator -> transformator -> vedeni -> transformator -> zasuvka -> spotrebic. Ke kazdemu kroku popise, jaka premena energie probihna. Vytvori plakat nebo prezentaci.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Elektromagneticka indukce -- Fyzika](https://fyzika.jreichl.com/main.article/view/242-elektromagneticka-indukce)<br />
+  Faradayuv zakon, generator, transformator.
+- [Bezpecnost a elektrina -- TZCB](https://www.tzb-info.cz)<br />
+  Informace o bezpecnosti elektrickych instalaci.
+- English: <Badge text="EN" variant="tip" /> [PhET -- Faraday's Electromagnetic Lab](https://phet.colorado.edu/en/simulations/faradays-electromagnetic-lab)<br />
+  Simulace elektromagneticke indukce, generatoru a transformatoru.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- Electromagnetic induction](https://www.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields/electromagnetic-induction)<br />
+  Videa o indukci, generatorech a transformatorech.

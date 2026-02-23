@@ -1,0 +1,101 @@
+---
+title: "8. rocnik"
+sidebar:
+  order: 8
+  label: "8. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Vlnova delka</dt>
+  <dd>Vzdalenost mezi dvema po sobe jdoucimi stejnymi body vlny (napr. dvema hrebeny). Jednotka: metr (m). Kratka vlnova delka = vysoky ton, dlouha vlnova delka = nizky ton. Souvisi s frekvenci: lambda = v / f.</dd>
+
+  <dt>Rezonance</dt>
+  <dd>Kdyz zvukovy zdroj kmita na "vlastni frekvenci" predmetu, ten se rozkmita velmi silne. Operny zpevak rozbiijui sklenici -- zpiva na frekvenci, na ktere sklenice rezonuje. Kytarovy korpus zesiluje ton struny rezonanci.</dd>
+
+  <dt>Interference</dt>
+  <dd>Kdyz se setkaji dve vlny, zesiluji se (konstruktivnii interference) nebo slabi (destruktivni interference). Proto nekde v koncertni sini slysime lip nez jinde.</dd>
+
+  <dt>Doppleruvv jev</dt>
+  <dd>Kdyz se zvukovy zdroj blizi, zvuk zni vyse (vlny se "stlacuji"). Kdyz se vzdaluje, zvuk zni nize (vlny se "natahuju"). Proto sanitka zni jinak, kdyz jede k nam a kdyz odjizdi.</dd>
+
+  <dt>Akustika</dt>
+  <dd>Veda o zvuku a jeho sireni v prostoru. Koncertni sala musi mit spravnou akustiku -- odrazzy nesmii byt prilis silne (echo) ani prilis slabe (mrtvy zvuk). Design mistnosti ovlivnuje, jak zvuk zni.</dd>
+
+  <dt>Infrazvuk</dt>
+  <dd>Zvuk s frekvenci pod 20 Hz -- lidske ucho ho neslysi, ale telo ho citi jako vibrace. Vzniky pri zemetresenich, erupci sopky, silnem vetru. Nektera zvirata ho pouzivaji ke komunikaci (sloni).</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Vysvetlit vztah frekvence, vlnove delky a rychlosti zvuku
+- Popsat rezonanci na beznem prikladu (kytara, houpacka, sklenice)
+- Chapat Doppleruvv jev a vysvetlit ho na prikladu sanitky
+- Vedet, co je interference a jak ovlivnuje zvuk v mistnosti
+- Rozumet zakladum akustiky -- proc nektere mistnosti zni dobre a jine ne
+- Chapat rozdil mezi zvukem, ultrazvukem a infrazvukem
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Sanitka -- Doppleruvv jev
+   Sanitka jede k vam -- sirena zni vysoko. Projede kolem -- ton se nagle snizi. Vlny pred sanitkou se stlacuji (vyssi frekvence), za ni natahujii (nizsi frekvence). Stejne to funguje u vsech pohybujicich se zvukovych zdroju.
+
+2. ### Kytara a rezonance
+   Struna sama by znela tichy. Ale korpus kytary rezonuje -- zesiluji vibraci a vytvari plny zvuk. Ruzne tvary korpusu znejii ruzne -- proto ma kazda kytara svuj charakter.
+
+3. ### Koncertni sal vs. koupelna
+   V koupelne zpev zni skvele -- hladke steny odrazejii zvuk a zesiluji ho (rezonance). V koncertni sali je to slozitejsi -- akustici navrhujii tvar, materialy a obklady tak, aby zvuk byl jasny, ale ne "rozbity" echem.
+
+4. ### Aktivni potlaceni hluku
+   Sluchatka s ANC (active noise cancellation) analyzuji okolni hluk a vytvari "protivlnu" -- zvuk s opacnou fazii. Destruktivni interference -- hluk se ztisi. Fyzika v bezne technologii.
+
+5. ### Sloni a infrazvuk
+   Sloni komunikuji infrazvukem (pod 20 Hz) na vzdalenosti az 10 km. My to neslysime, ale sloni ano. Infrazvuk se siri dale nez slysitelny zvuk, protoze ma dlouhou vlnovou delku a mene se pohlcuje.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Rezonance na vlastni oci
+
+   ⏱️ _30 minut_
+
+   Postavte dve stejne naladene kytary proti sobe. Drnknete na strunu jedne -- struna druhe zacne taky kmitat (rezonance). Nebo: zpivejte ruzne tony blizko piana s otevrenym vikem -- nektera struna se "odpojii". Hledejte rezonancni frekvenci.
+
+2. ### Doppleruvv jev -- experiment
+
+   ⏱️ _30 minut (venku)_
+
+   Priivazgte buzzer (nebo telefon hrajici ton) na provazek a tocte nad hlavou. Posluchac slysii, jak se ton meni -- vys pri priblizeni, niz pri oddaleni. Dite popise, co slysi, a vysvetli principem Dopplerova jevu.
+
+3. ### Akustika mistnosti
+
+   ⏱️ _1 hodina_
+
+   Dite tleskne v ruznych mistnostech (koupelna, loznice s kobercem, garaz, les) a poslouchy, jak se zvuk chova. Kde je echo? Kde zvuk utichne rychle? Proc? Souvislost s materialy (hladke odrazejii, mekke pohlcuji). Zapise pozorovani.
+
+4. ### Zvukovy projekt: Frekvence kolem nas
+
+   ⏱️ _1,5 hodiny_
+
+   Dite pomoci aplikace (Spectroid, FrequenSee) analyzuje frekvenci ruznych zvuku: vlastni hlas, hudebni nastroj, zvoneni telefonu, ptaci zpev. Zapise frekvence a porovna. Ktery zvuk ma nejvyssi frekvenci? Nejnizsi? Vytvori graf.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Vlneni a zvuk -- Fyzika pro ZS](https://fyzika.jreichl.com/main.article/view/134-vlneni)<br />
+  Vlnova delka, frekvence, interference, Doppleruvv jev.
+- [Akustika -- zaklady](https://cs.wikipedia.org/wiki/Akustika)<br />
+  Prehled akustiky v cestine.
+- English: <Badge text="EN" variant="tip" /> [PhET -- Wave Interference](https://phet.colorado.edu/en/simulations/wave-interference)<br />
+  Simulace interference vln -- vizualizace konstruktivni a destruktivni interference.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- Doppler effect](https://www.khanacademy.org/science/physics/mechanical-waves-and-sound/doppler-effect)<br />
+  Videa o Dopplerove jevu s animacemi.

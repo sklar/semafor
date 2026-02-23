@@ -1,0 +1,101 @@
+---
+title: "6. rocnik"
+sidebar:
+  order: 6
+  label: "6. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Vodic</dt>
+  <dd>Material, ktery dobre vede elektricky proud. Typicky kovy: med, hlinik, zeleso, zlato. V kazdem kabelu je uvnitr kovovy vodic -- nejcasteji medeny.</dd>
+
+  <dt>Izolant (nevodic)</dt>
+  <dd>Material, ktery proud nevede. Plast, guma, sklo, suche drevo, vzduch. Izolace na kabelech chranii pred urazen prudem -- proto je drat obaleny plastem.</dd>
+
+  <dt>Elektricky proud</dt>
+  <dd>Tok drobnych castic (elektronu) vodicem. Podobne jako voda tece potrubim, elektrony tecou kovem. Proud tece, jen kdyz je obvod uzavreny.</dd>
+
+  <dt>Kov</dt>
+  <dd>Latka, ktera dobre vede proud a teplo, je lesklaa, da se tvarovat. Med, hlinik, zeleso, zlato -- vsechny jsou vodive. Proto se z kovu delaji draty a kontakty.</dd>
+
+  <dt>Plast (polymer)</dt>
+  <dd>Umela latka, ktera proud nevede (je to izolant). Lehky, odolny, levny. Proto se z nej delaji obaly kabelu, kryty zasuvek, pouzdra telefonu.</dd>
+
+  <dt>Bezpecnost</dt>
+  <dd>Izolace chranii pred urazen prudem. Mokre ruce vedou proud lepe nez suche -- proto nesmime sahat na elektricke pristroje mokryma rukama. Poskozenaa izolace je nebezpecna.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Rozlisit vodic a izolant a udat priklady (med = vodic, plast = izolant)
+- Vysvetlit, proc je kabel z medi uvnitr a z plastu venku
+- Vedet, ze kovy vedou proud dobre a plasty/guma/sklo nevedou
+- Otestovat materialy v jednoduchem obvodu (sviti zarovka, nebo ne?)
+- Chapat zakladni pravidla bezpecnosti (mokre ruce, poskozena izolace)
+- Vedet, ze voda (obzvlast s mineraly) vede proud -- proto je mokro nebezpecne
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Kabel od nabijecky
+   Podivejte se na nabijeci kabel. Uvnitr je tenky medeny drat (vodic) -- vede proud z nabijecky do telefonu. Venku je plastovy obal (izolant) -- chranii vas pred proudem a drat pred poskozenim.
+
+2. ### Proc ma zasuvka plastovy kryt
+   Zasuvka je pod napetim 230 V -- nebezpecny. Plastovy kryt zajisti, ze se dotknesem jen izolantu. Kovove kontakty jsou schované uvnitr. Bez plastoveho krytu by zasuvka byla smrtelne nebezpecna.
+
+3. ### Mokre ruce a elektrina
+   Cista voda vede proud spatne, ale voda z kohoutku obsahuje mineraly a vede celkem dobre. Proto nesahame na zasuvky mokryma rukama -- voda na kuzi vytvori vodivou vrstvu.
+
+4. ### Zelta mince vs. gumova gumicka
+   Mince je z kovu -- polozite ji do obvodu a zarovka se rozsviti. Gumicka je z gumy -- izolant, zarovka nesviti. Jednoduchy test: vede to proud, nebo ne?
+
+5. ### Proc draty nejsou z plastou
+   Med vede proud vybornea -- ma nizky odpor. Plast proud nevede vubec. Proto je vodic z medi a izolace z plastu. Kazdy material ma svou roli.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Velky test materialu
+
+   ⏱️ _1 hodina_
+
+   Sestavte obvod s bateriii, zarovkou a dvema volnymi konci (testovaci misto). Dite pripoji ruzne predmety: lzicka, hrebik, mince, guma, tuha z tuzky, papir, alobalova folie, klic, drevo, kaminek. Ke kazdemu zapise: sviti/nesviti -> vodic/izolant. Vytvori tabulku a plakat.
+
+2. ### Detektiv kabeluo
+
+   ⏱️ _30 minut_
+
+   Dite prozkouma 5 ruznych kabelu v domacnosti (nabijecka, prodluzovacka, sluchatka, USB, sitovy kabel). Ke kazdemu popise: z ceho je vnijsi obal (plast -- izolant), z ceho je vnitrni vodic (med -- vodic). Nakreslii prez kabelu.
+
+3. ### Voda jako vodic
+
+   ⏱️ _30 minut_
+
+   Do obvodu s LED a bateriii vlozteite dve elektody (hrebiky). Ponorte je do ruznych kapalin: cisty destilovanaa voda, voda z kohoutku, slana voda, ocet. Ktera rozsviti LED? Dite zjisti, ze cisty voda vede spatne, ale solena vyborne. Proc?
+
+4. ### Bezpecnostni pravidla -- plakat
+
+   ⏱️ _45 minut_
+
+   Dite vytvori plakat "5 pravidel bezpecnosti s elektrinou" pro domacnost. Napriklad: nesahej mokryma rukama, neopravuj si sam zasuvku, neodkryvej izolaci, neprepinaj prodluzovacku. Ke kazdemu pravidlu nakresli obrazek a napise duvod.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Vodice a izolaty -- Fyzika pro ZS](https://fyzika.jreichl.com/main.article/view/241-vodice-a-izolaty)<br />
+  Zakladni vysvetleni s priklady materialu.
+- [Bezpecnost s elektrinou -- Hasici](https://www.hzscr.cz)<br />
+  Zasady bezpecneho zachazeni s elektrinou v domacnosti.
+- English: <Badge text="EN" variant="tip" /> [PhET -- Circuit Construction Kit](https://phet.colorado.edu/en/simulations/circuit-construction-kit-dc)<br />
+  Simulace obvodu -- testujte ruzne materialy virtualne.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- Current and resistance](https://www.khanacademy.org/science/physics/circuits-topic/circuits-resistance)<br />
+  Videa o proudu, odporu a materialech v obvodu.

@@ -1,0 +1,82 @@
+---
+title: "67. Materialy v elektrotechnice"
+sidebar:
+  order: 0
+  label: "Prehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Zna vlastnosti materialu pouzivanych v elektrotechnice." />
+
+## Co to znamena?
+
+Dite rozumi, ze materialy se lisi svou schopnosti vest elektricky proud. **Vodice** (kovy -- med, hlinik) proud vedou dobre, **izolaty** (plast, guma, sklo) proud nevedou, a **polovodice** (kremik) vedou za urcitych podminek. Tenhle rozdil je zakladem cele elektroniky a elektrotechniky.
+
+V praxi to znamena, ze dite chape, proc je drat z medi a obal z plastu. Vi, proc nesmite sahat mokryma rukama na zasuvku (voda je vodic). Rozumi, proc se v pocitacich pouziva kremik a proc je to tak dulezity material.
+
+Tohle tema propojuje fyziku s kazdodennim zivotem a technologii. Kazdy kabel, kazdy telefon, kazdy elektricky pristroj je ukazkou toho, jak lide vyuzivaji vlastnosti materialu.
+
+## Kdy se tomu venovat?
+
+| Rocnik | Doporuceni |
+|--------|-----------|
+| **6.** | **Zacnete zde.** Vodice a izolaty -- co proud vede a co ne. Jednoduche experimenty s testovanim materialu v obvodu. Bezpecnost -- proc izolace chranii. |
+| **7.--8.** | **Prohlubujte.** Elektricky odpor a co ho ovlivnuje (material, delka, tloust'ka vodice). Polovodice -- zakladni princip. Supravodice jako zajimavost. Recyklace elektroniky. |
+| **9.** | **Systematizace.** Polovodice podrobneji -- dioda, tranzistor, LED. Vodivost a struktura atomu. Proc kovy vedou a plasty ne (volne elektrony). Propojeni s modernimi technologiemi. |
+
+<Aside title="Prerekvizity" type="tip">Zakladni pochopeni elektrickeho obvodu (bod 66) a molekuloveho slozeni latek (bod 62). Dite by melo vedet, co je elektricky proud a z ceho se latky skladaji.</Aside>
+
+## Poznamky
+
+<Aside title="Testujte materialy v obvodu">Nejlepsi lekce: zapojte do obvodu s bateriii a zarovkou ruzne predmety (lzicka, guma, mince, klicek, papir) a sledujte, co sviti a co ne. Jednoduche, presvedcive, zabavne.</Aside>
+
+<Aside title="Propojte s ekologii">Elektronicky odpad je obrovsky problem. Kdyz dite pochopi, z ceho se elektronika sklada, lip chape, proc je dulezite recyklovat. Med, zlato, vzacne kovy -- to vse je v kazdem telefonu.</Aside>
+
+<Aside title="Typicka past" type="caution">Deti si mysli, ze "plastove veci nevedou proud nikdy". Vetsinou ne, ale nektere plasty se daji upravit tak, ze vodive jsou. A hlavne: mokry povrch plastoveho predmetu uz vodic je! Cistota kategorizace neni absolutni.</Aside>
+
+<Aside title="Dulezite" type="danger">Poskozena izolace kabelu je nebezpecna! Pokud dite vidi odhaleny drat na jakomkoli prstorji zapojenem do zasuvky, NESAHAT a okamzite to ohlasite. Izolace je bezpecnostni prvek, ne dekorace.</Aside>
+
+## Souvislosti
+
+- <Badge text="JAS" /> bod 62 -- molekulove slozeni latek (struktura urcuje vodivost)
+- <Badge text="JAS" /> bod 66 -- elektricky obvod (materialy jako soucasti obvodu)
+- <Badge text="JAS" /> bod 68 -- svetlo (LED jako polovodicovy prvek)
+- <Badge text="MAT" /> bod 01 -- pocetni operace (odpor, vodivost, vypocty)
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Tema jsme zatim neotevreli. Dite nemelo prilezitost ukazat, jestli zna vlastnosti materialu v elektrotechnice.</SkillItem>
+  <SkillItem level="novice">
+    Dite tuby vi, ze "kov vede proud", ale dalsi znalosti chybi.
+    <ul>
+      <li>Neumi rozlisit vodic a izolant na konkretnim prikladu</li>
+      <li>Nevi, proc ma kabel plastovy obal</li>
+      <li>Pojem polovodic nezna</li>
+      <li>Nechape souvislost mezi materialem a jeho elektrickymi vlastnostmi</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dite spolehlive rozlisuje vodice a izolaty a chape, proc na tom zalezi.
+    <ul>
+      <li>Spravne zaradi bezne materialy jako vodice nebo izolaty</li>
+      <li>Vysvetli, proc je izolace kabelu dulezita pro bezpecnost</li>
+      <li>Vi, ze existuji polovodice a ze se pouzivaji v elektronice</li>
+      <li>Podrobnejsi vysvetleni (proc kov vede a plast ne) potrebuje pomoc</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dite rozumi vlastnostem materialu na hlubsi urovni a propojuje je s technologii.
+    <ul>
+      <li>Vysvetli vodivost kovu pomoci volnych elektronu</li>
+      <li>Chape zakladni princip polovodicu a jejich vyuziti (dioda, LED, tranzistor)</li>
+      <li>Rozumi pojmu elektricky odpor a co ho ovlivnuje</li>
+      <li>Diskutuje o materialech v modernych technologiich a ekologickych aspektech</li>
+    </ul>
+  </SkillItem>
+</Skill>

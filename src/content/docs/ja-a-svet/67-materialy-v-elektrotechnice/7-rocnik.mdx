@@ -1,0 +1,101 @@
+---
+title: "7. rocnik"
+sidebar:
+  order: 7
+  label: "7. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Elektricky odpor</dt>
+  <dd>Jak moc material brzdi proud. Jednotka: ohm (omega). Zavisi na materialu, delce a prurezu vodice. Med ma maly odpor (dobre vede), grafit vetsi, plast obrovskiy (nevede).</dd>
+
+  <dt>Vodivost</dt>
+  <dd>Opak odporu -- jak dobre material vede proud. Kovy maji vysokou vodivost (nizky odpor). Cim vic volnych elektronu v materialu, tim vetsi vodivost.</dd>
+
+  <dt>Polovodic</dt>
+  <dd>Material, ktery za normalnych podminek vede proud spatne, ale za urcitych podminek (zahreni, osvetleni, pridani primesi) vede dobre. Kremik a germanium jsou nejznamejsi polovodice.</dd>
+
+  <dt>Rezistor</dt>
+  <dd>Soucastka s presne danym odporem. Pouziva se k regulaci proudu v obvodu. Barevne prouzky na rezistoru urcuji jeho odpor.</dd>
+
+  <dt>Supravodic</dt>
+  <dd>Material, ktery pri velmi nizke teplote (blizko absolutni nule) vede proud s nulovym odporem. Zadne tepelne ztraty! Pouziva se v MRI, urychlovacich castic a experimentalnich vlacich (maglev).</dd>
+
+  <dt>Vliv delky a prurezu</dt>
+  <dd>Delsi vodic = vetsi odpor (elektrony maji delsi cestu). Tlustsi vodic = mensi odpor (sirsi "trubka" pro elektrony). Proto maji silove kabely velky prurez a tenke dratky vetsi odpor.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Vysvetlit, co urcuje odpor vodice (material, delka, prurez)
+- Vedet, ze kovy maji nizky odpor a proc (volne elektrony)
+- Chapat zakladni princip polovodice -- vede za urcitych podminek
+- Vedet, co je rezistor a kde se pouziva
+- Vysvetlit, proc maji ruzne kabely ruznou tloust'ku
+- Znat pojem supravodivost jako zajimavost
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Proc je nabijecka tepla
+   Napajeci kabel ma odpor. Proud protekajici kabelem zpusobuje zahreni (proud * proud * odpor = teplo). Cim vetsi proud a odpor, tim vic tepla. Proto se nabijecka zahreje.
+
+2. ### Tluste kabely do kuchyne
+   Sporák nebo trouba potrebuji velky proud (16 A). Proto maji tluste kabely (velky prurez = maly odpor). Tenky kabel by se pri takovem proudu nebezpecne zahrilval.
+
+3. ### Solarni clanek
+   Solarni clanek je vyrobeny z kremiku (polovodic). Kdyz na nej dopadne svetlo, kremik zacne vest proud. Bez svetla nevede. -- Polovodic, ktery reaguje na svetlo.
+
+4. ### Topne teleso
+   Topeni v konvici je z materialu s velkym odporem (nichrm). Proud proteka, odpor generuje teplo a voda se vaari. Velky odpor je tady zadouci -- chceme teplo, ne proud.
+
+5. ### MRI v nemocnici
+   MRI (magneticka rezonance) pouziva supravodive civky. Supravodic vede proud bez odporu -- vytva silne magneticke pole bez tepelnych ztrat. Proto MRI chladime kapalnym heliem na -269 °C.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Vliv delky vodice na odpor
+
+   ⏱️ _45 minut_
+
+   V obvodu s bateriii a zarovkou pouzijte ruzne dlouhe kusy dratku (10 cm, 50 cm, 1 m). Zarovka sviti ruzne jasne -- s delsim dratem slabeji. Dite zmeri proud ampermetrem a zjistii, ze s delkou roste odpor.
+
+2. ### Rezistory a barevne prouzky
+
+   ⏱️ _30 minut_
+
+   Dite dostane sadu rezistoru. Podle tabulky barevnych kodu odeti odpor kazdeho rezistoru. Pak overi merenim (multimetrem nebo v simulaci). -- Cteni soucastek jako "jazyk elektroniky".
+
+3. ### LED a polovodic
+
+   ⏱️ _30 minut_
+
+   LED (svetlo emitujici dioda) je polovodicova soucastka. Zapojte LED do obvodu -- sviti. Otocte ji -- nesviti (proud tece jen jednim smerem). Proc? Protoze polovodic v LED ma vlastnost "jednosmerky". Dite nakresli schema a popise, co se deje.
+
+4. ### Referat: Materialy budoucnosti
+
+   ⏱️ _1,5 hodiny_
+
+   Dite zpracuje kratky referat o jednom "specialnim" materialu: supravodice, grafeen, vodive plasty. Kde se pouzivaji? Co umoznnuji? Proc jsou zajimave? Prezentuje rodine.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Elektricky odpor -- Fyzika pro ZS](https://fyzika.jreichl.com/main.article/view/243-elektricky-odpor)<br />
+  Odpor, vodivost, vliv delky a prurezu vodice.
+- [Polovodice -- zaklady](https://cs.wikipedia.org/wiki/Polovodi%C4%8D)<br />
+  Zakladni informace o polovodicich v cestine.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- Resistivity and conductivity](https://www.khanacademy.org/science/physics/circuits-topic/circuits-resistance)<br />
+  Videa o odporu, vodivosti a materialech.
+- English: <Badge text="EN" variant="tip" /> [PhET -- Resistance in a Wire](https://phet.colorado.edu/en/simulations/resistance-in-a-wire)<br />
+  Simulace -- menite delku, prurez a material vodice a sledujete odpor.

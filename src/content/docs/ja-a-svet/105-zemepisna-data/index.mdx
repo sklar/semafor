@@ -1,0 +1,82 @@
+---
+title: "105. Zeměpisná data"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Zpracovává zeměpisná data" />
+
+## Co to znamená?
+
+Dítě umí zeměpisná data nejen najít, ale i smysluplně zpracovat — uspořádat je do tabulek, vytvořit grafy, kartogramy nebo infografiky. Dokáže z dat vyčíst trendy, porovnat regiony a formulovat závěry. Nejde jen o "přepsat čísla", ale o schopnost data **interpretovat a prezentovat**.
+
+V praxi to znamená, že když dítě zjistí počty obyvatel evropských států, nenapíše jen seznam, ale vytvoří přehlednou tabulku seřazenou podle velikosti, sloupcový graf pro vizuální porovnání a krátký komentář: co z dat vyplývá, co ho překvapilo.
+
+Tenhle výstup úzce souvisí s matematickou a digitální gramotností. Zpracování dat je dovednost, která se hodí všude — od školních projektů po porozumění novinovým grafům a statistikám.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte základy.** Jednoduché tabulky, sloupcové a koláčové grafy. Dítě zpracuje data o jednom tématu (státy Evropy, teploty za rok). Důraz na přehlednost a čitelnost. |
+| **7.–8.** | **Prohlubujte.** Složitější datové sady, porovnávání více jevů najednou. Tematické mapy z vlastních dat. Interpretace — co data říkají a co ne. Kritický pohled na grafy v médiích. |
+| **9.** | **Samostatná analytická práce.** Dítě samo navrhne výzkumnou otázku, najde data, zpracuje je a prezentuje závěry. Rozumí základním statistickým pojmům (průměr, medián, trend). |
+
+<Aside title="Prerekvizity" type="tip">Základní práce s tabulkovým editorem (JAS bod 02) a znalost zlomků a procent z matematiky. Čím víc matiky dítě umí, tím zajímavější analýzy může dělat.</Aside>
+
+## Poznámky
+
+<Aside title="Data bez kontextu nic neříkají">Číslo samo o sobě je jen číslo. Důležité je srovnání: je 10 milionů obyvatel hodně, nebo málo? Ve srovnání s čím? Učte dítě vždy hledat kontext a měřítko.</Aside>
+
+<Aside title="Pozor na zavádějící grafy">Zkrácená osa, nerovnoměrná měřítka, chybějící popisky — grafy v médiích často zkreslují. Ukažte dítěti příklady zavádějících grafů a naučte ho je rozpoznat.</Aside>
+
+<Aside title="Typická past" type="caution">Dítě vytvoří "hezký graf", ale neumí říct, co z něj vyplývá. Vizualizace je nástroj pro komunikaci — vždy by měla odpovídat na otázku.</Aside>
+
+<Aside title="Důležité" type="danger">Korelace neznamená kauzalitu. To, že dva jevy spolu souvisí na mapě (například chudoba a nemocnost), neznamená, že jeden způsobuje druhý. Učte dítě tomuto rozlišení od začátku.</Aside>
+
+## Souvislosti
+
+- <Badge text="JAS" /> bod 104 (zeměpisné informace) — nejdřív data najít, pak je zpracovat
+- <Badge text="JAS" /> bod 02 (textové a grafické editory) — tabulkový editor jako nástroj pro zpracování dat
+- <Badge text="MAT" /> bod 01 (početní operace) — procenta, průměry, porovnávání čísel
+- <Badge text="ČJ" /> bod 06 (tvořivý koherentní text) — komentář k datům vyžaduje schopnost formulovat myšlenky
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost ukázat, jak zpracovává zeměpisná data.</SkillItem>
+  <SkillItem level="novice">
+    Dítě přepíše data do tabulky, ale neumí je dál zpracovat ani interpretovat.
+    <ul>
+      <li>Vytvoří jednoduchou tabulku, ale bez řazení a bez smysluplné struktury</li>
+      <li>Graf vytvoří jen s pomocí, volí nevhodný typ grafu</li>
+      <li>Z dat nedokáže vyvodit závěr — vidí čísla, ale nerozumí jim</li>
+      <li>Nerozlišuje mezi absolutními a relativními údaji (celkový počet vs. počet na obyvatele)</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě zpracuje data do přehledné formy a dokáže z nich vyčíst základní informace.
+    <ul>
+      <li>Vytvoří strukturovanou tabulku s řazením a zvýrazněním klíčových hodnot</li>
+      <li>Vybere vhodný typ grafu pro daná data (sloupcový pro porovnání, koláčový pro podíly)</li>
+      <li>Formuluje jednoduché závěry: co je nejvíc, nejméně, jaký je trend</li>
+      <li>Rozpozná zjevně chybný nebo zavádějící graf</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě samostatně navrhuje, zpracovává a prezentuje zeměpisné analýzy.
+    <ul>
+      <li>Kombinuje různé typy vizualizací (tabulka, graf, mapa) pro komplexní sdělení</li>
+      <li>Interpretuje data v kontextu — porovnává, hledá souvislosti, formuluje hypotézy</li>
+      <li>Kriticky hodnotí grafy a statistiky v médiích</li>
+      <li>Rozumí základním statistickým pojmům a umí je aplikovat na zeměpisná data</li>
+    </ul>
+  </SkillItem>
+</Skill>

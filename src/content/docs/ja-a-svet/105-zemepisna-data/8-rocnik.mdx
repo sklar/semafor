@@ -1,0 +1,103 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Medián</dt>
+  <dd>Prostřední hodnota v seřazené řadě dat. Na rozdíl od průměru ho neovlivní extrémní hodnoty. Medián platů = polovina lidí vydělává víc, polovina míň. Pro zeměpisná data často přesnější než průměr.</dd>
+
+  <dt>Index</dt>
+  <dd>Číslo, které shrnuje složitý jev do jedné hodnoty. HDI (index lidského rozvoje) kombinuje naději na dožití, vzdělání a příjem. Umožňuje srovnávat země jedním číslem.</dd>
+
+  <dt>Korelace</dt>
+  <dd>Statistický vztah mezi dvěma jevy — když roste jeden, roste i druhý (pozitivní korelace) nebo klesá (negativní). Pozor: korelace neznamená, že jeden jev způsobuje druhý!</dd>
+
+  <dt>Bodový graf (scatter plot)</dt>
+  <dd>Graf, kde každý bod představuje jednu jednotku (stát, město) a jeho poloha závisí na dvou hodnotách (osa x a y). Ukazuje, jestli mezi dvěma jevy existuje vztah.</dd>
+
+  <dt>Demografický přechod</dt>
+  <dd>Model popisující, jak se mění porodnost a úmrtnost s rozvojem společnosti. Rozvojové země: vysoká porodnost i úmrtnost. Vyspělé země: nízká porodnost i úmrtnost. Data o demografickém přechodu vysvětlují populační rozdíly.</dd>
+
+  <dt>Normalizace dat</dt>
+  <dd>Úprava dat tak, aby byla srovnatelná. Absolutní čísla (celkové emise CO2) zvýhodňují velké země. Přepočet na obyvatele (emise na hlavu) umožňuje férové srovnání.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Rozlišit průměr a medián a vědět, kdy který použít
+- Vytvořit a přečíst bodový graf — identifikovat korelaci
+- Pracovat se složenými indexy (HDI, Gini koeficient) a chápat jejich limity
+- Normalizovat data pro korektní srovnání různě velkých celků
+- Kombinovat více datových zdrojů do jedné analýzy
+- Formulovat závěry podložené daty a odlišit je od domněnek
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Bohatství vs. zdraví
+   Dítě vytvoří bodový graf: na jedné ose HDP na obyvatele, na druhé naděje na dožití pro 20 států. Existuje korelace? Je přímočará, nebo se někde láme? Gapminder toto vizualizuje krásně.
+
+2. ### Průměrná vs. mediánová mzda
+   V Česku je průměrná mzda výrazně vyšší než medián. Dítě zjistí obě čísla, vysvětlí rozdíl a pochopí, proč medián lépe popisuje "typickou" mzdu. Statistická gramotnost pro reálný život.
+
+3. ### Kdo znečišťuje nejvíc?
+   Čína produkuje nejvíc CO2 celkem, ale na obyvatele je na tom hůř Katar nebo Austrálie. Dítě zpracuje obojí a pochopí, proč normalizace dat mění závěry.
+
+4. ### Index lidského rozvoje
+   Dítě najde HDI pro 15 zemí ze všech kontinentů. Seřadí, vytvoří graf, porovná s vlastním očekáváním. Proč je Norsko nahoře a Niger dole? Co index měří a co ne?
+
+5. ### Korelace nebo náhoda?
+   Dítě najde dva jevy, které korelují, ale nemají příčinnou souvislost (například spotřeba čokolády a počet Nobelových cen). Pochopí koncept falešné korelace na zábavném příkladu.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Bodový graf: vzdělání a příjem
+
+   ⏱️ _1–2 hodiny_
+
+   Dítě najde data o podílu vysokoškolsky vzdělaných lidí a průměrném příjmu pro evropské státy. Vytvoří bodový graf, hledá korelaci. Napíše krátkou analýzu: existuje vztah? Je přímočarý? Jaké jsou výjimky a proč?
+
+2. ### Průměr vs. medián — experiment
+
+   ⏱️ _30 minut_
+
+   Připravte řadu 10 čísel s jedním extrémem (např. platy: 30, 32, 33, 35, 36, 37, 38, 40, 42, 250 tisíc). Dítě spočítá průměr a medián. Který lépe popisuje "typický" plat? Proč? Pak odstraní extrém a spočítá znovu.
+
+3. ### Normalizace — kdo znečišťuje?
+
+   ⏱️ _1 hodina_
+
+   Dítě najde celkové emise CO2 a počet obyvatel pro 10 zemí. Spočítá emise na obyvatele. Vytvoří dva grafy: absolutní a normalizovaný. Porovná pořadí. Napíše komentář: který pohled je "spravedlivější" a proč.
+
+4. ### HDI mapa světa
+
+   ⏱️ _1–2 hodiny_
+
+   Dítě najde HDI pro 30 zemí z různých kontinentů (UNDP). Vybarví slepou mapu světa podle HDI — vlastní kartogram. Identifikuje regionální vzorce: Evropa vs. subsaharská Afrika. Formuluje 3 závěry.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Gapminder](https://www.gapminder.org) <Badge text="EN" variant="tip" /><br />
+  Interaktivní bodové grafy světových dat. Ideální pro pochopení korelací a trendů.
+- [UNDP — Human Development Index](https://hdr.undp.org/data-center/human-development-index) <Badge text="EN" variant="tip" /><br />
+  Aktuální HDI data pro všechny země světa.
+- [Our World in Data](https://ourworldindata.org) <Badge text="EN" variant="tip" /><br />
+  Obrovská databáze vizualizací světových dat — emise, populace, vzdělání, zdraví.
+- [Spurious Correlations](https://tylervigen.com/spurious-correlations) <Badge text="EN" variant="tip" /><br />
+  Humorné příklady falešných korelací — důležitá lekce o interpretaci dat.
+- [Datawrapper](https://www.datawrapper.de) <Badge text="EN" variant="tip" /><br />
+  Nástroj pro tvorbu profesionálních grafů a map z vlastních dat.

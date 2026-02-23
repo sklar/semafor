@@ -1,0 +1,102 @@
+---
+title: "8. rocnik"
+sidebar:
+  order: 8
+  label: "8. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Tlak</dt>
+  <dd>Sila pusobici na urcitou plochu. Vzorec: p = F / S. Jednotka: pascal (Pa). Vysoke podpatky tlaci vic nez tenisky, protoze stejna sila pusobi na mensi plochu.</dd>
+
+  <dt>Atmosfericky tlak</dt>
+  <dd>Tlak vzduchu kolem nas. Na hladine more je priblizne 101 325 Pa. Na horach je nizsi, protoze je nad nami mene vzduchu.</dd>
+
+  <dt>Vykon</dt>
+  <dd>Jak rychle se kona prace. Vzorec: P = W / t. Jednotka: watt (W). Zarovka 60 W spotrebuje min energie nez zarovka 100 W za stejny cas.</dd>
+
+  <dt>Prace</dt>
+  <dd>Sila pusobici na teleso po urcite draze. Vzorec: W = F * s. Jednotka: joule (J). Kdyz zvednete 1 kg do vysky 1 m, vykonate praci priblizne 10 J.</dd>
+
+  <dt>Predpony SI</dt>
+  <dd>Zpusob, jak vyjadrit velmi velka nebo mala cisla: kilo (k) = 1000, mega (M) = 1 000 000, mili (m) = 0,001, mikro (u) = 0,000 001. Napr. 1 km = 1000 m, 1 mA = 0,001 A.</dd>
+
+  <dt>Merici pristroj</dt>
+  <dd>Presnejsi nez bezna meridla. Ampermeter meri proud, voltmeter napeti, manometr tlak. Kazdy ma svuj rozsah, presnost a zpusob pouziti.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Vypocitat tlak a rozumet, proc na tom zalezi (lyzar vs. pesky v snehu)
+- Pouzivat predpony SI (kilo, mega, mili, mikro) pri prevodu jednotek
+- Vypocitat praci a vykon z danych hodnot
+- Rozumet atmosferickemu tlaku a jeho vlivu na pocasi
+- Cist a interpretovat slozitejsi grafy (dve osy, vice krivek)
+- Merit s vedomim presnosti -- zapsat vysledek s rozumnym poctem desetinnych mist
+- Pouzivat jednoduche vzorce a dosazovat do nich
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Proc lyzar neklesne do snehu
+   Lyze rozlozi hmotnost cloveka na velkou plochu -- tlak na sneh je maly. Bez lyzi stoupnete do snehu a borite se, protoze stejna sila pusobi na malou plochu chodidla. -- Tlak v praxi.
+
+2. ### Udaje na zarovce
+   Na zarovce je napsano "9 W". Co to znamena? Zarovka premeni 9 wattu elektricke energie na svetlo a teplo za kazdou sekundu. Stara zarovka mela 60 W pro stejne svetlo -- LED je efektivnejsi. -- Vykon jako prakticky udaj.
+
+3. ### Vysavac a vykon
+   Vysavac ma udaj 2000 W. Znaci to silu saceni? Ne -- je to celkovy prijem energie. Vysavac s 800 W muze sasat lepe, pokud lepe smeruje energii. -- Vykon neni vzdy to, co cekate.
+
+4. ### Tlak v pneumatikach
+   Na boku pneumatiky je "max 2,5 bar". Prilis nizky tlak = vetsi odpor, vetsi spotreba, horis riditelnost. Prilis vysoky = mene pridrzi na mokru. -- Tlak jako bezpecnostni udaj.
+
+5. ### Pocasi a atmosfericky tlak
+   Kdyz barometr klesne, blizi se spatne pocasi. Nizky tlak znamena, ze vzduch stoupy vzhuru, ochlazuje se a tvori mraky. -- Fyzika vysvetluje predpoved pocasi.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Experiment s tlakem
+
+   ⏱️ _45 minut_
+
+   Dite stoupne na merici vahy jednou nohou a pak rozlozi vahu na obe nohy. Sila (vaha) je stejna, ale plocha je dvojnasobna -- tlak je polovicni. Pak polozi na mekkou podlozku knihu naplocho a na hranu. Ktera zanecha vetsi vtisk? Dite vypocita tlak v obou pripadech.
+
+2. ### Porovnani spotrebicu podle vykonu
+
+   ⏱️ _1 hodina_
+
+   Dite projde domacnost a zapise vykon vsech spotrebicu (je na stitku). Seradi je od nejmensiho po nejvetsi. Vypocita, kolik energie kazdy spotrebi za hodinu (W * h = Wh). Ktery je nejdrazsi na provoz?
+
+3. ### Barometr z PET lahve
+
+   ⏱️ _1 hodina + tydenni pozorovani_
+
+   Z PET lahve, balonku a slamky dite sestavi jednoduchy barometr. Kazdy den zaznamenava polohu slamky a pocasi. Hleda souvislost mezi zmenami tlaku a pocasim. -- Vlastnorucne vyrobeny merici pristroj.
+
+4. ### Prace pri vychazce
+
+   ⏱️ _1 hodina_
+
+   Dite zjisti svou hmotnost a vysku schodu na oblibene vychazce (nebo schody v dome). Vypocita praci, kterou vykona pri vystupu: W = m * g * h. Porovna s energii v jablku (~200 kJ). -- Propojeni fyzikalni prace a potravy.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [iVysavace -- jak cist parametry](https://www.ivysavace.cz)<br />
+  Prakticke vysvetleni vykonu a dalsich udaju u spotrebicu.
+- [Meteostanice -- atmosfericky tlak](https://www.chmi.cz)<br />
+  Cesky hydrometeorologicky ustav -- aktualni data o tlaku a pocasi.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- Pressure](https://www.khanacademy.org/science/physics/fluids/pressure-and-pascals-principle-in-fluids)<br />
+  Videa o tlaku, Pascaluv zakon, hydrostaticky tlak.
+- English: <Badge text="EN" variant="tip" /> [PhET -- Under Pressure](https://phet.colorado.edu/en/simulations/under-pressure)<br />
+  Simulace tlaku v kapalinach -- vizualni a interaktivni.

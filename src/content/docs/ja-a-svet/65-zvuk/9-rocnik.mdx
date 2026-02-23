@@ -1,0 +1,102 @@
+---
+title: "9. rocnik"
+sidebar:
+  order: 9
+  label: "9. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Decibel (dB)</dt>
+  <dd>Jednotka hlasitosti na logaritmicke stupnici. 0 dB = prah slyseniii, 60 dB = bezny rozhovor, 85 dB = hranice bezpecnosti, 120 dB = bolest. Kazdy 10 dB narust znamena 10x vetsi intenzitu zvuku.</dd>
+
+  <dt>Stojate vlneni</dt>
+  <dd>Kdyz se vlny odrazi a interferuji, vzniknou mista s maximalni amplitudou (kmitny) a nulovou amplitudou (uzly). Struna kytary kmita jako stojata vlna -- uzly jsou na koncich, kmitna uprostred.</dd>
+
+  <dt>Harmonicke tony (alikvoty)</dt>
+  <dd>Struna nekmita jen na zakladni frekvenci, ale i na nasobcich (2x, 3x, 4x...). Tyto vyssii tony urcuji "barvu zvuku" -- proto kytara a klavir zni jinak, i kdyz hraji stejny ton.</dd>
+
+  <dt>Husteeni a zredeni</dt>
+  <dd>Zvuk je podelfna vlna -- vzduch se stridave stlacuje (husteni) a rozptahuje (zredeni). Na rozdil od vln na vode se castice pohybuji ve smeru sireni, ne kolmo.</dd>
+
+  <dt>Rychlost zvuku v ruznych prostredich</dt>
+  <dd>Vzduch: ~340 m/s. Voda: ~1480 m/s. Ocel: ~5000 m/s. V hustejsim prostredi se zvuk siri rychleji. Ve vakuu se nesiri vubec -- ve vesmiru je ticho.</dd>
+
+  <dt>Sonar</dt>
+  <dd>Pristroj, ktery vysle zvukovy pulz a meri cas odrazu. Z toho spocita vzdalenost predmetu. Pouzivaji ho lode (hledani dna, ryb), netopyri a delfini (echolokace).</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Chapat decibelovou stupnici a vedet, kdy je zvuk nebezpecny pro sluch
+- Vysvetlit stojate vlneni na prikladu hudebniho nastroje
+- Popsat, co jsou harmonicke tony a proc ruzne nastroje zni ruzne
+- Vedet, ze zvuk je poddelna vlna (husteni a zredeni)
+- Porovnat rychlost zvuku v ruznych prostredich a vysvetlit proc se lisi
+- Chapat princip sonaru a echolokace
+- Propojit poznatky o zvuku s hudbou, technologii a bezpecnosti
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Poskozeni sluchu na koncertu
+   Koncert rockove kapely: 100--120 dB. Uz od 85 dB hrozi pri delsi expozici trvale poskozeniii sluchu. Proto muzici nosi spunty. Logaritmicka stupnice znamena, ze 100 dB je 10x intenzivnejsi nez 90 dB, ne o 10 % vice.
+
+2. ### Proc kytara zni jinak nez klavir
+   Oba mohou hrat ton A (440 Hz). Ale kytara ma jine alikvoty (harmonicke tony) nez klavir -- jiny pomer vyssiich frekvenci ke zakladni. Barva zvuku (tembr) je "otisk prstu" nastroje.
+
+3. ### Helium a hlas
+   Vdechnete helium -- hlas zni vyse. Helium je lehcii nez vzduch, zvuk se v nem siri rychleji (~970 m/s). Hlasivky kmitaji stejne, ale rezonance v ustni dutine se zmeni. Neni to zmena frekvence hlasivek, ale rezonance.
+
+4. ### Ultrazvuk u lekare
+   Ultrazvuk (nad 20 kHz) se odrazi od tkani ruzne -- tak vznikne obraz. Lekari viditii plod, organy, cevvy. Princip jako sonar, ale s mnohem vyssii frekvenci pro lepsi rozliseni.
+
+5. ### Zvukova bariiera
+   Nadzvukove letadlo leti rychleji nez zvuk (~1225 km/h na hladine more). Za nim vznika razova vlna -- "sonic boom". Zvukove vlny se nestihnou "utect" a nakupi se do jedne razove vlny.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Mereni hlasitosti kolem nas
+
+   ⏱️ _1 hodina_
+
+   Dite pomoci aplikace (Sound Meter, Decibel X) meri hlasitost v ruznych situacich: tichy pokoj, ulice, sesychac, hudba ve sluchatkach. Zapise hodnoty a porovna s bezpecnostnimi limity. Kdy hrozi poskozeniii sluchu?
+
+2. ### Stojate vlneni na strune
+
+   ⏱️ _45 minut_
+
+   Na kytare nebo jiinem strunnem nastroji dite lehce polozi prst doprostred struny a drnkne -- ozve se ton o oktavu vys (2. harmonicky). Prst ve tretine = 3. harmonicky. Dite nakresli tvary vlneni a vysvetli, proc to funguje.
+
+3. ### Sonar z odrazu
+
+   ⏱️ _30 minut_
+
+   Dite stoji urcitou vzdalenost od zdi a tleskne. Zmeri cas odrazu (stopkami nebo aplikaci). Vzdalenost = rychlost zvuku * cas / 2. Porovna vypoctenou vzdalenost se skutecnou. Princip sonaru v praxi.
+
+4. ### Projekt: Zvuk a zdravi -- prezentace
+
+   ⏱️ _1,5 hodiny_
+
+   Dite zpracuje prezentaci o vlivu zvuku na zdravi: prr co je hluk skodlivy, jake jsou limity, jak se chranit. Data o poskozeniii sluchu u mladych lidi (sluchatka!). Zakonci doporuceniimi pro kamarady.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Zvuk a akustika -- Fyzika pro ZS](https://fyzika.jreichl.com/main.article/view/134-vlneni)<br />
+  Stojaate vlneni, harmonicke tony, rychlost zvuku.
+- [Hluk a zdravi -- SZU](https://www.szu.cz)<br />
+  Statni zdravotni ustav -- informace o limitech hluku a ochrane sluchu.
+- English: <Badge text="EN" variant="tip" /> [PhET -- Sound](https://phet.colorado.edu/en/simulations/sound)<br />
+  Simulace zvukovych vln, frekvence, amplitudy a interference.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- Standing waves](https://www.khanacademy.org/science/physics/mechanical-waves-and-sound/standing-waves)<br />
+  Videa o stojatem vlneni a harmonickych tonech.

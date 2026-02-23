@@ -1,61 +1,61 @@
 ---
-title: "8. rocnik"
+title: "8. ročník"
 sidebar:
   order: 8
-  label: "8. rocnik"
+  label: "8. ročník"
 ---
 
 import { Badge, Steps } from '@astrojs/starlight/components'
 
-## 📇 Zakladni pojmy
+## 📇 Základní pojmy
 
 <dl class="basic-terms">
-  <dt>Kirchhoffovy zakony</dt>
-  <dd>Zakladni pravidla pro obvody: (1) Soucet proudu do uzlu = soucet proudu z uzlu. (2) Soucet napeti v uzavreme smycce = 0. Intuitivne: proud se nikde neztrati a napeti se "spotrebe" na soucastkach.</dd>
+  <dt>Kirchhoffovy zákony</dt>
+  <dd>Základní pravidla pro obvody: (1) Součet proudů do uzlu = součet proudů z uzlu. (2) Součet napětí v uzavřené smyčce = 0. Intuitivně: proud se nikde neztratí a napětí se "spotřebuje" na součástkách.</dd>
 
-  <dt>Seriove zapojeni odporu</dt>
-  <dd>Odpory za sebou: celkovy odpor = R₁ + R₂ + R₃... Proud je vsude stejny, napeti se rozdelii. Cim vic odporu v serii, tim vetsi celkovy odpor.</dd>
+  <dt>Sériové zapojení odporů</dt>
+  <dd>Odpory za sebou: celkový odpor = R₁ + R₂ + R₃... Proud je všude stejný, napětí se rozdělí. Čím víc odporů v sérii, tím větší celkový odpor.</dd>
 
-  <dt>Paralelni zapojeni odporu</dt>
-  <dd>Odpory vedle sebe: 1/R_celk = 1/R₁ + 1/R₂... Napeti je vsude stejne, proud se rozdelii. Celkovy odpor je mensi nez nejmensi jednotlivy odpor.</dd>
+  <dt>Paralelní zapojení odporů</dt>
+  <dd>Odpory vedle sebe: 1/R_celk = 1/R₁ + 1/R₂... Napětí je všude stejné, proud se rozdělí. Celkový odpor je menší než nejmenší jednotlivý odpor.</dd>
 
-  <dt>Elektricka prace</dt>
-  <dd>Energie, ktere spotrebic premeni. Vzorec: W = U * I * t. Jednotka: joule (J) nebo kilowatthodina (kWh). Na uctence za elektrinu platite za kWh.</dd>
+  <dt>Elektrická práce</dt>
+  <dd>Energie, kterou spotřebič přemění. Vzorec: W = U × I × t. Jednotka: joule (J) nebo kilowatthodina (kWh). Na účtence za elektřinu platíte za kWh.</dd>
 
-  <dt>Elektricky vykon</dt>
-  <dd>Jak rychle spotrebic premena energii. Vzorec: P = U * I. Jednotka: watt (W). Zarovka 60 W premena 60 joulu za sekundu. Varny konvice 2000 W je "silnejsi" nez zarovka.</dd>
+  <dt>Elektrický výkon</dt>
+  <dd>Jak rychle spotřebič přeměňuje energii. Vzorec: P = U × I. Jednotka: watt (W). Žárovka 60 W přemění 60 joulů za sekundu. Varná konvice 2000 W je "silnější" než žárovka.</dd>
 
-  <dt>Striadvy proud (AC)</dt>
-  <dd>Proud, ktery meni smer 50krat za sekundu (50 Hz). Proudii ze zasuvky. Vyhodnejsi pro prenos na velke vzdalenosti. Vetsina domacich spotrebicu pouziva striadvy proud.</dd>
+  <dt>Střídavý proud (AC)</dt>
+  <dd>Proud, který mění směr 50krát za sekundu (50 Hz). Proudí ze zásuvky. Výhodnější pro přenos na velké vzdálenosti. Většina domácích spotřebičů používá střídavý proud.</dd>
 </dl>
 
-## 🎓 Co by melo dite znat
+## 🎓 Co by mělo dítě znát
 
-- Vypocitat celkovy odpor serioveho a paralelniho zapojeni
-- Pouzit vzorec pro elektrickou praci a vykon
-- Chapat rozdil mezi stejnosmernym a striadvym proudem
-- Spocitat spotrebu elektrickeho spotrebice v kWh
-- Intuitivne rozumet Kirchhoffovym zakonum (proud se neztraci, napeti se "spotrebuje")
-- Nakreslit a analyzovat slozitejsi schema obvodu
+- Vypočítat celkový odpor sériového a paralelního zapojení
+- Použít vzorec pro elektrickou práci a výkon
+- Chápat rozdíl mezi stejnosměrným a střídavým proudem
+- Spočítat spotřebu elektrického spotřebiče v kWh
+- Intuitivně rozumět Kirchhoffovým zákonům (proud se neztrácí, napětí se "spotřebuje")
+- Nakreslit a analyzovat složitější schéma obvodu
 
-## 🌳 Priklady z realneho sveta
+## 🌳 Příklady z reálného světa
 
 <Steps>
 
-1. ### Uctenka za elektrinu
-   Spotreba 250 kWh za mesic. Cena 6 Kc/kWh = 1500 Kc. Kolik z toho spotrebuje lednicka (150 W * 24 h * 30 dni = 108 kWh = 648 Kc)? -- Elektricka prace a vykon v penezich.
+1. ### Účtenka za elektřinu
+   Spotřeba 250 kWh za měsíc. Cena 6 Kč/kWh = 1500 Kč. Kolik z toho spotřebuje lednice (150 W × 24 h × 30 dní = 108 kWh = 648 Kč)? -- Elektrická práce a výkon v penězích.
 
-2. ### Proc zasuvka ma 230 V
-   V Cesku je v zasuvkach striadvy proud 230 V / 50 Hz. Americky standard je 120 V / 60 Hz. Vyssi napeti umoznuje tensi dryty (mensi proud pro stejny vykon). Proto evropske zasuvky a vidlice vypadaji jinak.
+2. ### Proč zásuvka má 230 V
+   V Česku je v zásuvkách střídavý proud 230 V / 50 Hz. Americký standard je 120 V / 60 Hz. Vyšší napětí umožňuje tenčí dráty (menší proud pro stejný výkon). Proto evropské zásuvky a vidlice vypadají jinak.
 
 3. ### Pojistka 16 A
-   Jistic v rozvodne skrinni prepne pri 16 A. Maximalni vykon: P = U * I = 230 * 16 = 3680 W. Kdyz zapojite konvici (2000 W) a topeni (2000 W) na stejny okruh, 4000 W > 3680 W -- jistic vypadne.
+   Jistič v rozvodné skříni přepne při 16 A. Maximální výkon: P = U × I = 230 × 16 = 3680 W. Když zapojíte konvici (2000 W) a topení (2000 W) na stejný okruh, 4000 W > 3680 W -- jistič vypadne.
 
-4. ### Vanocni retez -- seriove vs. paralelni
-   Stariy retez (seriove): jedna zarovka prashala = vsechny zhasly. Novy retez (paralelne): kazda zarovka sviti nezavisle. Navic v paralelnim zapojeni kazda zarovka dostane plne napeti -- sviti jasneji.
+4. ### Vánoční řetěz -- sériové vs. paralelní
+   Starý řetěz (sériově): jedna žárovka přestala = všechny zhasly. Nový řetěz (paralelně): každá žárovka svítí nezávisle. Navíc v paralelním zapojení každá žárovka dostane plné napětí -- svítí jasněji.
 
-5. ### Stejnosmerny vs. striadvy
-   Baterie dava stejnosmerny proud (DC) -- proud tece stale jednim smerem. Zasuvka dava striadvy (AC) -- smer se meni 50x za sekundu. Elektronika (telefon, pocitac) potrebuje DC -- proto ma nabijecka prevodnyk.
+5. ### Stejnosměrný vs. střídavý
+   Baterie dává stejnosměrný proud (DC) -- proud teče stále jedním směrem. Zásuvka dává střídavý (AC) -- směr se mění 50× za sekundu. Elektronika (telefon, počítač) potřebuje DC -- proto má nabíječka převodník.
 
 </Steps>
 
@@ -63,39 +63,39 @@ import { Badge, Steps } from '@astrojs/starlight/components'
 
 <Steps>
 
-1. ### Vypocet spotreby domacnosti
+1. ### Výpočet spotřeby domácnosti
 
    ⏱️ _1 hodina_
 
-   Dite zapise vykon vsech spotrebicu (ze stitku) a odhadne denni dobu provozu. Spocita denni spotrebu v kWh a mesicniii ucet. Porovna s realnou uctenkou. Ktery spotrebic je nejdrazsi? Kde se da setrit?
+   Dítě zapíše výkon všech spotřebičů (ze štítku) a odhadne denní dobu provozu. Spočítá denní spotřebu v kWh a měsíční účet. Porovná s reálnou účtenkou. Který spotřebič je nejdražší? Kde se dá šetřit?
 
-2. ### Seriove a paralelni odpory
+2. ### Sériové a paralelní odpory
 
    ⏱️ _1 hodina_
 
-   S elektrostavebnicii (nebo simulaci PhET) dite zapoji rezistory seriove a paralelne. Meri celkovy odpor multimetrem. Overuje vzorce: R_ser = R₁ + R₂, 1/R_par = 1/R₁ + 1/R₂. Zapise vysledky a porovna s vypoctem.
+   S elektrostavebnicí (nebo simulací PhET) dítě zapojí rezistory sériově a paralelně. Měří celkový odpor multimetrem. Ověřuje vzorce: R_ser = R₁ + R₂, 1/R_par = 1/R₁ + 1/R₂. Zapíše výsledky a porovná s výpočtem.
 
-3. ### Stavba obvodu s merenim
+3. ### Stavba obvodu s měřením
 
    ⏱️ _1,5 hodiny_
 
-   Dite sestavi obvod se dvema zarovkami (seriove a paralelne). Meri napeti na kazde zarovce voltmetrem a proud ampermetrem. Overuje Kirchhoffovy zakony: soucet napeti v serii = napeti zdroje, proud v paralelnim zapojeni se rozdelii.
+   Dítě sestaví obvod se dvěma žárovkami (sériově a paralelně). Měří napětí na každé žárovce voltmetrem a proud ampérmetrem. Ověřuje Kirchhoffovy zákony: součet napětí v sérii = napětí zdroje, proud v paralelním zapojení se rozdělí.
 
-4. ### Projekt: Kolik stoji nas den?
+4. ### Projekt: Kolik stojí náš den?
 
    ⏱️ _1 hodina_
 
-   Dite sleduje 1 den vsechny elektricke spotrebice, ktere pouziva. Zapise: co, jak dlouho, jaky vykon. Vecer spocita celkovou spotrebu a "cenu dne". Vytvori graf: kolik energie pada na svetlo, vareniii, zabavu, nabijeni.
+   Dítě sleduje 1 den všechny elektrické spotřebiče, které používá. Zapíše: co, jak dlouho, jaký výkon. Večer spočítá celkovou spotřebu a "cenu dne". Vytvoří graf: kolik energie padá na světlo, vaření, zábavu, nabíjení.
 
 </Steps>
 
 ## 🍱 Odkazy a zdroje
 
-- [Kirchhoffovy zakony -- Fyzika](https://fyzika.jreichl.com/main.article/view/244-kirchhoffovy-zakony)<br />
-  Vysvetleni Kirchhoffovych zakonu s priklady a schematy.
-- [Spotreba elektriny -- ERU](https://www.eru.cz)<br />
-  Energeticky regulacni urad -- informace o cenach a spotrebe.
+- [Kirchhoffovy zákony -- Fyzika](https://fyzika.jreichl.com/main.article/view/244-kirchhoffovy-zakony)<br />
+  Vysvětlení Kirchhoffových zákonů s příklady a schématy.
+- [Spotřeba elektřiny -- ERÚ](https://www.eru.cz)<br />
+  Energetický regulační úřad -- informace o cenách a spotřebě.
 - English: <Badge text="EN" variant="tip" /> [PhET -- Circuit Construction Kit: AC+DC](https://phet.colorado.edu/en/simulations/circuit-construction-kit-ac)<br />
-  Simulace obvodu vcetne striadveho proudu.
+  Simulace obvodů včetně střídavého proudu.
 - English: <Badge text="EN" variant="tip" /> [Khan Academy -- DC circuit analysis](https://www.khanacademy.org/science/physics/circuits-topic)<br />
-  Videa o analyze obvodu, Kirchhoffovych zakonech.
+  Videa o analýze obvodů, Kirchhoffových zákonech.

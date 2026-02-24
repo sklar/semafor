@@ -44,10 +44,4 @@
 			margin: 0;
 		}
 	}
-
-	.sidebar {
-		summary {
-			font-variant-numeric: tabular-nums;
-		}
-	}
 }

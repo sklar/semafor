@@ -59,7 +59,7 @@ const crumbs: Crumb[] = [
 	...ancestors,
 ]
 
-const showBreadcrumbs = ancestors.length > 0
+const showBreadcrumbs = currentPath !== '/'
 ---
 
 {showBreadcrumbs && (

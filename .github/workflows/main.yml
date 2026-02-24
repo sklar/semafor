@@ -1,0 +1,60 @@
+name: Main
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  install:
+    name: Install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.29.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.20.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+  lint:
+    name: Lint
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.29.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.20.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint.check
+
+  typecheck:
+    name: Typecheck
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.29.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.20.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm type.check

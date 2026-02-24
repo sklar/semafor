@@ -1,0 +1,102 @@
+---
+title: "8. rocnik"
+sidebar:
+  order: 8
+  label: "8. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Objem hranolu</dt>
+  <dd>V = S_podstavy × vyska. Plati pro jakykoli hranol — trojboky, ctyrboky, sestiboky. Nejdriv spocitame obsah podstavy, pak vynasobime vyskou.</dd>
+
+  <dt>Objem valce</dt>
+  <dd>V = π × r² × v, kde r je polomer podstavy a v je vyska. Vlastne to same jako hranol — obsah kruhove podstavy × vyska.</dd>
+
+  <dt>Objem jehlanu</dt>
+  <dd>V = (S_podstavy × vyska) ÷ 3. Jehlan ma tretinovy objem ve srovnani s hranolem se stejnou podstavou a vyskou.</dd>
+
+  <dt>Objem kuzele</dt>
+  <dd>V = (π × r² × v) ÷ 3. Stejny vztah jako u jehlanu — tretina objemu valce se stejnou podstavou a vyskou.</dd>
+
+  <dt>Slozeny utvar</dt>
+  <dd>Utvar, ktery se sklada z vice zakladnich tvaru. Napriklad dum = kvader + trojboky hranol. Obsah/objem pocitame po castech a scitame.</dd>
+
+  <dt>Optimalizace</dt>
+  <dd>Hledani nejlepsiho reseni — napr. jaké rozmery krabice daji nejvetsi objem pri danem povrchu, nebo nejmensi povrch pri danem objemu. Prakticka a dulezita dovednost.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Spocitat objem a povrch hranolu, valce, jehlanu a kuzele v aplikacni uloze
+- Rozlozit slozeny utvar na zakladni casti a spocitat celkovy obsah/objem
+- Prevadet mezi jednotkami objemu (cm³, dm³, m³, litry)
+- Resit ulohy o vice krocich s realnym kontextem
+- Odhadnout vysledek a posoudit jeho smysluplnost
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Objem akvaria
+   Akvariumm ma tvar kvádru 60 × 30 × 35 cm. Kolik litru vody se do nej vejde? (1 dm³ = 1 l.) Kolik kilogramu bude plne akvrarium vazit? (1 l vody ≈ 1 kg + vaha akvaria.)
+
+2. ### Zmrzlinovy kornout
+   Kornout ma tvar kuzele — vyska 12 cm, prumer 5 cm. Kolik ml zmrzliny se do nej vejde? A kolik navic, kdyz nahoře pridame polokouli? Kuzel + polokoule.
+
+3. ### Cukrarska forma
+   Forma na dort je valec — prumer 26 cm, vyska 8 cm. Kolik litru testa potrebujeme? Recept udava mnozstvi na formu 22 cm. Jak prepocitat? (Pomer objemu.)
+
+4. ### Bazenik na zahrade
+   Kruhovy bazen ma prumer 3,5 m a hloubku 0,9 m. Kolik litru vody potrebujeme? Kolik hodin bude trvat napusteni hadicí s prutokem 15 l/min?
+
+5. ### Strechy a podkrovi
+   Strecha domu ma tvar trojbokeho hranolu — podstava je rovnostranny trojuhelnik o strane 8 m, delka domu 12 m. Jaky je objem podkrovi? Kolik metru ctverecnich stresnich tasek potrebujeme?
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Kuchynska geometrie
+
+   ⏱️ _1 hodina_
+
+   Zmerte rozmery 5 kuchynskych nadobi (hrnce, misky, formy). Spocitejte objem kazde v cm³ a prevedte na litry. Overte nalitim vody. Ktera nadoba pojme nejvic? Ktera ma nejvetsi povrch?
+
+2. ### Navrh zahradniho domku
+
+   ⏱️ _2 hodiny_
+
+   Dite navrhne zahradni domek — steny (kvader) + strecha (trojboky hranol). Zvoli rozmery, spocita: objem vnitrniho prostoru, povrch sten (kolik barvy), plochu strechy (kolik tasek). Kolik to bude stat?
+
+3. ### Optimalizacni vyzva
+
+   ⏱️ _45 minut_
+
+   Z listu kartonu A4 vyrobit krabici s co nejvetsim objemem. Postup: z rohu vyriznout ctverce, ohnout steny. Jak velke ctverce vyriznout, aby objem byl maximalni? Dite zkusi vic variant a zmeri.
+
+4. ### Slozene utvary
+
+   ⏱️ _1 hodina_
+
+   Pripravte 5 obrazku slozenych utvaru (dum, raketa, zmrzlina, hrib, hrneeck). Dite kazdy rozlozi na zakladni telesa, spocita objem kazde casti a celkovy objem.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Objem valce](https://www.matematika.cz/objem-valce)<br />
+  Vzorec, odvozeni a priklady.
+- [Matematika.cz — Objem jehlanu](https://www.matematika.cz/objem-jehlanu)<br />
+  Vzorec a prakticke priklady na objem jehlanu.
+- [Khanova skola — Objemy teles](https://cs.khanacademy.org/math/geometry/hs-geo-solids)<br />
+  Videa a cviceni na objemy ruznych teles.
+- [GeoGebra — 3D kalkulacka](https://www.geogebra.org/3d) <Badge text="EN" variant="tip" /><br />
+  Interaktivni 3D nastroj pro vizualizaci a pocitani objemu.
+- [Math is Fun — Volume](https://www.mathsisfun.com/geometry/volume.html) <Badge text="EN" variant="tip" /><br />
+  Vzorce objemu pro vsechna telesa s interaktivnimi ukazkam.

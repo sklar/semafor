@@ -1,0 +1,82 @@
+---
+title: "10. Množiny bodů"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Využívá pojem množina všech bodů dané vlastnosti." />
+
+## Co to znamená?
+
+Dítě chápe, že v geometrii můžeme popsat celou sadu bodů jednou vlastností — a tím definovat tvar. Například: **množina všech bodů, které mají od bodu S vzdálenost 5 cm, je kružnice** o poloměru 5 cm se středem v S. Není to jen jeden bod — je jich nekonečně mnoho a dohromady tvoří kružnici.
+
+Tento přístup je mocný nástroj pro **geometrické konstrukce**. Když hledáme bod, který splňuje dvě podmínky najednou, najdeme množinu bodů pro každou podmínku zvlášť a pak hledáme **průnik** — bod, kde se obě množiny protnou.
+
+Typické množiny bodů, se kterými dítě pracuje: kružnice (body ve stejné vzdálenosti od středu), osa úsečky (body stejně daleko od obou konců), osa úhlu (body stejně daleko od obou ramen). Zní to abstraktně, ale v praxi jde o elegantní logiku: *„Kde leží všechna místa, odkud to mám stejně daleko do školy i na hřiště?"*
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Kružnice jako množina bodů, osa úsečky, vzdálenost bodu od přímky. Hodně praktického rýsování — kružítko a pravítko. |
+| **7.–8.** | **Prohlubujte.** Osa úhlu, Thaletova kružnice. Konstrukce trojúhelníku z daných podmínek — kombinace množin bodů. |
+| **9.** | Složitější konstrukční úlohy s více podmínkami. Analytický přístup — algebraický popis množin bodů. |
+
+<Aside title="Prerekvizity" type="tip">Bezpečná práce s kružítkem a pravítkem. Znalost základních pojmů — kružnice, úsečka, úhel, kolmice, rovnoběžka.</Aside>
+
+## Poznámky
+
+<Aside title="Rýsujte hodně">Množiny bodů se nejlépe chápou přes rýsování. Nechte dítě nejdřív „tipovat" — kde leží body, které splňují podmínku? Pak to ověřte kružítkem a pravítkem.</Aside>
+
+<Aside title="GeoGebra je váš přítel">Interaktivní geometrie umožňuje dítěti experimentovat — posunout bod, změnit podmínku a okamžitě vidět, jak se množina bodů změní. To je pro pochopení mnohem silnější než statický obrázek.</Aside>
+
+<Aside title="Typická past" type="caution">Dítě se učí množiny bodů nazpaměť jako „osa úsečky je to a to" — ale nechápe, proč to tak je. Místo memorování nechte dítě samo experimentovat: „Najdi 10 bodů, které jsou stejně daleko od bodu A i od bodu B. Co vidíš?"</Aside>
+
+<Aside title="Dulezite" type="danger">Množina bodů není jen teoretický pojem — je to základ všech geometrických konstrukcí. Bez pochopení tohoto principu budou konstrukce v 8. a 9. ročníku jen mechanické opakování kroků bez porozumění.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 11 (náčrt a konstrukce) — množiny bodů jsou klíčový nástroj pro geometrické konstrukce
+- <Badge text="MAT" /> bod 12 (shodnost a podobnost) — konstrukce trojúhelníků podle vět o shodnosti využívají množiny bodů
+- <Badge text="MAT" /> bod 13 (souměrnost) — osa souměrnosti je množina bodů
+- <Badge text="JAS" /> (navigace, mapy — „kde leží všechna místa ve vzdálenosti 5 km od centra?")
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli nebo dítě nemělo příležitost ukázat, jak rozumí pojmu množina bodů dané vlastnosti.</SkillItem>
+  <SkillItem level="novice">
+    Dítě zná základní množiny bodů, ale neumí je aktivně použít.
+    <ul>
+      <li>Ví, že kružnice je množina bodů ve stejné vzdálenosti od středu, ale nedokáže tuto myšlenku zobecnit</li>
+      <li>Osu úsečky sestrojí podle návodu, ale neví, proč funguje</li>
+      <li>Při konstrukci potřebuje detailní postup krok za krokem</li>
+      <li>Nedokáže sám rozpoznat, kterou množinu bodů v úloze použít</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě rozumí principu a používá množiny bodů v jednodušších úlohách.
+    <ul>
+      <li>Popíše kružnici, osu úsečky a osu úhlu jako množiny bodů</li>
+      <li>V jednoduché konstrukční úloze rozpozná, které množiny bodů potřebuje</li>
+      <li>Sestrojí průnik dvou množin bodů, ale u složitějších kombinací tápe</li>
+      <li>Vysvětlí, proč osa úsečky AB je množina bodů stejně vzdálených od A i B</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě samostatně analyzuje úlohu, identifikuje potřebné množiny bodů a provede konstrukci.
+    <ul>
+      <li>Rozloží složitou úlohu na podmínky a ke každé přiřadí množinu bodů</li>
+      <li>Kombinuje více množin bodů a najde jejich průnik</li>
+      <li>Diskutuje počet řešení — kdy má úloha jedno, dvě nebo žádné řešení</li>
+      <li>Vysvětlí postup konstrukce a zdůvodní každý krok</li>
+    </ul>
+  </SkillItem>
+</Skill>

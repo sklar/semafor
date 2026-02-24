@@ -1,0 +1,81 @@
+---
+title: "61. Měřidla a veličiny"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Při praktickém řešení problému umí používat měřidla, základní fyzikální jednotky a vztahy mezi základními fyzikálními veličinami, druhy pohybu." />
+
+## Co to znamená?
+
+Dítě dokáže **měřit** -- délku, hmotnost, čas, teplotu -- a ví, jaký nástroj k tomu použít. Rozumí tomu, že každá fyzikální veličina má svou **jednotku** (metr, kilogram, sekunda, stupeň Celsia) a umí mezi jednotkami **převádět** (centimetry na metry, gramy na kilogramy).
+
+V praxi to znamená, že když dítě peče dort, ví, že 250 g mouky je čtvrt kilogramu. Když měří pokoj, umí použít metr a zapsat výsledek. Když se dívá na předpověď počasí, rozumí, co znamená "15 °C".
+
+Nejde jen o to "umět měřit". Jde o pochopení, že **měření je základ fyziky** -- bez něj bychom nemohli nic porovnávat, ověřovat ani vysvětlovat. A zároveň jde o naprosto praktickou dovednost, kterou dítě použije každodenně.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Základní veličiny (délka, hmotnost, čas, teplota), jejich jednotky a měřidla. Praktické měření v domácnosti. Převody v rámci jedné soustavy (mm-cm-m, g-kg). |
+| **7.--8.** | **Prohlubujte.** Odvozené veličiny (rychlost, hustota, tlak). Přesnost měření, chyba měření. Práce s tabulkami a grafy naměřených hodnot. Soustava SI jako mezinárodní standard. |
+| **9.** | **Systematizace.** Složitější převody, práce s vzorci. Pochopení, proč fyzika potřebuje přesné definice jednotek. Propojení s chemií a matematikou. |
+
+<Aside title="Prerekvizity" type="tip">Základní početní operace (násobení, dělení, desetinná čísla). Dítě by mělo umět pracovat s čísly v rozsahu, který odpovídá běžným měrám -- např. 1,75 m, 65 kg, 20 °C.</Aside>
+
+## Poznámky
+
+<Aside title="Měřte všechno kolem sebe">Nejlepší způsob, jak se naučit měřit, je měřit. Výška dveřního rámu, hmotnost jablka, teplota vody v hrnku, čas vaření vajíčka. Každé měření je přirozená lekce fyziky.</Aside>
+
+<Aside title="Převody přes schodky">Při převodech jednotek pomáhá představa "schodku" -- každý krok nahoru znamená dělení, každý krok dolů násobení. Např. mm -> cm -> m -> km. Nakreslete si to na papír.</Aside>
+
+<Aside title="Typická past" type="caution">Děti často zaměňují veličinu a jednotku. Délka je veličina, metr je jednotka. Hmotnost je veličina, kilogram je jednotka. Pomozte dítěti rozlišovat "co měřím" a "v čem to vyjadřuji".</Aside>
+
+<Aside title="Důležité" type="danger">Hmotnost a váha nejsou totéž! Hmotnost (kg) je vlastnost tělesa, váha (N) je síla. V běžném životě to zaměňují všichni, ale ve fyzice je to podstatný rozdíl. V 6. ročníku stačí upozornit, že rozdíl existuje.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 01 -- početní operace a převody jednotek
+- <Badge text="JAS" /> bod 62 -- molekulové složení látek (měření vlastností látek)
+- <Badge text="JAS" /> bod 64 -- energie (měření energetických veličin)
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost ukázat, jestli umí pracovat s měřidly a fyzikálními jednotkami.</SkillItem>
+  <SkillItem level="novice">
+    Dítě ví, že existují jednotky a měřidla, ale v praxi je nepoužívá samostatně.
+    <ul>
+      <li>Neví, jakou jednotku použít pro danou veličinu (např. měří teplotu v metrech)</li>
+      <li>Neumí přečíst hodnotu na měřidle (pravítko, teploměr, váhy)</li>
+      <li>Převody jednotek nezvládá ani s nápovědou</li>
+      <li>Záměnu veličin a jednotek nerozezná</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě umí měřit základní veličiny a převádí jednoduché jednotky, ale potřebuje občas podporu.
+    <ul>
+      <li>Správně používá pravítko, váhy a teploměr</li>
+      <li>Zvládá jednoduché převody (cm na m, g na kg) s občasnou chybou</li>
+      <li>Rozumí, že každá veličina má svou jednotku</li>
+      <li>U složitějších převodů (např. m/s na km/h) potřebuje pomoc</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě samostatně a přesně měří, převádí jednotky a rozumí soustavě SI.
+    <ul>
+      <li>Zvolí správné měřidlo a jednotku pro danou situaci</li>
+      <li>Převádí jednotky plynule, včetně odvozených veličin</li>
+      <li>Zapíše výsledek měření s příslušnou jednotkou a rozumnou přesností</li>
+      <li>Rozumí pojmu chyba měření a ví, že žádné měření není dokonale přesné</li>
+    </ul>
+  </SkillItem>
+</Skill>

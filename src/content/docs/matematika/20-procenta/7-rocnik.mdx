@@ -1,0 +1,102 @@
+---
+title: "7. rocnik"
+sidebar:
+  order: 7
+  label: "7. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Zaklad</dt>
+  <dd>Hodnota, ktera predstavuje 100 %. Puvodni cena, celkovy pocet, plna kapacita. Zaklad je to, z ceho pocitame procenta.</dd>
+
+  <dt>Procentova cast</dt>
+  <dd>Konkretni hodnota odpovidajici danemu poctu procent. Vzorec: procentova cast = zaklad × pocet procent ÷ 100.</dd>
+
+  <dt>Pocet procent</dt>
+  <dd>Kolik procent tvoricely cast z celku. Vzorec: pocet procent = procentova cast ÷ zaklad × 100.</dd>
+
+  <dt>Zvyseni o procenta</dt>
+  <dd>Puvodni hodnota + procentualni prirustek. Cena 500 Kc zvysena o 20 % = 500 + 100 = 600 Kc. Zkratka: 500 × 1,20 = 600. Nasobime koeficientem (1 + p/100).</dd>
+
+  <dt>Snizeni o procenta</dt>
+  <dd>Puvodni hodnota − procentualni ubytek. Cena 500 Kc snizena o 20 % = 500 − 100 = 400 Kc. Zkratka: 500 × 0,80 = 400. Nasobime koeficientem (1 − p/100).</dd>
+
+  <dt>DPH (dan z pridane hodnoty)</dt>
+  <dd>Dan pridana k cene zbozi a sluzeb. V CR zakladni sazba 21 %, snizena 12 %. Cena bez DPH × 1,21 = cena s DPH. Kdyz vidite cenu v obchode, DPH uz je v ni.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Resit vsechny tri zakladni typy uloh na procenta (zaklad, cast, pocet procent)
+- Pocitat zvyseni a snizeni o procenta pomoci koeficientu
+- Rozumet DPH a spocitat cenu s dani a bez dane
+- Resit slovni ulohy na procenta z realneho zivota
+- Pracovat s procenty vetsimi nez 100 % (napr. zvyseni o 150 %)
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### DPH na uctence
+   Na uctence z restaurace je castka 450 Kc vcetne DPH 12 %. Kolik je samotne jidlo bez dane? 450 ÷ 1,12 = 401,79 Kc. A kolik je DPH? 450 − 401,79 = 48,21 Kc.
+
+2. ### Zvyseni najmu
+   Najem 12 000 Kc se zvysil o 8 %. Novy najem = 12 000 × 1,08 = 12 960 Kc. O kolik korun vic? 960 Kc mesicne. Za rok? 11 520 Kc. Procenta v kontextu bydleni.
+
+3. ### Sleva na slevu
+   Obchod ma slevu 30 % a na Black Friday dava dalsi slevu 20 % z uz zlevnene ceny. Puvodni cena 1 000 Kc. Kolik zaplatime? 1 000 × 0,70 × 0,80 = 560 Kc. To neni 50% sleva!
+
+4. ### Sportovni statistika
+   Basketbalista dal 42 kosu z 60 pokusu. Uspesnost strelby = 70 %. Minuly mesic mel 65 %. O kolik procentnich bodu se zlepsil? O 5 procentnich bodu (ne o 5 %!).
+
+5. ### Vyzivove udaje
+   Doporuceny denni prijem energie je 2 000 kcal. Obed mel 650 kcal. Kolik procent denniho prijmu? 650 ÷ 2 000 × 100 = 32,5 %. Zbava na snidani a veceri 67,5 %.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### DPH kalkulator
+
+   ⏱️ _45 minut_
+
+   Dite sebere 5 uctenek z domacnosti. U kazde spocita: cenu bez DPH, vysi DPH, overi celkovou castku. Ktera uctencka ma nejvyssi DPH? (Restaurace 12 % vs. elektronika 21 %.) Proc jsou sazby ruzne?
+
+2. ### Sleva na slevu — experiment
+
+   ⏱️ _30 minut_
+
+   Dite dostane 10 produktu s ruznymikombinaacemi slev (30 % + 10 %, 20 % + 20 %, 50 % jednorázove). Spocita konecnou cenu kazdeho. Je 20 % + 20 % totez co 40 %? (Ne!) Proc?
+
+3. ### Procentovy denik
+
+   ⏱️ _prubezne, 1 tyden_
+
+   Kazdy den dite najde a zapise 3 udaje v procentech (z novin, TV, internetu, obchodu). U kazdeho napise: co je zaklad, co je procentova cast, dava to smysl?
+
+4. ### Rozpoctova simulace
+
+   ⏱️ _1 hodina_
+
+   Dite dostane fiktivni plat 25 000 Kc. Musi zaplatit: najem (35 %), jidlo (25 %), dopravu (10 %), sporeni (15 %), zbytek volne. Spocita konkretnni castky. Co kdyz dostane priplatek 3 000 Kc — jak se zmeni procenta?
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Procenta](https://www.matematika.cz/procenta)<br />
+  Kompletni vyklad vsech typu uloh na procenta.
+- [Khanova skola — Procenta](https://cs.khanacademy.org/math/cc-seventh-grade-math/cc-7th-fractions-decimals/cc-7th-percents-word-problems)<br />
+  Slovni ulohy na procenta v cestine.
+- [Financni gramotnost — DPH](https://www.financnigramotnost.cz)<br />
+  Informace o danich a financich srozumitelne pro verejnost.
+- [Math is Fun — Percentage Calculator](https://www.mathsisfun.com/percentage-calculator.html) <Badge text="EN" variant="tip" /><br />
+  Online kalkulacka na procenta s vysvetlenim postupu.
+- [Khan Academy — Percent Word Problems](https://www.khanacademy.org/math/cc-seventh-grade-math/cc-7th-fractions-decimals/cc-7th-percents-word-problems) <Badge text="EN" variant="tip" /><br />
+  Slovni ulohy na procenta s video resenim.

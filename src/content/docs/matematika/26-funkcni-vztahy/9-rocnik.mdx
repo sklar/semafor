@@ -1,0 +1,103 @@
+---
+title: "9. ročník"
+sidebar:
+  order: 9
+  label: "9. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Soustava rovnic</dt>
+  <dd>Dvě rovnice se dvěma neznámými. Řešení je bod (x, y), který vyhovuje oběma rovnicím najednou — graficky je to průsečík dvou přímek.</dd>
+
+  <dt>Absolutni hodnota funkce</dt>
+  <dd>Funkce y = |x| tvoří graf ve tvaru V — pro záporná x je výstup kladný (zrcadlení). Absolutní hodnota „odstraní znaménko".</dd>
+
+  <dt>Po castech definovana funkce</dt>
+  <dd>Funkce s různými pravidly pro různé části. Třeba: tarif 0 Kč pro první hodinu, pak 50 Kč za každou další. Dva různé vzorce pro dva intervaly.</dd>
+
+  <dt>Exponencialni rust (intuitivne)</dt>
+  <dd>Růst, kde se hodnota za stejný čas vždy znásobí — 1, 2, 4, 8, 16. Roste mnohem rychleji než lineární nebo kvadratický. Příklad: šíření viru, úroky z úroků.</dd>
+
+  <dt>Asymptota</dt>
+  <dd>Přímka, ke které se graf blíží, ale nikdy ji nedosáhne. U funkce y = 1/x je asymptotou osa x (y se blíží nule) i osa y (x se blíží nule).</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Řešit soustavu dvou lineárních rovnic graficky (průsečík přímek) i algebraicky
+- Rozlišit lineární, kvadratickou a exponenciální funkci z tabulky i grafu
+- Interpretovat po částech definované funkce z reálného světa
+- Přecházet plynule mezi tabulkou, rovnicí a grafem pro různé typy funkcí
+- Posoudit, který typ funkce nejlépe popisuje daná data
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Kdy se setkají?
+   Auto A jede z Prahy 80 km/h. Auto B vyjede o hodinu později 100 km/h. Kdy a kde ho dohoní? Soustava rovnic: d = 80t a d = 100(t − 1). Graficky: průsečík dvou přímek.
+
+2. ### Složený úrok
+   10 000 Kč na účtu s 3 % ročně. Po 1 roce 10 300, po 2 letech 10 609, po 10 letech 13 439. Exponenciální růst — porovnat s tím, kolik by to bylo při lineárním růstu (300 Kč/rok).
+
+3. ### Tarif s limitem
+   Do 100 MB data zdarma, nad 100 MB 2 Kč za MB, nad 500 MB omezení rychlosti (bez poplatku). Po částech definovaná funkce — tři různé vzorce.
+
+4. ### Epidemie
+   Počet nakažených: den 1 = 1, den 2 = 2, den 3 = 4, den 4 = 8… Exponenciální růst. Porovnat s lineárním modelem (každý den +5). Proč je exponenciální růst tak nebezpečný?
+
+5. ### Investiční porovnání
+   Investice A: jistý výnos 500 Kč měsíčně (lineární). Investice B: 2 % měsíčně z aktuální hodnoty (exponenciální). Kdy B předhoní A? Záleží na počáteční částce.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Průsečík v praxi
+
+   ⏱️ _1–2 hodiny_
+
+   Vymyslet 3 reálné situace, kde potřebujeme najít průsečík (dva tarify, dva dopravní prostředky, dvě investice). Pro každou: zapsat rovnice, nakreslit graf, najít řešení algebraicky. Porovnat oba postupy.
+
+2. ### Která funkce?
+
+   ⏱️ _1 hodina_
+
+   Dostat 5 sad dat (tabulky). Pro každou rozhodnout: lineární, kvadratická, exponenciální, nebo jiná? Zkusit „fitovat" — zapsat rovnicí a ověřit, jak dobře sedí.
+
+3. ### Exponenciální výzva
+
+   ⏱️ _45 minut_
+
+   Klasický příběh: přeložení papíru — po 1 přeložení 2 vrstvy, po 2 přeloženích 4, po 10 přeloženích 1 024. Po kolika přeloženích by papír dosáhl na Měsíc? Spočítat a zakreslit graf.
+
+4. ### Funkční portfolio
+
+   ⏱️ _2–3 hodiny_
+
+   Vytvořit „album funkcí" — pro každý typ (lineární, kvadratická, nepřímá úměrnost, exponenciální) najít reálný příklad, zapsat tabulkou, rovnicí i grafem. Ke každému napsat: kde se s tím v životě potkáme?
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Soustavy rovnic](https://www.matematika.cz/soustavy-rovnic)<br />
+  Řešení soustav rovnic graficky i početně.
+
+- [Khanova škola — Soustavy rovnic](https://cs.khanacademy.org/math/algebra/x2f8bb11595b61c86:systems-of-equations)<br />
+  Videa a cvičení o soustavách rovnic v češtině.
+
+- [Desmos Graphing Calculator](https://www.desmos.com/calculator)<br />
+  Zadejte dvě rovnice a uvidíte průsečík. Experimentujte s parametry.
+
+- [3Blue1Brown — Exponential Growth](https://www.youtube.com/watch?v=Kas0tIxDvrg) <Badge text="EN" variant="tip" /><br />
+  Skvělé video o exponenciálním růstu a jeho důsledcích (anglicky).
+
+- [Khan Academy — Systems of Equations](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:systems-of-equations) <Badge text="EN" variant="tip" /><br />
+  Kompletní kurz soustav rovnic s interaktivními cvičeními (anglicky).

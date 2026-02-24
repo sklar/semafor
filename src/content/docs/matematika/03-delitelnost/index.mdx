@@ -1,0 +1,82 @@
+---
+title: "03. Dělitelnost"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Modeluje a řeší situace s využitím dělitelnosti v oboru přirozených čísel." />
+
+## Co to znamená?
+
+Dítě rozumí tomu, co znamená, že jedno číslo je **dělitelné** jiným — bez zbytku. Umí najít **dělitele** a **násobky** čísla, pozná **prvočíslo**, a dokáže využít dělitelnost k řešení praktických situací: rozdělení do skupin, hledání společného rytmu, zjednodušení zlomků.
+
+Dělitelnost není abstraktní téma pro matematiky. Je to nástroj, který používáme, kdykoli něco **spravedlivě rozdělujeme**, hledáme **společný jmenovatel** nebo potřebujeme zjistit, jestli se něco „vejde" beze zbytku. *„Můžu rozdělit 36 sušenek mezi 8 dětí tak, aby každé dostalo stejně? Ne — 36 není dělitelné 8."*
+
+Postupně dítě zvládne i **prvočíselný rozklad**, **největšího společného dělitele** (NSD) a **nejmenší společný násobek** (NSN) — nástroje, které jsou klíčové pro práci se zlomky.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Pravidla dělitelnosti (2, 3, 5, 10), dělitelé a násobky, prvočísla a složená čísla. Dítě by mělo umět rychle rozhodnout, zda je číslo dělitelné. |
+| **7.–8.** | **Prohlubujte.** Prvočíselný rozklad, NSD a NSN. Využití pro práci se zlomky (společný jmenovatel, krácení). Dělitelnost jako nástroj, ne jako cíl. |
+| **9.** | **Aplikujte.** Dělitelnost v algebraických kontextech, složitější úlohy, propojení s dalšími oblastmi matematiky. Dítě by mělo vidět dělitelnost jako přirozenou součást matematického myšlení. |
+
+<Aside title="Prerekvizity" type="tip">Bezpečné násobení a dělení přirozených čísel (malá a velká násobilka). Představa o zbytku po dělení.</Aside>
+
+## Poznámky
+
+<Aside title="Delitelnost je vsude">Dělitelnost není jen školní téma. Používáme ji, když rozdělujeme jídlo, organizujeme skupiny, plánujeme čas. Dítě, které chápe dělitelnost, má výhodu v celé matematice — zejména při práci se zlomky.</Aside>
+
+<Aside title="Prvocisla jsou fascinujici">Prvočísla jsou „atomy čísel" — z nich se skládají všechna ostatní. Toto téma může být nečekaně zajímavé, pokud ho propojíte s kryptografií, bezpečností na internetu nebo prostě s hledáním vzorů.</Aside>
+
+<Aside title="Typická past" type="caution">Dítě se učí pravidla dělitelnosti nazpaměť, ale nechápe je. Pravidlo dělitelnosti třemi (ciferný součet) je elegantní, ale dítě by mělo rozumět, proč funguje — ne ho jen mechanicky aplikovat.</Aside>
+
+<Aside title="Dulezite" type="danger">NSD a NSN nejsou samoúčelné výpočty. Vždy je propojte s praktickým kontextem — krácení zlomků, společný jmenovatel, rozdělování do skupin. Bez kontextu se z nich stává bezvýznamná procedura.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 01 (početní operace) — dělitelnost je základ pro dělení beze zbytku
+- <Badge text="MAT" /> bod 04 (celek a část) — NSD pro krácení zlomků, NSN pro společný jmenovatel
+- <Badge text="JAS" /> (organizace, plánování) — rozdělování do skupin, plánování rozvrhu
+- <Badge text="HRA" /> (skupinové hry, týmové aktivity) — spravedlivé rozdělení do týmů
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli nebo dítě nemělo příležitost ukázat, jak pracuje s dělitelností.</SkillItem>
+  <SkillItem level="novice">
+    Dítě zná pojem dělitelnosti, ale nejistě ho aplikuje.
+    <ul>
+      <li>Pozná, zda je číslo sudé nebo liché</li>
+      <li>Pravidla dělitelnosti (2, 5, 10) používá, ale u trojky a dalších tápe</li>
+      <li>Najde některé dělitele čísla, ale ne všechny</li>
+      <li>Prvočísla a složená čísla zaměňuje nebo si není jisté</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě pracuje s dělitelností v jednodušších situacích, ale u složitějších úloh potřebuje podporu.
+    <ul>
+      <li>Spolehlivě používá pravidla dělitelnosti (2, 3, 5, 10)</li>
+      <li>Najde všechny dělitele čísla do 100</li>
+      <li>Rozloží číslo na prvočinitele s občasnou pomocí</li>
+      <li>Spočítá NSD a NSN u jednodušších čísel</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě plynule využívá dělitelnost jako nástroj pro řešení problémů.
+    <ul>
+      <li>Rychle posoudí dělitelnost a zdůvodní svůj závěr</li>
+      <li>Provede prvočíselný rozklad a najde NSD/NSN</li>
+      <li>Využívá dělitelnost pro krácení zlomků a hledání společného jmenovatele</li>
+      <li>Aplikuje dělitelnost v praktických situacích (rozdělování, plánování)</li>
+    </ul>
+  </SkillItem>
+</Skill>

@@ -1,0 +1,103 @@
+---
+title: "9. ročník"
+sidebar:
+  order: 9
+  label: "9. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Euklidovy věty</dt>
+  <dd>V pravoúhlém trojúhelníku: výška na přeponu vytvoří dva menší trojúhelníky, které jsou podobné původnímu i navzájem. Z toho plynou vztahy mezi odvěsnami, přeponou a úseky.</dd>
+
+  <dt>Pythagorova věta</dt>
+  <dd>V pravoúhlém trojúhelníku platí a² + b² = c², kde c je přepona. Lze ji dokázat pomocí podobnosti trojúhelníků.</dd>
+
+  <dt>Dělení úsečky v daném poměru</dt>
+  <dd>Úsečku AB chceme rozdělit v poměru 2:3. Využijeme podobné trojúhelníky — rovnoběžky vytvoří podobné trojúhelníky s odpovídajícími poměry stran.</dd>
+
+  <dt>Střední příčka trojúhelníku</dt>
+  <dd>Úsečka spojující středy dvou stran. Je rovnoběžná s třetí stranou a má poloviční délku — protože vytváří podobný trojúhelník s k = 1/2.</dd>
+
+  <dt>Trigonometrické poměry</dt>
+  <dd>Sin, cos, tg — poměry stran pravoúhlého trojúhelníku. Fungují díky podobnosti: všechny pravoúhlé trojúhelníky se stejným ostrým úhlem jsou podobné, takže poměry stran jsou stejné.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Využít podobnost k důkazu Pythagorovy věty a Euklidových vět
+- Rozdělit úsečku v daném poměru pomocí podobných trojúhelníků
+- Chápat, proč fungují trigonometrické poměry (podobnost pravoúhlých trojúhelníků)
+- Řešit aplikační úlohy s podobností (nedostupné vzdálenosti, měřítko, proporce)
+- Propojit shodnost, podobnost a souměrnost do uceleného systému
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Výška budovy z fotografie
+   Vyfotíte budovu a na fotce změříte poměr výšky budovy ku výšce osoby. Znáte-li výšku osoby, spočítáte výšku budovy. — Podobnost v praxi fotografie.
+
+2. ### GPS a triangulace
+   Satelity GPS využívají trojúhelníky a poměry vzdáleností k určení vaší polohy s přesností na metry. Bez podobnosti a trigonometrie by navigace nefungovala. — Moderní technologie postavená na antické geometrii.
+
+3. ### Dělení dědictví
+   Pozemek trojúhelníkového tvaru se dělí mezi dva dědice v poměru 3:2. Kde vést hranici? Rovnoběžka se základnou ve správné výšce — podobné trojúhelníky. — Právní aplikace geometrie.
+
+4. ### Rampa pro vozíčkáře
+   Rampa musí mít sklon max. 6 % (výška/délka). Vchod je 60 cm nad zemí. Jak dlouhá musí být rampa? 60/0,06 = 1000 cm = 10 m. — Podobný trojúhelník v bezbariérovém přístupu.
+
+5. ### Filmové triky
+   Miniatury budov ve filmech musí být podobné originálu. Koeficient podobnosti určuje i sílu „zemětřesení" v modelu — fyzika se nemění lineárně s měřítkem. — Podobnost v zábavním průmyslu.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Pythagorova věta z podobnosti
+
+   ⏱️ _1 hodina_
+
+   V pravoúhlém trojúhelníku veďte výšku na přeponu. Vzniknou dva menší trojúhelníky — oba podobné originálu (ověřte měřením úhlů!). Z podobnosti odvoďte a² + b² = c². — Elegantní důkaz nejznámější věty geometrie.
+
+2. ### Dělení úsečky v poměru
+
+   ⏱️ _45 minut_
+
+   Rozdělte úsečku 12 cm v poměru 2:3 bez počítání (2,4 cm + 3,6 cm ... ne!). Použijte rovnoběžky a podobné trojúhelníky — čistě geometricky kružítkem a pravítkem. — Konstrukce pomocí podobnosti.
+
+3. ### Měření nedostupné vzdálenosti
+
+   ⏱️ _1,5 hodiny (venku)_
+
+   Dítě změří šířku řeky (nebo silnice, parkoviště) bez přecházení na druhou stranu. Postup: dva body na „svém" břehu, změření úhlů, sestrojení podobného trojúhelníku v menším měřítku. — Klasická zeměměřická úloha.
+
+4. ### Trigonometrie jako podobnost
+
+   ⏱️ _1 hodina_
+
+   Dítě narýsuje 5 pravoúhlých trojúhelníků s úhlem 30°, ale s různě dlouhými stranami. U každého změří poměr protilehlé odvěsny ku přeponě. Výsledek? Vždy 0,5. To je sin 30°. Proč? Protože jsou všechny podobné! — Experimentální objev trigonometrie.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Euklidovy věty](https://www.matematika.cz/euklidovy-vety)<br />
+  Vysvětlení s obrázky a příklady.
+
+- [Matematika.cz — Pythagorova věta](https://www.matematika.cz/pythagorova-veta)<br />
+  Různé důkazy včetně důkazu pomocí podobnosti.
+
+- [3Blue1Brown — Pythagorean theorem](https://www.youtube.com/watch?v=elQVZLLiod4) <Badge text="EN" variant="tip" /><br />
+  Vizuální vysvětlení Pythagorovy věty.
+
+- [GeoGebra](https://www.geogebra.org/geometry)<br />
+  Interaktivní experimentování s podobnými trojúhelníky.
+
+- [Brilliant.org — Similarity](https://brilliant.org/courses/geometry-fundamentals/) <Badge text="EN" variant="tip" /><br />
+  Interaktivní úlohy na podobnost a její aplikace.

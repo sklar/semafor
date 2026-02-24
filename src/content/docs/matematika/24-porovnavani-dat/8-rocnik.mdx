@@ -1,0 +1,103 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Kvartily</dt>
+  <dd>Hodnoty, které rozdělí seřazená data na čtvrtiny. Dolní kvartil (Q1) = medián spodní poloviny, horní kvartil (Q3) = medián horní poloviny. Mezi Q1 a Q3 leží prostředních 50 % dat.</dd>
+
+  <dt>Mezikvartilové rozpětí (IQR)</dt>
+  <dd>Rozdíl Q3 − Q1. Říká, jak široké je „prostřední pásmo" dat. Menší IQR = data jsou soustředěnější. Lepší měřítko rozptylu než rozsah, protože ignoruje extrémy.</dd>
+
+  <dt>Krabicový graf (box plot)</dt>
+  <dd>Graf, který ukazuje medián, kvartily, rozsah a odlehlé hodnoty v jednom obrázku. Skvělý pro porovnání dvou souborů vedle sebe — hned vidíte, který je rozptýlenější.</dd>
+
+  <dt>Odlehlá hodnota (outlier)</dt>
+  <dd>Hodnota výrazně vzdálená od ostatních. V datech 2, 3, 4, 5, 47 je 47 odlehlá hodnota. Může signalizovat chybu v měření, nebo opravdu neobvyklý případ.</dd>
+
+  <dt>Normalizace</dt>
+  <dd>Přepočet dat na společné měřítko, aby šla férově porovnat. Třeba výsledky dvou testů s jiným maximem přepočteme na procenta.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Spočítat kvartily a mezikvartilové rozpětí
+- Nakreslit jednoduchý krabicový graf a interpretovat ho
+- Porovnat dva soubory dat pomocí krabicových grafů vedle sebe
+- Identifikovat odlehlé hodnoty a rozhodnout, jak s nimi naložit
+- Normalizovat data pro férové porovnání (přepočet na procenta, na jednotku)
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Výsledky testů
+   Dvě skupiny dětí psaly test (jiný počet otázek). Jak porovnat výsledky? Přepočet na procenta — normalizace v praxi.
+
+2. ### Teploty dvou měst
+   Porovnat průběh teplot v Praze a Brně za rok. Krabicový graf pro každé město — kde je teplejší průměr? Kde jsou větší výkyvy? Které město má extrémnější zimy?
+
+3. ### Odlehlá hodnota v praxi
+   Jeden spoluhráč v týmu dal v sezóně 30 gólů, ostatní 2–8. Jak to ovlivní průměr týmu? Je férové říkat „průměrně dáváme 6 gólů na hráče"?
+
+4. ### Porovnání škol
+   Výsledky přijímacích testů dvou škol. Jedna má vyšší průměr, ale druhá má menší rozptyl. Která je „lepší"? Záleží na tom, co hledáme.
+
+5. ### Příjmy v regionech
+   Porovnat mediánové příjmy ve dvou krajích. Který má vyšší medián? Který má větší IQR (větší příjmovou nerovnost)?
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Krabicové grafy v praxi
+
+   ⏱️ _1–2 hodiny_
+
+   Nasbírat data od dvou skupin (např. čas na řešení úlohy u dětí vs. dospělých). Spočítat medián, kvartily, IQR. Nakreslit krabicové grafy vedle sebe. Co z porovnání vyplývá?
+
+2. ### Lovci outlierů
+
+   ⏱️ _1 hodina_
+
+   Dostat datový soubor s jednou nebo dvěma odlehlými hodnotami. Spočítat průměr a medián s nimi i bez nich. Jak moc se změní? Měli bychom je vyřadit, nebo ne? Diskuze.
+
+3. ### Normalizační výzva
+
+   ⏱️ _1 hodina_
+
+   Porovnat tři zcela odlišné věci — spotřebu vody, elektřiny a plynu domácnosti za rok. Absolutní čísla jsou v jiných jednotkách. Jak přepočítat, aby šla porovnat (třeba na procento z průměru ČR)?
+
+4. ### Datová zpráva
+
+   ⏱️ _2 hodiny_
+
+   Vybrat téma, sesbírat data pro dvě skupiny, zpracovat pomocí všech naučených ukazatelů (průměr, medián, Q1, Q3, IQR, rozsah). Napsat krátkou zprávu: čím se skupiny liší a proč?
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Khanova škola — Kvartily a krabicové grafy](https://cs.khanacademy.org/math/statistics-probability/summarizing-quantitative-data)<br />
+  Videa a cvičení o kvartilech a box plotech v češtině.
+
+- [GeoGebra — Box Plot](https://www.geogebra.org/m/RNGhbPgd)<br />
+  Interaktivní krabicový graf — zadejte data a uvidíte výsledek.
+
+- [Matematika.cz — Statistika pokročilá](https://www.matematika.cz/statistika)<br />
+  Kvartily, rozptyl a další statistické pojmy.
+
+- [Math is Fun — Quartiles](https://www.mathsisfun.com/data/quartiles.html) <Badge text="EN" variant="tip" /><br />
+  Srozumitelný výklad kvartilů a mezikvartilového rozpětí (anglicky).
+
+- [Khan Academy — Box and Whisker Plots](https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/box-whisker-plots/v/reading-box-and-whisker-plots) <Badge text="EN" variant="tip" /><br />
+  Čtení a tvorba krabicových grafů (anglicky).

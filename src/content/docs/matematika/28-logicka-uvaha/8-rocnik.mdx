@@ -1,0 +1,103 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Kombinace (bez opakovani)</dt>
+  <dd>Výběr k prvků z n, kde nezáleží na pořadí. Z 5 kamarádů vybereme 3 na výlet — nezáleží, v jakém pořadí je jmenujeme. Kombinací je méně než permutací.</dd>
+
+  <dt>Princip inkluze a exkluze</dt>
+  <dd>Když dvě skupiny se překrývají: |A nebo B| = |A| + |B| − |A a B|. Třeba: 20 dětí hraje fotbal, 15 basketbal, 8 obojí. Kolik dětí sportuje? 20 + 15 − 8 = 27.</dd>
+
+  <dt>Holubnikovy princip</dt>
+  <dd>Pokud n + 1 holubů umístíme do n holubníků, alespoň jeden holubník obsahuje 2+ holuby. Zní jednoduše, ale důsledky jsou překvapivé: v Praze určitě existují 2 lidé se stejným počtem vlasů.</dd>
+
+  <dt>Logicky retezec</dt>
+  <dd>Řetězec implikací: A → B → C → D. Pokud A platí, platí i D. Pokud D neplatí, nemůže platit A. Jako řetěz — slabý článek zničí celý řetěz.</dd>
+
+  <dt>Logicky klam</dt>
+  <dd>Argument, který vypadá logicky, ale obsahuje chybu. Třeba: „Většina nehod se stane blízko domova, takže je bezpečnější jezdit daleko." Chyba: blízko domova jezdíme nejčastěji.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Rozlišit, kdy záleží na pořadí (permutace) a kdy ne (kombinace)
+- Použít princip inkluze a exkluze pro dvě množiny
+- Aplikovat holubníkový princip na jednoduché problémy
+- Sestavit logický řetězec a ověřit jeho platnost
+- Rozpoznat alespoň 3 základní logické klamy
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Loterie
+   V loterii vybíráme 6 čísel z 49. Kolik existuje kombinací? Proč je šance na výhru tak malá? Záleží na pořadí? Ne — proto kombinace, ne permutace.
+
+2. ### Sportovní kroužky
+   Ve skupině 30 dětí: 18 hraje fotbal, 12 plave, 5 dělá obojí. Kolik dětí sportuje alespoň jedním způsobem? Kolik nesportuje? Princip inkluze a exkluze.
+
+3. ### Narozeniny ve třídě
+   Ve skupině 23 lidí je pravděpodobnost, že dva mají narozeniny ve stejný den, větší než 50 %. Překvapivé? Holubníkový princip v praxi.
+
+4. ### Reklama a klamy
+   „90 % zubařů doporučuje naši pastu!" — kolik zubařů se ptali? Jakou otázku položili? Mohli vybírat ze 6 past a doporučit i ostatní? Logický klam v reklamě.
+
+5. ### Sestavení výboru
+   Ze 10 lidí vybereme 3členný výbor. Kolik možností? C(10,3) = 120. Co kdyby měl výbor předsedu, místopředsedu a zapisovatele? Pak záleží na pořadí: 10 × 9 × 8 = 720.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Narozeninový paradox
+
+   ⏱️ _1 hodina_
+
+   Simulovat narozeninový problém: ve skupině kolikrát se najdou 2 lidé se stejným narozeninovým dnem? Sbírat data ze skupin (rodina, kroužek, online komunita). Porovnat s matematickou předpovědí.
+
+2. ### Detektiv klamů
+
+   ⏱️ _1 hodina_
+
+   Najít v médiích nebo reklamě 5 příkladů logických klamů. Pro každý: jaký je klam? Jak by zněl korektní argument? Vytvořit „sbírku klamů" s komentářem.
+
+3. ### Kombinace vs. permutace
+
+   ⏱️ _45 minut_
+
+   Připravit 10 úloh — dítě rozhoduje, zda jde o kombinaci nebo permutaci. „Pořadí běžců v závodě" = permutace. „Výběr ingrediencí do salátu" = kombinace. Pak spočítat.
+
+4. ### Vennovy diagramy
+
+   ⏱️ _45 minut_
+
+   Sesbírat data o zájmech ve skupině (sport, hudba, čtení). Zakreslit do Vennova diagramu. Kolik lidí je v průniku? Aplikovat princip inkluze a exkluze. Ověřit sčítáním.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Kombinace](https://www.matematika.cz/kombinatorika)<br />
+  Kombinace, permutace a variace s příklady.
+
+- [Khanova škola — Pravděpodobnost](https://cs.khanacademy.org/math/statistics-probability/probability-library)<br />
+  Základy pravděpodobnosti a kombinatoriky v češtině.
+
+- [Numberphile — Birthday Problem](https://www.youtube.com/watch?v=ofTb57aZHZs) <Badge text="EN" variant="tip" /><br />
+  Video o narozeninovém paradoxu — skvěle vysvětlený (anglicky).
+
+- [Math is Fun — Combinations](https://www.mathsisfun.com/combinatorics/combinations-permutations.html) <Badge text="EN" variant="tip" /><br />
+  Kombinace a permutace s interaktivním kalkulátorem (anglicky).
+
+- [Brilliant.org — Logic Puzzles](https://brilliant.org/courses/logic/) <Badge text="EN" variant="tip" /><br />
+  Pokročilejší logické hádanky a problémy (anglicky).

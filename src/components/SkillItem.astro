@@ -1,0 +1,51 @@
+---
+interface Props {
+	level: keyof typeof Variant
+}
+
+const Variant = {
+	none: { color: 'red', label: 'Nepozorováno' },
+	novice: { color: 'orange', label: 'Začíná' },
+	adept: { color: 'gold', label: 'Rozvíjí' },
+	master: { color: 'lime', label: 'Zvládnuto' },
+} as const
+
+const { level } = Astro.props
+
+const { color, label } = Variant[level]
+---
+
+<dt>{label}</dt>
+<dd><slot /></dd>
+
+<style define:vars={{ _color: color }}>
+	dt {
+		align-items: center;
+		display: flex;
+		color: var(--sl-color-white);
+		font-weight: 600;
+		gap: theme('spacing.2');
+		margin: 0;
+
+		&::before {
+			aspect-ratio: 1;
+			background-color: var(--_color);
+			block-size: 1em;
+			border-radius: 50%;
+			content: '';
+			display: inline-block;
+		}
+
+		&:not(:first-of-type)::after {
+			border-block-start: 1px solid var(--sl-color-gray-5);
+			content: '';
+			inset-inline: 0;
+			position: absolute;
+			translate: 0 calc(-1 * theme('spacing.6'));
+		}
+	}
+	dd {
+		margin: 0;
+	}
+
+</style>

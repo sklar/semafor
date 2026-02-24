@@ -1,0 +1,106 @@
+---
+title: "9. ročník"
+sidebar:
+  order: 9
+  label: "9. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Složený útvar</dt>
+  <dd>Rovinný tvar, který vznikl kombinací (sjednocení, rozdíl) základních útvarů — obdélníků, trojúhelníků, kruhů a jejich částí.</dd>
+
+  <dt>Optimalizace</dt>
+  <dd>Hledání nejlepšího řešení za daných podmínek — např. obdélník s největším obsahem při daném obvodu.</dd>
+
+  <dt>Kruhová výseč</dt>
+  <dd>Část kruhu mezi dvěma poloměry. Obsah = (α/360) × π × r², kde α je úhel ve stupních.</dd>
+
+  <dt>Kruhová úseč</dt>
+  <dd>Část kruhu oddělená tětivou. Obsah = obsah výseče − obsah trojúhelníku (tvořeného poloměry a tětivou).</dd>
+
+  <dt>Heronův vzorec</dt>
+  <dd>Obsah trojúhelníku ze tří stran: S = √(s(s−a)(s−b)(s−c)), kde s = (a+b+c)/2. Užitečný, když neznáme výšku.</dd>
+
+  <dt>Inverzní úloha</dt>
+  <dd>Ze známého obsahu nebo obvodu hledáme rozměry útvaru — „opačný" postup, vyžaduje řešení rovnic.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Rozložit libovolný složený útvar na základní tvary a spočítat celkový obsah
+- Řešit inverzní úlohy (ze zadaného obsahu/obvodu najít rozměry)
+- Pracovat s kruhovými výsečemi a úsečemi
+- Formulovat a řešit jednoduché optimalizační úlohy
+- Vybrat si vhodný postup výpočtu a zdůvodnit ho
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Půdorys domu
+   Reálný půdorys — nepravidelný tvar s výklenky, šikmými stěnami, zaoblenými rohy. Spočítejte obytnou plochu. — Složené útvary v praxi realitního trhu.
+
+2. ### Optimální ohrada
+   Máte 24 m pletiva a chcete oplotit co největší obdélníkový výběh pro slepice. Jaké rozměry zvolit? (Čtverec 6×6 = 36 m², ale obdélník 4×8 = 32 m².) — Úvod do optimalizace.
+
+3. ### Zavlažovací systém
+   Kruhový postřikovač s dosahem 5 m. Jakou plochu pokryje? Kolik postřikovačů potřebujete na obdélníkový trávník 15 × 10 m? — Kruhové plochy a jejich pokrytí.
+
+4. ### Výseč koláčového grafu
+   Rozpočet rodiny: 35 % bydlení, 25 % jídlo, 15 % doprava, 10 % vzdělávání, 15 % ostatní. Nakreslete koláčový graf s přesnými úhly a spočítejte obsah každé výseče. — Propojení s finanční gramotností.
+
+5. ### Atletický ovál
+   Běžecká dráha: dvě rovné části (84,39 m) a dva půlkruhy. Vnitřní poloměr 36,5 m. Jaký je obvod vnitřní dráhy (400 m — ověřte!)? Jaký je obsah oválu? — Složený útvar z obdélníku a dvou půlkruhů.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Architekt zahrady
+
+   ⏱️ _2 hodiny_
+
+   Dítě navrhne zahradu na pozemku 20 × 15 m. Musí zahrnout: dům (obdélník), terasu (složený tvar), kruhový bazén, záhony (různé tvary), chodníky. Spočítá obsah každé části. Celkový obsah = obsah pozemku. — Komplexní projekt spojující všechny typy útvarů.
+
+2. ### Optimalizační výzva
+
+   ⏱️ _1 hodina_
+
+   Série úloh: a) Obdélník s obvodem 20 cm — který má největší obsah? b) Trojúhelník s obvodem 18 cm — který má největší obsah? c) Kruh vs. čtverec se stejným obvodem — který má větší obsah? — Systematické zkoumání, kdy je kruh „nejlepší".
+
+3. ### Reálný půdorys
+
+   ⏱️ _1,5 hodiny_
+
+   Dítě najde půdorys bytu (z realitní nabídky online nebo změří vlastní byt). Ověří, zda uvedená plocha odpovídá součtu jednotlivých místností. Rozloží nepravidelné tvary na základní útvary. — Kritické myšlení + složené útvary.
+
+4. ### Heronův vzorec v praxi
+
+   ⏱️ _45 minut_
+
+   Dítě narýsuje trojúhelník se stranami 7, 8, 9 cm. Změří výšku a spočítá obsah klasicky. Pak spočítá obsah Heronovým vzorcem. Výsledky by se měly shodovat. Kdy je Heron výhodnější? — Když neznáme výšku.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Složené útvary](https://www.matematika.cz/slozene-utvary)<br />
+  Příklady rozkladu na základní tvary.
+
+- [GeoGebra — plocha složeného útvaru](https://www.geogebra.org/geometry)<br />
+  Kreslení a výpočet obsahu libovolných tvarů.
+
+- [Desmos](https://www.desmos.com/calculator)<br />
+  Grafický kalkukátor — vizualizace kruhových výsečí a optimalizačních úloh.
+
+- [3Blue1Brown — Essence of calculus](https://www.youtube.com/watch?v=WUvTyaaNkzM) <Badge text="EN" variant="tip" /><br />
+  Pro zvídavé — jak obsah kruhu souvisí s integrálem (vizuální, intuitivní).
+
+- [Brilliant.org — Geometry](https://brilliant.org/courses/geometry-fundamentals/) <Badge text="EN" variant="tip" /><br />
+  Interaktivní kurz geometrie s úlohami na obsah a obvod.

@@ -1,0 +1,106 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Platné cifry</dt>
+  <dd>Cifry, které nesou informaci o přesnosti čísla. V čísle 4 300 mohou být platné 2 cifry (4 a 3, zbytek je zaokrouhlení) nebo 4 cifry (přesná hodnota). Kontext rozhoduje.</dd>
+
+  <dt>Absolutní chyba</dt>
+  <dd>Rozdíl mezi přesnou hodnotou a zaokrouhlenou (přibližnou) hodnotou. Měříme délku: přesně 3,847 m, zaokrouhleno 3,8 m → absolutní chyba = 0,047 m.</dd>
+
+  <dt>Relativní chyba</dt>
+  <dd>Absolutní chyba vyjádřená jako podíl z přesné hodnoty, obvykle v procentech. 0,047 / 3,847 ≈ 1,2 %. Relativní chyba říká, jak „velká" je chyba ve srovnání s měřenou hodnotou.</dd>
+
+  <dt>Kumulace chyb</dt>
+  <dd>Když zaokrouhlíme víc čísel a pak s nimi počítáme, chyby se sčítají. 10 položek zaokrouhlených na desítky — celková chyba může být až 50 Kč nahoru nebo dolů.</dd>
+
+  <dt>Interpolace</dt>
+  <dd>Odhad hodnoty mezi dvěma známými body. Teplota v 8:00 byla 5 °C, v 10:00 byla 9 °C. Kolik asi bylo v 9:00? Odhad: asi 7 °C (uprostřed).</dd>
+
+  <dt>Řád velikosti</dt>
+  <dd>Přibližná velikost čísla vyjádřená mocninou desítky. 5 000 ≈ 10³ (tisíce), 3 000 000 ≈ 10⁶ (miliony). Pomáhá rychle porovnat velmi rozdílná čísla.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Rozumět pojmu platné cifry a správně zaokrouhlovat na daný počet platných cifer
+- Spočítat absolutní a relativní chybu zaokrouhlení
+- Odhadnout, jak se chyba kumuluje při více výpočtech
+- Odhadnout výsledek výpočtu s procenty, zlomky a desetinnými čísly
+- Volit přesnost zaokrouhlení podle kontextu (peníze, měření, statistika)
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Přesnost GPS
+   GPS ukazuje polohu s přesností ±5 metrů. Když navigace říká „za 150 metrů odbočte", může to být 145 nebo 155 metrů. Na to stačí odhad, nepotřebujeme přesnost na centimetry.
+
+2. ### Rozpočet dovolené
+   Rodina plánuje dovolenou. Odhad: ubytování 12 000 Kč, doprava 3 500 Kč, jídlo 8 000 Kč, aktivity 4 000 Kč. Celkem ≈ 27 500 Kč. Každá položka má chybu ±10 %. Kolik by měla být rezerva?
+
+3. ### Sportovní statistiky
+   Basketbalista má úspěšnost střelby 43,7 %. Co to znamená? Zaokrouhleno: skoro každý druhý pokus. Z 200 pokusů trefí asi 87. Stačí nám přesnost na desetinu procenta?
+
+4. ### Výroba nábytku
+   Prkno má být 1 200 mm dlouhé. Pila řeže s přesností ±1 mm. Je to dost přesné pro nábytek? Pro umělecký rámeček? Pro stavbu domu? Kontext určuje požadovanou přesnost.
+
+5. ### Počet obyvatel
+   Česko má 10,9 milionu obyvatel. Je to přesné číslo? Ne — mění se každý den. Kolik platných cifer má smysl udávat? Kdy se hodí „asi 11 milionů" a kdy potřebujeme přesnější údaj?
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Chyba v řetězci
+
+   ⏱️ _45 minut_
+
+   Dítě dostane 5 čísel (např. ceny v obchodě). Zaokrouhlí je na desítky, sečte. Pak sečte přesné hodnoty. Jaký je rozdíl? Zkusí zaokrouhlit na stovky a porovnat znovu. Kdy je chyba přijatelná a kdy ne?
+
+2. ### Přesnost měření
+
+   ⏱️ _1 hodina_
+
+   Změřte 5 předmětů v domácnosti třemi způsoby: odhadem (pohledem), pravítkem (na cm), svinovacím metrem (na mm). Zapište výsledky do tabulky. Spočítejte absolutní a relativní chybu odhadu oproti přesnému měření.
+
+3. ### Řádová rozcvička
+
+   ⏱️ _20 minut_
+
+   Připravte otázky typu: „Kolik zhruba váží auto? 100 kg, 1 000 kg, nebo 10 000 kg?" Dítě volí správný řád velikosti. Další: výška mrakodrapu, počet písmen v knize, počet kapek v kbelíku vody. Trénuje intuici pro velká čísla.
+
+4. ### Rozpočet s rezervou
+
+   ⏱️ _45 minut_
+
+   Dítě plánuje nákup (školní pomůcky, výbava na tábor). U každé položky odhadne cenu a zapíše ± chybu. Pak spočítá celkovou cenu a celkovou možnou chybu. Jakou rezervu by mělo mít?
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Přibližná čísla](https://www.matematika.cz/priblizna-cisla)<br />
+  Výklad o přesnosti, chybě zaokrouhlení a platných cifrách.
+
+- [Khanova škola — Odhady a aproximace](https://cs.khanacademy.org/math/pre-algebra)<br />
+  Interaktivní cvičení pro odhady.
+
+- [Math is Fun — Significant Figures](https://www.mathsisfun.com/significant-figures.html) <Badge text="EN" variant="tip" /><br />
+  Přehledný výklad platných cifer s příklady.
+
+- [Khan Academy — Significant Figures](https://www.khanacademy.org/math/arithmetic-home/arith-review-decimals/arithmetic-significant-figures-tutorial/v/significant-figures) <Badge text="EN" variant="tip" /><br />
+  Video výklad platných cifer.
+
+- [Nápady na měření doma](https://www.geogebra.org/)<br />
+  GeoGebra — interaktivní nástroj pro experimentování s čísly a měřením.

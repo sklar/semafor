@@ -1,0 +1,82 @@
+---
+title: "26. Funkční vztahy"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Vyjadri funkcni vztah tabulkou, rovnici, grafem." />
+
+## Co to znamená?
+
+Dítě dokáže popsat **vztah mezi dvěma veličinami** třemi způsoby: tabulkou, rovnicí a grafem — a přecházet mezi nimi. Když vidí tabulku hodnot, umí z ní vyčíst rovnici. Když má rovnici, umí nakreslit graf. Když vidí graf, umí popsat, co se děje.
+
+Funkce je vlastně **pravidlo**, které každému vstupu přiřazuje právě jeden výstup. *Zadáš počet hodin práce → dostaneš výdělek. Zadáš teplotu → dostaneš spotřebu energie. Zadáš čas → dostaneš polohu.* Funkce jsou všude — jen jim často neříkáme „funkce".
+
+Klíčové je, aby dítě chápalo, že tabulka, rovnice a graf jsou **tři pohledy na totéž**. Každý pohled ukazuje jiný aspekt vztahu — tabulka je přesná, graf je názorný, rovnice je kompaktní.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Jednoduché vstup-výstup tabulky: „Když zadám 3, co dostanu?" Hledání pravidla v tabulce. Zakreslení bodů do souřadnicové soustavy. |
+| **7.–8.** | **Prohlubujte.** Formální pojem funkce, zápis rovnicí (y = 2x + 3), graf lineární funkce. Čtení grafů z reálného světa (jízdní řád, vývoj teploty). |
+| **9.** | Lineární a kvadratická funkce, interpretace grafů, propojení s rovnicemi a nerovnicemi. Dítě plynule přechází mezi tabulkou, rovnicí a grafem. |
+
+<Aside title="Prerekvizity" type="tip">Úměrnost (bod 25) — přímá úměrnost je nejjednodušší funkce. Souřadnicová soustava (osy x, y, zakreslování bodů). Základní algebraické operace.</Aside>
+
+## Poznámky
+
+<Aside title="Funkce = automat">Představte si funkci jako automat: hodíte minci (vstup) a vypadne výrobek (výstup). Stejná mince = stejný výrobek. Funkce každému vstupu přiřadí právě jeden výstup — nikdy dva různé.</Aside>
+
+<Aside title="Tři jazyky, jeden příběh">Tabulka, rovnice a graf mluví o tomtéž, ale jiným jazykem. Některé děti lépe chápou tabulku, jiné graf. Nechte dítě začít tam, kde se cítí jistě, a pak překládat do ostatních „jazyků".</Aside>
+
+<Aside title="Typická past" type="caution">Dítě nakreslí graf, ale nerozumí, co ukazuje. Vždy se ptejte: „Co je na ose x? Co je na ose y? Co znamená tento bod?" Bez pochopení os je graf jen obrázek.</Aside>
+
+<Aside title="Dulezite" type="danger">Funkční vztah neznamená, že jedno způsobuje druhé. Graf ukazuje, že se dvě veličiny mění společně — ale proč, to musíme zjistit jinak. Korelace ≠ kauzalita.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 25 (přímá a nepřímá úměrnost) — úměrnost je nejjednodušší funkční vztah
+- <Badge text="MAT" /> bod 27 (matematizace situací) — funkce jako nástroj pro popis reality
+- <Badge text="MAT" /> bod 2 (algebra) — rovnice a výrazy pro zápis funkcí
+- <Badge text="JAS" /> (fyzika — grafy pohybu, teploty; ekonomie — vývoj cen)
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost pracovat s funkčními vztahy vyjádřenými tabulkou, rovnicí nebo grafem.</SkillItem>
+  <SkillItem level="novice">
+    Dítě chápe jednoduché vstup-výstup vztahy, ale formálně s funkcemi nepracuje.
+    <ul>
+      <li>Doplní chybějící hodnotu v jednoduché tabulce, když vidí vzor</li>
+      <li>Zakreslit bod do souřadnicové soustavy zvládá s pomocí</li>
+      <li>Neumí zapsat vztah rovnicí</li>
+      <li>Graf nepřečte — neví, co osy znamenají</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě pracuje s funkcemi v jednodušších případech, přechod mezi formami zvládá s podporou.
+    <ul>
+      <li>Z tabulky odhalí pravidlo a zapíše ho rovnicí</li>
+      <li>Nakreslí graf lineární funkce z tabulky hodnot</li>
+      <li>Přečte graf — najde hodnotu pro daný vstup</li>
+      <li>Při přechodu rovnice → graf nebo graf → rovnice občas chybuje</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě plynule přechází mezi tabulkou, rovnicí a grafem.
+    <ul>
+      <li>Z libovolné formy (tabulka, rovnice, graf) vytvoří zbylé dvě</li>
+      <li>Interpretuje graf z reálného světa a popíše, co se děje</li>
+      <li>Rozliší lineární a nelineární funkci z grafu i z tabulky</li>
+      <li>Volí vhodnou formu vyjádření podle situace a zdůvodní svou volbu</li>
+    </ul>
+  </SkillItem>
+</Skill>

@@ -1,0 +1,104 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>IBAN</dt>
+  <dd>Mezinárodní číslo bankovního účtu (International Bank Account Number). V ČR začíná CZ a má 24 znaků. Používá se pro mezinárodní platby, ale funguje i pro tuzemské. Příklad: CZ65 0800 0000 1920 0014 5399.</dd>
+
+  <dt>SWIFT / BIC</dt>
+  <dd>Kód identifikující konkrétní banku v mezinárodním platebním styku. Například KOMBCZPP = Komerční banka. Potřebujete ho při platbách do zahraničí společně s IBANem.</dd>
+
+  <dt>Bezkontaktní platba</dt>
+  <dd>Platba přiložením karty, mobilu nebo hodinek k terminálu. Do 500 Kč bez PINu, nad 500 Kč s PINem. Technologie NFC (Near Field Communication) — funguje na vzdálenost pár centimetrů. Rychlá a bezpečná, ale pozor na nechtěné platby.</dd>
+
+  <dt>Platební brána</dt>
+  <dd>Systém, který zprostředkovává online platby v e-shopech. Když kliknete "zaplatit", přesměruje vás na zabezpečenou stránku (vaší banky nebo platební služby). Důležité: URL musí začínat https:// a adresa musí patřit bance, ne e-shopu.</dd>
+
+  <dt>Autorizace platby</dt>
+  <dd>Proces ověření, že platbu skutečně chcete provést. U karty: PIN nebo otisk prstu. Online: 3D Secure (potvrzení v aplikaci banky). Bez autorizace platba neproběhne — to je vaše ochrana.</dd>
+
+  <dt>Kurzový lístek</dt>
+  <dd>Přehled směnných kurzů — kolik korun stojí jedno euro, dolar atd. Banka má vždy dva kurzy: nákupní (za kolik od vás koupí) a prodejní (za kolik vám prodá). Rozdíl = zisk banky. Při platbě kartou v zahraničí se použije kurz banky.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Vysvětlit, co je IBAN a SWIFT a kdy je potřebujete
+- Pochopit, jak technicky funguje bezkontaktní platba
+- Rozpoznat bezpečnou platební bránu od podvodné stránky (https, správná adresa)
+- Porozumět procesu autorizace platby (3D Secure) a proč existuje
+- Přečíst kurzový lístek a spočítat, kolik bude stát platba v cizí měně
+- Rozlišit debetní a kreditní kartu a vysvětlit rizika kreditní karty
+- Bezpečně nakupovat online — ověřit e-shop, zkontrolovat podmínky, použít bezpečnou platbu
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Nákup v zahraničním e-shopu
+   Dítě chce koupit knihu z německého e-shopu. Cena je 15 EUR. Kolik to bude v korunách? Dítě najde aktuální kurz, spočítá cenu a porovná s kurzem, který použije banka. Zjistí, že "poplatek za konverzi" není malá částka.
+
+2. ### Platba v zahraničí na dovolené
+   Rodina je v Chorvatsku. Platit kartou, nebo měnit hotovost? Dítě porovná kurz banky (platba kartou) s kurzem směnárny. Spočítá, co je výhodnější. Většinou vyhrává karta — ale záleží na bance.
+
+3. ### Podezřelý e-shop
+   Dítě najde skvělou nabídku na tenisky za třetinovou cenu. Než zaplatí, zkontroluje: existuje firma? má recenze? je adresa reálná? je na stránce https? Zjistí, že web byl vytvořen před týdnem a sídlo firmy je fiktivní. Nezaplatí.
+
+4. ### 3D Secure v praxi
+   Dítě platí online za předplatné. Po zadání čísla karty přijde notifikace v mobilní aplikaci banky: "Potvrďte platbu 99 Kč pro Spotify." Dítě ověří, že částka a příjemce souhlasí, a potvrdí. Bez tohoto kroku platba neproběhne — ochrana proti zneužití.
+
+5. ### Porovnání poplatků bank
+   Dítě porovná 3 studentské účty: měsíční poplatek, poplatek za výběr z cizího bankomatu, poplatek za platbu v zahraničí, úrok na spoření. Zjistí, že "bezplatný" účet může mít skryté poplatky. Kritické myšlení o finančních produktech.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Cesta platby kartou
+
+   ⏱️ _1 hodina_
+
+   Dítě nakreslí schéma, co se děje, když přiloží kartu k terminálu: karta, terminál, banka obchodníka (acquirer), karetní asociace (Visa/Mastercard), banka zákazníka (issuer), zpět k terminálu. Celý proces trvá 2 sekundy, ale zahrnuje 5 stran. Výstup: infografika nebo diagram.
+
+2. ### Kurzy a konverze
+
+   ⏱️ _45 minut_
+
+   Dítě si vybere 5 věcí, které by chtělo koupit v zahraničí (kniha, hra, oblečení, elektronika, lístek na koncert). Zjistí cenu v místní měně, přepočítá na koruny podle aktuálního kurzu, přidá poplatek banky za konverzi. Porovná s cenou v ČR. Výstup: tabulka s porovnáním.
+
+3. ### Audit e-shopu
+
+   ⏱️ _45 minut_
+
+   Dítě vybere 3 e-shopy (jeden známý, jeden menší, jeden podezřelý) a hodnotí jejich důvěryhodnost: HTTPS, kontaktní údaje, IČO, recenze, členství v APEK, platební metody. Vytvoří hodnotící kartu pro každý e-shop. Výstup: přehledná tabulka s doporučením.
+
+4. ### Porovnání platebních metod
+
+   ⏱️ _1 hodina_
+
+   Dítě porovná různé způsoby platby: hotovost, karta, převod, QR platba, Apple/Google Pay, dobírka. U každé metody popíše: jak funguje, kdy se hodí, jaké má výhody a rizika, kolik stojí poplatky. Výstup: přehledová tabulka nebo prezentace.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Česká národní banka — platební styk](https://www.cnb.cz/cs/platebni-styk/)<br />
+  Oficiální informace o platebním styku v ČR.
+- [Peníze.cz — kurzovní lístek](https://www.penize.cz/kurzovni-listek)<br />
+  Aktuální kurzy měn a porovnání kurzů bank.
+- [APEK — ověřený e-shop](https://www.apek.cz)<br />
+  Asociace pro elektronickou komerci — certifikace důvěryhodných e-shopů.
+- [How credit cards work — Investopedia](https://www.investopedia.com/terms/c/creditcard.asp) <Badge text="EN" variant="tip" /><br />
+  Srozumitelné vysvětlení, jak fungují platební karty.
+- [Visa — How payments work](https://usa.visa.com/about-visa/how-visa-works.html) <Badge text="EN" variant="tip" /><br />
+  Oficiální vysvětlení platebního procesu od Visa — animace a schémata.

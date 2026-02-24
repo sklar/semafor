@@ -1,0 +1,82 @@
+---
+title: "28. Logická úvaha"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Uziva logickou uvahu a kombinacni usudek." />
+
+## Co to znamená?
+
+Dítě umí **logicky myslet** — vyvozovat závěry z daných informací, systematicky procházet možnosti a argumentovat. Nejde o memorování vzorečků, ale o schopnost říct: *„Tohle platí, protože…"* a *„Tohle nemůže platit, protože…"*
+
+**Logická úvaha** zahrnuje: pokud platí A a B, pak musí platit C. Pokud C neplatí, pak neplatí A nebo B. Tohle myšlení používáme denně — při plánování, rozhodování, řešení problémů.
+
+**Kombinační úsudek** je schopnost systematicky projít všechny možnosti a žádnou nevynechat. *Kolik různých outfitů složím ze 3 triček a 4 kalhot?* *Kolika způsoby se dá rozsadit 5 lidí?* Nejde jen o to spočítat výsledek — jde o to, mít systém, který zaručí, že jsme nic nepřeskočili.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Logické hádanky a hlavolamy, systematické zkoušení možností, jednoduché kombinatorické úlohy (kolik kombinací?). Důraz na „mít systém". |
+| **7.–8.** | **Prohlubujte.** Formálnější logika (negace, implikace), kombinatorické počítání (pravidlo součinu), důkaz sporem v jednoduchých případech. Sudoku, strategické hry. |
+| **9.** | Složitější kombinatorické problémy, úvod do pravděpodobnosti, argumentační řetězce, rozpoznání logických chyb v argumentaci. |
+
+<Aside title="Prerekvizity" type="tip">Žádné specifické matematické prerekvizity — logické myšlení se rozvíjí od základu. Pomáhá zkušenost s řešením problémů a hádankami.</Aside>
+
+## Poznámky
+
+<Aside title="Hry jsou nejlepší učitel">Šachy, dáma, Go, Mastermind, logické hádanky, Sudoku — všechny tyto hry rozvíjejí logické myšlení přirozeně a zábavně. Nemusíte sedět nad učebnicí.</Aside>
+
+<Aside title="Systém, ne intuice">Největší hodnota kombinatoriky není ve vzorcích, ale v systematičnosti. Dítě, které umí „projít všechny možnosti a žádnou nevynechat", má dovednost užitečnou daleko za hranicemi matematiky.</Aside>
+
+<Aside title="Typická past" type="caution">Dítě odpovídá „to je logické" bez zdůvodnění. Logická úvaha vyžaduje explicitní kroky: „Vím, že… z toho plyne… proto…" Neúplný argument je jako neúplný důkaz — nestačí.</Aside>
+
+<Aside title="Dulezite" type="danger">Logika v matematice a logika v běžné řeči se liší. V matematice „nebo" znamená „alespoň jedno z" (může platit i oboje). V běžné řeči „nebo" často znamená „jedno z, ale ne oboje". Toto rozlišení je důležité.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 29 (prostorová představivost) — systematické myšlení pomáhá při řešení prostorových úloh
+- <Badge text="MAT" /> bod 27 (matematizace situací) — logická úvaha je základem správného modelování
+- <Badge text="ČJ" /> bod 4 (vyjádření názoru a diskuze) — argumentace a logická struktura řeči
+- <Badge text="JAS" /> (kritické myšlení, mediální gramotnost) — rozpoznání logických chyb v argumentech
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost řešit logické hádanky ani systematicky procházet kombinace.</SkillItem>
+  <SkillItem level="novice">
+    Dítě řeší jednoduché logické úlohy, ale nesystematicky.
+    <ul>
+      <li>Hádanky řeší pokusem a omylem, bez systému</li>
+      <li>Při hledání kombinací některé vynechá nebo zdvojí</li>
+      <li>Závěry formuluje intuitivně, bez explicitní argumentace</li>
+      <li>U složitějších úloh se ztratí a neví, jak pokračovat</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě myslí logicky a systematicky, u složitějších problémů potřebuje vedení.
+    <ul>
+      <li>Má systém pro procházení možností (strom, tabulka, seznam)</li>
+      <li>Formuluje logické závěry: „Protože platí X, musí platit Y"</li>
+      <li>Řeší kombinatorické úlohy s pomocí pravidla součinu</li>
+      <li>Složitější logické řetězce ještě nezvládá samostatně</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě samostatně a přesvědčivě argumentuje, systematicky řeší kombinatorické problémy.
+    <ul>
+      <li>Formuluje úplné a přesvědčivé logické argumenty</li>
+      <li>Systematicky projde všechny možnosti a ví, že žádnou nevynechalo</li>
+      <li>Rozpozná logickou chybu v cizím argumentu</li>
+      <li>Řeší složitější kombinatorické úlohy a aplikuje je v reálných situacích</li>
+    </ul>
+  </SkillItem>
+</Skill>

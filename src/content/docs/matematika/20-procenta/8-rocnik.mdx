@@ -1,0 +1,102 @@
+---
+title: "8. rocnik"
+sidebar:
+  order: 8
+  label: "8. rocnik"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Zakladni pojmy
+
+<dl class="basic-terms">
+  <dt>Jednoduchy urok</dt>
+  <dd>Urok pocitany pouze z puvodni jistiny (vlozene castky). Vzorec: urok = jistina × sazba × cas. 10 000 Kc pri 3 % rocne na 1 rok = 300 Kc uroku.</dd>
+
+  <dt>Slozeny urok</dt>
+  <dd>Urok pocitany z jistiny i z driv pripisanych uroku — „urok z uroku". Po prvnim roce se urok pricte k jistine a dalsi rok se uroceni z vetsi castky. Exponencialni rust.</dd>
+
+  <dt>Jistina</dt>
+  <dd>Puvodni vlozena castka (u sporeni) nebo pujcena castka (u uveru). Zaklad, ze ktereho se pocitaji uroky.</dd>
+
+  <dt>Urokova sazba</dt>
+  <dd>Procento, ktere urcuje vysi uroku za dane obdobi (obvykle rok). Sazba 3 % p.a. (per annum = rocne) znamena, ze za rok dostaneme 3 % z jistiny.</dd>
+
+  <dt>Procentni bod</dt>
+  <dd>Rozdil mezi dvema procentualnimi hodnotami. Urokova sazba vzrostla z 3 % na 5 % — to je narust o 2 procentni body (ne o 2 %). Narust o 2 % z 3 % by byl 3,06 %.</dd>
+
+  <dt>Promile</dt>
+  <dd>Jedna tisicina celku. Symbol ‰. 1 ‰ = 0,1 % = 0,001. Pouziva se napr. pro alkohol v krvi, koncentrace latek, pojistne sazby.</dd>
+</dl>
+
+## 🎓 Co by melo dite znat
+
+- Spocitat jednoduchy urok na zadane obdobi
+- Pochopit princip slozeneho uroku a spocitat ho na 2–3 obdobi
+- Rozlisit procentni bod a procento
+- Resit ulohy na opakovaně procentni zmeny (zvyseni, pak snizeni)
+- Pracovat s promile v jednoduchych kontextech
+
+## 🌳 Priklady z realneho sveta
+
+<Steps>
+
+1. ### Sporicí ucet
+   Na uctu mame 20 000 Kc s urokem 4 % rocne (slozeny urok). Po 1 roce: 20 800 Kc. Po 2 letech: 21 632 Kc (ne 21 600!). Ten rozdil 32 Kc je „urok z uroku" — a s casem roste.
+
+2. ### Splatka pujcky
+   Pujcime si 50 000 Kc na 2 roky s urokem 8 % rocne (jednoduchy). Celkovy urok = 50 000 × 0,08 × 2 = 8 000 Kc. Vratime 58 000 Kc. Mesicni splatka = 58 000 ÷ 24 ≈ 2 417 Kc.
+
+3. ### Inflace
+   Inflace 6 % rocne znamena, ze co stalo 100 Kc loni, stoji 106 Kc letos. A za 5 let? 100 × 1,06⁵ ≈ 134 Kc. Slozeny urok funguje i „proti nam" — penize ztraceji hodnotu.
+
+4. ### Procentni body ve volbach
+   Strana mela 25 % hlasu a nyni ma 30 %. Narost o 5 procentnich bodu. Ale narust v procentech = 5/25 × 100 = 20 %. Zcela jiny udaj! Media casto zamenuji.
+
+5. ### Alkohol v krvi
+   Povolena hranice pro ridice je 0 ‰. Po jednom pivu ma clovek priblizne 0,5 ‰. Co to znamena? V 1 litru krve je 0,5 ml cistiho alkoholu. Promile v praxi.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Sporicí simulace
+
+   ⏱️ _1 hodina_
+
+   Dite vytvori tabulku (rucne nebo v Excelu): vlozi 10 000 Kc na ucet s 5 % rocne. Spocita zustatek po kazdem roce az do 10. roku — jednou s jednoduchym urokem, jednou se slozenym. Vysledky zakreslido grafu. Kde se krivky rozchazeci?
+
+2. ### Medialni detektiv
+
+   ⏱️ _45 minut_
+
+   Dite najde v mediich 5 zprav obsahujicich procenta. U kazde analyzuje: co je zaklad, je to procento nebo procentni bod, je udaj pouzit spravne, neni zavadejici? Kriticke mysleni o cislech.
+
+3. ### Pujcka vs. sporeni
+
+   ⏱️ _45 minut_
+
+   Dite srovnam dva scenare: a) sporeni 1 000 Kc mesicne pri 4 % rocne na 5 let, b) pujcka 50 000 Kc pri 10 % na 5 let. Kolik celkem nalspori, kolik celkem zaplatime? Proc se banky usmivaji?
+
+4. ### Inflacni experiment
+
+   ⏱️ _30 minut_
+
+   Najdete ceny 10 beznych produktu dnes a pred 10 lety (internetovy archiv, stare letaky). O kolik procent se zvysily? Jaka byla prumerna rocni inflace? Sedi to s oficialnimi udaji?
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Slozeny urok](https://www.matematika.cz/slozeny-urok)<br />
+  Vyklad slozeneho uroku s priklady a kalkulackou.
+- [Financni gramotnost](https://www.financnigramotnost.cz)<br />
+  Vzdelavaci portal o financich — uroky, dane, sporeni.
+- [Ceska narodni banka — Inflace](https://www.cnb.cz/cs/statistika/cenova-statistika/inflace/)<br />
+  Aktualni i historicka data o inflaci v CR.
+- [Khan Academy — Compound Interest](https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial/compound-interest-tutorial/v/compound-interest-introduction) <Badge text="EN" variant="tip" /><br />
+  Video vysvetleni slozeneho uroku.
+- [Math is Fun — Compound Interest](https://www.mathsisfun.com/money/compound-interest.html) <Badge text="EN" variant="tip" /><br />
+  Interaktivni kalkulacka slozeneho uroku s vysvetlenim.

@@ -1,0 +1,83 @@
+---
+title: "15. Objem a povrch"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Odhaduje a vypočítá objem a povrch těles." />
+
+## Co to znamená?
+
+Dítě dokáže **spočítat, kolik místa těleso zabírá** (objem) a **jak velký je jeho povrch** (povrch). Objem odpovídá na otázku *„kolik se dovnitř vejde"* — vody, vzduchu, písku. Povrch odpovídá na otázku *„kolik materiálu potřebuji na obal"* — barvy, papíru, plechu.
+
+Začíná se u **krychle a kvádru** (6. ročník), kde je výpočet přímočarý — délka × šířka × výška. Postupně přibývají **hranoly, jehlany, válce, kužely** a nakonec i **koule**. Na konci 2. stupně by dítě mělo zvládnout i **složená tělesa** — třeba dům = kvádr + trojboký hranol (střecha).
+
+Stejně jako u obsahu a obvodu je klíčový **odhad**. Než dítě začne počítat, mělo by umět říct: *„Bude to asi takhle velké."* A po výpočtu si výsledek zkontrolovat — *„Dává to smysl?"*
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Krychle a kvádr — objem i povrch. Jednotky (cm³, dm³, m³, litry). Hodně praktického měření a odhadování. |
+| **7.–8.** | **Prohlubujte.** Hranoly (obecné), jehlany, válec. Povrch = součet obsahů stěn. Objem = podstava × výška (u hranolů). |
+| **9.** | Kužel, koule, složená tělesa. Souhrnné úlohy, inverzní úlohy (z objemu najít rozměry). |
+
+<Aside title="Prerekvizity" type="tip">Obsah a obvod rovinných útvarů (bod 09). Znalost základních těles — krychle, kvádr, hranol, jehlan, válec, kužel, koule (bod 14). Početní operace se zlomky a desetinnými čísly.</Aside>
+
+## Poznámky
+
+<Aside title="Objem vs. povrch — jiné jednotky">Objem se měří v krychlových jednotkách (cm³, dm³ = litr, m³). Povrch se měří ve čtverečních jednotkách (cm², m²). Převody: 1 dm³ = 1 litr = 1000 cm³. Toto je zásadní a děti si to často pletou.</Aside>
+
+<Aside title="Měřte reálné věci">Kolik vody se vejde do hrnku? Kolik barvy na natření krabice? Kolik zeminy do květináče? Praktické měření a odhad dávají číslům smysl.</Aside>
+
+<Aside title="Typická past" type="caution">Záměna objemu a povrchu — dítě počítá objem, ale dosadí do vzorce pro povrch (nebo naopak). Pomáhá vizualizace: objem = „kolik vody se dovnitř vejde", povrch = „kolik balicího papíru potřebuji".</Aside>
+
+<Aside title="Dulezite" type="danger">Vzorec pro objem jehlanu (1/3 × podstava × výška) a kužele (1/3 × πr² × v) obsahuje třetinu — proč? Protože do hranolu (válce) se vejdou přesně 3 jehlany (kužely) se stejnou podstavou a výškou. Nechte dítě to experimentálně ověřit s vodou!</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 14 (prostorové útvary) — znalost těles je základ pro výpočty
+- <Badge text="MAT" /> bod 09 (obsah a obvod) — povrch tělesa = součet obsahů stěn, objem hranolu = obsah podstavy × výška
+- <Badge text="MAT" /> bod 01 (početní operace) — výpočty vyžadují bezpečnou práci s čísly
+- <Badge text="JAS" /> (praktické úlohy — bazén, nádrž, balení, stavba)
+- <Badge text="PUK" /> (modelování — kolik materiálu potřebuji?)
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli nebo dítě nemělo příležitost ukázat, jak pracuje s objemem a povrchem těles.</SkillItem>
+  <SkillItem level="novice">
+    Dítě rozlišuje objem a povrch, ale výpočty jsou nejisté.
+    <ul>
+      <li>Spočítá objem krychle a kvádru, ale u dalších těles tápe</li>
+      <li>Plete si jednotky — píše cm² místo cm³ pro objem</li>
+      <li>Povrch počítá jen jako „strany × 6" bez ohledu na typ tělesa</li>
+      <li>Neodhaduje výsledek předem, nedokáže posoudit, zda je realistický</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě počítá objem a povrch základních těles, u složitějších potřebuje podporu.
+    <ul>
+      <li>Bezpečně počítá objem a povrch krychle, kvádru a hranolu</li>
+      <li>Zvládá válec s oporou o vzorec</li>
+      <li>Převádí jednotky objemu (cm³, dm³, litr, m³) s občasnými chybami</li>
+      <li>V jednoduchých reálných situacích (nádrž, krabice) spočítá objem samostatně</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě samostatně počítá objem i povrch všech základních těles včetně složených.
+    <ul>
+      <li>Plynule počítá objem a povrch krychle, kvádru, hranolu, jehlanu, válce, kužele, koule</li>
+      <li>Rozloží složené těleso na jednodušší části a spočítá celkový objem/povrch</li>
+      <li>Odhaduje výsledek a kontroluje si ho — pozná nesmyslný výsledek</li>
+      <li>Řeší inverzní úlohy — z objemu nebo povrchu najde rozměry</li>
+    </ul>
+  </SkillItem>
+</Skill>

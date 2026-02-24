@@ -1,0 +1,103 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Kvadraticka funkce</dt>
+  <dd>Funkce tvaru y = ax². Její graf je parabola — křivka ve tvaru U (nebo obráceného U, když a je záporné). Na rozdíl od lineární funkce neroste rovnoměrně.</dd>
+
+  <dt>Parabola</dt>
+  <dd>Tvar grafu kvadratické funkce. Má vrchol (nejnižší nebo nejvyšší bod) a je symetrická — levá a pravá strana jsou zrcadlové. Třeba dráha hozeného míče.</dd>
+
+  <dt>Prusiccik primek</dt>
+  <dd>Bod, kde se dvě přímky protnou — má stejné souřadnice pro obě funkce. V praxi: při kolika SMS se dva tarify vyrovnají? To je průsečík.</dd>
+
+  <dt>Rostouci a klesajici funkce</dt>
+  <dd>Rostoucí = čím víc doprava, tím víc nahoru (graf stoupá). Klesající = čím víc doprava, tím víc dolů (graf klesá). Lineární funkce je buď celá rostoucí, nebo celá klesající.</dd>
+
+  <dt>Nulovy bod (koren)</dt>
+  <dd>Hodnota x, pro kterou je y = 0. Na grafu: místo, kde křivka protne osu x. Lineární funkce y = 2x − 6 má nulový bod x = 3 (protože 2·3 − 6 = 0).</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Nakreslit graf kvadratické funkce y = ax² pro různá a
+- Rozlišit lineární a kvadratickou funkci z tabulky i z grafu
+- Najít průsečík dvou přímek výpočtem i graficky
+- Určit, kde je funkce rostoucí a kde klesající
+- Najít nulový bod lineární funkce
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Brzdna draha
+   Brzdná dráha roste se čtvercem rychlosti. Při 30 km/h = 9 m, při 60 km/h = 36 m (4× víc!), při 90 km/h = 81 m. Kvadratická funkce — proto je rychlost tak nebezpečná.
+
+2. ### Hod míčem
+   Míč hozený do výšky letí po parabole. Výška závisí na čase — nejdřív stoupá, pak klesá. V jakém čase je nejvýš? Kdy dopadne? Graf je obrácená parabola.
+
+3. ### Porovnání tarifů
+   Tarif A: 200 + 3x. Tarif B: 350 + 1,5x. Průsečík: 200 + 3x = 350 + 1,5x → x = 100. Do 100 jednotek je levnější A, nad 100 je levnější B.
+
+4. ### Plocha zahrady
+   Čtvercová zahrada se stranou x metrů má plochu x². Tabulka, graf — jak rychle roste plocha? Zdvojnásobení strany = čtyřnásobení plochy.
+
+5. ### Populace králíků
+   Začínáme s 10 králíky, každý měsíc se počet zdvojnásobí. To roste rychleji než lineárně i než kvadraticky — exponenciální růst. Úvod k myšlence, že ne všechny funkce jsou přímky.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Parabola v praxi
+
+   ⏱️ _1 hodina_
+
+   Házet míček a fotografovat dráhu (nebo nakreslit podle odhadu). Změřit 5 bodů dráhy a zakreslit do grafu. Sedí to na parabolu? Porovnat s grafem y = −x² + 10.
+
+2. ### Průsečík tarifů
+
+   ⏱️ _1 hodina_
+
+   Najít 2 skutečné tarify (elektřina, mobil, internet) s různou strukturou (paušál + sazba). Zapsat rovnicemi, nakreslit grafy, najít průsečík. Pro koho se vyplatí který tarif?
+
+3. ### Galerie funkcí
+
+   ⏱️ _1–2 hodiny_
+
+   V GeoGebře nebo Desmosu zadat 6 různých funkcí (y = x, y = 2x + 1, y = −x + 5, y = x², y = −x², y = 1/x). Porovnat tvary grafů. Které jsou přímky? Které křivky? Která roste nejrychleji?
+
+4. ### Graf příběhu
+
+   ⏱️ _45 minut_
+
+   Nakreslit graf, který vypráví příběh: „Vyšel jsem z domu (výška 0), šel do kopce (graf stoupá), chvíli šel po rovině (graf vodorovný), seběhl dolů (graf klesá)." Pak naopak: z grafu vyprávět příběh.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Kvadratická funkce](https://www.matematika.cz/kvadraticka-funkce)<br />
+  Výklad s grafy a řešenými příklady.
+
+- [Khanova škola — Kvadratické funkce](https://cs.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratics-multiplying-factoring)<br />
+  Videa o kvadratických funkcích v češtině.
+
+- [Desmos Graphing Calculator](https://www.desmos.com/calculator)<br />
+  Nejlepší online grafický kalkulátor — zadejte rovnici a experimentujte s parametry.
+
+- [Math is Fun — Quadratic Functions](https://www.mathsisfun.com/algebra/quadratic-equation-graphing.html) <Badge text="EN" variant="tip" /><br />
+  Kvadratické funkce a paraboly vysvětlené vizuálně (anglicky).
+
+- [PhET — Graphing Lines](https://phet.colorado.edu/en/simulations/graphing-lines) <Badge text="EN" variant="tip" /><br />
+  Interaktivní simulace — experimentujte se směrnicí a absolutním členem.

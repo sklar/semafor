@@ -1,0 +1,103 @@
+---
+title: "9. ročník"
+sidebar:
+  order: 9
+  label: "9. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Hyperbola</dt>
+  <dd>Křivka, kterou tvoří graf nepřímé úměrnosti y = k/x. Má dvě větve — jednu v prvním a jednu ve třetím kvadrantu (pro kladné k). Blíží se k osám, ale nikdy se jich nedotkne.</dd>
+
+  <dt>Asymptota</dt>
+  <dd>Přímka, ke které se křivka nekonečně blíží, ale nikdy ji neprotne. U nepřímé úměrnosti jsou asymptoty obě osy — x i y. V praxi: nikdy nedosáhnete nulového času, i kdybyste přidali nekonečně dělníků.</dd>
+
+  <dt>Modelování</dt>
+  <dd>Popis reálné situace pomocí matematického vztahu. Zjistíme, zda data odpovídají přímé úměrnosti, nepřímé úměrnosti, nebo jinému modelu — a ten pak použijeme k předpovědi.</dd>
+
+  <dt>Odchylka od modelu</dt>
+  <dd>Reálná data nikdy nesedí na model dokonale. Odchylka je rozdíl mezi skutečnou hodnotou a tím, co model předpovídá. Malé odchylky = dobrý model.</dd>
+
+  <dt>Extrapolace</dt>
+  <dd>Odhad hodnoty „za" známými daty — předpověď do budoucna. Nebezpečná, protože model může přestat platit. Úměrnost platí v určitém rozsahu, ne do nekonečna.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Z dat rozpoznat, zda jde o přímou úměrnost, nepřímou úměrnost, nebo jiný vztah
+- Ověřit úměrnost výpočtem (konstantní poměr = přímá, konstantní součin = nepřímá)
+- Zakreslit a interpretovat graf nepřímé úměrnosti (hyperbolu)
+- Použít model úměrnosti k předpovědi a posoudit jeho omezenost
+- Propojit úměrnost s lineárními funkcemi — přímá úměrnost jako speciální případ
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Boylův zákon
+   Tlak plynu × objem = konstanta (při stálé teplotě). Stlačíte píst na polovinu → tlak se zdvojnásobí. Krásná nepřímá úměrnost z fyziky.
+
+2. ### Ekonomika a úspory z rozsahu
+   Výroba 100 triček stojí 50 Kč/kus, výroba 1 000 triček 30 Kč/kus. Je to nepřímá úměrnost? Ne přesně — ale přibližně. Kdy model přestane platit?
+
+3. ### Dopravní zácpa
+   Teoreticky: 2× víc aut = 2× pomalejší provoz (nepřímá úměrnost). Ale v realitě? Po určitém bodě se provoz úplně zastaví — model úměrnosti přestane platit.
+
+4. ### Osvětlení a vzdálenost
+   Intenzita světla klesá se čtvercem vzdálenosti (nepřímá úměrnost se čtvercem). 2× dál = 4× slabší světlo. Proč je to důležité pro fotografy a astronomy?
+
+5. ### Úroky z úspor
+   Jednoduchý úrok: úrok = jistina × sazba × čas. Přímá úměrnost — delší doba, větší úrok. Ale složený úrok roste rychleji než úměrně — proč?
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Je to úměrnost? — datový test
+
+   ⏱️ _1–2 hodiny_
+
+   Dostat 4 sady reálných dat. Pro každou ověřit: je poměr konstantní (přímá)? Je součin konstantní (nepřímá)? Nebo to není úměrnost? Zapsat rovnici, nakreslit graf, okomentovat odchylky.
+
+2. ### Fyzikální experiment
+
+   ⏱️ _1–2 hodiny_
+
+   Měřit čas pádu kuličky z různých výšek. Nebo čas kyvu kyvadla při různých délkách. Zapsat data, zkusit najít model — je to přímá úměrnost, nepřímá, nebo něco jiného?
+
+3. ### Modelování a předpověď
+
+   ⏱️ _2 hodiny_
+
+   Z existujících dat (cena benzínu za 10 let, spotřeba elektřiny za rok) vytvořit model. Předpovědět další hodnotu. Za měsíc ověřit — jak přesná byla předpověď? Kde model selhal?
+
+4. ### Portfolio úměrností
+
+   ⏱️ _2–3 hodiny_
+
+   Vytvořit „sbírku" 6 reálných situací — 2 přímé úměrnosti, 2 nepřímé, 2 kde úměrnost neplatí. Pro každou: popis situace, tabulka, graf, rovnice (kde to jde), komentář.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Nepřímá úměrnost a hyperbola](https://www.matematika.cz/neprima-umernost)<br />
+  Podrobný výklad s grafy a řešenými příklady.
+
+- [Khanova škola — Funkce a grafy](https://cs.khanacademy.org/math/algebra)<br />
+  Lineární funkce, úměrnosti a jejich grafy v češtině.
+
+- [GeoGebra — Hyperbola](https://www.geogebra.org/graphing)<br />
+  Zadat y = k/x pro různá k a pozorovat tvar hyperboly.
+
+- [PhET — Gas Properties](https://phet.colorado.edu/en/simulations/gas-properties) <Badge text="EN" variant="tip" /><br />
+  Simulace plynů — Boylův zákon v akci (nepřímá úměrnost tlaku a objemu).
+
+- [Khan Academy — Inverse Variation](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:direct-inverse-variation) <Badge text="EN" variant="tip" /><br />
+  Nepřímá úměrnost — videa a cvičení (anglicky).

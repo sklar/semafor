@@ -1,0 +1,83 @@
+---
+title: "18. Aplikacni geometricke ulohy"
+sidebar:
+  order: 0
+  label: "Prehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Analyzuje a resi aplikacni geometricke ulohy." />
+
+## Co to znamena?
+
+Dite dokaze pouzit geometrii k **reseni praktickych problemu** — zmerit, spocitat, navrhnout, naplnovat. Nejde o abstraktni priklady z ucebnice, ale o **realne situace**: kolik barvy potrebuju na zed? Kolik betonu na zaklady? Vejde se skrin do pokoje? Jak daleko je to napric parkem?
+
+Aplikacni ulohy spojuji vic geometrickych dovednosti dohromady — dite musi **analyzovat situaci** (co je zadano, co hledam), **zvolit postup** (jaky vzorec, jaky geometricky princip) a **provest vypocet** (presne a s kontrolou). Casto je treba kombinovat vic kroku — napr. nejdriv spocitat obsah, pak ho vynasobit cenou za metr ctverecni.
+
+Klicove je, ze dite **rozumi, co pocita a proc** — nejen mechanicky dosazuje do vzorcu, ale vi, jaky geometricky princip pouziva a zda ma vysledek smysl.
+
+## Kdy se tomu venovat?
+
+| Rocnik | Doporuceni |
+|--------|-----------|
+| **6.** | **Zacnete zde.** Jednoduche ulohy — mereni, obvody, obsahy obdelniku a ctverce. Dite se uci prevest realnou situaci do geometrickeho modelu. |
+| **7.–8.** | **Prohlubujte.** Obsahy trojuhelniku, lichobezniku, kruhu. Povrchy a objemy teles. Pythagorova veta v aplikacich. Ulohy o vice krocich. |
+| **9.** | Komplexni ulohy — kombinace rovinne a prostorove geometrie, optimalizace, navrhovani, technicke aplikace. |
+
+<Aside title="Prerekvizity" type="tip">Znalost zakladnich geometrickych tvaru a teles, vzorce pro obvody, obsahy, povrchy a objemy. Schopnost prevest jednotky (cm na m, m² na cm²).</Aside>
+
+## Poznamky
+
+<Aside title="Realita je nejlepsi ucebnice">Nechte dite merit a pocitat skutecne veci — pokoj, zahradu, plot, zed. Ulohy z reality jsou motivujicejsi a dite lip chape, proc geometrii potrebuje.</Aside>
+
+<Aside title="Nacrt je pulka reseni">U kazde aplikacni ulohy by dite melo zacit nacrtem — nakreslit situaci, zapsat zname rozmery, oznacit hledanou velicinu. Nacrt pomaha videt, co je zadano a co pocitat.</Aside>
+
+<Aside title="Typicka past" type="caution">Dite zapomene prevest jednotky — pocita v centimetrech, ale vysledek ma byt v metrech ctverecnich. Nebo zameni obvod a obsah. Prevod jednotek a kontrola, „co vlastne pocitam", jsou klicove.</Aside>
+
+<Aside title="Dulezite" type="danger">Vysledek musi davat smysl. Pokud dite spocita, ze na vymalovani pokoje potrebuje 0,3 litru barvy nebo 3 000 litru, neco je spatne. Odhadnete vysledek predem — a kontrolujte na konci.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 14 (obvody a obsahy) — zakladni vypocty, ktere aplikacni ulohy vyuzivaji
+- <Badge text="MAT" /> bod 15 (telesa — povrchy a objemy) — prostorove aplikace
+- <Badge text="MAT" /> bod 19 (pomer a meritko) — meritka map a planu v geometrickych ulohach
+- <Badge text="JAS" /> (svet prace, technika) — prakticke aplikace geometrie v beznem zivote
+- <Badge text="PUK" /> (telesna vychova) — mereni hrist, atletickych drah, sportovnich parametru
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Tema jsme zatim neotevreli. Dite nemelo prilezitost resit prakticke geometricke ulohy.</SkillItem>
+  <SkillItem level="novice">
+    Dite resi jednoduche ulohy, ale potrebuje hodne vedeni.
+    <ul>
+      <li>U jednoduche ulohy (obvod obdelniku) spocita vysledek, ale neumi samo zvolit postup</li>
+      <li>Nenarysuje si nacrt situace — zacina pocitat „naslepo"</li>
+      <li>Zameni obvod a obsah nebo zapomene prevest jednotky</li>
+      <li>Nedokaze posoudit, zda ma vysledek smysl</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dite zvlada jednoduche aplikacni ulohy samostatne, u slozitejsich potrebuje napovedu.
+    <ul>
+      <li>Nakresli nacrt a zapise znama data</li>
+      <li>Zvoli spravny postup pro jednoduche ulohy (obsah, obvod, objem)</li>
+      <li>U vicekrokovych uloh obcas ztrati nit — nevida dalsi krok</li>
+      <li>Vysledek obcas zkontroluje, ale ne vzdy</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dite samostatne analyzuje a resi i slozitejsi aplikacni ulohy.
+    <ul>
+      <li>Analyzuje situaci, nakresli nacrt, naplnuje reseni</li>
+      <li>Kombinuje vic geometrickych poznatku v jedne uloze</li>
+      <li>Prevadi jednotky spravne a kontroluje smysluplnost vysledku</li>
+      <li>Dokaze ulohu formulovat i sam — vidi geometrii v realnych situacich</li>
+    </ul>
+  </SkillItem>
+</Skill>

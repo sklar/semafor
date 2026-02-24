@@ -1,0 +1,82 @@
+---
+title: "63. Síly"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Rozpozná základní působící síly a silové působení na tělesa a v kapalinách." />
+
+## Co to znamená?
+
+Dítě rozumí, že **síla** je to, co mění pohyb tělesa -- rozjíždí ho, brzdí, mění směr, deformuje. Dokáže v běžných situacích rozpoznat, jaké síly působí: gravitační síla táhá věci k zemi, třecí síla brzdí pohyb, pružná síla vrací pružinu do původního tvaru.
+
+V praxi to znamená, že když dítě hází míčkem, chápe, proč míč letí obloukem (gravitace ho stahuje dolů), proč se zastavuje po dopadu (tření), a proč se odráží (pružnost). Když stojí na váze, ví, že váha měří gravitační sílu, kterou Země působí na jeho tělo.
+
+Síly jsou všude -- každý pohyb, každá změna tvaru, každé držení rovnováhy je výsledkem působení sil. Tohle téma je základ mechaniky a prostá cesta k pochopení fyziky kolem nás.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Gravitační síla, třecí síla, pružná síla. Síla jako veličina (newton). Jednoduché experimenty s měrákem sil (siloměrem). |
+| **7.--8.** | **Prohlubujte.** Skládání sil, rovnovážná síla. Newtonovy zákony pohybu (1. a 3. zákon intuitivně). Tlaková síla, vztlaková síla. Páka a jednoduché stroje. |
+| **9.** | **Systematizace.** Vektorová povaha síly. 2. Newtonův zákon (F = m * a). Gravitační zákon. Odstředivý a dostředivý efekt. Propojení se všemi oblastmi fyziky. |
+
+<Aside title="Prerekvizity" type="tip">Základní pojem pohybu (rychlost, dráha). Dítě by mělo intuitivně chápat, že k pohybu je třeba "nějaká příčina" -- to je právě síla.</Aside>
+
+## Poznámky
+
+<Aside title="Síly jsou neviditelné, ale důsledky vidíme">Sílu nevidíme, ale vidíme, co způsobí -- změna pohybu, deformace. Pomáhejte dítěti pojmenovat síly v běžných situacích: co tě drží na židli? Co brzdí kolo? Proč padá jablko?</Aside>
+
+<Aside title="Siloměr je skvělý nástroj">Jednoduchý pružinový siloměr (nebo digitální) umožní dítěti měřit síly vlastníma rukama. Stojí pár korun a otevře dveře k experimentům.</Aside>
+
+<Aside title="Typická past" type="caution">Děti si myslí, že k pohybu je vždy třeba síla. Ve skutečnosti síla mění pohyb -- těleso v pohybu pokračuje v pohybu, dokud na něj nezapůsobí síla (1. Newtonův zákon). Tohle je neintuitivní a stojí za to se k tomu vracet.</Aside>
+
+<Aside title="Důležité" type="danger">Hmotnost a síla nejsou totéž! Dítě má hmotnost 40 kg vždy a všude. Ale gravitační síla na něj na Měsíci je šestinová oproti Zemi. Váha měří sílu, ne hmotnost -- i když na ní čteme "kg".</Aside>
+
+## Souvislosti
+
+- <Badge text="JAS" /> bod 61 -- měřidla a veličiny (měření síly v newtonech)
+- <Badge text="JAS" /> bod 64 -- energie (práce = síla na dráze)
+- <Badge text="JAS" /> bod 65 -- zvuk (zvuk jako důsledek kmitání -- síly v pružném prostředí)
+- <Badge text="MAT" /> bod 01 -- početní operace (dosazování do vzorců)
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost ukázat, jestli rozumí působení sil.</SkillItem>
+  <SkillItem level="novice">
+    Dítě tuší, že síla existuje, ale neumí ji popsat ani rozpoznat v konkrétní situaci.
+    <ul>
+      <li>Neví, co je newton jako jednotka síly</li>
+      <li>Nedokáže pojmenovat síly působící na padající předmět</li>
+      <li>Zaměňuje hmotnost a sílu (váhy a gravitaci)</li>
+      <li>Myslí si, že nepohybující se těleso není pod vlivem žádné síly</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě rozpoznává základní síly v běžných situacích a umí měřit sílu siloměrem.
+    <ul>
+      <li>Pojmenuje gravitační, třecí a pružnou sílu v jednoduchých situacích</li>
+      <li>Umí použít siloměr a přečíst hodnotu v newtonech</li>
+      <li>Chápe, že síla mění pohyb nebo tvar tělesa</li>
+      <li>Skládání sil a složitější situace potřebuje vysvětlit</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě samostatně analyzuje silové působení v různých situacích a používá fyzikální vztahy.
+    <ul>
+      <li>Nakreslí diagram sil pro běžné situace (knížka na stole, auto na svahu)</li>
+      <li>Rozumí rovnováze sil a Newtonovým zákonům</li>
+      <li>Vypočítá sílu z hmotnosti a zrychlení</li>
+      <li>Propojuje síly s energií, prací a dalšími oblastmi fyziky</li>
+    </ul>
+  </SkillItem>
+</Skill>

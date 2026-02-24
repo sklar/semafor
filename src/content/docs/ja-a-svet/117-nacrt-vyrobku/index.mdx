@@ -1,0 +1,83 @@
+---
+title: "117. Náčrt výrobku"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Připraví si vlastní jednoduchý náčrt výrobku." />
+
+## Co to znamená?
+
+Dítě umí nakreslit jednoduchý náčrt toho, co chce vyrobit — s rozměry, popiskami a základním pohledem na výrobek. Nejde o technický výkres s normami, ale o srozumitelný obrázek, podle kterého se dá pracovat.
+
+Náčrt je most mezi nápadem a realizací. Když si dítě nakreslí, jak by měl stojánek na tužky vypadat, uvědomí si rozměry, proporce, spoje — věci, které v hlavě vypadají jinak než na papíře. Náčrt je nejlevnější prototyp.
+
+V domácím vzdělávání stačí tužka a papír. Žádné speciální pomůcky, žádné kresličské nadání — jde o komunikaci myšlenky, ne o umělecké dílo.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Jednoduchý náčrt z jednoho pohledu — obdélníky, čáry, kóty s rozměry. Dítě kreslí to, co chce vyrobit, a popisuje důležité části. |
+| **7.–8.** | **Prohlubujte.** Náčrt z více pohledů (zepředu, zboku, shora), přesnější rozměry, značení materiálů. Dítě kreslí před každou výrobou. |
+| **9.** | **Samostatná práce.** Dítě vytvoří kompletní náčrt s rozměry, popisy, seznamem materiálů. Náčrt je dostatečně srozumitelný, aby podle něj mohl vyrábět někdo jiný. |
+
+<Aside title="Prerekvizity" type="tip">Základní geometrie — pravý úhel, rovnoběžky, měření pravítkem. Schopnost odhadnout rozměry reálných předmětů v centimetrech.</Aside>
+
+## Poznámky
+
+<Aside title="Náčrt neni umělecké dílo">Důležitá je srozumitelnost, ne krása. Rovné čáry s pravítkem, čitelné rozměry, jasné popisky. Pokud náčrt sděluje, co chceme vyrobit, splnil svůj účel.</Aside>
+
+<Aside title="Kreslení rozvíjí myšlení">Když dítě kreslí náčrt, přemýšlí o proporcích, spojích, materiálu. Často při kreslení objeví problém, který by jinak zjistilo až při výrobě.</Aside>
+
+<Aside title="Typická past" type="caution">Přeskočit náčrt a začít rovnou vyrábět. Výsledek: špatné rozměry, zapomenutý detail, zbytečně spotřebovaný materiál. Náčrt zabere 10 minut, ale ušetří hodinu předělávání.</Aside>
+
+<Aside title="Důležité" type="danger">Rozměry v náčrtu musí odpovídat realitě. Naučte dítě vždy měřit skutečné rozměry (metr, pravítko), ne odhadovat od oka. Rozdíl 2 cm u poličky znamená, že nepasuje.</Aside>
+
+## Souvislosti
+
+- <Badge text="JAS" /> bod 114 (technické materiály) — náčrt zahrnuje volbu materiálu
+- <Badge text="JAS" /> bod 116 (plánování práce) — náčrt je vizuální součást plánování
+- <Badge text="JAS" /> bod 118 (konstrukce a modely) — náčrt předchází stavbě modelu
+- <Badge text="MAT" /> bod 01 (početní operace) — výpočty rozměrů, měřítko
+- <Badge text="PUK" /> bod 01 (komplexní dílo) — vizuální vyjádření záměru
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Tema jsme zatim neotevreli. Dite nekreslilo nacrty pred vyrobou nebo se s touto praxí nesetkalo.</SkillItem>
+  <SkillItem level="novice">
+    Dite nakresli jednoduchy obrazek, ale chybi rozmery a dulezite detaily.
+    <ul>
+      <li>Nakresli obrys vyrobku, ale bez rozměru — "asi takhle velky"</li>
+      <li>Schazi popisky materiálu a zpusobu spojeni</li>
+      <li>Nacrt je nepresny — proporce neodpovidaji realite</li>
+      <li>Podle nacrtu by se tezko dalo vyrábet</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dite vytvori srozumitelny nacrt s rozmery, podle ktereho se da pracovat.
+    <ul>
+      <li>Nacrt ma zakladni rozmery v centimetrech</li>
+      <li>Dulezite casti jsou popsany (material, spoj)</li>
+      <li>Proporce priblizne odpovídaji realite</li>
+      <li>Dite dokaze podle nacrtu vyrobit jednoduchy vyrobek</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dite vytvori detailni nacrt, podle ktereho by mohl vyrábet kdokoli.
+    <ul>
+      <li>Nacrt z vice pohledu s presnymi rozmery</li>
+      <li>Vsechny casti popsany — material, rozmery, zpusob spojeni</li>
+      <li>Obsahuje seznam materialů a nastroju</li>
+      <li>Nacrt je prehledny, cisty a jednoznacny</li>
+    </ul>
+  </SkillItem>
+</Skill>

@@ -1,0 +1,106 @@
+---
+title: "7. ročník"
+sidebar:
+  order: 7
+  label: "7. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Funkce</dt>
+  <dd>Pravidlo, které každému vstupu (x) přiřazuje právě jeden výstup (y). Píšeme y = f(x). Funkce jako automat — pro stejný vstup vždy stejný výstup, nikdy dva různé.</dd>
+
+  <dt>Lineární funkce</dt>
+  <dd>Funkce tvaru y = kx + q. Její graf je přímka. Číslo k určuje sklon (strmí, klesá), číslo q říká, kde přímka protne osu y.</dd>
+
+  <dt>Směrnice (k)</dt>
+  <dd>Číslo, které říká, jak strmá je přímka. Kladné k = přímka stoupá, záporné k = přímka klesá. Větší |k| = strmější přímka. k = 0 = vodorovná přímka.</dd>
+
+  <dt>Absolutní clen (q)</dt>
+  <dd>Číslo, které posune přímku nahoru nebo dolů. y = 2x + 3 protne osu y v bodě [0, 3]. y = 2x protne v bodě [0, 0]. Rozdíl je právě v q.</dd>
+
+  <dt>Deficni obor</dt>
+  <dd>Množina všech vstupů (hodnot x), pro které funkce „funguje". U lineární funkce jsou to všechna čísla. U y = 1/x všechna čísla kromě nuly (nulou dělit nelze).</dd>
+
+  <dt>Obor hodnot</dt>
+  <dd>Množina všech výstupů (hodnot y), které funkce může dát. U lineární funkce (k ≠ 0) to jsou opět všechna čísla.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Zapsat lineární funkci rovnicí y = kx + q z tabulky hodnot
+- Nakreslit graf lineární funkce (stačí 2 body a spojit přímkou)
+- Určit směrnici a absolutní člen z rovnice i z grafu
+- Přečíst z grafu: kde přímka protíná osy, zda stoupá nebo klesá
+- Z grafu reálné situace (jízdní řád, vývoj teploty) přečíst konkrétní hodnoty
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Taxametr
+   Nástupní sazba 40 Kč + 28 Kč za km. Cena = 28x + 40. Kolik stojí 5 km? 10 km? Nakreslit graf — je to přímka, ale nezačíná v nule (kvůli paušálu).
+
+2. ### Plnění bazénu
+   Bazén se plní rychlostí 200 litrů za hodinu. Tabulka: čas → objem. Graf: přímka stoupající z nuly. Kolik bude v bazénu po 3 hodinách? Za jak dlouho bude plný (5 000 l)?
+
+3. ### Teplota při oteplování
+   Ráno 5 °C, otepluje se o 2 °C za hodinu. Teplota = 2h + 5, kde h = počet hodin od rána. Kdy bude 15 °C? Nakreslit graf.
+
+4. ### Smlouva na mobil
+   Paušál 299 Kč + 2 Kč za SMS. Měsíční cena = 2s + 299. Porovnat s druhým tarifem: 399 Kč + 1 Kč za SMS. Kdy se vyplatí který? (Průsečík přímek.)
+
+5. ### Výška rostliny
+   Fazole roste 2 cm denně. Při výsadbě měřila 5 cm. Výška = 2d + 5. Tabulka, graf. Za kolik dní dosáhne 30 cm?
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Tarifový souboj
+
+   ⏱️ _1 hodina_
+
+   Porovnat dva mobilní tarify (skutečné nebo vymyšlené). Zapsat každý rovnicí, nakreslit oba grafy do jedné souřadnicové soustavy. Najít průsečík — od kolika SMS/minut se vyplatí přejít na druhý tarif?
+
+2. ### Rostlinný deník
+
+   ⏱️ _průběžně, 3 týdny_
+
+   Zasadit fazoli nebo hrášek a denně měřit výšku. Zapsat do tabulky, zakreslit graf. Je růst lineární (přímka), nebo se časem zpomalí? Zkusit zapsat rovnicí.
+
+3. ### Hádej funkci z grafu
+
+   ⏱️ _30 minut_
+
+   Jeden hráč nakreslí přímku do souřadnicové soustavy. Druhý odečte 2–3 body a hádá rovnici. Ověření: dosazením bodů do rovnice.
+
+4. ### Graf mého dne
+
+   ⏱️ _45 minut_
+
+   Nakreslit graf „nálada během dne" (osa x = hodiny, osa y = nálada 1–10). Nebo „energie během dne". Popsat: kdy graf stoupá, kdy klesá, kde je maximum?
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Lineární funkce](https://www.matematika.cz/linearni-funkce)<br />
+  Výklad lineární funkce, směrnice, absolutní člen, graf.
+
+- [Khanova škola — Lineární funkce](https://cs.khanacademy.org/math/algebra/x2f8bb11595b61c86:linear-equations-graphs)<br />
+  Videa a interaktivní cvičení v češtině.
+
+- [GeoGebra — Grafický kalkulátor](https://www.geogebra.org/graphing)<br />
+  Zadat rovnici a vidět graf — skvělý nástroj pro experimentování.
+
+- [Math is Fun — Linear Equations](https://www.mathsisfun.com/algebra/linear-equations.html) <Badge text="EN" variant="tip" /><br />
+  Lineární rovnice a jejich grafy jednoduše (anglicky).
+
+- [Desmos Graphing Calculator](https://www.desmos.com/calculator) <Badge text="EN" variant="tip" /><br />
+  Výborný online grafický kalkulátor — zadejte rovnici a experimentujte.

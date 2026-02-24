@@ -1,0 +1,83 @@
+---
+title: "18. Finanční gramotnost"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Ovládá základy finanční gramotnosti" />
+
+## Co to znamená?
+
+Dítě rozumí tomu, jak fungují peníze ve společnosti -- nejen "jak šetřit kapesné", ale širší obraz: co je banka, proč existují daně, jak funguje pojištění, co jsou finanční produkty a jak se nenechat nachytat podvodnými nabídkami.
+
+Finanční gramotnost není o tom stát se ekonomem. Je to o tom, aby dítě v dospělosti dokázalo: vybrat si bankovní účet, pochopit smlouvu před podpisem, neuzavřít nevýhodnou půjčku, poznat finanční podvod a rozumět tomu, proč platí daně a co za ně dostává.
+
+Tento výstup propojuje praktické hospodaření (bod 16) s teoretickým porozuměním finančnímu systému. Nejlíp se učí na konkrétních příkladech -- ne na definicích z učebnice.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Co je banka, bankovní účet, platební karta. Základní bezpečnost plateb. Rozdíl hotovost vs. bezhotovostní platba. |
+| **7.--8.** | **Prohlubujte.** Spoření vs. investování. Půjčky a úroky. Pojištění. Jak číst jednoduchou smlouvu. Rozpoznávání podvodných nabídek. |
+| **9.** | **Samostatně.** Daně a proč existují. Finanční produkty (hypotéka, penzijko, akcie). Finanční plánování. Kritické hodnocení finančních nabídek. |
+
+<Aside title="Prerekvizity" type="tip">Praktické hospodaření s kapesným (bod 16) -- dítě by mělo už umět sestavit rozpočet a rozumět základním pojmům jako příjem, výdaj, spoření.</Aside>
+
+## Poznámky
+
+<Aside title="Používejte reálné produkty">Místo abstraktních definic ukažte dítěti reálný výpis z účtu, smlouvu k telefonu, pojistku na dovolenou. Konkrétní dokumenty učí líp než učebnice.</Aside>
+
+<Aside title="Finanční podvody jsou všude">Naučte dítě rozpoznávat podvodné nabídky: "zaručený výdělek", "rychlá půjčka bez ověření", phishingové e-maily. V digitálním světě je to klíčová dovednost.</Aside>
+
+<Aside title="Typická past" type="caution">Uchylovat se k moralizování ("dluhy jsou špatné", "šetřit je dobré"). Finanční svět je nuancovanější -- hypotéka je dluh, ale rozumný. A někdy je investice lepší než spoření. Učte principy, ne dogmata.</Aside>
+
+<Aside title="Důležité" type="danger">Dítě by mělo vědět, že nikdy nemá podepisovat nic, čemu nerozumí. Ani pod tlakem, ani "protože to říká dospělý". Schopnost říci "nejdřív si to přečtu" je klíčová finanční dovednost.</Aside>
+
+## Souvislosti
+
+- <Badge text="JAS" /> bod 16 -- hospodaření (praktická stránka -- kapesné, rozpočet)
+- <Badge text="JAS" /> bod 17 -- formy vlastnictví (smlouvy, licence, nájem)
+- <Badge text="JAS" /> bod 19 -- trh a hospodaření státu (makroekonomický kontext financí)
+- <Badge text="MAT" /> bod 01 -- početní operace (procenta, úroky, složené úročení)
+- <Badge text="JAS" /> bod 09 -- kritické myšlení a média (rozpoznávání podvodných nabídek)
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemá zkušenost s finančními pojmy a produkty nad rámec základního hospodaření.</SkillItem>
+  <SkillItem level="novice">
+    Dítě zná základní pojmy, ale nepropojuje je s realitou.
+    <ul>
+      <li>Ví, že banka existuje, ale neví, co přesně dělá a proč tam lidé dávají peníze</li>
+      <li>Platí kartou, ale nechápe, odkud se peníze "berou"</li>
+      <li>Nerozlišuje spoření a investování</li>
+      <li>Nevnímá rizika finančních nabídek -- "když to říkají v reklamě, bude to pravda"</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě rozumí základním finančním produktům a umí je použít v kontextu.
+    <ul>
+      <li>Vysvětlí, co dělá banka a proč lidé mají bankovní účet</li>
+      <li>Rozliší spoření od investování a ví, že investice nese riziko</li>
+      <li>Rozpozná podezřelou finanční nabídku a ví, že "zaručený výdělek" neexistuje</li>
+      <li>Chápe základy pojištění -- proč se pojišťujeme a jak to funguje</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě se orientuje ve finančním světě a dokáže kriticky hodnotit finanční informace.
+    <ul>
+      <li>Porovná finanční produkty (účty, spoření, pojištění) podle klíčových parametrů</li>
+      <li>Chápe daně -- proč existují, jak fungují, co financují</li>
+      <li>Přečte jednoduchou smlouvu a identifikuje klíčové body a rizika</li>
+      <li>Formuluje vlastní finanční plán a rozumí časové hodnotě peněz</li>
+    </ul>
+  </SkillItem>
+</Skill>

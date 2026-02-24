@@ -1,0 +1,103 @@
+---
+title: "9. ročník"
+sidebar:
+  order: 9
+  label: "9. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Statistická hypotéza</dt>
+  <dd>Tvrzení o datech, které chceme ověřit. Třeba: „Dívky čtou víc než chlapci." Hypotézu formulujeme před analýzou, ne po ní — jinak hledáme vzory tam, kde nejsou.</dd>
+
+  <dt>Statistická významnost (intuitivně)</dt>
+  <dd>Je pozorovaný rozdíl opravdu rozdíl, nebo jen náhoda? Když jeden tým vyhrál 51 ze 100 zápasů a druhý 49, je to asi náhoda. Když vyhrál 80, je to asi skutečný rozdíl.</dd>
+
+  <dt>Vícenásobné porovnání</dt>
+  <dd>Porovnávání více než dvou souborů najednou. Čím víc skupin porovnáváme, tím víc roste šance, že najdeme „rozdíl" jen díky náhodě.</dd>
+
+  <dt>Index (bazický, řetězový)</dt>
+  <dd>Poměr hodnoty k základu, často vyjádřený v procentech. Bazický index porovnává vše k jednomu roku (základ = 100 %). Řetězový porovnává vždy s předchozím obdobím.</dd>
+
+  <dt>Korelační koeficient (intuitivně)</dt>
+  <dd>Číslo od −1 do +1, které říká, jak silně spolu dvě veličiny souvisejí. +1 = dokonalá přímá souvislost, −1 = dokonalá nepřímá, 0 = žádná souvislost. Na ZŠ stačí intuice, ne vzorec.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Formulovat statistickou hypotézu a navrhnout, jak ji ověřit daty
+- Posoudit, zda je pozorovaný rozdíl mezi skupinami pravděpodobně náhodný, nebo významný
+- Porovnat více než dva soubory dat pomocí souhrnných ukazatelů
+- Pracovat s indexy pro porovnání vývoje v čase
+- Prezentovat výsledky porovnání přesvědčivě a s korektní argumentací
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Volební průzkumy a „statistická chyba"
+   Průzkum říká 25 % ± 3 %. Co to znamená pro porovnání dvou stran s 24 % a 26 %? Jsou opravdu rozdílné, nebo je to v rámci chyby?
+
+2. ### Porovnání ekonomik
+   HDP České republiky, Polska a Slovenska za posledních 10 let. Bazický index (rok 2014 = 100 %). Která ekonomika rostla nejrychleji?
+
+3. ### Léky a účinnost
+   Dva léky na bolest hlavy — jeden zabral u 70 % pacientů, druhý u 68 %. Je první opravdu lepší? Záleží na velikosti vzorku a dalších faktorech.
+
+4. ### Klimatická data
+   Porovnat průměrné teploty za posledních 50 let v 5 evropských městech. Kde se otepluje nejrychleji? Je trend statisticky patrný?
+
+5. ### Sportovní sezóny
+   Porovnat výkonnost týmu za 3 sezóny. Zlepšuje se, nebo stagnuje? Použít průměr, medián, rozptyl — a argumentovat.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Testování hypotézy
+
+   ⏱️ _2–3 hodiny_
+
+   Dítě formuluje hypotézu (např. „Dospělí odhadují vzdálenosti přesněji než děti"). Navrhne experiment, sesbírá data od obou skupin, spočítá ukazatele, porovná. Závěr: potvrdila se hypotéza?
+
+2. ### Indexový graf
+
+   ⏱️ _1–2 hodiny_
+
+   Najít data o vývoji cen 3 komodit za posledních 10 let. Přepočítat na bazický index (první rok = 100 %). Zakreslit do jednoho grafu a porovnat trendy.
+
+3. ### Turnaj porovnání
+
+   ⏱️ _2 hodiny_
+
+   Porovnat 4 evropské země ve 5 kategoriích (rozloha, obyvatelstvo, HDP na obyvatele, naděje na dožití, podíl obnovitelných zdrojů). Kdo „vyhraje" záleží na tom, co a jak porovnáváme — diskuze o férovém porovnání.
+
+4. ### Statistická gramotnost v médiích
+
+   ⏱️ _1 hodina_
+
+   Najít 3 články v médiích, které porovnávají data. Zhodnotit: Je porovnání férové? Jsou data přepočtená na srovnatelnou jednotku? Je zohledněna velikost vzorku? Napsat krátkou recenzi.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Český statistický úřad — Časové řady](https://www.czso.cz)<br />
+  Historická data o Česku — ekonomika, demografie, životní úroveň.
+
+- [Eurostat — Country Comparison](https://ec.europa.eu/eurostat/web/main)<br />
+  Porovnání evropských zemí v desítkách kategorií.
+
+- [Gapminder](https://www.gapminder.org/tools/) <Badge text="EN" variant="tip" /><br />
+  Interaktivní porovnání zemí — zdraví, ekonomika, vzdělání v čase.
+
+- [Seeing Theory — Comparing](https://seeing-theory.brown.edu/) <Badge text="EN" variant="tip" /><br />
+  Vizuální vysvětlení statistických konceptů včetně porovnávání (anglicky).
+
+- [Khan Academy — Significance Tests](https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample) <Badge text="EN" variant="tip" /><br />
+  Úvod do testování hypotéz a statistické významnosti (anglicky).

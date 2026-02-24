@@ -1,0 +1,103 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>GIS (geografický informační systém)</dt>
+  <dd>Počítačový systém pro práci s prostorovými daty. Umožňuje zobrazit na mapě různé vrstvy informací najednou — například silnice, řeky, hustotu obyvatelstva a průmysl. Příklad: Google Earth, ArcGIS Online.</dd>
+
+  <dt>Kartogram</dt>
+  <dd>Mapa, kde jsou oblasti vybarveny podle hodnoty sledovaného jevu — čím tmavší barva, tím vyšší hodnota. Typicky: HDP na obyvatele, hustota zalidnění, podíl lesů.</dd>
+
+  <dt>Kartodiagram</dt>
+  <dd>Mapa s grafy (koláčovými, sloupcovými) umístěnými přímo na mapě. Ukazuje strukturu jevu v daném místě — například podíl jednotlivých odvětví průmyslu v regionech.</dd>
+
+  <dt>Primární vs. sekundární zdroj</dt>
+  <dd>Primární zdroj = původní data (sčítání lidu, měření teploty). Sekundární zdroj = někdo data zpracoval a interpretoval (učebnice, článek, infografika). Primární je spolehlivější, sekundární je srozumitelnější.</dd>
+
+  <dt>Geolokace</dt>
+  <dd>Zjištění zeměpisné polohy zařízení (mobil, počítač) pomocí GPS, Wi-Fi nebo mobilní sítě. Využívají ji navigace, mapy, počasí i sociální sítě.</dd>
+
+  <dt>Open data</dt>
+  <dd>Veřejně dostupná data, která může kdokoliv zdarma používat. Stát a města zveřejňují data o dopravě, životním prostředí, demografii. Jsou to důvěryhodné primární zdroje.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Pracovat s kartogramy a kartodiagramy — přečíst, co zobrazují, a vyvodit závěry
+- Rozlišit primární a sekundární zdroje zeměpisných dat
+- Používat základní funkce GIS (Google Earth — vrstvy, měření, historické snímky)
+- Zpracovat zeměpisná data do vlastní mapy, tabulky nebo grafu
+- Kriticky posoudit aktuálnost a spolehlivost zeměpisných dat
+- Kombinovat informace z různých typů map a zdrojů pro odpověď na komplexní otázku
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Kde stavět novou školu?
+   Město řeší, kde postavit novou školu. Dítě pracuje s daty o hustotě zalidnění, věkové struktuře obyvatel a dopravní dostupnosti. Hledá optimální místo na mapě — průsečík potřeb a možností.
+
+2. ### Jak se mění klima
+   Dítě porovná klimatická data za posledních 30 let pro své město — průměrné teploty, srážky, extrémní jevy. Najde data na ČHMÚ, zpracuje do grafu. Vidí trend vlastníma očima.
+
+3. ### Odkud jsou turisté
+   Česko navštěvují miliony turistů. Dítě najde statistiky příjezdového cestovního ruchu, zpracuje do kartogramu Evropy (odkud jezdí nejvíc turistů) a vysvětlí, proč.
+
+4. ### Google Earth jako stroj času
+   Dítě v Google Earth porovná historické satelitní snímky svého okolí — jak se za 10–20 let změnila zástavba, zeleň, infrastruktura. GIS jako nástroj pro pochopení změn krajiny.
+
+5. ### Volební mapa
+   Po volbách se objeví mapa výsledků po krajích. Dítě analyzuje kartogram — kde vyhrála která strana, koreluje to s městem vs. venkovem, s nezaměstnaností? Zeměpis propojený s občanskou gramotností.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Průzkumník v Google Earth
+
+   ⏱️ _1 hodina_
+
+   Dítě dostane 5 souřadnic slavných míst (Machu Picchu, Velká čínská zeď, Sahara…). V Google Earth je najde, přepíná vrstvy (satelit, terén, 3D budovy), měří vzdálenosti. U každého místa zapíše 3 zjištění přímo z GIS.
+
+2. ### Kartogram vlastníma rukama
+
+   ⏱️ _1–2 hodiny_
+
+   Dítě najde data o HDP na obyvatele pro evropské státy (Eurostat nebo CIA Factbook). Na slepé mapě Evropy vybarví státy podle hodnoty — vytvoří vlastní kartogram. Přidá legendu a krátký komentář: co z mapy vyplývá?
+
+3. ### Detektiv zdrojů
+
+   ⏱️ _45 minut_
+
+   Připravte 5 zeměpisných údajů z různých zdrojů (Wikipedia, atlas z roku 2005, aktuální ČSÚ, blog cestovatelky, CIA Factbook). Dítě posoudí spolehlivost každého zdroje, seřadí od nejspolehlivějšího a vysvětlí proč.
+
+4. ### Jak se změnilo moje město
+
+   ⏱️ _1–2 hodiny_
+
+   Dítě porovná historické a současné mapy svého města nebo obce (staré mapy na oldmaps.geolab.cz, současné na Mapy.cz). Popíše hlavní změny — co přibylo, co zmizelo, jak se rozrostla zástavba.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Google Earth](https://earth.google.com)<br />
+  3D model Země se satelitními snímky, terénním zobrazením a historickými snímky. Funguje v prohlížeči.
+- [Eurostat](https://ec.europa.eu/eurostat) <Badge text="EN" variant="tip" /><br />
+  Statistický úřad EU — data o ekonomice, populaci, životním prostředí pro všechny členské státy.
+- [Staré mapy](https://oldmaps.geolab.cz)<br />
+  Historické mapy českých zemí — skvělé pro porovnání s dnešním stavem.
+- [ČHMÚ — historická data](https://www.chmi.cz)<br />
+  Český hydrometeorologický ústav — klimatická data, srážky, teploty.
+- [ArcGIS Online](https://www.arcgis.com/home/index.html) <Badge text="EN" variant="tip" /><br />
+  Profesionální GIS v prohlížeči — mnoho volně dostupných map a datasetů.

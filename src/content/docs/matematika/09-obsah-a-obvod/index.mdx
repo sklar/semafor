@@ -1,0 +1,82 @@
+---
+title: "09. Obsah a obvod"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Odhaduje a vypočítá obsah a obvod základních rovinných útvarů." />
+
+## Co to znamená?
+
+Dítě dokáže **spočítat, kolik místa zabírá rovinný útvar** (obsah) a **jak dlouhý je jeho okraj** (obvod). Nejde jen o dosazování do vzorečků — dítě by mělo chápat, co obsah a obvod vlastně vyjadřují a kde se s nimi potkáváme v životě.
+
+Začíná se u obdélníků a trojúhelníků, kde je výpočet přímočarý. Postupně přibývají rovnoběžníky, lichoběžníky a kruhy. Na konci 2. stupně by dítě mělo zvládnout i **složené útvary** — třeba půdorys místnosti ve tvaru L nebo plochu s kruhovým výřezem.
+
+Klíčová dovednost je **odhad**. Než dítě začne počítat, mělo by umět říct: *„Bude to asi takhle velké."* Odhad chrání před nesmyslnými výsledky a buduje geometrickou intuici.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Obdélník, čtverec, trojúhelník — obsah i obvod. Jednotky (cm², m²) a převody. Hodně praktického měření. |
+| **7.–8.** | **Prohlubujte.** Rovnoběžník, lichoběžník, kruh (π). Složené útvary z jednodušších tvarů. Převody jednotek obsahu. |
+| **9.** | Souhrnné úlohy, složené tvary, optimalizační úvahy (např. „jaký obdélník s daným obvodem má největší obsah?"). |
+
+<Aside title="Prerekvizity" type="tip">Bezpečné násobení a dělení desetinných čísel. Základní znalost geometrických útvarů (co je trojúhelník, obdélník, kružnice). Práce s jednotkami délky.</Aside>
+
+## Poznámky
+
+<Aside title="Měřte doma">Nejlepší způsob, jak pochopit obsah a obvod, je měřit reálné věci — podlahu v pokoji, zahradu, desku stolu. Dítě si spojí abstraktní vzorec s konkrétní zkušeností.</Aside>
+
+<Aside title="Obsah vs. obvod — jiné jednotky">Obsah se měří v čtverečních jednotkách (cm², m²), obvod v běžných jednotkách délky (cm, m). Zní to triviálně, ale mnoho dětí si to plete.</Aside>
+
+<Aside title="Typická past" type="caution">Záměna obsahu a obvodu. Dítě mechanicky násobí strany, aniž by se zamyslelo, jestli počítá plochu nebo okraj. Pomáhá vizualizace: obvod = provázek kolem tvaru, obsah = kolik dlaždic se dovnitř vejde.</Aside>
+
+<Aside title="Dulezite" type="danger">Vzorečky bez porozumění nemají smysl. Dítě by mělo umět vysvětlit, proč je obsah trojúhelníku „polovina obdélníku" — ne jen napsat a/2 × v.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 15 (objem a povrch) — obsah je základ pro výpočet povrchu těles
+- <Badge text="MAT" /> bod 11 (náčrt a konstrukce) — přesné rýsování útvarů, u kterých pak počítáme rozměry
+- <Badge text="JAS" /> (praktické úlohy — koberec do pokoje, plot kolem zahrady, nátěr zdi)
+- <Badge text="PUK" /> (výtvarná výchova — kompozice, formáty, měřítko)
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli nebo dítě nemělo příležitost ukázat, jak pracuje s obsahem a obvodem.</SkillItem>
+  <SkillItem level="novice">
+    Dítě rozlišuje obsah a obvod, ale výpočty jsou nejisté.
+    <ul>
+      <li>Spočítá obvod obdélníku sečtením stran, ale občas zapomene na všechny strany</li>
+      <li>Obsah obdélníku zvládne, u trojúhelníku tápe</li>
+      <li>Plete si jednotky — píše cm místo cm²</li>
+      <li>Neodhaduje výsledek předem, nedokáže posoudit, zda je výsledek realistický</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě počítá obsah a obvod základních útvarů, u složitějších potřebuje podporu.
+    <ul>
+      <li>Bezpečně počítá obvod i obsah obdélníku, čtverce a trojúhelníku</li>
+      <li>Zvládá rovnoběžník a lichoběžník s oporou o vzorec</li>
+      <li>S kruhem pracuje, ale výpočty s π nejsou plynulé</li>
+      <li>Převádí jednotky obsahu s občasnými chybami</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě samostatně počítá obsah i obvod všech základních útvarů včetně složených tvarů.
+    <ul>
+      <li>Plynule počítá obsah a obvod všech probraných útvarů včetně kruhu</li>
+      <li>Rozloží složený útvar na jednodušší části a spočítá celkový obsah/obvod</li>
+      <li>Odhaduje výsledek a kontroluje si ho — pozná nesmyslný výsledek</li>
+      <li>Aplikuje výpočty v reálných situacích (podlahová krytina, plot, nátěr)</li>
+    </ul>
+  </SkillItem>
+</Skill>

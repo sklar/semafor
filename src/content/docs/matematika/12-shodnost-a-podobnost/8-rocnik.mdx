@@ -1,0 +1,106 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Podobnost trojúhelníků</dt>
+  <dd>Dva trojúhelníky jsou podobné, pokud mají stejné úhly (a tedy strany v stejném poměru). Značíme ∼.</dd>
+
+  <dt>Koeficient podobnosti (k)</dt>
+  <dd>Poměr odpovídajících si stran podobných trojúhelníků. Pokud k = 2, druhý trojúhelník má strany 2× delší.</dd>
+
+  <dt>Věta uu (úhel, úhel)</dt>
+  <dd>Dva trojúhelníky jsou podobné, pokud mají shodné dva úhly. (Třetí úhel pak musí být také shodný, protože součet úhlů = 180°.)</dd>
+
+  <dt>Věta sus (strana, úhel, strana)</dt>
+  <dd>Dva trojúhelníky jsou podobné, pokud mají dvě strany v stejném poměru a úhel jimi sevřený shodný.</dd>
+
+  <dt>Věta sss (strana, strana, strana)</dt>
+  <dd>Dva trojúhelníky jsou podobné, pokud mají všechny tři strany v stejném poměru.</dd>
+
+  <dt>Poměr obsahů</dt>
+  <dd>Pokud jsou dva trojúhelníky podobné s koeficientem k, jejich obsahy jsou v poměru k². Trojúhelník 2× větší má 4× větší obsah.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Vyjmenovat a vysvětlit věty o podobnosti trojúhelníků (uu, sus, sss)
+- Určit koeficient podobnosti ze zadaných rozměrů
+- Pomocí podobnosti spočítat neznámou stranu trojúhelníku
+- Chápat vztah koeficientu podobnosti a poměru obsahů (k²)
+- Rozlišovat shodnost (k = 1) a podobnost (k může být libovolné kladné číslo)
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Výška stromu pomocí stínu
+   Strom vrhá stín 12 m, tyč 2 m vysoká vrhá stín 3 m. Jak vysoký je strom? Trojúhelníky (strom + stín) a (tyč + stín) jsou podobné — poměr výšek = poměr stínů. Strom = 2 × 12/3 = 8 m. — Klasická aplikace podobnosti.
+
+2. ### Zvětšení fotografie
+   Fotka 10×15 cm se zvětšuje na 20×30 cm. Koeficient podobnosti k = 2. Kolikrát víc papíru potřebujete? 4× (k²). — Podobnost a obsah.
+
+3. ### Technický výkres
+   Výkres v měřítku 1:100. Stěna na výkresu 5 cm = 5 m ve skutečnosti. Obsah místnosti na výkresu 20 cm² = kolik m²? 20 × 100² cm² = 200 000 cm² = 20 m². — Měřítko a poměr obsahů.
+
+4. ### Šířka řeky
+   Ze břehu vidíte strom na protějším břehu. Pomocí dvou měření úhlů a jedné známé vzdálenosti na svém břehu spočítáte šířku řeky — díky podobným trojúhelníkům. — Měření nedostupných vzdáleností.
+
+5. ### Pyramidy a Thales
+   Podle legendy Thales změřil výšku pyramidy pomocí jejího stínu a svého vlastního stínu. Dva podobné trojúhelníky. — Historická aplikace, která funguje dodnes.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Měření výšky stínovou metodou
+
+   ⏱️ _1 hodina (venku)_
+
+   Dítě změří svůj stín a svou výšku, pak stín stromu (budovy, sloupu). Pomocí podobnosti spočítá výšku objektu. Opakujte v různou denní dobu — mění se výsledek? (Neměl by.) — Nejklasičtější aplikace podobnosti.
+
+2. ### Poměr obsahů
+
+   ⏱️ _45 minut_
+
+   Narýsujte trojúhelník. Zvětšete ho 2× — spočítejte obsah obou. Poměr? 1:4. Zvětšete 3× — poměr 1:9. Obecně k² . Dítě vyzkouší na několika příkladech a odvodí pravidlo. — Experimentální odvození.
+
+3. ### Detektiv podobnosti
+
+   ⏱️ _30 minut_
+
+   10 párů trojúhelníků s vyznačenými rozměry. U každého: jsou podobné? Pokud ano, jaký je koeficient? Jakou větu použijete? — Systematické procvičení.
+
+4. ### Neznámá strana
+
+   ⏱️ _45 minut_
+
+   Série úloh: dva podobné trojúhelníky, některé strany známe, jednu neznáme. Dítě najde koeficient a dopočítá. Začíná jednoduše, postupně přidáváme převrácené poměry a dvě neznámé. — Od jednoduchého ke složitějšímu.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Podobnost trojúhelníků](https://www.matematika.cz/podobnost-trojuhelniku)<br />
+  Věty o podobnosti, koeficient, příklady.
+
+- [GeoGebra — podobnost](https://www.geogebra.org/geometry)<br />
+  Interaktivní zvětšování trojúhelníků — vizualizace koeficientu.
+
+- [Khan Academy — Similarity](https://www.khanacademy.org/math/geometry/hs-geo-similarity) <Badge text="EN" variant="tip" /><br />
+  Video lekce o podobnosti trojúhelníků.
+
+- [Mathigon — Similarity](https://mathigon.org/course/triangles/similarity) <Badge text="EN" variant="tip" /><br />
+  Interaktivní kurz s vizualizacemi.
+
+- [Matematika.cz — Věty o podobnosti](https://www.matematika.cz/vety-o-podobnosti)<br />
+  Přehled vět uu, sus, sss s důkazy.

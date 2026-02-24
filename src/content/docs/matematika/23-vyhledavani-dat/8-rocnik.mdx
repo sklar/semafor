@@ -1,0 +1,106 @@
+---
+title: "8. ročník"
+sidebar:
+  order: 8
+  label: "8. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Histogram</dt>
+  <dd>Sloupcový graf pro spojitá data rozdělená do intervalů. Na rozdíl od běžného sloupcového grafu se sloupce dotýkají — data plynule přecházejí z jednoho intervalu do druhého. Třeba rozložení výšek dětí po 5cm intervalech.</dd>
+
+  <dt>Medián</dt>
+  <dd>Prostřední hodnota, když data seřadíme od nejmenší po největší. Z hodnot 2, 5, 8, 12, 100 je medián 8. Na rozdíl od průměru ho neovlivní extrémní hodnoty.</dd>
+
+  <dt>Modus</dt>
+  <dd>Nejčastější hodnota v souboru. V datech 3, 5, 5, 7, 5, 9 je modus 5, protože se vyskytuje třikrát. Soubor může mít i více modů.</dd>
+
+  <dt>Zkreslení dat</dt>
+  <dd>Způsob, jak data nebo graf mohou vypadat jinak, než odpovídá skutečnosti. Oříznutá osa Y, nevhodné měřítko nebo chybějící kontext — to vše může čtenáře uvést v omyl.</dd>
+
+  <dt>Primární vs. sekundární zdroj</dt>
+  <dd>Primární zdroj = data, která jsme sami nasbírali (vlastní anketa). Sekundární zdroj = data od někoho jiného (statistický úřad, noviny). U sekundárních dat se vždy ptáme: kdo je sbíral a proč?</dd>
+
+  <dt>Korelace</dt>
+  <dd>Když se dvě veličiny mění společně — třeba čím víc trénuješ, tím lépe běžíš. Pozor: korelace neznamená, že jedno způsobuje druhé!</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Spočítat medián a modus datového souboru
+- Rozhodnout, kdy je lepší použít průměr a kdy medián
+- Vytvořit histogram z naměřených dat
+- Rozpoznat zkreslení v grafech (oříznutá osa, chybějící legenda)
+- Pracovat se sekundárními datovými zdroji (ČSÚ, Eurostat) a citovat je
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Platy a průměr vs. medián
+   Průměrný plat v Česku vs. mediánový plat — proč se liší? Dítě pochopí, proč medián lépe popisuje „typický" plat, když pár lidí vydělává mnohonásobně víc.
+
+2. ### Reklama a statistika
+   Reklama tvrdí: „9 z 10 doporučuje!" — ale koho se ptali? Kolik lidí celkem? Jak byla otázka formulovaná? Kritický pohled na data v reklamě.
+
+3. ### Výsledky sportovních závodů
+   Časy běžců na závodě zapsat, seřadit, najít medián a modus. Vytvořit histogram — kolik běžců bylo v jakém časovém rozmezí?
+
+4. ### Demografická data
+   Na stránkách ČSÚ najít data o počtu obyvatel, věkovém složení nebo porodnosti. Přečíst tabulky a grafy, okomentovat trend.
+
+5. ### Manipulativní grafy
+   Najít příklady grafů v médiích, kde je oříznutá osa Y nebo nevhodné měřítko. Jak by graf vypadal korektně? Co se autor snažil zdůraznit?
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Průměr vs. medián — experiment
+
+   ⏱️ _1 hodina_
+
+   Vymyslet datový soubor, kde se průměr a medián výrazně liší (např. příjmy v rodině, kde jeden člen vydělává hodně). Spočítat obojí. Který lépe popisuje „typickou" hodnotu? Kdy je průměr zavádějící?
+
+2. ### Detektiv manipulace
+
+   ⏱️ _1–2 hodiny_
+
+   Najít na internetu 5 grafů a zhodnotit je: Má graf popsané osy? Začíná osa Y od nuly? Je měřítko rovnoměrné? Chybí zdroj dat? Dítě vytvoří „zprávu detektiva" s hodnocením každého grafu.
+
+3. ### Histogram třídy
+
+   ⏱️ _1–2 hodiny_
+
+   Změřit délku chodidla všech členů rodiny a známých (alespoň 15 lidí). Data roztřídit do intervalů po 1 cm, vytvořit histogram. Jaký tvar má rozložení? Kde je nejvíc lidí?
+
+4. ### Sekundární data — ČSÚ
+
+   ⏱️ _1 hodina_
+
+   Na webu Českého statistického úřadu najít data o vybraném tématu (migrace, vzdělání, průmysl). Přečíst tabulku, vybrat zajímavý údaj, vytvořit graf a napsat krátký komentář.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Český statistický úřad](https://www.czso.cz)<br />
+  Oficiální zdroj statistických dat o Česku — tabulky, grafy, otevřená data.
+
+- [Khanova škola — Medián, průměr, modus](https://cs.khanacademy.org/math/statistics-probability/summarizing-quantitative-data)<br />
+  Videa a cvičení o středních hodnotách v češtině.
+
+- [Matematika.cz — Statistika](https://www.matematika.cz/statistika)<br />
+  Přehled statistických pojmů s řešenými příklady.
+
+- [Spurious Correlations](https://www.tylervigen.com/spurious-correlations) <Badge text="EN" variant="tip" /><br />
+  Zábavné příklady falešných korelací — skvělý materiál pro diskuzi o tom, že korelace ≠ kauzalita.
+
+- [Khan Academy — Misleading Graphs](https://www.khanacademy.org/math/statistics-probability/displaying-describing-data) <Badge text="EN" variant="tip" /><br />
+  Jak rozpoznat zavádějící grafy (anglicky).

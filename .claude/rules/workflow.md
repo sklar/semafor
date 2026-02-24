@@ -1,5 +1,4 @@
 # Development Workflow
 
 - Pin exact versions when adding dependencies or devDependencies (no `^` or `~` ranges).
-- Never use the git commit command after a task is finished.
-
+- Verify changes with `pnpm build` — should produce 0 errors.

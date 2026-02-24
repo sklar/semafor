@@ -1,0 +1,106 @@
+---
+title: "9. ročník"
+sidebar:
+  order: 9
+  label: "9. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Lomený výraz</dt>
+  <dd>Zlomek, kde v čitateli nebo jmenovateli (nebo obou) je mnohočlen. Například (x + 1)/(x − 2) nebo (3x²)/(6x). Jmenovatel nesmí být 0 — podmínka: x ≠ 2.</dd>
+
+  <dt>Krácení lomených výrazů</dt>
+  <dd>Stejný princip jako u zlomků — dělíme čitatele i jmenovatele společným výrazem. (6x²)/(3x) = 2x. (x² − 9)/(x + 3) = (x − 3)(x + 3)/(x + 3) = x − 3.</dd>
+
+  <dt>Rozklad trinómu</dt>
+  <dd>Rozklad x² + bx + c na součin (x + p)(x + q), kde p + q = b a p × q = c. x² + 7x + 12 = (x + 3)(x + 4), protože 3 + 4 = 7 a 3 × 4 = 12.</dd>
+
+  <dt>Substituce</dt>
+  <dd>Nahrazení složitého výrazu jednoduchou proměnnou pro zjednodušení. Pokud t = x², pak x⁴ − 5x² + 4 = t² − 5t + 4 = (t − 1)(t − 4) = (x² − 1)(x² − 4).</dd>
+
+  <dt>Definiční obor výrazu</dt>
+  <dd>Množina hodnot proměnné, pro které má výraz smysl. U (x + 1)/(x − 2) nesmí být jmenovatel 0, takže x ≠ 2. Definiční obor: všechna reálná čísla kromě 2.</dd>
+
+  <dt>Identita</dt>
+  <dd>Rovnost, která platí pro všechny hodnoty proměnné. (a + b)² = a² + 2ab + b² je identita — platí vždy. Naproti tomu x + 3 = 7 platí jen pro x = 4 (to je rovnice).</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Rozložit na součin pomocí vytýkání, vzorců i rozkladu trinómu
+- Krátit lomené výrazy po rozkladu na součin
+- Určit definiční obor lomeného výrazu
+- Používat substituci pro zjednodušení složitějších výrazů
+- Propojit algebraické úpravy s řešením rovnic
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Optimalizace krabice
+   Z plechu a × a vyřízneme v rozích čtverečky o straně x a ohneme do krabice. Objem: x(a − 2x)². Roznásobíme: x(a² − 4ax + 4x²) = a²x − 4ax² + 4x³. Pro jaké x je objem největší? (Náhled na optimalizaci.)
+
+2. ### Průměrná rychlost
+   Tam jedeme rychlostí v₁, zpět rychlostí v₂. Průměrná rychlost není (v₁ + v₂)/2! Je to 2v₁v₂/(v₁ + v₂) — lomený výraz. Pro v₁ = 60 a v₂ = 40: 2 × 60 × 40/100 = 48 km/h.
+
+3. ### Elektronika — odpor
+   Dva odpory R₁ a R₂ zapojené paralelně: celkový odpor = R₁R₂/(R₁ + R₂). Lomený výraz v praxi. Pro R₁ = 100 a R₂ = 200: 100 × 200/300 ≈ 66,7 ohmů.
+
+4. ### Cenová elasticita
+   Zvýšíme cenu o x %, prodej klesne o y %. Nový výnos: (1 + x/100)(1 − y/100) × původní výnos. Roznásobíme: 1 + x/100 − y/100 − xy/10000. Algebraická analýza obchodní situace.
+
+5. ### Dědičnost
+   V genetice: pravděpodobnost, že dítě zdědí vlastnost = p²/(p² + 2pq + q²) = p²/(p + q)². Lomený výraz, který po rozkladu jmenovatele dává smysl — ale jen s algebrou.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Rozkladové mistrovství
+
+   ⏱️ _45 minut_
+
+   Kartičky s mnohočleny na jedné straně a rozklady na druhé. Dítě otáčí kartičku, rozloží a kontroluje. Body za rychlost a správnost. Postupně složitější: od vytýkání přes vzorce po trinómy.
+
+2. ### Lomené výrazy v praxi
+
+   ⏱️ _1 hodina_
+
+   Sbírka 5 reálných vzorců s lomenými výrazy (průměrná rychlost, paralelní odpor, optika — vzorec pro čočku 1/f = 1/a + 1/b). Dítě dosazuje čísla, počítá a upravuje výrazy. Algebra není abstrakce — je všude.
+
+3. ### Krabice z papíru
+
+   ⏱️ _1 hodina_
+
+   Vystřihněte z čtverce papíru (20 × 20 cm) rohové čtverečky velikosti 1, 2, 3, 4 cm. Ohněte do krabic. Změřte objemy. Zapište vzorec V = x(20 − 2x)². Který výřez dává největší objem? Ověřte prakticky.
+
+4. ### Algebra v programování
+
+   ⏱️ _45 minut_
+
+   V libovolném programovacím jazyce (Python, Scratch) napište program, který dosazuje za proměnnou ve výrazu. Vstup: x. Výstup: hodnota výrazu. Dítě vidí, že programování je vlastně algebra v akci.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Lomené výrazy](https://www.matematika.cz/lomene-vyrazy)<br />
+  Výklad krácení a operací s lomenými výrazy.
+
+- [Khanova škola — Rozklad na součin](https://cs.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratics-multiplying-factoring)<br />
+  Videa o rozkladu mnohočlenů.
+
+- [Math is Fun — Factoring Quadratics](https://www.mathsisfun.com/algebra/factoring-quadratics.html) <Badge text="EN" variant="tip" /><br />
+  Interaktivní výklad rozkladu trinómů.
+
+- [Khan Academy — Rational Expressions](https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:rational) <Badge text="EN" variant="tip" /><br />
+  Kurz lomených výrazů.
+
+- [Wolfram Alpha](https://www.wolframalpha.com/) <Badge text="EN" variant="tip" /><br />
+  Algebraický kalkulátor — dítě si ověřuje rozklady a úpravy.

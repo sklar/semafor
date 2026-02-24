@@ -1,0 +1,83 @@
+---
+title: "02. Textové a grafické editory"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Ovládá práci s textovými a grafickými editory i tabulkovými editory a využívá vhodných aplikací." />
+
+## Co to znamená?
+
+Dítě umí prakticky používat základní nástroje pro tvorbu dokumentů — textový editor (Word, Google Docs, LibreOffice Writer), grafický editor (Canva, GIMP, Inkscape) a tabulkový editor (Excel, Google Sheets). Nejde jen o to "kliknout na tučné písmo", ale o pochopení, kdy a proč který nástroj použít.
+
+V praxi to znamená, že když dítě potřebuje napsat referát, vytvořit plakát nebo zpracovat data z experimentu, dokáže si samo vybrat správný nástroj a efektivně ho použít. Ví, že tabulkový editor není jen "tabulka na papíře v počítači", ale nástroj, který umí počítat, třídit a vizualizovat data.
+
+Tenhle výstup je hodně praktický — a je dobré ho rozvíjet průběžně, ne jako izolované "hodiny informatiky". Nejlepší je zapojit editory do běžné práce na všech předmětech: referát z dějepisu, graf z přírodovědy, plakát na akci.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Základní práce s textem — formátování, nadpisy, odrážky, vkládání obrázků. V tabulkovém editoru jednoduché tabulky a základní vzorce (součet, průměr). V grafickém editoru ořez fotky, jednoduchý koláž. |
+| **7.–8.** | **Prohlubujte.** Styly a šablony v textovém editoru, obsah a záhlaví. Tabulky s podmíněným formátováním, grafy. Grafický editor pro tvorbu plakátů, infografik, jednoduchou vektorovou grafiku. |
+| **9.** | **Samostatná komplexní práce.** Dítě zvládne vytvořit rozsáhlejší dokument s automatickým obsahem, zpracovat data z vlastního průzkumu do grafů, připravit vizuálně konzistentní materiály pro prezentaci. |
+
+<Aside title="Prerekvizity" type="tip">Základní práce s počítačem — ovládání myši, klávesnice, ukládání souborů. Většina dětí tohle v 6. třídě zvládá, ale ověřte si to — někdy jsou zvyklé jen na tablet.</Aside>
+
+## Poznámky
+
+<Aside title="Nechte dítě vybrat si nástroj">Neexistuje jeden "správný" editor. Pokud dítěti vyhovuje Google Docs místo Wordu nebo Canva místo GIMPu, je to v pořádku. Důležité je pochopit principy, ne ovládat konkrétní program.</Aside>
+
+<Aside title="Zadávejte reálné úkoly">Nejlepší motivace je skutečná potřeba: napsat pozvánku na oslavu, udělat rozpočet na výlet, vytvořit plakát na kroužek. Uměle vymyšlené cvičení typu "naformátuj tento odstavec" nikoho nebaví.</Aside>
+
+<Aside title="Typická past" type="caution">Soustředit se na "klikání v menu" místo na výsledek. Dítě nepotřebuje znát každou funkci editoru — potřebuje umět vytvořit kvalitní dokument. Funkce si najde, když bude vědět, čeho chce dosáhnout.</Aside>
+
+<Aside title="Důležité" type="danger">Naučte dítě pravidelně ukládat práci a pracovat se zálohami. Ztráta hodinové práce kvůli "zamrzlému počítači" je zbytečná frustrace, které se dá předejít. Cloudové nástroje (Google Docs) ukládají automaticky — to je velká výhoda pro začátečníky.</Aside>
+
+## Souvislosti
+
+- <Badge text="ČJ" /> bod 06 (tvorivý koherentní text) — textový editor je nástroj pro tvorbu textů, ale kvalita textu závisí na jazykových dovednostech
+- <Badge text="ČJ" /> bod 14 (tvorivý pisemný projev) — formální úprava textu jde ruku v ruce s obsahem
+- <Badge text="JAS" /> bod 03 (typografická pravidla) — formátování textu souvisí s typografií
+- <Badge text="JAS" /> bod 06 (prezentace informací) — editory jsou nástroje pro prezentaci
+- <Badge text="MAT" /> bod 01 (početní operace) — tabulkový editor pomáhá s výpočty a vizualizací dat
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost ukázat, jak pracuje s editory, nebo používá jen základní poznámkový blok.</SkillItem>
+  <SkillItem level="novice">
+    Dítě zvládne základní operace, ale potřebuje průběžné vedení a často se ztrácí v rozhraní.
+    <ul>
+      <li>V textovém editoru píše, ale nepoužívá nadpisy, styly ani strukturu — vše je jeden blok textu</li>
+      <li>V tabulkovém editoru vyplní buňky, ale nepoužívá vzorce</li>
+      <li>Grafický editor používá jen pro ořez nebo otočení fotky</li>
+      <li>Neví, kdy použít který typ editoru — na všechno sahá po textovém</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě pracuje s editory funkčně, v jednodušších úkolech samostatně, u složitějších potřebuje radu.
+    <ul>
+      <li>Textový dokument má nadpisy, odrážky, vložené obrázky — vypadá přehledně</li>
+      <li>V tabulce používá základní vzorce (SUM, AVERAGE), umí vytvořit jednoduchý graf</li>
+      <li>V grafickém editoru vytvoří plakát nebo jednoduchou infografiku</li>
+      <li>Rozumí rozdílu mezi rastrem a vektorem, mezi tabulkou a textem s tabulátory</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě efektivně a samostatně pracuje se všemi třemi typy editorů, volí správný nástroj pro daný úkol.
+    <ul>
+      <li>Vytváří strukturované dokumenty se styly, obsahem, záhlavím a zápatím</li>
+      <li>V tabulkách pracuje s podmínkami (IF), řazením, filtrováním a vytváří přehledné grafy</li>
+      <li>Grafické materiály jsou vizuálně konzistentní a účelné</li>
+      <li>Kombinuje nástroje pro komplexní výstupy — data z tabulky vizualizuje v grafu, vloží do dokumentu</li>
+    </ul>
+  </SkillItem>
+</Skill>

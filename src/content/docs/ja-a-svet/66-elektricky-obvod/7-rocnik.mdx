@@ -1,0 +1,101 @@
+---
+title: "7. ročník"
+sidebar:
+  order: 7
+  label: "7. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Napětí (U)</dt>
+  <dd>Rozdíl elektrického potenciálu -- "tlak", který žene elektrony obvodem. Jednotka: volt (V). Baterie AA má 1,5 V, zásuvka 230 V. Větší napětí = větší "tlak" na elektrony.</dd>
+
+  <dt>Proud (I)</dt>
+  <dd>Množství elektřiny, které proteče vodičem za sekundu. Jednotka: ampér (A). Žárovka spotřebuje zlomky ampéru, varná konvice několik ampérů.</dd>
+
+  <dt>Odpor (R)</dt>
+  <dd>Jak moc materiál brzdí proud. Jednotka: ohm (Ω). Tenký drát má větší odpor než tlustý. Delší drát má větší odpor než kratší. Měď má malý odpor, grafit velký.</dd>
+
+  <dt>Ohmův zákon</dt>
+  <dd>U = R × I (napětí = odpor krát proud). Když znáte dvě veličiny, spočítáte třetí. Základní vzorec elektrotechniky.</dd>
+
+  <dt>Paralelní zapojení</dt>
+  <dd>Spotřebiče zapojené vedle sebe -- každý má svou vlastní větev. Když jedna žárovka zhasne, ostatní svítí dál. Tak je zapojena většina spotřebičů v domácnosti.</dd>
+
+  <dt>Zkrat</dt>
+  <dd>Situace, kdy proud teče přímo ze zdroje zpět bez spotřebiče -- odpor je téměř nulový, proud obrovský. Hrozí požár nebo poškození. Proto máme pojistky -- přeruší obvod při příliš velkém proudu.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Vysvětlit, co je napětí, proud a odpor na jednoduché analogii (např. voda v potrubí)
+- Použít Ohmův zákon k výpočtu napětí, proudu nebo odporu
+- Popsat rozdíl mezi sériovým a paralelním zapojením
+- Vědět, k čemu slouží pojistka a proč je zkrat nebezpečný
+- Nakreslit schéma obvodu se správnými značkami
+- Chápat, že větší odpor = menší proud (při stejném napětí)
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Vodní analogie
+   Napětí je jako výška vodního sloupce (tlak). Proud je jako množství tekoucí vody. Odpor je jako zúžená trubka -- čím užší, tím méně vody proteče. Ohmův zákon je jako zákon proudění vody.
+
+2. ### Pojistky v rozvodné skříni
+   V bytě je rozvodná skříň s pojistkami (jističi). Každý jistič chrání jeden obvod (kuchyň, světla, zásuvky). Když je proud příliš velký (zkrat nebo přetížení), jistič obvod přeruší. Bez něj by hrozil požár.
+
+3. ### Proč žárovky v bytě svítí nezávisle
+   V bytě jsou spotřebiče zapojeny paralelně. Když vypnete světlo v kuchyni, televize v obýváku svítí dál. Každý spotřebič má svou větev obvodu -- jsou na sobě nezávislé.
+
+4. ### Prodlužovačka a přetížení
+   Prodlužovačka má maximální zatížení (např. 3500 W). Když do ní zapojíte varnou konvici (2000 W), topení (2000 W) a vysavač (1500 W), celkový odběr je 5500 W -- přetížení. Kabel se zahřívá, hrozí požár.
+
+5. ### Baterie v ovladači
+   Dva články AA (každý 1,5 V) jsou v ovladači zapojeny sériově -- napětí se sečte: 3 V. Díky tomu ovladač funguje. Kdyby byly paralelně, napětí by bylo stále 1,5 V, ale vydržel by déle.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Ohmův zákon v praxi
+
+   ⏱️ _1 hodina_
+
+   S elektrostavebnicí nebo jednoduchým obvodem (baterie 4,5 V, rezistory, LED) dítě měří napětí voltmetrem a proud ampérmetrem. Mění odpor (různé rezistory) a sleduje, jak se mění proud. Zapisuje do tabulky a ověřuje U = R × I.
+
+2. ### Sériové vs. paralelní
+
+   ⏱️ _45 minut_
+
+   Dítě zapojí dvě žárovky sériově a změří jas (nebo proud). Pak je zapojí paralelně. V kterém zapojení svítí jasněji? Co se stane, když jednu vymontujeme? Výsledky zapíše a nakreslí schémata obou zapojení.
+
+3. ### Mapa obvodů v bytě
+
+   ⏱️ _1 hodina_
+
+   Dítě nakreslí plán bytu a zanese, kde jsou zásuvky, vypínače a světla. Pak zkouší: když vypne jistič č. 1, co přestane fungovat? A jistič č. 2? Rekonstruuje, které spotřebiče patří do kterého obvodu.
+
+4. ### Stavba složitého obvodu
+
+   ⏱️ _1,5 hodiny_
+
+   Z elektrostavebnice (Boffin, snap circuits) dítě sestaví obvod s vypínačem, dvěma žárovkami (jednou sériově, jednou paralelně) a buzzerem. Nakreslí schéma. Diskutujte, co se stane, když různé části odpojíte.
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Ohmův zákon -- Fyzika pro ZŠ](https://fyzika.jreichl.com/main.article/view/242-ohmuv-zakon)<br />
+  Srozumitelné vysvětlení s příklady a obrázky.
+- [Boffin elektrostavebnice](https://www.boffin.cz)<br />
+  Česká stavebnice pro experimenty s obvody.
+- English: <Badge text="EN" variant="tip" /> [PhET -- Circuit Construction Kit](https://phet.colorado.edu/en/simulations/circuit-construction-kit-dc)<br />
+  Virtuální stavba obvodů s voltmetrem a ampérmetrem.
+- English: <Badge text="EN" variant="tip" /> [Khan Academy -- Ohm's law](https://www.khanacademy.org/science/physics/circuits-topic/circuits-resistance)<br />
+  Videa o Ohmově zákoně, odporu a zapojeních.

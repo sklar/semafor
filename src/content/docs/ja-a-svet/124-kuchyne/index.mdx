@@ -1,0 +1,83 @@
+---
+title: "124. Kuchyně"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Používá základní kuchyňský inventář a bezpečně obsluhuje základní spotřebiče, připraví jednoduché pokrmy." />
+
+## Co to znamená?
+
+Dítě se orientuje v kuchyni — ví, k čemu slouží základní náčiní, spotřebiče a pomůcky, a umí je bezpečně používat. Zvládne si připravit jednoduché jídlo, dodržuje hygienu a po sobě uklidí.
+
+Nejde jen o vaření jako takové. Jde o pochopení, jak kuchyně funguje — od nože a prkénka přes sporák a troubu až po lednici a její organizaci. Dítě by mělo vědět, proč se maso krájí na jiném prkénku než zelenina, proč se hrnec nepřehřívá naprázdno a jak správně skladovat potraviny.
+
+Vaření je skvělá příležitost propojit praktické dovednosti s matematikou (měření, přepočty), přírodovědou (chemické reakce při vaření) a zdravým životním stylem.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Bezpečný pohyb v kuchyni, základní náčiní (nůž, prkénko, hrnec, pánev), jednoduché studené pokrmy, ohřívání jídla, mytí nádobí. |
+| **7.–8.** | **Prohlubujte.** Vaření jednoduchých teplých jídel (těstoviny, vejce, polévka), pečení, práce s receptem, plánování jídelníčku na den, správné skladování potravin. |
+| **9.** | **Samostatnost.** Dítě naplánuje a připraví kompletní jídlo pro rodinu, nakoupí suroviny, zvládne složitější recepty, improvizuje s tím, co je doma. |
+
+<Aside title="Prerekvizity" type="tip">Základní bezpečnostní návyky — zacházení s ostrými předměty a horkými povrchy. Většina dětí v 6. ročníku už nějakou zkušenost z kuchyně má, ale ověřte si úroveň.</Aside>
+
+## Poznámky
+
+<Aside title="Vařte spolu">Nejlepší způsob učení je společné vaření. Nechte dítě aktivně pomáhat — krájet, míchat, dochucovat. Postupně předávejte víc a víc odpovědnosti, až dítě vaří samo a vy jen asistujete.</Aside>
+
+<Aside title="Recepty jako návod k použití">Naučte dítě pracovat s receptem jako s návodem — přečíst celý, připravit suroviny předem, dodržovat postup. Je to stejná dovednost jako čtení jakéhokoli technického návodu.</Aside>
+
+<Aside title="Typická past" type="caution">Dělat z vaření "speciální událost" místo běžné součásti dne. Dítě se nenaučí vařit, když peče jednou za měsíc dort. Naučí se, když třikrát týdně připravuje oběd nebo večeři.</Aside>
+
+<Aside title="Důležité" type="danger">Bezpečnost v kuchyni je absolutní priorita. Naučte dítě: nůž vždy od sebe, hrnec rukojetí dovnitř, mokré ruce pryč od elektřiny, hořící olej NIKDY nehasit vodou (přikrýt pokličkou). Tyto návyky musí být automatické.</Aside>
+
+## Souvislosti
+
+- <Badge text="JAS" /> bod 123 (domacnost) — kuchyně je součást domácnosti
+- <Badge text="JAS" /> bod 128 (bezpecnost pri praci) — bezpečnostní návyky při vaření
+- <Badge text="JAS" /> bod 33 (zakladni zivotni potreby) — výživa jako základní potřeba
+- <Badge text="MAT" /> bod 01 (pocetni operace) — přepočty surovin, měření, poměry
+- <Badge text="JAS" /> bod 125 (experimenty) — vaření jako experiment s postupem
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě v kuchyni nepracuje nebo nemělo příležitost ukázat, co zvládne.</SkillItem>
+  <SkillItem level="novice">
+    Dítě zvládne základní úkony s vedením, ale v kuchyni se necítí jistě.
+    <ul>
+      <li>Připraví studený pokrm (chleba s máslem, salát), ale potřebuje dohled</li>
+      <li>Ví, kde co v kuchyni je, ale neorientuje se v náčiní</li>
+      <li>Ohřeje jídlo v mikrovlnce, ale sporák používá jen s dohledem</li>
+      <li>Po sobě uklidí, ale nepravidelně a ne úplně</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě pracuje v kuchyni samostatně u jednodušších jídel, u složitějších potřebuje radu.
+    <ul>
+      <li>Uvaří jednoduché teplé jídlo podle receptu (těstoviny, vajíčka, polévku)</li>
+      <li>Bezpečně zachází s nožem, sporákem a troubou</li>
+      <li>Rozumí základním technikám — vařit, smažit, péct, dusit</li>
+      <li>Dodržuje hygienu — myje ruce, odděluje prkénka, kontroluje trvanlivost</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě se v kuchyni pohybuje sebejistě, vaří samostatně a kreativně.
+    <ul>
+      <li>Naplánuje jídelníček, nakoupí suroviny a připraví kompletní jídlo pro rodinu</li>
+      <li>Improvizuje s dostupnými surovinami, upravuje recepty podle chuti</li>
+      <li>Ovládá různé techniky přípravy a ví, kdy kterou použít</li>
+      <li>Dbá na vyváženou stravu, rozumí základům výživy</li>
+    </ul>
+  </SkillItem>
+</Skill>

@@ -1,0 +1,106 @@
+---
+title: "7. ročník"
+sidebar:
+  order: 7
+  label: "7. ročník"
+---
+
+import { Badge, Steps } from '@astrojs/starlight/components'
+
+## 📇 Základní pojmy
+
+<dl class="basic-terms">
+  <dt>Koeficient přímé úměrnosti</dt>
+  <dd>Číslo, kterým násobíme jednu veličinu, abychom dostali druhou. Když y = 3x, koeficient je 3. Kilogram za 35 Kč → koeficient je 35 (cena = 35 × hmotnost).</dd>
+
+  <dt>Graf přímé úměrnosti</dt>
+  <dd>Přímka procházející počátkem (bodem [0, 0]). Čím strmější přímka, tím větší koeficient. Graf přímé úměrnosti vždy začíná v nule — nula kusů stojí nula korun.</dd>
+
+  <dt>Graf nepřímé úměrnosti</dt>
+  <dd>Křivka (hyperbola), která se blíží k osám, ale nikdy se jich nedotkne. Klesá — jak jedna veličina roste, druhá klesá. Nikdy neprotne osu (nulou dělit nelze).</dd>
+
+  <dt>Konstanta úměrnosti (nepřímá)</dt>
+  <dd>U nepřímé úměrnosti je součin obou veličin stále stejný. Když x · y = 60, pak pro x = 2 je y = 30, pro x = 3 je y = 20, atd. Tato konstanta se nemění.</dd>
+
+  <dt>Souřadnicová soustava</dt>
+  <dd>Dvě kolmé osy (x a y) tvořící mřížku. Každý bod má dvě souřadnice — [x, y]. Slouží k zakreslení grafů funkcí a úměrností.</dd>
+
+  <dt>Interpolace</dt>
+  <dd>Odhad hodnoty „mezi" známými body. Když víme, že při 2 km je cena 50 Kč a při 4 km 100 Kč, při 3 km odhadneme 75 Kč. U přímé úměrnosti je interpolace přesná.</dd>
+</dl>
+
+## 🎓 Co by mělo dítě znát
+
+- Zapsat přímou úměrnost rovnicí y = kx a určit koeficient k
+- Nakreslit graf přímé úměrnosti v souřadnicové soustavě
+- Zapsat nepřímou úměrnost rovnicí y = k/x a určit konstantu k
+- Rozlišit graf přímé a nepřímé úměrnosti
+- Řešit složitější trojčlenky (přímé i nepřímé)
+
+## 🌳 Příklady z reálného světa
+
+<Steps>
+
+1. ### Telefonní tarif
+   Volání stojí 2 Kč za minutu. Sestavit tabulku (minuty → cena), zapsat rovnicí (cena = 2 × minuty), nakreslit graf. Je to přímka procházející nulou?
+
+2. ### Rychlost a čas cesty
+   Z Prahy do Brna je 200 km. Při 100 km/h = 2 hodiny, při 80 km/h = 2,5 hodiny, při 200 km/h = 1 hodina. Tabulka, graf — je to nepřímá úměrnost (rychlost × čas = vzdálenost).
+
+3. ### Měřítko mapy
+   Mapa v měřítku 1:50 000. Na mapě je vzdálenost 4 cm. Kolik je to ve skutečnosti? A kolik cm na mapě je 10 km? — Přímá úměrnost mezi vzdáleností na mapě a ve skutečnosti.
+
+4. ### Dělení dortu
+   Dort pro 12 lidí — každý dostane 1/12. Pro 6 lidí — každý 1/6 (2× víc). Pro 3 lidi — každý 1/3 (4× víc). Nepřímá úměrnost: víc lidí = menší kousek.
+
+5. ### Směnný kurz
+   1 euro = 25 Kč. Kolik korun dostaneš za 5, 10, 50 eur? Naopak: kolik eur je 375 Kč? Přímá úměrnost s koeficientem 25.
+
+</Steps>
+
+## 🎬 Aktivity a projekty
+
+<Steps>
+
+1. ### Grafy úměrností
+
+   ⏱️ _1–2 hodiny_
+
+   Pro 3 situace (přímá úměrnost, nepřímá úměrnost, a něco, co není úměrné vůbec) vytvořit tabulku hodnot a zakreslit do grafu. Porovnat tvary grafů. Jak poznáš přímou úměrnost na první pohled?
+
+2. ### Mapová výprava
+
+   ⏱️ _1 hodina_
+
+   Na turistické mapě (papírové nebo online) změřit vzdálenosti mezi 5 místy v cm. Pomocí měřítka přepočítat na skutečné kilometry. Ověřit trojčlenkou. Nakreslit graf: cm na mapě vs. km ve skutečnosti.
+
+3. ### Směnárna
+
+   ⏱️ _45 minut_
+
+   Najít aktuální kurzy 4 měn. Sestavit tabulky přepočtů (10, 50, 100, 500 jednotek). Zakreslit graf pro každou měnu. Která přímka je nejstrmější? Co to znamená?
+
+4. ### Experiment: pružina
+
+   ⏱️ _1 hodina_
+
+   Zavěsit na pružinu (nebo gumičku) různé závaží a měřit prodloužení. Je vztah mezi závaží a prodloužením přímá úměrnost? Do jakého bodu? (Hookův zákon v praxi.)
+
+</Steps>
+
+## 🍱 Odkazy a zdroje
+
+- [Matematika.cz — Graf přímé úměrnosti](https://www.matematika.cz/prima-umernost)<br />
+  Výklad s grafy a interaktivními příklady.
+
+- [Khanova škola — Přímá a nepřímá úměrnost](https://cs.khanacademy.org/math/pre-algebra/xb4832e56:ratios-rates)<br />
+  Videa a cvičení v češtině.
+
+- [GeoGebra — Úměrnosti](https://www.geogebra.org/graphing)<br />
+  Interaktivní grafický kalkulátor — zadejte rovnici a uvidíte graf.
+
+- [Math is Fun — Directly Proportional](https://www.mathsisfun.com/algebra/directly-inversely-proportional.html) <Badge text="EN" variant="tip" /><br />
+  Přímá a nepřímá úměrnost s příklady a grafy (anglicky).
+
+- [Khan Academy — Proportional Relationships](https://www.khanacademy.org/math/cc-seventh-grade-math/cc-7th-ratio-proportion) <Badge text="EN" variant="tip" /><br />
+  Proporcionální vztahy — videa a interaktivní cvičení (anglicky).

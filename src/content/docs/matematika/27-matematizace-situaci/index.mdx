@@ -1,0 +1,82 @@
+---
+title: "27. Matematizace situací"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Matematizuje jednoduche realne situace s vyuzitim funkcnich vztahu." />
+
+## Co to znamená?
+
+Dítě dokáže vzít **reálnou situaci** a přeložit ji do matematického jazyka — zapsat ji rovnicí, tabulkou nebo grafem, vyřešit a výsledek interpretovat zpět do reality. Tohle je vlastně to, k čemu celá školní matematika směřuje.
+
+Matematizace není o tom „řešit slovní úlohy". Jde o to, aby dítě umělo samo **rozpoznat**, kde v životě se skrývá matematický problém, a dokázalo ho **formulovat**. *Kolik barvy potřebuju na pokoj? Vyplatí se mi roční jízdenka? Stihnu doběhnout na autobus?* — tohle všechno jsou matematické úlohy v přestrojení.
+
+Klíčový je celý cyklus: **realita → matematický model → výpočet → interpretace → ověření v realitě**. Dítě, které zvládne tento cyklus, má z matematiky skutečný nástroj pro život, ne jen sbírku vzorečků.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Jednoduché slovní úlohy, kde dítě samo zapíše rovnici nebo postup. Důraz na porozumění zadání — co vím, co hledám, jak to souvisí. |
+| **7.–8.** | **Prohlubujte.** Složitější situace s více kroky. Dítě samo navrhne postup řešení. Ověřování výsledku: dává smysl? Použití úměrnosti, rovnic, grafů. |
+| **9.** | Komplexní modelování — dítě samo identifikuje problém, zvolí matematický nástroj, vyřeší a interpretuje. Propojení s funkcemi, soustavami rovnic, statistikou. |
+
+<Aside title="Prerekvizity" type="tip">Početní operace (bod 1), úměrnost (bod 25), funkční vztahy (bod 26). Čím víc matematických nástrojů dítě zná, tím víc situací dokáže matematizovat.</Aside>
+
+## Poznámky
+
+<Aside title="Ze života, ne z učebnice">Nejlepší úlohy na matematizaci pocházejí z reálného života dítěte. Plánování výletu, rozpočet na narozeniny, porovnání tarifů — to vše je matematizace. Nemusíte vymýšlet umělé příklady.</Aside>
+
+<Aside title="Chyba v překladu">Nejčastější problém není špatný výpočet, ale špatný „překlad" reality do matematiky. Dítě čte úlohu, ale neví, co sčítat a co odčítat. Pomáhá: nakreslit obrázek, vysvětlit vlastními slovy, zkusit jednodušší případ.</Aside>
+
+<Aside title="Typická past" type="caution">Dítě mechanicky hledá klíčová slova („celkem" = sčítání, „kolikrát" = dělení) místo aby rozumělo situaci. Tento postup selhává u složitějších úloh. Učte dítě porozumět příběhu, ne hledat signální slova.</Aside>
+
+<Aside title="Dulezite" type="danger">Matematický model je vždy zjednodušení reality. Výsledek „3,7 autobusu" říká, že potřebujeme 4 autobusy. Výsledek „záporný čas" říká, že jsme špatně sestavili model. Vždy ověřujte, zda výsledek dává v realitě smysl.</Aside>
+
+## Souvislosti
+
+- <Badge text="MAT" /> bod 26 (funkční vztahy) — funkce jako nástroj pro matematizaci
+- <Badge text="MAT" /> bod 25 (přímá a nepřímá úměrnost) — nejčastější model pro jednoduché situace
+- <Badge text="MAT" /> bod 2 (algebra) — rovnice jako jazyk pro zápis vztahů
+- <Badge text="JAS" /> (finanční gramotnost, fyzika, zeměpis) — zdroj reálných situací k matematizaci
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost převádět reálné situace do matematického jazyka.</SkillItem>
+  <SkillItem level="novice">
+    Dítě řeší jednoduché slovní úlohy, ale potřebuje hodně vedení.
+    <ul>
+      <li>Při čtení zadání neví, kde začít — nerozliší, co je dáno a co se hledá</li>
+      <li>Jednokrokovou úlohu vyřeší, ale postup neumí zapsat rovnicí</li>
+      <li>Výsledek nepřeloží zpět do reality — neověřuje, zda dává smysl</li>
+      <li>Situace z vlastního života jako matematický problém nerozpozná</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě matematizuje jednodušší situace, u složitějších potřebuje pomoc.
+    <ul>
+      <li>Z běžné situace sestaví rovnici nebo zapíše postup řešení</li>
+      <li>Řeší vícekrokové úlohy, občas vynechá krok nebo zvolí špatný postup</li>
+      <li>Výsledek interpretuje a většinou zkontroluje, zda dává smysl</li>
+      <li>S pomocí zvolí vhodný matematický nástroj (trojčlenka, rovnice, graf)</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě samostatně matematizuje reálné situace a volí vhodné nástroje.
+    <ul>
+      <li>Samo identifikuje matematický problém v reálné situaci</li>
+      <li>Zvolí vhodný model (úměrnost, funkce, rovnice) a zdůvodní volbu</li>
+      <li>Projde celý cyklus: model → výpočet → interpretace → ověření</li>
+      <li>Rozpozná omezení modelu — ví, kdy zjednodušení příliš zkresluje realitu</li>
+    </ul>
+  </SkillItem>
+</Skill>

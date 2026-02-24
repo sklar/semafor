@@ -1,0 +1,82 @@
+---
+title: "66. Elektrický obvod"
+sidebar:
+  order: 0
+  label: "Přehled"
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components'
+
+import Banner from '@/components/Banner.astro'
+import Skill from '@/components/Skill.astro'
+import SkillItem from '@/components/SkillItem.astro'
+
+<Banner text="Rozumí principu sestavení elektrického obvodu a rozezná střídavý a stejnosměrný proud." />
+
+## Co to znamená?
+
+Dítě chápe, že **elektrický obvod** je uzavřená cesta, kterou protéká elektrický proud. Rozumí tomu, že obvod potřebuje **zdroj** (baterie), **spotřebič** (žárovka, motůrek) a **vodiče** (dráty), které vše propojí do uzavřené smyčky. Když se obvod přeruší, proud neteče a žárovka nesvítí.
+
+V praxi to znamená, že dítě dokáže sestavit jednoduchý obvod z baterie, drátku a žárovky. Chápe, proč baterka nesvítí, když není zavřený obvod. Ví, k čemu slouží vypínač -- přeruší nebo spojí obvod.
+
+Elektřina je téma, které děti fascinuje, protože s ní mohou experimentovat a vidět okamžitý výsledek. Zároveň je to základ pro pochopení celé moderní technologie -- od mobilních telefonů po elektromobily.
+
+## Kdy se tomu věnovat?
+
+| Ročník | Doporučení |
+|--------|-----------|
+| **6.** | **Začněte zde.** Jednoduchý obvod: baterie, vodič, žárovka. Uzavřený vs. otevřený obvod. Vypínač. Sériové zapojení. |
+| **7.--8.** | **Prohlubujte.** Napětí (V), proud (A), odpor (Ω). Ohmův zákon. Paralelní zapojení. Měření ampérmetrem a voltmetrem. Zkrat a pojistka. |
+| **9.** | **Systematizace.** Složitější obvody, Kirchhoffovy zákony (intuitivně). Střídavý a stejnosměrný proud. Elektrická práce a výkon. Domácí elektroinstalace. |
+
+<Aside title="Prerekvizity" type="tip">Základní pojem energie (bod 64) -- elektrická energie se přeměňuje na světlo, teplo, pohyb. Pojem částicového složení látek (bod 62) -- elektrony jako nosice náboje.</Aside>
+
+## Poznámky
+
+<Aside title="Stavebnice jsou skvělý začátek">Elektrostavebnice (Boffin, snap circuits) umožní dítěti experimentovat bezpečně. Není třeba páječku ani složité součástky -- stačí kliknout a svítí.</Aside>
+
+<Aside title="Kreslete schémata">Od začátku zvykejte dítě kreslit schéma obvodu se značkami. Je to "jazyk elektrotechniky" a pomáhá organizovat myšlení. Stačí základní značky: baterie, žárovka, vodič, vypínač.</Aside>
+
+<Aside title="Typická past" type="caution">Děti si myslí, že proud "vyrazí" z baterie a "dojde" k žárovce. Ve skutečnosti proud teče celým obvodem současně -- jako voda v uzavřeném potrubí. Žárovka nekonzumuje proud, jen přeměňuje energii.</Aside>
+
+<Aside title="Důležité" type="danger">Bezpečnost! Experimentujte POUZE s bateriemi (1,5 V až 9 V). NIKDY nezapojujte dítě do experimentů se síťovým napětím (230 V). Síťové napětí je životu nebezpečné. Tohle je absolutní pravidlo bez výjimek.</Aside>
+
+## Souvislosti
+
+- <Badge text="JAS" /> bod 64 -- energie (elektrická energie a její přeměny)
+- <Badge text="JAS" /> bod 67 -- materiály v elektrotechnice (vodiče, izolanty, polovodiče)
+- <Badge text="JAS" /> bod 68 -- světlo (žárovka přeměňuje elektrickou energii na světlo)
+- <Badge text="MAT" /> bod 01 -- početní operace (Ohmův zákon, výpočty v obvodu)
+
+## Semafor
+
+<Skill>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost ukázat, jestli rozumí principu elektrického obvodu.</SkillItem>
+  <SkillItem level="novice">
+    Dítě ví, že "elektřina" existuje, ale nechápe, jak obvod funguje.
+    <ul>
+      <li>Neumí sestavit jednoduchý obvod z baterie a žárovky</li>
+      <li>Nechápe, proč musí být obvod uzavřený</li>
+      <li>Nezná rozdíl mezi napětím a proudem</li>
+      <li>S elektrickými součástkami nemá zkušenost</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="adept">
+    Dítě sestaví jednoduchý obvod a rozumí základním principům.
+    <ul>
+      <li>Propojí baterii, vodič a žárovku tak, aby svítila</li>
+      <li>Chápe funkci vypínače a sériového zapojení</li>
+      <li>Ví, že napětí je "tlak" a proud je "tok" elektřiny</li>
+      <li>Složitější obvody (paralelní zapojení, měření) potřebuje vysvětlit</li>
+    </ul>
+  </SkillItem>
+  <SkillItem level="master">
+    Dítě samostatně navrhuje a analyzuje obvody, používá Ohmův zákon.
+    <ul>
+      <li>Kreslí schémata obvodů se správnými značkami</li>
+      <li>Měří napětí a proud v obvodu</li>
+      <li>Vypočítá odpor, napětí nebo proud pomocí Ohmova zákona</li>
+      <li>Rozumí rozdílu sériového a paralelního zapojení a jejich praktického využití</li>
+    </ul>
+  </SkillItem>
+</Skill>

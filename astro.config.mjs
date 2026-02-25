@@ -1,10 +1,34 @@
 // @ts-check
 import starlight from '@astrojs/starlight'
 import tailwindcss from '@tailwindcss/vite'
-import { defineConfig } from 'astro/config'
+import { defineConfig, envField } from 'astro/config'
+
+/** @type {import('@astrojs/starlight/types').StarlightUserConfig['head']} */
+const head =
+	import.meta.env.PROD && import.meta.env.UMAMI_WEBSITE_ID
+		? [
+				{
+					tag: 'script',
+					attrs: {
+						src: 'https://cloud.umami.is/script.js',
+						'data-website-id': import.meta.env.UMAMI_WEBSITE_ID,
+						defer: true,
+					},
+				},
+			]
+		: []
 
 // https://astro.build/config
 export default defineConfig({
+	env: {
+		schema: {
+			UMAMI_WEBSITE_ID: envField.string({
+				context: 'client',
+				access: 'public',
+				optional: true,
+			}),
+		},
+	},
 	vite: { plugins: [tailwindcss()] },
 	integrations: [
 		starlight({
@@ -34,6 +58,9 @@ export default defineConfig({
 					href: 'https://github.com/sklar/semafor',
 				},
 			],
+
+			// analytics (production only, requires UMAMI_WEBSITE_ID env var)
+			head,
 
 			// overrrides for default components and styles
 			components: {

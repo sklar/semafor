@@ -1,49 +1,49 @@
-# Starlight Starter Kit: Basics
+# Semafor
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+[![Main](https://github.com/sklar/semafor/actions/workflows/main.yml/badge.svg)](https://github.com/sklar/semafor/actions/workflows/main.yml)
+
+Knowledge base for home-schooling parents (grades 6–9), bridging the gap between
+formal Czech curriculum (ŠVP) and everyday home education practice.
+
+See [.claude/CLAUDE.md](.claude/CLAUDE.md) for full project context.
+
+## 🧰 Stack
+
+- [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Biome](https://biomejs.dev/) (lint + format)
+
+## 🗂️ Project Structure
 
 ```
-pnpm create astro@latest -- --template starlight
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
-.
-├── public/
+/
+├── resources/                         # source data (tabulka-pokroku.xlsx)
 ├── src/
 │   ├── assets/
+│   ├── components/
 │   ├── content/
 │   │   └── docs/
-│   └── content.config.ts
+│   │       ├── cesky-jazyk/           # 17 topics
+│   │       ├── matematika/            # 29 topics
+│   │       ├── ja-a-svet/             # 131 topics
+│   │       ├── pohyb-umeni-kultura/   # 16 topics
+│   │       └── hry-relaxace-aktivity/ # 9 topics
+│   └── styles/
 ├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+└── package.json
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## 🧑‍🚀 Commands
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+| Command | Action |
+|---------|--------|
+| `pnpm dev` | Start dev server at `localhost:4321` |
+| `pnpm build` | Build to `./dist/` |
+| `pnpm preview` | Preview production build |
+| `pnpm lint.check` | Check with Biome |
+| `pnpm lint.write` | Fix with Biome |
+| `pnpm type.check` | Typecheck with `astro check` |
 
-Static assets, like favicons, can be placed in the `public/` directory.
+## 📄 License
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+[CC BY 4.0](LICENSE) — free to share and adapt with attribution.

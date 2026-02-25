@@ -4,13 +4,13 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 
-@layer base {
+/* @layer base {
 	@media (prefers-reduced-motion: no-preference) {
 		@view-transition {
 			navigation: auto;
 		}
 	}
-}
+} */
 
 @layer components {
 	.hero {

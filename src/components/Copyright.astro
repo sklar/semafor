@@ -2,11 +2,22 @@
 const currentYear = new Date().getFullYear()
 ---
 
-<span class="copyright">Copyright © 2020–{currentYear} NDRT</span>
+<span class="copyright">
+	© {currentYear} NDRT・<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</span>
 
 <style>
 	.copyright {
 		color: var(--sl-color-gray-3);
 		font-size: var(--sl-text-xs);
+
+		a {
+			color: inherit;
+			text-decoration: none;
+
+			&:where(:focus, :hover) {
+				color: var(--sl-color-white);
+			}
+		}
 	}
 </style>

@@ -1,31 +1,34 @@
 /*
-  # CSP: restrict resource loading; unsafe-inline needed for Starlight's injected styles
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://cloud.umami.is; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloud.umami.is; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'
+  # unsafe-inline: Starlight inline scripts/styles
+  # wasm-unsafe-eval: Pagefind search engine
+  # cloud.umami.is: analytics script + beacons
+  # app.netlify.com: deploy preview toolbar iframe
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cloud.umami.is; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloud.umami.is; frame-src https://app.netlify.com; object-src 'none'; base-uri 'self'; form-action 'none'
 
-  # Prevent iframe embedding (clickjacking)
+  # Block other sites from framing this site (clickjacking)
   X-Frame-Options: DENY
 
   # Block MIME-type sniffing
   X-Content-Type-Options: nosniff
 
-  # Force HTTPS for 1 year + preload list eligibility
+  # Force HTTPS, 1 year, preload-list eligible
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
-  # Send full path same-origin, origin-only cross-origin
+  # Full path same-origin, origin-only cross-origin, nothing on HTTP downgrade
   Referrer-Policy: strict-origin-when-cross-origin
 
   # Disable unused browser APIs
   Permissions-Policy: camera=(), microphone=(), geolocation=(), browsing-topics=()
 
-  # Isolate browsing context from cross-origin windows
+  # Prevent cross-origin window references
   Cross-Origin-Opener-Policy: same-origin
 
-  # Prevent other sites from embedding our resources
+  # Block cross-origin resource embedding
   Cross-Origin-Resource-Policy: same-origin
 
-  # Tell search engines not to index or follow links
+  # Prevent search engine indexing
   X-Robots-Tag: noindex, nofollow
 
-# Hashed assets — cache forever
+# Cache hashed assets forever
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable

@@ -1,0 +1,31 @@
+/*
+  # CSP: restrict resource loading; unsafe-inline needed for Starlight's injected styles
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://cloud.umami.is; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloud.umami.is; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'
+
+  # Prevent iframe embedding (clickjacking)
+  X-Frame-Options: DENY
+
+  # Block MIME-type sniffing
+  X-Content-Type-Options: nosniff
+
+  # Force HTTPS for 1 year + preload list eligibility
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # Send full path same-origin, origin-only cross-origin
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Disable unused browser APIs
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), browsing-topics=()
+
+  # Isolate browsing context from cross-origin windows
+  Cross-Origin-Opener-Policy: same-origin
+
+  # Prevent other sites from embedding our resources
+  Cross-Origin-Resource-Policy: same-origin
+
+  # Tell search engines not to index or follow links
+  X-Robots-Tag: noindex, nofollow
+
+# Hashed assets — cache forever
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable

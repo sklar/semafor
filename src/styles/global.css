@@ -13,22 +13,6 @@
 } */
 
 @layer components {
-	.hero {
-		@media (min-width: 50rem) {
-			grid-template-columns: repeat(2, auto);
-			justify-content: center;
-			padding-block: clamp(1rem, calc(1rem + 10vmin), 2rem);
-
-			img {
-				block-size: 400px;
-			}
-
-			.tagline {
-				margin-inline-start: 0.5rem;
-			}
-		}
-	}
-
 	.sl-markdown-content {
 		container: markdown / inline-size;
 	}

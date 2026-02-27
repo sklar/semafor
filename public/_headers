@@ -1,9 +1,9 @@
 /*
   # unsafe-inline: Starlight inline scripts/styles
   # wasm-unsafe-eval: Pagefind search engine
-  # cloud.umami.is: analytics script + beacons
+  # cloud.umami.is: analytics script; api-gateway.umami.dev: beacons
   # app.netlify.com: deploy preview toolbar iframe
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cloud.umami.is; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloud.umami.is; frame-src https://app.netlify.com; object-src 'none'; base-uri 'self'; form-action 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cloud.umami.is; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloud.umami.is https://api-gateway.umami.dev; frame-src https://app.netlify.com; object-src 'none'; base-uri 'self'; form-action 'none'
 
   # Block other sites from framing this site (clickjacking)
   X-Frame-Options: DENY

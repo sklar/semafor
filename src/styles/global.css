@@ -29,6 +29,10 @@
 		}
 	}
 
+	.sl-markdown-content {
+		container: markdown / inline-size;
+	}
+
 	.basic-terms {
 		align-items: baseline;
 		display: grid;

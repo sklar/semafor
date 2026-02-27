@@ -9,10 +9,13 @@
 <style>
 	dl {
 		align-items: baseline;
-		display: grid;
 		gap: theme('spacing.6');
-		grid-template-columns: auto 1fr;
 		line-height: 1.6;
 		position: relative;
+
+		@container (width >= 40rem) {
+			display: grid;
+			grid-template-columns: auto 1fr;
+		}
 	}
 </style>

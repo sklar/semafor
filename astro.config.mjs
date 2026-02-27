@@ -3,8 +3,11 @@ import starlight from '@astrojs/starlight'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig, envField } from 'astro/config'
 
+// Production URL for og:image
+const site = 'https://semaf0r.netlify.app'
+
 /** @type {import('@astrojs/starlight/types').StarlightUserConfig['head']} */
-const head =
+const analyticsHead =
 	import.meta.env.PROD && import.meta.env.UMAMI_WEBSITE_ID
 		? [
 				{
@@ -20,6 +23,7 @@ const head =
 
 // https://astro.build/config
 export default defineConfig({
+	site,
 	env: {
 		schema: {
 			UMAMI_WEBSITE_ID: envField.string({
@@ -59,8 +63,23 @@ export default defineConfig({
 				},
 			],
 
-			// analytics (production only, requires UMAMI_WEBSITE_ID env var)
-			head,
+			head: [
+				{
+					tag: 'meta',
+					attrs: { property: 'og:image', content: `${site}/og.webp` },
+				},
+				{ tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
+				{ tag: 'meta', attrs: { property: 'og:image:height', content: '630' } },
+				{
+					tag: 'meta',
+					attrs: { name: 'twitter:card', content: 'summary_large_image' },
+				},
+				{
+					tag: 'meta',
+					attrs: { name: 'twitter:image', content: `${site}/og.webp` },
+				},
+				...analyticsHead,
+			],
 
 			// overrrides for default components and styles
 			components: {

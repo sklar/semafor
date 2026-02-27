@@ -9,13 +9,13 @@ const site = 'https://semaf0r.netlify.app'
 
 /** @type {import('@astrojs/starlight/types').StarlightUserConfig['head']} */
 const analyticsHead =
-	import.meta.env.PROD && import.meta.env.UMAMI_WEBSITE_ID
+	import.meta.env.PROD && process.env.UMAMI_WEBSITE_ID
 		? [
 				{
 					tag: 'script',
 					attrs: {
 						src: 'https://cloud.umami.is/script.js',
-						'data-website-id': import.meta.env.UMAMI_WEBSITE_ID,
+						'data-website-id': process.env.UMAMI_WEBSITE_ID,
 						defer: true,
 					},
 				},

@@ -1,10 +1,12 @@
 {
   "name": "semafor",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.0",
+  "calver": "0.0.0",
   "packageManager": "pnpm@10.29.3",
   "scripts": {
     "build": "astro build",
+    "changeset": "node scripts/changeset.mjs",
     "dev": "astro dev",
     "lint.check": "biome check",
     "lint.write": "biome check --write",
@@ -23,7 +25,8 @@
     "typescript": "5.9.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.15"
+    "@biomejs/biome": "2.3.15",
+    "@clack/prompts": "1.0.1"
   },
   "engines": {
     "node": "20.20.0",

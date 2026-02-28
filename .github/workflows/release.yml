@@ -1,0 +1,203 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check for changesets
+        id: check
+        run: |
+          CHANGESETS=$(find .changesets -name '*.md' ! -name '.gitkeep' 2>/dev/null | head -1)
+          if [ -z "$CHANGESETS" ]; then
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "No changesets found, skipping release"
+          else
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "Changesets found, proceeding with release"
+          fi
+
+      - name: Generate CalVer tag
+        if: steps.check.outputs.found == 'true'
+        id: version
+        run: |
+          TODAY=$(date -u +"%Y.%m.%d")
+
+          EXISTING=$(git tag --list "${TODAY}.*" | sort -t. -k4 -n | tail -1)
+
+          if [ -z "$EXISTING" ]; then
+            if git tag --list "$TODAY" | grep -q .; then
+              VERSION="${TODAY}.1"
+            else
+              VERSION="$TODAY"
+            fi
+          else
+            COUNTER=$(echo "$EXISTING" | awk -F. '{print $4}')
+            VERSION="${TODAY}.$((COUNTER + 1))"
+          fi
+
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Version: $VERSION"
+
+      - name: Build changelog entry
+        if: steps.check.outputs.found == 'true'
+        id: changelog
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          ENTRY="## ${VERSION}\n\n"
+
+          declare -A TYPE_LABELS=(
+            [chore]="Chores"
+            [ci]="CI"
+            [content]="Content"
+            [doc]="Docs"
+            [feature]="Features"
+            [fix]="Fixes"
+            [test]="Tests"
+          )
+
+          declare -A GROUPED
+          UNGROUPED=""
+
+          for file in .changesets/*.md; do
+            [ -f "$file" ] || continue
+            [[ "$(basename "$file")" == ".gitkeep" ]] && continue
+
+            TYPE=$(grep '^type:' "$file" | sed 's/type: //' || true)
+            SCOPE=$(grep '^scope:' "$file" | sed 's/scope: //' || true)
+
+            # Extract body (everything after the closing ---)
+            BODY=$(awk '/^---$/{n++; next} n>=2' "$file" | sed '/^$/d')
+
+            # Derive commit that added this file
+            COMMIT_SHA=$(git log --diff-filter=A --format="%H" -- "$file" | head -1)
+            SHORT_SHA=""
+            PR_NUM=""
+
+            if [ -n "$COMMIT_SHA" ]; then
+              SHORT_SHA=$(echo "$COMMIT_SHA" | cut -c1-7)
+
+              # Look up associated PR
+              PR_NUM=$(gh pr list --state merged --search "$COMMIT_SHA" --json number --jq '.[0].number' 2>/dev/null || true)
+            fi
+
+            # Build line: - #42 `76ee442` Summary
+            LINE="- "
+            if [ -n "$PR_NUM" ]; then
+              LINE+="#${PR_NUM} "
+            fi
+            if [ -n "$SHORT_SHA" ]; then
+              LINE+="\`${SHORT_SHA}\` "
+            fi
+            if [ -n "$SCOPE" ]; then
+              LINE+="**${SCOPE}**: ${BODY}"
+            else
+              LINE+="${BODY}"
+            fi
+
+            if [ -n "$TYPE" ]; then
+              GROUPED[$TYPE]+="${LINE}\n"
+            else
+              UNGROUPED+="${LINE}\n"
+            fi
+          done
+
+          # Build grouped entry (alphabetical by type key)
+          for TYPE in chore ci content doc feature fix test; do
+            if [ -n "${GROUPED[$TYPE]}" ]; then
+              LABEL="${TYPE_LABELS[$TYPE]}"
+              ENTRY+="### ${LABEL}\n\n${GROUPED[$TYPE]}\n"
+            fi
+          done
+
+          # Append untyped entries at the end without a section header
+          if [ -n "$UNGROUPED" ]; then
+            ENTRY+="${UNGROUPED}\n"
+          fi
+
+          echo -e "$ENTRY" > /tmp/changelog_entry.md
+          echo -e "$ENTRY" > /tmp/release_body.md
+
+          echo "--- Changelog entry ---"
+          cat /tmp/changelog_entry.md
+
+      - name: Upload preview artifacts
+        if: steps.check.outputs.found == 'true' && github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-preview
+          path: |
+            /tmp/changelog_entry.md
+            /tmp/release_body.md
+
+      - name: Update CHANGELOG.md
+        if: steps.check.outputs.found == 'true' && github.event_name != 'workflow_dispatch'
+        run: |
+          if [ -f CHANGELOG.md ]; then
+            {
+              head -1 CHANGELOG.md
+              echo ""
+              cat /tmp/changelog_entry.md
+              tail -n +2 CHANGELOG.md
+            } > CHANGELOG.tmp
+            mv CHANGELOG.tmp CHANGELOG.md
+          else
+            {
+              echo "# Changelog"
+              echo ""
+              cat /tmp/changelog_entry.md
+            } > CHANGELOG.md
+          fi
+
+      - name: Update package.json version
+        if: steps.check.outputs.found == 'true' && github.event_name != 'workflow_dispatch'
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          node -e "
+            const pkg = JSON.parse(require('fs').readFileSync('package.json', 'utf8'));
+            pkg.version = '0.0.0';
+            pkg.calver = '${VERSION}';
+            require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
+          "
+          echo "Updated package.json calver to ${VERSION}"
+
+      - name: Clean up changeset files
+        if: steps.check.outputs.found == 'true' && github.event_name != 'workflow_dispatch'
+        run: |
+          find .changesets -name '*.md' ! -name '.gitkeep' -delete
+          echo "Cleaned changeset files"
+
+      - name: Commit and tag
+        if: steps.check.outputs.found == 'true' && github.event_name != 'workflow_dispatch'
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add CHANGELOG.md package.json .changesets/
+          git commit -m "release: ${VERSION}" || echo "Nothing to commit"
+          git tag "$VERSION"
+          git push
+          git push --tags
+
+      - name: Create GitHub Release
+        if: steps.check.outputs.found == 'true' && github.event_name != 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          gh release create "$VERSION" \
+            --title "$VERSION" \
+            --notes-file /tmp/release_body.md

@@ -5,7 +5,7 @@
 Knowledge base for home-schooling parents (grades 6–9), bridging the gap between
 formal Czech curriculum (ŠVP) and everyday home education practice.
 
-See [.claude/CLAUDE.md](.claude/CLAUDE.md) for full project context.
+- [Specification](.claude/SPEC.md)
 
 ## 🧰 Stack
 

@@ -1,11 +1,11 @@
 # Semafor
 
-[![Main](https://github.com/sklar/semafor/actions/workflows/main.yml/badge.svg)](https://github.com/sklar/semafor/actions/workflows/main.yml)
+[![PR](https://github.com/sklar/semafor/actions/workflows/pr.yml/badge.svg)](https://github.com/sklar/semafor/actions/workflows/pr.yml)
 
 Knowledge base for home-schooling parents (grades 6–9), bridging the gap between
 formal Czech curriculum (ŠVP) and everyday home education practice.
 
-See [.claude/CLAUDE.md](.claude/CLAUDE.md) for full project context.
+- [Specification](.claude/SPEC.md)
 
 ## 🧰 Stack
 

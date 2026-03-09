@@ -65,7 +65,7 @@ done
 
 # Build grouped entry (alphabetical by type key)
 for TYPE in chore ci content doc feature fix test; do
-  if [ -n "${GROUPED[$TYPE]}" ]; then
+  if [ -n "${GROUPED[$TYPE]:-}" ]; then
     LABEL="${TYPE_LABELS[$TYPE]}"
     ENTRY+="### ${LABEL}\n\n${GROUPED[$TYPE]}\n"
   fi

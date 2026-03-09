@@ -123,7 +123,7 @@ Sidebar config v `astro.config.mjs` — hybridní: manuální skupiny s `autogen
 
 ## JaS — struktura
 
-131 témat v 10 sub-oblastech: ICT (01–06), Výchova k občanství (07–25), Mezinárodní vztahy (26–29), Výchova ke zdraví (30–38), Dějepis (39–60), Fyzika (61–68), Chemie (67ch–73ch), Přírodopis (74–103), Zeměpis (104–113), Člověk a svět práce (114–131).
+131 témat v 9 sub-oblastech: Informační a komunikační technologie (01–06), Výchova k občanství (07–29), Výchova ke zdraví (30–38), Dějepis (39–60), Fyzika (61–68), Chemie (67ch–73ch), Přírodopis (74–103), Zeměpis (104–113), Člověk a svět práce (114–131).
 
 - Chemie: pouze `8-rocnik.mdx` + `9-rocnik.mdx` (žádný 6./7. ročník)
 - Fyzika/Chemie: překryv číslování 67–68 (různé slugy, různé adresáře)

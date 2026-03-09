@@ -37,4 +37,4 @@ Knowledge base built with Astro Starlight. Full spec in [SPEC.md](SPEC.md).
 
 ## Navigation
 
-Sidebar config in `astro.config.mjs` — hybrid: manual groups with `autogenerate` for individual directories.
+Sidebar config in `src/sidebar.config.ts` — hybrid: manual groups with `autogenerate` for individual directories.

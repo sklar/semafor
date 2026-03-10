@@ -1,0 +1,24 @@
+name: Issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  gate:
+    name: Collaborator gate
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Check author permission
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          AUTHOR: ${{ github.event.issue.user.login }}
+          REPO: ${{ github.repository }}
+        run: |
+          PERM=$(gh api "repos/$REPO/collaborators/$AUTHOR/permission" --jq '.permission' 2>/dev/null || echo "none")
+          if [[ "$PERM" != "admin" && "$PERM" != "write" && "$PERM" != "maintain" ]]; then
+            gh issue close "$ISSUE_URL" --comment "Thanks for stopping by! This repo doesn’t accept external issues." --reason "not planned"
+          fi

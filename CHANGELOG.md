@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026.03.10
+
+### CI
+
+- #23 `a5a21ff` On-demand PR review via @gemini review comment.
+- #23 `a5a21ff` Auto-close issues from non-collaborators.
+
+
+
 ## 2026.03.09
 
 ### CI

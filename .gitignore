@@ -2,7 +2,9 @@
 # @see https://git-scm.com/docs/gitignore
 
 # ai
+.agents/skills
 .claude/*.local.json
+.claude/skills
 
 # build
 dist

@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026.03.14
+
+### CI
+
+- #24 `34ec7fb` Migrate hosting from Netlify to Cloudflare for broader platform capabilities (KV, D1, Workers) needed by upcoming features.
+
+
+
 ## 2026.03.10
 
 ### CI

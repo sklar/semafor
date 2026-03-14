@@ -5,7 +5,7 @@ import { defineConfig, envField } from 'astro/config'
 import { sidebar } from './src/sidebar.config'
 
 // Production URL for og:image
-const site = 'https://semafor.pages.dev'
+const site = 'https://semafor.sklar.workers.dev'
 
 /** @type {import('@astrojs/starlight/types').StarlightUserConfig['head']} */
 const analyticsHead =

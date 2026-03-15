@@ -1,4 +1,5 @@
 // @ts-check
+import solidJs from '@astrojs/solid-js'
 import starlight from '@astrojs/starlight'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig, envField } from 'astro/config'
@@ -33,8 +34,10 @@ export default defineConfig({
 			}),
 		},
 	},
-	vite: { plugins: [tailwindcss()] },
+	// @tailwindcss/vite ships Vite 7 types, Astro 5 bundles Vite 6
+	vite: { plugins: [/** @type {any} */ (tailwindcss())] },
 	integrations: [
+		solidJs({ include: ['**/solid/*'] }),
 		starlight({
 			title: 'Semafor',
 			titleDelimiter: ' – ',

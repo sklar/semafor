@@ -95,6 +95,23 @@
 					}
 				}
 			}
+		},
+		{
+			// Solid components use PascalCase by convention
+			"includes": ["src/components/solid/**"],
+			"linter": {
+				"rules": {
+					"style": {
+						"useFilenamingConvention": {
+							"level": "error",
+							"options": {
+								"requireAscii": true,
+								"filenameCases": ["PascalCase"]
+							}
+						}
+					}
+				}
+			}
 		}
 	]
 }

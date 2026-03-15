@@ -4,8 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { defineConfig, envField } from 'astro/config'
 import { sidebar } from './src/sidebar.config'
 
-// Production URL for og:image
-const site = 'https://semafor.sklar.workers.dev'
+const site = process.env.SITE_URL
 
 /** @type {import('@astrojs/starlight/types').StarlightUserConfig['head']} */
 const analyticsHead =

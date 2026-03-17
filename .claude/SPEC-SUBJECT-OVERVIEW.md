@@ -132,7 +132,7 @@ Topic list is derived from the file system at build time — no manual maintenan
 
 ---
 
-## File Structure (New)
+## File Structure
 
 ```
 src/
@@ -142,19 +142,24 @@ src/
 │   ├── SkillItem.astro           # existing
 │   ├── SiteTitle.astro           # existing
 │   └── solid/
+│       ├── Counter.tsx           # smoke test (temporary)
 │       ├── SubjectOverview.tsx
 │       ├── GradeFilter.tsx
 │       ├── ViewToggle.tsx
 │       ├── CardView.tsx
 │       └── TableView.tsx
+tests/
+├── unit/
+│   └── counter.test.tsx          # smoke test (temporary)
+vitest.config.ts
 ```
 
 ---
 
-## Astro Configuration Changes
+## Astro Configuration
 
 ```typescript
-// astro.config.mjs — add Solid integration
+// astro.config.mjs
 import solidJs from '@astrojs/solid-js';
 
 export default defineConfig({
@@ -177,7 +182,7 @@ All interactive elements must be keyboard-navigable and screen-reader friendly. 
 
 ## Testing
 
-Testing strategy and tooling (Vitest, Playwright, etc.) to be decided during implementation. Tests are a deliverable, not optional.
+Vitest 4.x with `@vitest/browser-playwright` (Chromium) and `@solidjs/testing-library`. Config in `vitest.config.ts`. CI runs `pnpm test` in the PR workflow after lint and typecheck.
 
 - **Unit tests**: each component in isolation — GradeFilter state changes, ViewToggle persistence, CardView link generation per grade, TableView column muting logic.
 - **E2E tests**: full user flows — select a grade → verify card links update, switch view → refresh page → verify view persists, verify all 13 pages render SubjectOverview correctly.

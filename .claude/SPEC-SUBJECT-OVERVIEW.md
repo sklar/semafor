@@ -82,11 +82,13 @@ Uses `client:load` hydration directive for immediate interactivity.
 - Does NOT own localStorage — parent (SubjectOverview) handles persistence.
 - Shared types/constants in `grade-filter/grade.ts`.
 
-### `ViewToggle.tsx`
+### `view-toggle/ViewToggle.tsx`
 
+- Presentational radio group — receives `view: Accessor<View>` + `onViewChange` props.
 - Toggle between Cards and Table view: `Karty | Tabulka`
-- Reads/writes `semafor:view` in localStorage.
-- Available to all users (no auth required).
+- Native `<fieldset>` + `<input type="radio">` + `<label>` for accessibility.
+- Does NOT own localStorage — parent (SubjectOverview) handles persistence.
+- Shared types/constants in `view-toggle/view.ts`.
 
 ### `CardView.tsx`
 
@@ -146,12 +148,15 @@ src/
 │   │   ├── GradeFilter.module.css
 │   │   └── grade.ts
 │   ├── subject-overview/
-│   │   └── subject-overview.tsx
+│   │   └── SubjectOverview.tsx
 │   └── view-toggle/
-│       └── view-toggle.tsx
+│       ├── ViewToggle.tsx
+│       ├── ViewToggle.module.css
+│       └── view.ts
 tests/
 ├── unit/
-│   └── grade-filter.test.tsx
+│   ├── grade-filter.test.tsx
+│   └── view-toggle.test.tsx
 vitest.config.ts
 ```
 
@@ -177,7 +182,7 @@ No include filter — no framework mixing. No adapter changes. Site remains full
 
 ## Accessibility
 
-All interactive elements must be keyboard-navigable and screen-reader friendly. GradeFilter uses native `<fieldset>` + `<input type="radio">` (no ARIA overrides needed). ViewToggle TBD.
+All interactive elements must be keyboard-navigable and screen-reader friendly. GradeFilter and ViewToggle both use native `<fieldset>` + `<input type="radio">` + `<label>` (no ARIA overrides needed).
 
 ---
 

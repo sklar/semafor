@@ -26,9 +26,12 @@ Knowledge base built with Astro Starlight. Full spec in [SPEC.md](SPEC.md).
 
 ## Custom Components
 
+Astro components live directly in `src/components/`. Solid (interactive) components use a component-folder pattern: `src/components/<component>/`.
+
 - `src/components/Banner.astro` — displays original ŠVP outcome text
 - `src/components/Skill.astro` + `SkillItem.astro` — traffic-light indicator (levels: `none`/`novice`/`adept`/`master`)
 - `src/components/SiteTitle.astro` — logo + site name in header
+- `src/components/grade-filter/` — single-select grade radio group (Solid, presentational)
 
 ## MDX — Known Issues
 

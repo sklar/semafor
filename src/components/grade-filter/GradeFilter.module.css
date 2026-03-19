@@ -1,0 +1,47 @@
+.fieldset {
+	display: inline grid;
+	gap: 1rem;
+	grid-auto-flow: column;
+	margin: 0;
+	padding: 0;
+
+	* :has(> &) {
+		display: block;
+		margin: 0;
+		overflow-x: auto;
+	}
+}
+
+.legend {
+	block-size: 1px;
+	clip: rect(0, 0, 0, 0);
+	inline-size: 1px;
+	overflow: hidden;
+	position: absolute;
+}
+
+.label {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.35rem;
+	cursor: pointer;
+	display: inline grid;
+	margin-block-start: 0;
+	padding: 0.25rem 0.75rem;
+	place-items: center;
+	position: relative;
+	text-align: center;
+
+	&:hover {
+		background-color: var(--sl-color-gray-7, var(--sl-color-gray-6));
+		border-color: var(--sl-color-gray-2);
+	}
+	&:has(:checked) {
+		outline: -webkit-focus-ring-color auto 1px;
+	}
+
+	input {
+		clip: rect(0, 0, 0, 0);
+		outline: 0;
+		position: absolute;
+	}
+}

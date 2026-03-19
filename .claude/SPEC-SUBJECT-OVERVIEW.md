@@ -50,7 +50,7 @@ Both settings are global — changing them on one Přehled page affects all othe
 
 ## UI Components (Solid 1.x)
 
-All Solid components live in `src/components/solid/` with `.tsx` extension.
+Each Solid component lives in its own folder under `src/components/<component>/` (e.g. `grade-filter/`). Files use kebab-case.
 
 ### `SubjectOverview.tsx`
 
@@ -74,13 +74,13 @@ interface SubjectOverviewProps {
 
 Uses `client:load` hydration directive for immediate interactivity.
 
-### `GradeFilter.tsx`
+### `grade-filter/GradeFilter.tsx`
 
-- Rendered at top of SubjectOverview.
-- Single-select control: `6. ročník | 7. ročník | 8. ročník | 9. ročník | Vše`
-- Only one value active at a time (enum, not multi-select).
-- Reads/writes `semafor:grade` in localStorage.
-- Available to all users (no auth required).
+- Presentational radio group — receives `grade: Accessor<Grade>` + `onGradeChange` props.
+- Single-select: `6. ročník | 7. ročník | 8. ročník | 9. ročník | Vše`
+- Native `<fieldset>` + `<input type="radio">` + `<label>` for accessibility.
+- Does NOT own localStorage — parent (SubjectOverview) handles persistence.
+- Shared types/constants in `grade-filter/grade.ts`.
 
 ### `ViewToggle.tsx`
 
@@ -115,7 +115,7 @@ The 13 target pages are rendered from a single template that uses `import.meta.g
 
 ```astro
 ---
-import SubjectOverview from '@/components/solid/SubjectOverview.tsx';
+import SubjectOverview from '@/components/subject-overview/subject-overview.tsx';
 // topics already collected via import.meta.glob()
 ---
 
@@ -141,16 +141,17 @@ src/
 │   ├── Skill.astro               # existing
 │   ├── SkillItem.astro           # existing
 │   ├── SiteTitle.astro           # existing
-│   └── solid/
-│       ├── Counter.tsx           # smoke test (temporary)
-│       ├── SubjectOverview.tsx
-│       ├── GradeFilter.tsx
-│       ├── ViewToggle.tsx
-│       ├── CardView.tsx
-│       └── TableView.tsx
+│   ├── grade-filter/
+│   │   ├── GradeFilter.tsx
+│   │   ├── GradeFilter.module.css
+│   │   └── grade.ts
+│   ├── subject-overview/
+│   │   └── subject-overview.tsx
+│   └── view-toggle/
+│       └── view-toggle.tsx
 tests/
 ├── unit/
-│   └── counter.test.tsx          # smoke test (temporary)
+│   └── grade-filter.test.tsx
 vitest.config.ts
 ```
 
@@ -165,18 +166,18 @@ import solidJs from '@astrojs/solid-js';
 export default defineConfig({
   integrations: [
     starlight({ /* existing config */ }),
-    solidJs({ include: ['**/solid/*'] }),
+    solidJs(),
   ],
 });
 ```
 
-No adapter changes. No output mode changes. Site remains fully static.
+No include filter — no framework mixing. No adapter changes. Site remains fully static.
 
 ---
 
 ## Accessibility
 
-All interactive elements must be keyboard-navigable and screen-reader friendly. Specific ARIA patterns (button group vs radio group, etc.) will be determined during implementation.
+All interactive elements must be keyboard-navigable and screen-reader friendly. GradeFilter uses native `<fieldset>` + `<input type="radio">` (no ARIA overrides needed). ViewToggle TBD.
 
 ---
 

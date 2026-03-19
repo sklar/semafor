@@ -37,7 +37,7 @@ export default defineConfig({
 	// @tailwindcss/vite ships Vite 7 types, Astro 5 bundles Vite 6
 	vite: { plugins: [/** @type {any} */ (tailwindcss())] },
 	integrations: [
-		solidJs({ include: ['**/solid/*'] }),
+		solidJs(),
 		starlight({
 			title: 'Semafor',
 			titleDelimiter: ' – ',

@@ -2,30 +2,11 @@
 title: "Výchova k občanství"
 ---
 
-import { CardGrid, LinkCard } from '@astrojs/starlight/components'
+import TopicCards from '@/components/TopicCards.astro'
+import { parseTopics } from '@/lib/topics'
+import { getSubAreaSlugs } from '@/lib/sidebar'
 
-<CardGrid>
-	<LinkCard href="/ja-a-svet/07-vztahy-a-spolecnost/" title="07. Vztahy a společnost" description="Uvědomuje si vztah k sobě, druhým, ke společnosti." />
-	<LinkCard href="/ja-a-svet/08-demokraticke-pristupy/" title="08. Demokratické přístupy" description="Uplatňuje různé demokratické přístupy." />
-	<LinkCard href="/ja-a-svet/09-kriticke-mysleni-a-media/" title="09. Kritické myšlení a média" description="Kriticky přistupuje k mediálním informacím, propagandě, populismu." />
-	<LinkCard href="/ja-a-svet/10-konflikty-a-mediace/" title="10. Konflikty a mediace" description="Konflikt vnímá jako příležitost; využívá NVC a mediaci." />
-	<LinkCard href="/ja-a-svet/11-seberizeni-a-kooperace/" title="11. Sebeřízení a kooperace" description="Učí se sebeřízení a kooperaci." />
-	<LinkCard href="/ja-a-svet/12-skolni-samosprava/" title="12. Školní samospráva" description="Volí si oblast a způsob aktivity ve školní samosprávě." />
-	<LinkCard href="/ja-a-svet/13-vnitrni-motivace/" title="13. Vnitřní motivace" description="Zná význam vnitřní motivace a umí ji v sobě pěstovat." />
-	<LinkCard href="/ja-a-svet/14-potreby-a-sebevyjadreni/" title="14. Potřeby a sebevyjádření" description="Rozpozná své potřeby a respektuje potřeby druhých." />
-	<LinkCard href="/ja-a-svet/15-talenty-a-sebeucta/" title="15. Talenty a sebeúcta" description="Objevuje a rozvíjí své talenty, buduje zdravou sebeúctu." />
-	<LinkCard href="/ja-a-svet/16-hospodareni/" title="16. Hospodaření" description="Prakticky umí hospodařit s kapesným, rozpočtem." />
-	<LinkCard href="/ja-a-svet/17-formy-vlastnictvi/" title="17. Formy vlastnictví" description="Rozlišuje různé formy dohod, vlastnictví, směny, sdílení." />
-	<LinkCard href="/ja-a-svet/18-financni-gramotnost/" title="18. Finanční gramotnost" description="Ovládá základy finanční gramotnosti." />
-	<LinkCard href="/ja-a-svet/19-trh-a-hospodareni-statu/" title="19. Trh a hospodaření státu" description="Zná základy fungování trhu a hospodaření státu." />
-	<LinkCard href="/ja-a-svet/20-aktivni-obcan/" title="20. Aktivní občan" description="Na základě zkušeností se učí být aktivním členem společnosti." />
-	<LinkCard href="/ja-a-svet/21-rozdeleni-moci/" title="21. Rozdělení moci" description="Porovná různé způsoby rozdělení moci." />
-	<LinkCard href="/ja-a-svet/22-ochrana-prav-a-svobod/" title="22. Ochrana práv a svobod" description="Posoudí význam ochrany práv a svobod lidí a zvířat." />
-	<LinkCard href="/ja-a-svet/23-pravidla-a-zodpovednost/" title="23. Pravidla a zodpovědnost" description="Podílí se na tvorbě a dodržování pravidel." />
-	<LinkCard href="/ja-a-svet/24-pravni-stat/" title="24. Právní stát" description="Objasní základy fungování právního státu." />
-	<LinkCard href="/ja-a-svet/25-odpovednost-za-jednani/" title="25. Odpovědnost za jednání" description="Bere na sebe odpovědnost za své jednání." />
-	<LinkCard href="/ja-a-svet/26-mezinarodni-vztahy/" title="26. Mezinárodní vztahy" description="Uvede příklad vztahů na mezinárodní úrovni." />
-	<LinkCard href="/ja-a-svet/27-globalni-a-lokalni-prilezitosti/" title="27. Globální a lokální příležitosti" description="Uvede příklady globálních a lokálních příležitostí." />
-	<LinkCard href="/ja-a-svet/28-globalni-problemy-jako-prilezitosti/" title="28. Globální problémy jako příležitosti" description="Učí se nahlížet na globální a lokální problémy jako na příležitosti." />
-	<LinkCard href="/ja-a-svet/29-propojenost-sveta/" title="29. Propojenost světa" description="Uvědomuje si propojenost světa; ČR jako součást EU." />
-</CardGrid>
+export const slugs = getSubAreaSlugs('ja-a-svet/vychova-k-obcanstvi')
+export const topics = parseTopics(import.meta.glob('./*/*.mdx', { eager: true })).filter(t => slugs.includes(t.slug))
+
+<TopicCards topics={topics} subject="ja-a-svet" />

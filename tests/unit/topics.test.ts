@@ -112,6 +112,32 @@ describe('parseTopics', () => {
 		expect(parseTopics({})).toEqual([])
 	})
 
+	test('extracts description from frontmatter', () => {
+		const glob: GlobRecord = {
+			'./01-topic/index.mdx': {
+				frontmatter: {
+					title: '01. Topic',
+					description: 'Topic description text.',
+				},
+			},
+			'./01-topic/6-rocnik.mdx': {
+				frontmatter: { title: '6. ročník' },
+			},
+		}
+
+		expect(parseTopics(glob)[0].description).toBe('Topic description text.')
+	})
+
+	test('omits description when not in frontmatter', () => {
+		const glob: GlobRecord = {
+			'./01-topic/index.mdx': {
+				frontmatter: { title: '01. Topic' },
+			},
+		}
+
+		expect(parseTopics(glob)[0].description).toBeUndefined()
+	})
+
 	test('handles absolute-style glob paths', () => {
 		const glob: GlobRecord = {
 			'/src/content/docs/matematika/01-pocetni-operace/index.mdx': {

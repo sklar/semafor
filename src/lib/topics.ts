@@ -1,12 +1,13 @@
 export interface Topic {
 	number: number
 	title: string
+	description?: string
 	slug: string
 	grades: number[]
 }
 
 export type GlobEntry = {
-	frontmatter: { title: string }
+	frontmatter: { title: string; description?: string }
 }
 
 export type GlobRecord = Record<string, GlobEntry>
@@ -15,7 +16,10 @@ const GRADE_PATTERN = /^(\d+)-rocnik\.mdx$/
 const NUMBER_PREFIX = /^(\d+)-/
 
 export function parseTopics(glob: GlobRecord): Topic[] {
-	const groups = new Map<string, { title: string; grades: number[] }>()
+	const groups = new Map<
+		string,
+		{ title: string; description?: string; grades: number[] }
+	>()
 
 	for (const path of Object.keys(glob)) {
 		const segments = path.split('/')
@@ -32,6 +36,7 @@ export function parseTopics(glob: GlobRecord): Topic[] {
 
 		if (filename === 'index.mdx') {
 			group.title = glob[path].frontmatter.title
+			group.description = glob[path].frontmatter.description
 		} else {
 			const gradeMatch = filename.match(GRADE_PATTERN)
 			if (gradeMatch) {
@@ -42,7 +47,7 @@ export function parseTopics(glob: GlobRecord): Topic[] {
 
 	const topics: Topic[] = []
 
-	for (const [slug, { title, grades }] of groups) {
+	for (const [slug, { title, description, grades }] of groups) {
 		const numberMatch = slug.match(NUMBER_PREFIX)
 		if (!numberMatch) continue
 
@@ -51,6 +56,7 @@ export function parseTopics(glob: GlobRecord): Topic[] {
 			title,
 			slug,
 			grades: grades.toSorted((a, b) => a - b),
+			...(description && { description }),
 		})
 	}
 

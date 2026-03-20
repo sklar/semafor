@@ -64,7 +64,7 @@ Both settings are global — changing them on one Přehled page affects all othe
 ```typescript
 interface Topic {
   number: number;          // e.g. 1, 2, ... 29
-  title: string;           // from frontmatter, e.g. "01. Početní operace s celými a racionálními čísly"
+  title: string;           // from frontmatter, number prefix stripped, e.g. "Početní operace s celými a racionálními čísly"
   description?: string;    // from frontmatter, ŠVP outcome text (same as Banner text)
   slug: string;            // directory name, e.g. "01-pocetni-operace"
   grades: number[];        // available grades, e.g. [6, 7, 8, 9] or [8, 9] for chemistry

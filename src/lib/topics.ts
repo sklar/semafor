@@ -53,7 +53,7 @@ export function parseTopics(glob: GlobRecord): Topic[] {
 
 		topics.push({
 			number: Number(numberMatch[1]),
-			title,
+			title: title.replace(/^\d{1,3}\.\s*/, ''),
 			slug,
 			grades: grades.toSorted((a, b) => a - b),
 			...(description && { description }),

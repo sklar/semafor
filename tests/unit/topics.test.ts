@@ -24,7 +24,7 @@ describe('parseTopics', () => {
 		expect(parseTopics(glob)).toEqual([
 			{
 				number: 1,
-				title: '01. Početní operace',
+				title: 'Početní operace',
 				slug: '01-pocetni-operace',
 				grades: [6, 7, 8, 9],
 			},

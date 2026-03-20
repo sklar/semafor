@@ -19,7 +19,9 @@ export default function CardView(props: CardViewProps) {
 					<div class={styles.card}>
 						<span class={styles.stack}>
 							<a href={topicHref(props.subject, topic.slug, props.grade())}>
-								<b class={styles.title}>{topic.title}</b>
+								<b
+									class={styles.title}
+								>{`${String(topic.number).padStart(2, '0')}. ${topic.title}`}</b>
 								<Show when={topic.description}>
 									<div class={styles.description}>{topic.description}</div>
 								</Show>

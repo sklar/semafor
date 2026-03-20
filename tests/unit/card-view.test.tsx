@@ -9,14 +9,14 @@ import type { Topic } from '@/lib/topics'
 const TOPICS: Topic[] = [
 	{
 		number: 1,
-		title: '01. Početní operace s celými a racionálními čísly',
+		title: 'Početní operace s celými a racionálními čísly',
 		slug: '01-pocetni-operace',
 		grades: [6, 7, 8, 9],
 		description: 'Provádí početní operace s celými a racionálními čísly.',
 	},
 	{
 		number: 2,
-		title: '02. Zaokrouhlování a odhady',
+		title: 'Zaokrouhlování a odhady',
 		slug: '02-zaokrouhlovani-a-odhady',
 		grades: [6, 7],
 	},

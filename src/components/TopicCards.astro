@@ -17,7 +17,7 @@ const { topics, subject } = Astro.props
 		{topics.map(topic => (
 			<LinkCard
 				href={topicHref(subject, topic.slug, 'all')}
-				title={topic.title}
+				title={`${String(topic.number).padStart(2, '0')}. ${topic.title}`}
 				description={topic.description ?? ''}
 			/>
 		))}

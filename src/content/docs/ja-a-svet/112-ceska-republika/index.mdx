@@ -1,5 +1,6 @@
 ---
 title: "112. Česká republika"
+description: "Zná reálie ČR a reálie svého bydliště."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +12,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Zná reálie ČR a reálie svého bydliště." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

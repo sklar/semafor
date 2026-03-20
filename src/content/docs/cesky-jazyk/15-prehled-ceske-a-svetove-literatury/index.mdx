@@ -1,5 +1,6 @@
 ---
 title: "15. Přehled české a světové literatury"
+description: "Má základní přehled o české a světové literatuře (opřený o vlastní četbu), zná základní literární druhy a žánry."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +12,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Má základní přehled o české a světové literatuře (opřený o vlastní četbu), zná základní literární druhy a žánry." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

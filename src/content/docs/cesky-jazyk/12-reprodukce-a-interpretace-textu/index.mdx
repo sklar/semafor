@@ -1,5 +1,6 @@
 ---
 title: "12. Reprodukce a interpretace textu"
+description: "Uceleně reprodukuje přečtený text, jednoduše popisuje strukturu a jazyk literárního díla a vlastními slovy interpretuje smysl díla."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +12,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Uceleně reprodukuje přečtený text, jednoduše popisuje strukturu a jazyk literárního díla a vlastními slovy interpretuje smysl díla." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

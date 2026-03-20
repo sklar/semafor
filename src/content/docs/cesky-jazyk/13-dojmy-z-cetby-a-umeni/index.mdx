@@ -1,5 +1,6 @@
 ---
 title: "13. Dojmy z četby a umění"
+description: "Umí vhodně formulovat dojmy ze své četby, návštěvy divadelního nebo filmového představení a názory na umělecké dílo."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +12,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Umí vhodně formulovat dojmy ze své četby, návštěvy divadelního nebo filmového představení a názory na umělecké dílo." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

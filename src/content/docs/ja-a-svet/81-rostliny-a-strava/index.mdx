@@ -1,5 +1,6 @@
 ---
 title: "81. Rostliny a strava"
+description: "Popíše význam rostlin pro lidskou stravu."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +12,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Popíše význam rostlin pro lidskou stravu." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

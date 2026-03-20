@@ -21,7 +21,7 @@ export default function TableView(props: TableViewProps) {
 	}
 
 	return (
-		<div class={styles.wrapper}>
+		<div class={styles.wrapper} data-testid="table-view">
 			<table class={styles.table}>
 				<thead>
 					<tr>

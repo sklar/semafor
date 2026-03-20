@@ -1,6 +1,6 @@
 ---
 import { CardGrid, LinkCard } from '@astrojs/starlight/components'
-import CardViewIsland from '@/components/card-view/CardViewIsland'
+import SubjectOverview from '@/components/subject-overview/SubjectOverview'
 import { topicHref } from '@/lib/href'
 import type { Topic } from '@/lib/topics'
 
@@ -12,7 +12,7 @@ interface Props {
 const { topics, subject } = Astro.props
 ---
 
-<div data-static-cards>
+<noscript>
 	<CardGrid>
 		{topics.map(topic => (
 			<LinkCard
@@ -22,6 +22,6 @@ const { topics, subject } = Astro.props
 			/>
 		))}
 	</CardGrid>
-</div>
+</noscript>
 
-<CardViewIsland client:load topics={topics} subject={subject} />
+<SubjectOverview client:load topics={topics} subject={subject} />

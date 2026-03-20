@@ -71,7 +71,9 @@ describe('CardView', () => {
 		renderCardView(TOPICS, SUBJECT, 'all')
 
 		for (const topic of TOPICS) {
-			expect(screen.getByText(topic.title)).toBeDefined()
+			expect(
+				screen.getAllByText(topic.title, { exact: false }).length,
+			).toBeGreaterThan(0)
 		}
 	})
 

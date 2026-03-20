@@ -13,7 +13,7 @@ interface CardViewProps {
 
 export default function CardView(props: CardViewProps) {
 	return (
-		<div class={styles.grid}>
+		<div class={styles.grid} data-testid="card-view">
 			<For each={props.topics}>
 				{(topic) => (
 					<div class={styles.card}>

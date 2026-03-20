@@ -28,7 +28,10 @@ function renderOverview() {
 }
 
 describe('SubjectOverview', () => {
-	afterEach(cleanup)
+	afterEach(() => {
+		cleanup()
+		localStorage.clear()
+	})
 
 	describe('composition', () => {
 		test('renders grade filter', () => {

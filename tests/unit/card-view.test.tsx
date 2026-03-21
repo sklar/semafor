@@ -26,7 +26,7 @@ const SUBJECT = 'matematika'
 function renderCardView(topics: Topic[], subject: string, initial: Grade) {
 	const [grade, setGrade] = createSignal<Grade>(initial)
 
-	render(() => <CardView topics={topics} subject={subject} grade={grade} />)
+	render(() => <CardView topics={topics} subject={subject} grade={grade()} />)
 
 	return { setGrade }
 }

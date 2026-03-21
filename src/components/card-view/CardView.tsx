@@ -1,4 +1,3 @@
-import type { Accessor } from 'solid-js'
 import { For, Show } from 'solid-js'
 import type { Grade } from '@/components/grade-filter/grade'
 import { topicHref } from '@/lib/href'
@@ -56,7 +55,7 @@ function CardWithLink(props: CardWithLinkProps) {
 interface CardViewProps {
 	topics: Topic[]
 	subject: string
-	grade: Accessor<Grade>
+	grade: Grade
 }
 
 export default function CardView(props: CardViewProps) {
@@ -65,14 +64,13 @@ export default function CardView(props: CardViewProps) {
 			<For each={props.topics}>
 				{(topic) => {
 					const available = () =>
-						props.grade() === 'all' ||
-						topic.grades.includes(Number(props.grade()))
+						props.grade === 'all' || topic.grades.includes(Number(props.grade))
 
 					return (
 						<Show when={available()} fallback={<Card topic={topic} />}>
 							<CardWithLink
 								topic={topic}
-								href={topicHref(props.subject, topic.slug, props.grade())}
+								href={topicHref(props.subject, topic.slug, props.grade)}
 							/>
 						</Show>
 					)

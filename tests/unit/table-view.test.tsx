@@ -26,7 +26,7 @@ const SUBJECT = 'matematika'
 function renderTableView(topics: Topic[], subject: string, initial: Grade) {
 	const [grade, setGrade] = createSignal<Grade>(initial)
 
-	render(() => <TableView topics={topics} subject={subject} grade={grade} />)
+	render(() => <TableView topics={topics} subject={subject} grade={grade()} />)
 
 	return { setGrade }
 }

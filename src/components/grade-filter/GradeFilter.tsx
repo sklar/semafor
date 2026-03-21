@@ -1,11 +1,10 @@
-import type { Accessor } from 'solid-js'
 import { For } from 'solid-js'
 import styles from './GradeFilter.module.css'
 import type { Grade } from './grade'
 import { GRADE_LABELS, GRADES } from './grade'
 
 interface GradeFilterProps {
-	grade: Accessor<Grade>
+	grade: Grade
 	onGradeChange: (grade: Grade) => void
 }
 
@@ -20,7 +19,7 @@ export default function GradeFilter(props: GradeFilterProps) {
 							type="radio"
 							name="grade"
 							value={g}
-							checked={props.grade() === g}
+							checked={props.grade === g}
 							onChange={() => props.onGradeChange(g)}
 						/>
 						{GRADE_LABELS[g]}

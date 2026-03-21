@@ -9,7 +9,7 @@ function renderWithSignal(initial: Grade) {
 	const onChange = vi.fn()
 	const [grade] = createSignal<Grade>(initial)
 
-	render(() => <GradeFilter grade={grade} onGradeChange={onChange} />)
+	render(() => <GradeFilter grade={grade()} onGradeChange={onChange} />)
 
 	return { onChange, grade }
 }

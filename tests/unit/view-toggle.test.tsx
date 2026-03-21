@@ -9,7 +9,7 @@ function renderWithSignal(initial: View) {
 	const onChange = vi.fn()
 	const [view] = createSignal<View>(initial)
 
-	render(() => <ViewToggle view={view} onViewChange={onChange} />)
+	render(() => <ViewToggle view={view()} onViewChange={onChange} />)
 
 	return { onChange, view }
 }

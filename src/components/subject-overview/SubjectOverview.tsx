@@ -41,17 +41,21 @@ export default function SubjectOverview(props: SubjectOverviewProps) {
 	return (
 		<>
 			<div class={style.container}>
-				<GradeFilter grade={grade} onGradeChange={onGradeChange} />
-				<ViewToggle view={view} onViewChange={onViewChange} />
+				<GradeFilter grade={grade()} onGradeChange={onGradeChange} />
+				<ViewToggle view={view()} onViewChange={onViewChange} />
 			</div>
 			<Show when={view() === 'cards'}>
-				<CardView topics={props.topics} subject={props.subject} grade={grade} />
+				<CardView
+					topics={props.topics}
+					subject={props.subject}
+					grade={grade()}
+				/>
 			</Show>
 			<Show when={view() === 'table'}>
 				<TableView
 					topics={props.topics}
 					subject={props.subject}
-					grade={grade}
+					grade={grade()}
 				/>
 			</Show>
 		</>

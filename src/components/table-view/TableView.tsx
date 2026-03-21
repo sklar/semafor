@@ -1,4 +1,3 @@
-import type { Accessor } from 'solid-js'
 import { For } from 'solid-js'
 import type { Grade } from '@/components/grade-filter/grade'
 import { GRADE_LABELS } from '@/components/grade-filter/grade'
@@ -12,13 +11,12 @@ const NUMERIC_GRADES = ['6', '7', '8', '9'] as const
 interface TableViewProps {
 	topics: Topic[]
 	subject: string
-	grade: Accessor<Grade>
+	grade: Grade
 }
 
 export default function TableView(props: TableViewProps) {
 	const isMuted = (g: string) => {
-		const current = props.grade()
-		return current !== 'all' && current !== g
+		return props.grade !== 'all' && props.grade !== g
 	}
 
 	return (

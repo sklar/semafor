@@ -34,12 +34,14 @@
 		inset: 0;
 	}
 
-	&:hover {
-		background: var(--sl-color-gray-7, var(--sl-color-gray-6));
-		border-color: var(--sl-color-gray-2);
+	&:not([data-muted]) {
+		&:hover {
+			background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+			border-color: var(--sl-color-gray-2);
 
-		svg {
-			color: var(--sl-color-white);
+			svg {
+				color: var(--sl-color-white);
+			}
 		}
 	}
 

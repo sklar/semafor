@@ -1,60 +1,60 @@
 ---
-title: "8. rocnik"
+title: "8. ročník"
 sidebar:
   order: 8
-  label: "8. rocnik"
+  label: "8. ročník"
 ---
 
 import { Badge, Steps } from '@astrojs/starlight/components'
 
-## 📇 Zakladni pojmy
+## 📇 Základní pojmy
 
 <dl class="basic-terms">
-  <dt>Jednoduchy urok</dt>
-  <dd>Urok pocitany pouze z puvodni jistiny (vlozene castky). Vzorec: urok = jistina × sazba × cas. 10 000 Kc pri 3 % rocne na 1 rok = 300 Kc uroku.</dd>
+  <dt>Jednoduchý úrok</dt>
+  <dd>Úrok počítaný pouze z původní jistiny (vložené částky). Vzorec: úrok = jistina × sazba × čas. 10 000 Kč při 3 % ročně na 1 rok = 300 Kč úroku.</dd>
 
-  <dt>Slozeny urok</dt>
-  <dd>Urok pocitany z jistiny i z driv pripisanych uroku — „urok z uroku". Po prvnim roce se urok pricte k jistine a dalsi rok se uroceni z vetsi castky. Exponencialni rust.</dd>
+  <dt>Složený úrok</dt>
+  <dd>Úrok počítaný z jistiny i z dříve připsaných úroků — „úrok z úroku". Po prvním roce se úrok přičte k jistině a další rok se úročení z větší částky. Exponenciální růst.</dd>
 
   <dt>Jistina</dt>
-  <dd>Puvodni vlozena castka (u sporeni) nebo pujcena castka (u uveru). Zaklad, ze ktereho se pocitaji uroky.</dd>
+  <dd>Původní vložená částka (u spoření) nebo půjčená částka (u úvěru). Základ, ze kterého se počítají úroky.</dd>
 
-  <dt>Urokova sazba</dt>
-  <dd>Procento, ktere urcuje vysi uroku za dane obdobi (obvykle rok). Sazba 3 % p.a. (per annum = rocne) znamena, ze za rok dostaneme 3 % z jistiny.</dd>
+  <dt>Úroková sazba</dt>
+  <dd>Procento, které určuje výši úroku za dané období (obvykle rok). Sazba 3 % p.a. (per annum = ročně) znamená, že za rok dostaneme 3 % z jistiny.</dd>
 
-  <dt>Procentni bod</dt>
-  <dd>Rozdil mezi dvema procentualnimi hodnotami. Urokova sazba vzrostla z 3 % na 5 % — to je narust o 2 procentni body (ne o 2 %). Narust o 2 % z 3 % by byl 3,06 %.</dd>
+  <dt>Procentní bod</dt>
+  <dd>Rozdíl mezi dvěma procentuálními hodnotami. Úroková sazba vzrostla z 3 % na 5 % — to je nárůst o 2 procentní body (ne o 2 %). Nárůst o 2 % z 3 % by byl 3,06 %.</dd>
 
   <dt>Promile</dt>
-  <dd>Jedna tisicina celku. Symbol ‰. 1 ‰ = 0,1 % = 0,001. Pouziva se napr. pro alkohol v krvi, koncentrace latek, pojistne sazby.</dd>
+  <dd>Jedna tisícina celku. Symbol ‰. 1 ‰ = 0,1 % = 0,001. Používá se např. pro alkohol v krvi, koncentrace látek, pojistné sazby.</dd>
 </dl>
 
-## 🎓 Co by melo dite znat
+## 🎓 Co by mělo dítě znát
 
-- Spocitat jednoduchy urok na zadane obdobi
-- Pochopit princip slozeneho uroku a spocitat ho na 2–3 obdobi
-- Rozlisit procentni bod a procento
-- Resit ulohy na opakovaně procentni zmeny (zvyseni, pak snizeni)
-- Pracovat s promile v jednoduchych kontextech
+- Spočítat jednoduchý úrok na zadané období
+- Pochopit princip složeného úroku a spočítat ho na 2–3 období
+- Rozlišit procentní bod a procento
+- Řešit úlohy na opakované procentní změny (zvýšení, pak snížení)
+- Pracovat s promile v jednoduchých kontextech
 
-## 🌳 Priklady z realneho sveta
+## 🌳 Příklady z reálného světa
 
 <Steps>
 
-1. ### Sporicí ucet
-   Na uctu mame 20 000 Kc s urokem 4 % rocne (slozeny urok). Po 1 roce: 20 800 Kc. Po 2 letech: 21 632 Kc (ne 21 600!). Ten rozdil 32 Kc je „urok z uroku" — a s casem roste.
+1. ### Spořicí účet
+   Na účtu máme 20 000 Kč s úrokem 4 % ročně (složený úrok). Po 1 roce: 20 800 Kč. Po 2 letech: 21 632 Kč (ne 21 600!). Ten rozdíl 32 Kč je „úrok z úroku" — a s časem roste.
 
-2. ### Splatka pujcky
-   Pujcime si 50 000 Kc na 2 roky s urokem 8 % rocne (jednoduchy). Celkovy urok = 50 000 × 0,08 × 2 = 8 000 Kc. Vratime 58 000 Kc. Mesicni splatka = 58 000 ÷ 24 ≈ 2 417 Kc.
+2. ### Splátka půjčky
+   Půjčíme si 50 000 Kč na 2 roky s úrokem 8 % ročně (jednoduchý). Celkový úrok = 50 000 × 0,08 × 2 = 8 000 Kč. Vrátíme 58 000 Kč. Měsíční splátka = 58 000 ÷ 24 ≈ 2 417 Kč.
 
 3. ### Inflace
-   Inflace 6 % rocne znamena, ze co stalo 100 Kc loni, stoji 106 Kc letos. A za 5 let? 100 × 1,06⁵ ≈ 134 Kc. Slozeny urok funguje i „proti nam" — penize ztraceji hodnotu.
+   Inflace 6 % ročně znamená, že co stálo 100 Kč loni, stojí 106 Kč letos. A za 5 let? 100 × 1,06⁵ ≈ 134 Kč. Složený úrok funguje i „proti nám" — peníze ztrácejí hodnotu.
 
-4. ### Procentni body ve volbach
-   Strana mela 25 % hlasu a nyni ma 30 %. Narost o 5 procentnich bodu. Ale narust v procentech = 5/25 × 100 = 20 %. Zcela jiny udaj! Media casto zamenuji.
+4. ### Procentní body ve volbách
+   Strana měla 25 % hlasů a nyní má 30 %. Nárůst o 5 procentních bodů. Ale nárůst v procentech = 5/25 × 100 = 20 %. Zcela jiný údaj! Média často zaměňují.
 
 5. ### Alkohol v krvi
-   Povolena hranice pro ridice je 0 ‰. Po jednom pivu ma clovek priblizne 0,5 ‰. Co to znamena? V 1 litru krve je 0,5 ml cistiho alkoholu. Promile v praxi.
+   Povolená hranice pro řidiče je 0 ‰. Po jednom pivu má člověk přibližně 0,5 ‰. Co to znamená? V 1 litru krve je 0,5 ml čistého alkoholu. Promile v praxi.
 
 </Steps>
 
@@ -62,41 +62,41 @@ import { Badge, Steps } from '@astrojs/starlight/components'
 
 <Steps>
 
-1. ### Sporicí simulace
+1. ### Spořicí simulace
 
    ⏱️ _1 hodina_
 
-   Dite vytvori tabulku (rucne nebo v Excelu): vlozi 10 000 Kc na ucet s 5 % rocne. Spocita zustatek po kazdem roce az do 10. roku — jednou s jednoduchym urokem, jednou se slozenym. Vysledky zakreslido grafu. Kde se krivky rozchazeci?
+   Dítě vytvoří tabulku (ručně nebo v Excelu): vloží 10 000 Kč na účet s 5 % ročně. Spočítá zůstatek po každém roce až do 10. roku — jednou s jednoduchým úrokem, jednou se složeným. Výsledky zakreslí do grafu. Kde se křivky rozcházejí?
 
-2. ### Medialni detektiv
-
-   ⏱️ _45 minut_
-
-   Dite najde v mediich 5 zprav obsahujicich procenta. U kazde analyzuje: co je zaklad, je to procento nebo procentni bod, je udaj pouzit spravne, neni zavadejici? Kriticke mysleni o cislech.
-
-3. ### Pujcka vs. sporeni
+2. ### Mediální detektiv
 
    ⏱️ _45 minut_
 
-   Dite srovnam dva scenare: a) sporeni 1 000 Kc mesicne pri 4 % rocne na 5 let, b) pujcka 50 000 Kc pri 10 % na 5 let. Kolik celkem nalspori, kolik celkem zaplatime? Proc se banky usmivaji?
+   Dítě najde v médiích 5 zpráv obsahujících procenta. U každé analyzuje: co je základ, je to procento nebo procentní bod, je údaj použit správně, není zavádějící? Kritické myšlení o číslech.
 
-4. ### Inflacni experiment
+3. ### Půjčka vs. spoření
+
+   ⏱️ _45 minut_
+
+   Dítě srovná dva scénáře: a) spoření 1 000 Kč měsíčně při 4 % ročně na 5 let, b) půjčka 50 000 Kč při 10 % na 5 let. Kolik celkem naspoří, kolik celkem zaplatíme? Proč se banky usmívají?
+
+4. ### Inflační experiment
 
    ⏱️ _30 minut_
 
-   Najdete ceny 10 beznych produktu dnes a pred 10 lety (internetovy archiv, stare letaky). O kolik procent se zvysily? Jaka byla prumerna rocni inflace? Sedi to s oficialnimi udaji?
+   Najděte ceny 10 běžných produktů dnes a před 10 lety (internetový archiv, staré letáky). O kolik procent se zvýšily? Jaká byla průměrná roční inflace? Sedí to s oficiálními údaji?
 
 </Steps>
 
 ## 🍱 Odkazy a zdroje
 
-- [Matematika.cz — Slozeny urok](https://www.matematika.cz/slozeny-urok)<br />
-  Vyklad slozeneho uroku s priklady a kalkulackou.
-- [Financni gramotnost](https://www.financnigramotnost.cz)<br />
-  Vzdelavaci portal o financich — uroky, dane, sporeni.
-- [Ceska narodni banka — Inflace](https://www.cnb.cz/cs/statistika/cenova-statistika/inflace/)<br />
-  Aktualni i historicka data o inflaci v CR.
+- [Matematika.cz — Složený úrok](https://www.matematika.cz/slozeny-urok)<br />
+  Výklad složeného úroku s příklady a kalkulačkou.
+- [Finanční gramotnost](https://www.financnigramotnost.cz)<br />
+  Vzdělávací portál o financích — úroky, daně, spoření.
+- [Česká národní banka — Inflace](https://www.cnb.cz/cs/statistika/cenova-statistika/inflace/)<br />
+  Aktuální i historická data o inflaci v ČR.
 - [Khan Academy — Compound Interest](https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial/compound-interest-tutorial/v/compound-interest-introduction) <Badge text="EN" variant="tip" /><br />
-  Video vysvetleni slozeneho uroku.
+  Video vysvětlení složeného úroku.
 - [Math is Fun — Compound Interest](https://www.mathsisfun.com/money/compound-interest.html) <Badge text="EN" variant="tip" /><br />
-  Interaktivni kalkulacka slozeneho uroku s vysvetlenim.
+  Interaktivní kalkulačka složeného úroku s vysvětlením.

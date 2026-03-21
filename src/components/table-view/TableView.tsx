@@ -23,15 +23,20 @@ export default function TableView(props: TableViewProps) {
 
 	return (
 		<div class={styles.wrapper} data-testid="table-view">
-			<table class={styles.table}>
+			<table class={styles.table} aria-label="Přehled témat podle ročníků">
 				<thead>
 					<tr>
-						<th class={styles.colNumber}>#</th>
-						<th class={styles.colTopic}>Téma</th>
+						<th class={styles.colNumber} scope="col">
+							#
+						</th>
+						<th class={styles.colTopic} scope="col">
+							Téma
+						</th>
 						<For each={NUMERIC_GRADES}>
 							{(g) => (
 								<th
 									class={styles.colGrade}
+									scope="col"
 									data-grade={g}
 									data-muted={isMuted(g) || undefined}
 								>
@@ -61,7 +66,12 @@ export default function TableView(props: TableViewProps) {
 											data-muted={isMuted(g) || undefined}
 										>
 											{topic.grades.includes(Number(g)) ? (
-												<a href={topicHref(props.subject, topic.slug, g)}>✅</a>
+												<a
+													href={topicHref(props.subject, topic.slug, g)}
+													aria-label={`${topic.title} — ${GRADE_LABELS[g]}`}
+												>
+													✅
+												</a>
 											) : (
 												'—'
 											)}

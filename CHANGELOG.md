@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026.03.21.1
+
+### Chores
+
+- #43 `e5d15fe` Astro 6 + Starlight v0.38 migration, Node 24, [experimental rust compiler](https://astro.build/blog/astro-6/#experimental-rust-compiler) + [queued rendering](https://astro.build/blog/astro-6/#experimental-queued-rendering)
+
+
+
 ## 2026.03.21
 
 ### Content

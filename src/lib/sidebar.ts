@@ -14,6 +14,7 @@ export function findGroupBySlug(
 ): SidebarObject | undefined {
 	for (const item of items) {
 		if (!isObject(item)) continue
+		// Skip leaf items (have `slug`) — we want their parent group (has `items`)
 		if ('slug' in item && item.slug === slug) return undefined
 		if ('items' in item && item.items) {
 			for (const child of item.items) {

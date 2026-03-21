@@ -16,6 +16,8 @@ export default defineConfig({
 		browser: {
 			enabled: true,
 			provider: playwright(),
+			// Show browser: VITEST_HEADED=1 pnpm test
+			headless: !process.env.VITEST_HEADED,
 			instances: [{ browser: 'chromium' }],
 		},
 	},

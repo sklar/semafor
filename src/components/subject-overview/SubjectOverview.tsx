@@ -1,15 +1,20 @@
-import { createSignal, onMount, Show } from 'solid-js'
+import { createSignal, Match, onMount, Switch } from 'solid-js'
 import CardView from '@/components/card-view/CardView'
 import GradeFilter from '@/components/grade-filter/GradeFilter'
 import type { Grade } from '@/components/grade-filter/grade'
 import {
 	DEFAULT_GRADE,
 	GRADE_STORAGE_KEY,
+	isGrade,
 } from '@/components/grade-filter/grade'
 import TableView from '@/components/table-view/TableView'
 import ViewToggle from '@/components/view-toggle/ViewToggle'
 import type { View } from '@/components/view-toggle/view'
-import { DEFAULT_VIEW, VIEW_STORAGE_KEY } from '@/components/view-toggle/view'
+import {
+	DEFAULT_VIEW,
+	isView,
+	VIEW_STORAGE_KEY,
+} from '@/components/view-toggle/view'
 import type { Topic } from '@/lib/topics'
 import style from './SubjectOverview.module.css'
 
@@ -32,10 +37,10 @@ export default function SubjectOverview(props: SubjectOverviewProps) {
 	}
 
 	onMount(() => {
-		const storedGrade = localStorage.getItem(GRADE_STORAGE_KEY) as Grade | null
-		if (storedGrade) setGrade(storedGrade)
-		const storedView = localStorage.getItem(VIEW_STORAGE_KEY) as View | null
-		if (storedView) setView(storedView)
+		const storedGrade = localStorage.getItem(GRADE_STORAGE_KEY)
+		if (storedGrade && isGrade(storedGrade)) setGrade(storedGrade)
+		const storedView = localStorage.getItem(VIEW_STORAGE_KEY)
+		if (storedView && isView(storedView)) setView(storedView)
 	})
 
 	return (
@@ -44,20 +49,22 @@ export default function SubjectOverview(props: SubjectOverviewProps) {
 				<GradeFilter grade={grade()} onGradeChange={onGradeChange} />
 				<ViewToggle view={view()} onViewChange={onViewChange} />
 			</div>
-			<Show when={view() === 'cards'}>
-				<CardView
-					topics={props.topics}
-					subject={props.subject}
-					grade={grade()}
-				/>
-			</Show>
-			<Show when={view() === 'table'}>
-				<TableView
-					topics={props.topics}
-					subject={props.subject}
-					grade={grade()}
-				/>
-			</Show>
+			<Switch>
+				<Match when={view() === 'cards'}>
+					<CardView
+						topics={props.topics}
+						subject={props.subject}
+						grade={grade()}
+					/>
+				</Match>
+				<Match when={view() === 'table'}>
+					<TableView
+						topics={props.topics}
+						subject={props.subject}
+						grade={grade()}
+					/>
+				</Match>
+			</Switch>
 		</>
 	)
 }

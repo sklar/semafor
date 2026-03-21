@@ -109,22 +109,25 @@ describe('TableView', () => {
 	test('all columns unmuted when grade is "all"', () => {
 		renderTableView(TOPICS, SUBJECT, 'all')
 
-		const mutedCells = document.querySelectorAll('[data-muted]')
+		const table = screen.getByRole('table')
+		const mutedCells = table.querySelectorAll('[data-muted]')
 		expect(mutedCells).toHaveLength(0)
 	})
 
 	test('non-selected grade columns are muted', () => {
 		renderTableView(TOPICS, SUBJECT, '7')
 
+		const table = screen.getByRole('table')
+
 		// Grade 7 should not be muted
-		const grade7Cells = document.querySelectorAll('[data-grade="7"]')
+		const grade7Cells = table.querySelectorAll('[data-grade="7"]')
 		for (const cell of grade7Cells) {
 			expect(cell.hasAttribute('data-muted')).toBe(false)
 		}
 
 		// Grades 6, 8, 9 should be muted
 		for (const g of ['6', '8', '9']) {
-			const cells = document.querySelectorAll(`[data-grade="${g}"]`)
+			const cells = table.querySelectorAll(`[data-grade="${g}"]`)
 			for (const cell of cells) {
 				expect(cell.hasAttribute('data-muted')).toBe(true)
 			}
@@ -134,19 +137,21 @@ describe('TableView', () => {
 	test('muting updates reactively when grade changes', () => {
 		const { setGrade } = renderTableView(TOPICS, SUBJECT, 'all')
 
+		const table = screen.getByRole('table')
+
 		// Initially no muted cells
-		expect(document.querySelectorAll('[data-muted]')).toHaveLength(0)
+		expect(table.querySelectorAll('[data-muted]')).toHaveLength(0)
 
 		setGrade('6')
 
 		// Grade 7 should now be muted
-		const grade7Cells = document.querySelectorAll('[data-grade="7"]')
+		const grade7Cells = table.querySelectorAll('[data-grade="7"]')
 		for (const cell of grade7Cells) {
 			expect(cell.hasAttribute('data-muted')).toBe(true)
 		}
 
 		// Grade 6 should not be muted
-		const grade6Cells = document.querySelectorAll('[data-grade="6"]')
+		const grade6Cells = table.querySelectorAll('[data-grade="6"]')
 		for (const cell of grade6Cells) {
 			expect(cell.hasAttribute('data-muted')).toBe(false)
 		}

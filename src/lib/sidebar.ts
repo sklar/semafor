@@ -1,13 +1,14 @@
+import type { StarlightUserConfig } from '@astrojs/starlight/types'
 import { sidebar } from '@/sidebar.config'
 
-type SidebarEntry = NonNullable<typeof sidebar>[number]
+export type SidebarEntry = NonNullable<StarlightUserConfig['sidebar']>[number]
 type SidebarObject = Exclude<SidebarEntry, string>
 
 function isObject(entry: SidebarEntry): entry is SidebarObject {
 	return typeof entry !== 'string'
 }
 
-function findGroupBySlug(
+export function findGroupBySlug(
 	items: SidebarEntry[],
 	slug: string,
 ): SidebarObject | undefined {
@@ -31,14 +32,18 @@ function findGroupBySlug(
  * Extracts the last path segment from each `autogenerate.directory` entry.
  *
  * @param subAreaSlug - Slug identifying the sub-area group in the sidebar config
+ * @param items - Sidebar entries to search (defaults to the project sidebar config)
  * @returns Array of topic directory slugs
  *
  * @example
  * getSubAreaSlugs('matematika')
  * // => ['01-pocetni-operace', '02-zaokrouhlovani-a-odhady', ...]
  */
-export function getSubAreaSlugs(subAreaSlug: string): string[] {
-	const group = findGroupBySlug(sidebar ?? [], subAreaSlug)
+export function getSubAreaSlugs(
+	subAreaSlug: string,
+	items: SidebarEntry[] = sidebar ?? [],
+): string[] {
+	const group = findGroupBySlug(items, subAreaSlug)
 	if (!group || !('items' in group) || !group.items) return []
 
 	const slugs: string[] = []

@@ -21,10 +21,10 @@
 	box-shadow: var(--sl-shadow-sm);
 	position: relative;
 	margin-block-start: 0;
+	transition: opacity 0.15s ease;
 
 	a {
 		text-decoration: none;
-		line-height: var(--sl-line-height-headings);
 	}
 
 	/* a11y fix for https://github.com/withastro/starlight/issues/487 */
@@ -42,12 +42,20 @@
 			color: var(--sl-color-white);
 		}
 	}
+
+	&[data-muted] {
+		opacity: 0.35;
+	}
 }
 
 .stack {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+
+	& > * {
+		line-height: var(--sl-line-height-headings);
+	}
 }
 
 .title {

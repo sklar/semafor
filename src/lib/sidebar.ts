@@ -26,6 +26,17 @@ function findGroupBySlug(
 	return undefined
 }
 
+/**
+ * Return topic directory slugs for a sidebar sub-area.
+ * Extracts the last path segment from each `autogenerate.directory` entry.
+ *
+ * @param subAreaSlug - Slug identifying the sub-area group in the sidebar config
+ * @returns Array of topic directory slugs
+ *
+ * @example
+ * getSubAreaSlugs('matematika')
+ * // => ['01-pocetni-operace', '02-zaokrouhlovani-a-odhady', ...]
+ */
 export function getSubAreaSlugs(subAreaSlug: string): string[] {
 	const group = findGroupBySlug(sidebar ?? [], subAreaSlug)
 	if (!group || !('items' in group) || !group.items) return []

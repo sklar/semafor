@@ -14,6 +14,16 @@ export type GlobRecord = Record<string, GlobEntry>
 
 const GRADE_PATTERN = /^(\d+)-rocnik\.mdx$/
 
+/**
+ * Parse MDX glob into sorted topics.
+ * Entries without `number` in frontmatter are skipped.
+ *
+ * @param glob - Record from `import.meta.glob(...)`, keyed by file path
+ * @returns Topics sorted by number ascending
+ *
+ * @example
+ * const topics = parseTopics(import.meta.glob('./*.mdx', { eager: true }))
+ */
 export function parseTopics(glob: GlobRecord): Topic[] {
 	const groups = new Map<
 		string,
@@ -62,11 +72,34 @@ export function parseTopics(glob: GlobRecord): Topic[] {
 	return topics.toSorted((a, b) => a.number - b.number)
 }
 
+/**
+ * Zero-pad a topic number for display.
+ * Width adapts to `maxNumber` (2 digits for ≤99, 3 for ≥100).
+ *
+ * @param n - Topic number
+ * @param maxNumber - Largest number in the set, determines padding width
+ * @returns Padded string
+ *
+ * @example
+ * formatTopicNumber(5)       // => '05'
+ * formatTopicNumber(5, 131)  // => '005'
+ */
 export function formatTopicNumber(n: number, maxNumber = 99): string {
 	const width = String(maxNumber).length
 	return String(n).padStart(width, '0')
 }
 
+/**
+ * Format a topic's display label with padded number prefix.
+ *
+ * @param topic - Topic object
+ * @param maxNumber - Passed to {@link formatTopicNumber} for padding width
+ * @returns Label string
+ *
+ * @example
+ * topicLabel({ number: 1, title: 'Početní operace', slug: '01-pocetni-operace', grades: [] })
+ * // => '01. Početní operace'
+ */
 export function topicLabel(topic: Topic, maxNumber?: number): string {
 	return `${formatTopicNumber(topic.number, maxNumber)}. ${topic.title}`
 }

@@ -7,18 +7,17 @@ export interface Topic {
 }
 
 export type GlobEntry = {
-	frontmatter: { title: string; description?: string }
+	frontmatter: { number?: number; title: string; description?: string }
 }
 
 export type GlobRecord = Record<string, GlobEntry>
 
 const GRADE_PATTERN = /^(\d+)-rocnik\.mdx$/
-const NUMBER_PREFIX = /^(\d+)-/
 
 export function parseTopics(glob: GlobRecord): Topic[] {
 	const groups = new Map<
 		string,
-		{ title: string; description?: string; grades: number[] }
+		{ number?: number; title: string; description?: string; grades: number[] }
 	>()
 
 	for (const path of Object.keys(glob)) {
@@ -35,6 +34,7 @@ export function parseTopics(glob: GlobRecord): Topic[] {
 		}
 
 		if (filename === 'index.mdx') {
+			group.number = glob[path].frontmatter.number
 			group.title = glob[path].frontmatter.title
 			group.description = glob[path].frontmatter.description
 		} else {
@@ -47,13 +47,12 @@ export function parseTopics(glob: GlobRecord): Topic[] {
 
 	const topics: Topic[] = []
 
-	for (const [slug, { title, description, grades }] of groups) {
-		const numberMatch = slug.match(NUMBER_PREFIX)
-		if (!numberMatch) continue
+	for (const [slug, { number, title, description, grades }] of groups) {
+		if (number == null) continue
 
 		topics.push({
-			number: Number(numberMatch[1]),
-			title: title.replace(/^\d{1,3}\.\s*/, ''),
+			number,
+			title,
 			slug,
 			grades: grades.toSorted((a, b) => a - b),
 			...(description && { description }),
@@ -61,4 +60,13 @@ export function parseTopics(glob: GlobRecord): Topic[] {
 	}
 
 	return topics.toSorted((a, b) => a.number - b.number)
+}
+
+export function formatTopicNumber(n: number, maxNumber = 99): string {
+	const width = String(maxNumber).length
+	return String(n).padStart(width, '0')
+}
+
+export function topicLabel(topic: Topic, maxNumber?: number): string {
+	return `${formatTopicNumber(topic.number, maxNumber)}. ${topic.title}`
 }

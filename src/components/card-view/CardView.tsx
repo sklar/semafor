@@ -3,6 +3,7 @@ import { For, Show } from 'solid-js'
 import type { Grade } from '@/components/grade-filter/grade'
 import { topicHref } from '@/lib/href'
 import type { Topic } from '@/lib/topics'
+import { topicLabel } from '@/lib/topics'
 import styles from './CardView.module.css'
 
 interface CardViewProps {
@@ -19,9 +20,7 @@ export default function CardView(props: CardViewProps) {
 					<div class={styles.card}>
 						<span class={styles.stack}>
 							<a href={topicHref(props.subject, topic.slug, props.grade())}>
-								<b
-									class={styles.title}
-								>{`${String(topic.number).padStart(2, '0')}. ${topic.title}`}</b>
+								<b class={styles.title}>{topicLabel(topic)}</b>
 								<Show when={topic.description}>
 									<div class={styles.description}>{topic.description}</div>
 								</Show>

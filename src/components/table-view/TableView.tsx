@@ -4,6 +4,7 @@ import type { Grade } from '@/components/grade-filter/grade'
 import { GRADE_LABELS } from '@/components/grade-filter/grade'
 import { topicHref } from '@/lib/href'
 import type { Topic } from '@/lib/topics'
+import { formatTopicNumber } from '@/lib/topics'
 import styles from './TableView.module.css'
 
 const NUMERIC_GRADES = ['6', '7', '8', '9'] as const
@@ -45,7 +46,7 @@ export default function TableView(props: TableViewProps) {
 						{(topic) => (
 							<tr>
 								<td class={styles.colNumber}>
-									{String(topic.number).padStart(2, '0')}
+									{formatTopicNumber(topic.number)}
 								</td>
 								<td class={styles.colTopic}>
 									<a href={topicHref(props.subject, topic.slug, 'all')}>

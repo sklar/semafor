@@ -8,6 +8,7 @@ export const collections = {
 		loader: docsLoader(),
 		schema: docsSchema({
 			extend: z.object({
+				number: z.number().optional(),
 				heroCompact: z.boolean().default(false),
 			}),
 		}),

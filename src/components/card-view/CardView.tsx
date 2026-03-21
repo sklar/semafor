@@ -11,15 +11,13 @@ interface CardProps {
 }
 
 function Card(props: CardProps) {
-	const { topic } = props
-
 	return (
 		<div class={styles.card} data-muted>
 			<span class={styles.stack}>
 				<span>
-					<b class={styles.title}>{topicLabel(topic)}</b>
-					<Show when={topic.description}>
-						<div class={styles.description}>{topic.description}</div>
+					<b class={styles.title}>{topicLabel(props.topic)}</b>
+					<Show when={props.topic.description}>
+						<div class={styles.description}>{props.topic.description}</div>
 					</Show>
 				</span>
 			</span>
@@ -33,15 +31,13 @@ interface CardWithLinkProps extends CardProps {
 }
 
 function CardWithLink(props: CardWithLinkProps) {
-	const { href, topic } = props
-
 	return (
 		<div class={styles.card}>
 			<span class={styles.stack}>
-				<a href={href}>
-					<b class={styles.title}>{topicLabel(topic)}</b>
-					<Show when={topic.description}>
-						<div class={styles.description}>{topic.description}</div>
+				<a href={props.href}>
+					<b class={styles.title}>{topicLabel(props.topic)}</b>
+					<Show when={props.topic.description}>
+						<div class={styles.description}>{props.topic.description}</div>
 					</Show>
 				</a>
 			</span>
@@ -64,20 +60,19 @@ interface CardViewProps {
 }
 
 export default function CardView(props: CardViewProps) {
-	const { grade, subject, topics } = props
-
 	return (
 		<div class={styles.grid} data-testid="card-view">
-			<For each={topics}>
+			<For each={props.topics}>
 				{(topic) => {
 					const available = () =>
-						grade() === 'all' || topic.grades.includes(Number(grade()))
+						props.grade() === 'all' ||
+						topic.grades.includes(Number(props.grade()))
 
 					return (
 						<Show when={available()} fallback={<Card topic={topic} />}>
 							<CardWithLink
 								topic={topic}
-								href={topicHref(subject, topic.slug, grade())}
+								href={topicHref(props.subject, topic.slug, props.grade())}
 							/>
 						</Show>
 					)

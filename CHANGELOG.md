@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026.03.21
+
+### Content
+
+- #40 `4d0128c` **MAT**: Add missing Czech diacritics (topics 16–22)
+
+### Features
+
+- #40 `4d0128c` Add interactive grade filtering and view switching to Subject overview pages
+Subject overview pages (Přehled) now let users filter topics by grade (6.–9. ročník) and switch between card and table views. Selecting a grade links directly to the grade-specific page for each topic. Table view shows grade availability at a glance with muted columns for quick orientation. Settings persist across pages (localStorage).
+
+
+
 ## 2026.03.14
 
 ### CI

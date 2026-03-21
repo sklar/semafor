@@ -1,5 +1,7 @@
 ---
-title: "115. Technické úkoly"
+number: 115
+title: "Technické úkoly"
+description: "Řeší jednoduché technické úkoly s vhodným výběrem materiálů, pracovních nástrojů a nářadí."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Řeší jednoduché technické úkoly s vhodným výběrem materiálů, pracovních nástrojů a nářadí." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

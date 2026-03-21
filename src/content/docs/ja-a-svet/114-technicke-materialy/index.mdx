@@ -1,5 +1,7 @@
 ---
-title: "114. Technické materiály"
+number: 114
+title: "Technické materiály"
+description: "Provádí jednoduché práce s technickými materiály a dodržuje technologickou kázeň."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Provádí jednoduché práce s technickými materiály a dodržuje technologickou kázeň." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

@@ -1,5 +1,7 @@
 ---
-title: "98. Geologie a krajina"
+number: 98
+title: "Geologie a krajina"
+description: "Na konkrétním geografickém příkladu popíše vztah geologického podkladu pro utváření krajiny a pro vznik a rozvoj biosféry i pro činnost člověka."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Na konkrétním geografickém příkladu popíše vztah geologického podkladu pro utváření krajiny a pro vznik a rozvoj biosféry i pro činnost člověka." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

@@ -1,5 +1,7 @@
 ---
-title: "42. Počátky lidské společnosti"
+number: 42
+title: "Počátky lidské společnosti"
+description: "Pravěk: Rozumí poselství dějin, charakterizuje jejich základní epochy a ví, kde hledat informace o historii. Orientuje se na časové ose a dokáže ji propojit s konkrétními příběhy."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Pravěk: Rozumí poselství dějin, charakterizuje jejich základní epochy a ví, kde hledat informace o historii. Orientuje se na časové ose a dokáže ji propojit s konkrétními příběhy." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

@@ -1,57 +1,57 @@
 ---
-title: "8. rocnik"
+title: "8. ročník"
 sidebar:
   order: 8
-  label: "8. rocnik"
+  label: "8. ročník"
 ---
 
 import { Badge, Steps } from '@astrojs/starlight/components'
 
-## 📇 Zakladni pojmy
+## 📇 Základní pojmy
 
 <dl class="basic-terms">
-  <dt>Vicekrokovy problem</dt>
-  <dd>Problem, ktery vyzaduje vice nez jeden vypocetni krok. Nejdriv spocitam jedno, vysledek pouziju v dalsim kroku, pak v dalsim. Klicove je neztratiut nit — vedeni, co je dalsi krok.</dd>
+  <dt>Vícekrokový problém</dt>
+  <dd>Problém, který vyžaduje více než jeden výpočetní krok. Nejdřív spočítám jedno, výsledek použiju v dalším kroku, pak v dalším. Klíčové je neztratit nit — vědění, co je další krok.</dd>
 
-  <dt>Rozlozeni na podproblemy</dt>
-  <dd>Slozity problem rozdelim na mensi, zvladnutelne casti. Kazdy podproblem vyresim zvlast, pak vysledky spojim. Jako stavet dum — nejdriv zaklady, pak steny, pak strecha.</dd>
+  <dt>Rozložení na podproblémy</dt>
+  <dd>Složitý problém rozdělím na menší, zvládnutelné části. Každý podproblém vyřeším zvlášť, pak výsledky spojím. Jako stavět dům — nejdřív základy, pak stěny, pak střecha.</dd>
 
-  <dt>Protipriklad</dt>
-  <dd>Priklad, ktery vyvraci tvrzeni. „Vsechna suda cisla jsou delitelna 4" — protipriklad: 6 (sude, ale neni delitelne 4). Jeden protipriklad staci k vyvraceni. Silny nastroj argumentace.</dd>
+  <dt>Protipříklad</dt>
+  <dd>Příklad, který vyvrací tvrzení. „Všechna sudá čísla jsou dělitelná 4" — protipříklad: 6 (sudé, ale není dělitelné 4). Jeden protipříklad stačí k vyvrácení. Silný nástroj argumentace.</dd>
 
-  <dt>Dulkaz (zakladni)</dt>
-  <dd>Logicky retez tvrzeni, ktery ukazuje, ze neco MUSI platit (ne jen ze to „vycha" v par prikladech). Pokud x je sude, pak x = 2k pro nejake cele k. Pak x² = 4k² — taky sude. Presvedcivy argument.</dd>
+  <dt>Důkaz (základní)</dt>
+  <dd>Logický řetěz tvrzení, který ukazuje, že něco MUSÍ platit (ne jen že to „vychází" v pár příkladech). Pokud x je sudé, pak x = 2k pro nějaké celé k. Pak x² = 4k² — taky sudé. Přesvědčivý argument.</dd>
 
-  <dt>Zobecneni</dt>
-  <dd>Od konkretniho prikladu k obecnemu pravidlu. Soucet 1 + 3 = 4, 1 + 3 + 5 = 9, 1 + 3 + 5 + 7 = 16. Vzdy vyjde druha mocnina! Soucet prvnich n lichych cisel = n². To je zobecneni.</dd>
+  <dt>Zobecnění</dt>
+  <dd>Od konkrétního příkladu k obecnému pravidlu. Součet 1 + 3 = 4, 1 + 3 + 5 = 9, 1 + 3 + 5 + 7 = 16. Vždy vyjde druhá mocnina! Součet prvních n lichých čísel = n². To je zobecnění.</dd>
 </dl>
 
-## 🎓 Co by melo dite znat
+## 🎓 Co by mělo dítě znát
 
-- Rozlozit slozity problem na mensi casti a resit systematicky
-- Pracovat s racionalni cisly (zlomky, desetinna cisla, procenta) ve slovnich ulohach
-- Najit protipriklad k nepravdivemu tvrzeni
-- Zobecnit vzor z konkretních prikladu
-- Argumentovat a zduvodnit svuj postup — nejen „spocital jsem", ale „proto, ze..."
+- Rozložit složitý problém na menší části a řešit systematicky
+- Pracovat s racionálními čísly (zlomky, desetinná čísla, procenta) ve slovních úlohách
+- Najít protipříklad k nepravdivému tvrzení
+- Zobecnit vzor z konkrétních příkladů
+- Argumentovat a zdůvodnit svůj postup — nejen „spočítal jsem", ale „proto, že..."
 
-## 🌳 Priklady z realneho sveta
+## 🌳 Příklady z reálného světa
 
 <Steps>
 
-1. ### Rodinny rozpocet
-   Mesicni prijem 45 000 Kc. Najem 13 500 Kc, jidlo 9 000 Kc, pojisteni 2 800 Kc, sport deti 1 500 Kc, benzin 3 200 Kc, sporeni 5 000 Kc. Kolik zbude? Staci na dovolenou za 35 000 Kc (za 3 mesice nasporene z „volnych" penez)?
+1. ### Rodinný rozpočet
+   Měsíční příjem 45 000 Kč. Nájem 13 500 Kč, jídlo 9 000 Kč, pojištění 2 800 Kč, sport dětí 1 500 Kč, benzín 3 200 Kč, spoření 5 000 Kč. Kolik zbude? Stačí na dovolenou za 35 000 Kč (za 3 měsíce naspořené z „volných" peněz)?
 
-2. ### Vyber tarifu
-   Internet: tarif A 499 Kc/mesic, rychlost 100 Mbit. Tarif B 699 Kc/mesic, rychlost 250 Mbit. Tarif C 399 Kc/mesic + 2 Kc za kazdy GB nad 100 GB. Rodina spotrebuje 180 GB mesicne. Co je nejvyhodnejsi? (C: 399 + 80 × 2 = 559 Kc.)
+2. ### Výběr tarifu
+   Internet: tarif A 499 Kč/měsíc, rychlost 100 Mbit. Tarif B 699 Kč/měsíc, rychlost 250 Mbit. Tarif C 399 Kč/měsíc + 2 Kč za každý GB nad 100 GB. Rodina spotřebuje 180 GB měsíčně. Co je nejvýhodnější? (C: 399 + 80 × 2 = 559 Kč.)
 
-3. ### Ciselna tvrzeni
-   „Soucin dvou zapornych cisel je vzdy kladny." Pravda? Proc? „Soucet dvou prvocisel je vzdy sude." Pravda? Ne — protipriklad: 2 + 3 = 5 (liche). Kriticke mysleni o matematickych tvrzeniach.
+3. ### Číselná tvrzení
+   „Součin dvou záporných čísel je vždy kladný." Pravda? Proč? „Součet dvou prvočísel je vždy sudé." Pravda? Ne — protipříklad: 2 + 3 = 5 (liché). Kritické myšlení o matematických tvrzeních.
 
 4. ### Optimalizace cesty
-   Z domu do skoly vedou 3 cesty: A (2,1 km po rovine), B (1,8 km do kopce), C (2,5 km po cyklostezce). Pesky rychlost 5 km/h na rovine, 3,5 km/h do kopce. Na kole 15 km/h. Ktera cesta je nejrychlejsi pesky? Na kole?
+   Z domu do školy vedou 3 cesty: A (2,1 km po rovině), B (1,8 km do kopce), C (2,5 km po cyklostezce). Pěšky rychlost 5 km/h na rovině, 3,5 km/h do kopce. Na kole 15 km/h. Která cesta je nejrychlejší pěšky? Na kole?
 
-5. ### Vzor v ciselnem trojuhelniku
-   Pascaluv trojuhelnik: 1 / 1 1 / 1 2 1 / 1 3 3 1 / ... Jaky je vzor? Co kdyz secktu kazdy radek? (1, 2, 4, 8, 16 — mocniny dvou!) Zobecneni: soucet n-teho radku = 2ⁿ⁻¹.
+5. ### Vzor v číselném trojúhelníku
+   Pascalův trojúhelník: 1 / 1 1 / 1 2 1 / 1 3 3 1 / ... Jaký je vzor? Co když sečtu každý řádek? (1, 2, 4, 8, 16 — mocniny dvou!) Zobecnění: součet n-tého řádku = 2ⁿ⁻¹.
 
 </Steps>
 
@@ -59,41 +59,41 @@ import { Badge, Steps } from '@astrojs/starlight/components'
 
 <Steps>
 
-1. ### Rozpoctova simulace
+1. ### Rozpočtová simulace
 
    ⏱️ _1–2 hodiny_
 
-   Dite dostane fiktivni rodinny rozpocet (prijem, fixni vydaje). Behem „roku" (12 kol) prichazeji udalosti: auto se rozbilo (−15 000), bonus v praci (+8 000), zdrazeni energii (+500/mesic). Dite musi reagovat, prepocítavat, plánovat. Realny vicekrokovy problem.
+   Dítě dostane fiktivní rodinný rozpočet (příjem, fixní výdaje). Během „roku" (12 kol) přicházejí události: auto se rozbilo (−15 000), bonus v práci (+8 000), zdražení energií (+500/měsíc). Dítě musí reagovat, přepočítávat, plánovat. Reálný vícekrokový problém.
 
-2. ### Pravda nebo lez?
-
-   ⏱️ _45 minut_
-
-   Pripravte 12 matematickych tvrzeni (nektere pravdive, nektere ne). Dite u kazdeho rozhodne a zduvodni. U nepravdivych najde protipriklad. U pravdivych zkusi jednoduche zduvodneni. Trenujesie logicka argumentace.
-
-3. ### Vzory a zobecneni
+2. ### Pravda nebo lež?
 
    ⏱️ _45 minut_
 
-   Dejte dítěti 5 ciselnych vzorcu k proskouzakumani. U kazdeho: najdi vzor, zapis pravidlo, over na dalsich cisláech, zkus zobecnit. Napr.: soucet prvnich n prirozenih cisel = n(n+1)/2. Plati to vzdy? Proc?
+   Připravte 12 matematických tvrzení (některé pravdivé, některé ne). Dítě u každého rozhodne a zdůvodní. U nepravdivých najde protipříklad. U pravdivých zkusí jednoduché zdůvodnění. Trénuje se logická argumentace.
 
-4. ### Resitelsky workshop
+3. ### Vzory a zobecnění
+
+   ⏱️ _45 minut_
+
+   Dejte dítěti 5 číselných vzorců k prozkoumání. U každého: najdi vzor, zapiš pravidlo, ověř na dalších číslech, zkus zobecnit. Např.: součet prvních n přirozených čísel = n(n+1)/2. Platí to vždy? Proč?
+
+4. ### Řešitelský workshop
 
    ⏱️ _1 hodina_
 
-   3–4 slozitejsi ulohy. Dite u kazde: 1) zapise, co vi a co hleda, 2) rozlozi na podproblemy, 3) zvoli strategii, 4) resi krok po kroku, 5) kontroluje, 6) argumentuje. Cil: systematicky pristup jako navyk.
+   3–4 složitější úlohy. Dítě u každé: 1) zapíše, co ví a co hledá, 2) rozloží na podproblémy, 3) zvolí strategii, 4) řeší krok po kroku, 5) kontroluje, 6) argumentuje. Cíl: systematický přístup jako návyk.
 
 </Steps>
 
 ## 🍱 Odkazy a zdroje
 
-- [Matematika.cz — Slovni ulohy](https://www.matematika.cz/slovni-ulohy)<br />
-  Pokrocile slovni ulohy s resenim.
-- [Matematicky korespondenicky seminar](https://mks.mff.cuni.cz/)<br />
-  Cesky korespondenickny seminar — zajimave ulohy pro motivovane deti.
-- [Logicke hadanky — Reckon](https://www.reckon.cz)<br />
-  Cesky web s hlavolamy a logickymi ulohami.
+- [Matematika.cz — Slovní úlohy](https://www.matematika.cz/slovni-ulohy)<br />
+  Pokročilé slovní úlohy s řešením.
+- [Matematický korespondenční seminář](https://mks.mff.cuni.cz/)<br />
+  Český korespondenční seminář — zajímavé úlohy pro motivované děti.
+- [Logické hádanky — Reckon](https://www.reckon.cz)<br />
+  Český web s hlavolamy a logickými úlohami.
 - [Nrich — Secondary Problems](https://nrich.maths.org/secondary) <Badge text="EN" variant="tip" /><br />
-  Problemy pro stredoskolaky z Cambridge — ruzne obtiznosti.
+  Problémy pro středoškoláky z Cambridge — různé obtížnosti.
 - [Project Euler](https://projecteuler.net/) <Badge text="EN" variant="tip" /><br />
-  Matematicke problemy resitelne programovanim — pro pokrocile (propojeni s informatikou).
+  Matematické problémy řešitelné programováním — pro pokročilé (propojení s informatikou).

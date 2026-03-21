@@ -1,5 +1,7 @@
 ---
-title: "13. Vnitřní motivace"
+number: 13
+title: "Vnitřní motivace"
+description: "Zná význam vnitřní motivace a umí ji v sobě pěstovat."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Zná význam vnitřní motivace a umí ji v sobě pěstovat." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

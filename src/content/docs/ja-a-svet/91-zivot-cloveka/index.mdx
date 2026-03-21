@@ -1,5 +1,7 @@
 ---
-title: "91. Život člověka"
+number: 91
+title: "Život člověka"
+description: "Objasní život člověka od jeho vzniku až po stáří."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Objasní život člověka od jeho vzniku až po stáří." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

@@ -1,5 +1,7 @@
 ---
-title: "15. Olympijské myšlenky"
+number: 15
+title: "Olympijské myšlenky"
+description: "Naplňuje základní olympijské myšlenky — spolupráce, týmový duch."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Naplňuje základní olympijské myšlenky — spolupráce, týmový duch." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

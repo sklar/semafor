@@ -1,5 +1,7 @@
 ---
-title: "125. Experimenty"
+number: 125
+title: "Experimenty"
+description: "Prakticky využívá vhodné pracovní postupy, přístroje, zařízení a pomůcky pro konání konkrétních pozorování, měření a experimentů."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Prakticky využívá vhodné pracovní postupy, přístroje, zařízení a pomůcky pro konání konkrétních pozorování, měření a experimentů." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

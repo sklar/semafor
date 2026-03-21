@@ -119,7 +119,7 @@ Záložku **Matematika** (ne Matematika 2) ignorovat — je to jen zhuštěný s
 
 ## Navigace
 
-Sidebar config v `astro.config.mjs` — hybridní: manuální skupiny s `autogenerate` pro jednotlivé adresáře.
+Sidebar config v `src/sidebar.config.ts` — hybridní: manuální skupiny s `autogenerate` pro jednotlivé adresáře.
 
 ## JaS — struktura
 

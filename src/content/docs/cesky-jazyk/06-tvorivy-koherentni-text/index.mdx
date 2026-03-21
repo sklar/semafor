@@ -1,5 +1,7 @@
 ---
-title: "06. Tvořivý koherentní text"
+number: 6
+title: "Tvořivý koherentní text"
+description: "Umí sepsat tvořivý koherentní text s ohledem na jeho účel. Text je schopen po sobě zkontrolovat a případné nedostatky dostupnými prostředky napravit."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Umí sepsat tvořivý koherentní text s ohledem na jeho účel. Text je schopen po sobě zkontrolovat a případné nedostatky dostupnými prostředky napravit." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

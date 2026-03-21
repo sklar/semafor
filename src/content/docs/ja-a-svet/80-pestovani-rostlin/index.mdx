@@ -1,5 +1,7 @@
 ---
-title: "80. Pěstování rostlin"
+number: 80
+title: "Pěstování rostlin"
+description: "Vypěstuje rostlinu a vysvětlí důležité podmínky pro její život. S pomocí internetu určí druh rostliny."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Vypěstuje rostlinu a vysvětlí důležité podmínky pro její život. S pomocí internetu určí druh rostliny." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

@@ -1,5 +1,7 @@
 ---
-title: "40. Časová osa"
+number: 40
+title: "Časová osa"
+description: "Orientuje se na časové ose a dokáže ji propojit s konkrétními příběhy."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Orientuje se na časové ose a dokáže ji propojit s konkrétními příběhy." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

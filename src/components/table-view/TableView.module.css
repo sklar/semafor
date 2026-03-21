@@ -1,0 +1,54 @@
+.wrapper {
+	overflow-x: auto;
+}
+
+.table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.table th,
+.table td {
+	border-bottom: 1px solid var(--sl-color-gray-5);
+	padding: 0.5rem 0.5rem;
+	text-align: left;
+}
+
+.table thead th {
+	color: var(--sl-color-gray-3);
+	font-weight: 600;
+	vertical-align: bottom;
+}
+
+.colNumber {
+	width: 3rem;
+	text-align: center;
+}
+
+.colTopic a {
+	color: var(--sl-color-white);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.colGrade {
+	text-align: center;
+	width: 6rem;
+	transition: opacity 0.15s ease;
+}
+
+.colGrade[data-muted] {
+	opacity: 0.35;
+}
+
+.colGrade a {
+	color: var(--sl-color-text-accent);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

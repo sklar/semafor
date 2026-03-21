@@ -1,5 +1,7 @@
 ---
-title: "14. Tvořivý písemný projev"
+number: 14
+title: "Tvořivý písemný projev"
+description: "V písemném projevu se dokáže vyjadřovat tvořivě."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="V písemném projevu se dokáže vyjadřovat tvořivě." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

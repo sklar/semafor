@@ -1,5 +1,7 @@
 ---
-title: "101. Ekosystémy"
+number: 101
+title: "Ekosystémy"
+description: "Popíše konkrétní ekosystém, jeho složky a základní vztahy v něm včetně jeho významu pro člověka. Uvede příklady potravních řetězců."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Popíše konkrétní ekosystém, jeho složky a základní vztahy v něm včetně jeho významu pro člověka. Uvede příklady potravních řetězců." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

@@ -1,5 +1,7 @@
 ---
-title: "07. Vztahy a společnost"
+number: 7
+title: "Vztahy a společnost"
+description: "Uvědomuje si a učí se žít vztah k sobě, druhým, ke společnosti na různých úrovních (rodina, komunita, organizace, obec, region, stát, kontinent, planeta, ...) a umí o tom diskutovat. Uvědomuje si výhody založení takových vztahů na partnerství."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Uvědomuje si a učí se žít vztah k sobě, druhým, ke společnosti na různých úrovních (rodina, komunita, organizace, obec, region, stát, kontinent, planeta, ...) a umí o tom diskutovat. Uvědomuje si výhody založení takových vztahů na partnerství." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

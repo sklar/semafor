@@ -1,8 +1,10 @@
 ---
-title: "17. Zobrazeni teles"
+number: 17
+title: "Zobrazení těles"
+description: "Načrtne a sestrojí obraz jednoduchých těles v rovině."
 sidebar:
   order: 0
-  label: "Prehled"
+  label: "Přehled"
 ---
 
 import { Aside, Badge } from '@astrojs/starlight/components'
@@ -11,72 +13,72 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Nacrtne a sestroji obraz jednoduchych teles v rovine." />
+<Banner text={frontmatter.description} />
 
-## Co to znamena?
+## Co to znamená?
 
-Dite dokaze **nakreslit trojrozmerne teleso na papir** tak, aby kresba vypadala prostorove a vystihla tvar a rozmery telesa. Jinymi slovy — umi prevest 3D objekt do 2D obrazku.
+Dítě dokáže **nakreslit trojrozměrné těleso na papír** tak, aby kresba vypadala prostorově a vystihla tvar a rozměry tělesa. Jinými slovy — umí převést 3D objekt do 2D obrázku.
 
-Tohle delame vsichni, kdyz kreslime krychli, dum nebo krabici. Ale v matematice to ma pravidla — existuji **zpusoby zobrazeni** (volne rovnobezne promitani, axonometrie), ktere zajisti, ze kresba je nejen hezka, ale i **spravna**. Rovnobezne hrany zustanou rovnobezne, pomery se zachovaji podle dohodnutych pravidel.
+Tohle děláme všichni, když kreslíme krychli, dům nebo krabici. Ale v matematice to má pravidla — existují **způsoby zobrazení** (volné rovnoběžné promítání, axonometrie), které zajistí, že kresba je nejen hezká, ale i **správná**. Rovnoběžné hrany zůstanou rovnoběžné, poměry se zachovají podle dohodnutých pravidel.
 
-Proc je to dulezite? Protoze spousta realne prace funguje pres vykresy — architektura, strojirenstvi, design, nabytek. Dite se uci **cist** technicke obrazky a samo je **vytvareti**. A pri tom rozviji prostorovou predstavivost, ktera je zakladem pro dalsi geometrii.
+Proč je to důležité? Protože spousta reálné práce funguje přes výkresy — architektura, strojírenství, design, nábytek. Dítě se učí **číst** technické obrázky a samo je **vytvářet**. A při tom rozvíjí prostorovou představivost, která je základem pro další geometrii.
 
-## Kdy se tomu venovat?
+## Kdy se tomu věnovat?
 
-| Rocnik | Doporuceni |
+| Ročník | Doporučení |
 |--------|-----------|
-| **6.** | **Zacnete zde.** Nacrty od ruky — krychle, kvader. Dite se uci naznacit hloubku a prostorovy dojem. |
-| **7.–8.** | **Prohlubujte.** Volne rovnobezne promitani s pravidly (uhly, zkracovani). Zobrazeni hranolu a jehlanu. |
-| **9.** | Axonometricke pohledy, jednoduche technicke vykresy, kombinace teles. |
+| **6.** | **Začněte zde.** Náčrty od ruky — krychle, kvádr. Dítě se učí naznačit hloubku a prostorový dojem. |
+| **7.–8.** | **Prohlubujte.** Volné rovnoběžné promítání s pravidly (úhly, zkracování). Zobrazení hranolů a jehlanů. |
+| **9.** | Axonometrické pohledy, jednoduché technické výkresy, kombinace těles. |
 
-<Aside title="Prerekvizity" type="tip">Znalost zakladnich teles (krychle, kvader, hranol, jehlan) a jejich vlastnosti. Zakladni rysovaci dovednosti — prace s pravitkem, kruzitkem a uhelnukem.</Aside>
+<Aside title="Prerekvizity" type="tip">Znalost základních těles (krychle, kvádr, hranol, jehlan) a jejich vlastností. Základní rýsovací dovednosti — práce s pravítkem, kružítkem a úhelníkem.</Aside>
 
-## Poznamky
+## Poznámky
 
-<Aside title="Od ruky i s pravitkem">Zacnete nacrty od ruky — dite se uci videt a zachytit prostorovy tvar. Teprve potom prejdete k presnym konstrukcim s pravitkem. Obe dovednosti jsou dulezite.</Aside>
+<Aside title="Od ruky i s pravítkem">Začněte náčrty od ruky — dítě se učí vidět a zachytit prostorový tvar. Teprve potom přejděte k přesným konstrukcím s pravítkem. Obě dovednosti jsou důležité.</Aside>
 
-<Aside title="Realne predmety jako predlohy">Nechte dite kreslit podle skutecnych veci — krabice, knihy, lahve. Je to mnohem efektivnejsi nez kreslit podle abstraktnich zadani. Dite vidi, co kresli, a muze porovnat vysledek.</Aside>
+<Aside title="Reálné předměty jako předlohy">Nechte dítě kreslit podle skutečných věcí — krabice, knihy, lahve. Je to mnohem efektivnější než kreslit podle abstraktních zadání. Dítě vidí, co kreslí, a může porovnat výsledek.</Aside>
 
-<Aside title="Typicka past" type="caution">Dite kresli „co vi" misto „co vidi". Napr. nakresli vsechny steny krychle jako ctverce, protoze vi, ze jsou ctvercove — ale v prostorovem zobrazeni nektere vypadaji jako rovnobezniky. Pomaha porovnavani s fotkou nebo skutecnym predmetem.</Aside>
+<Aside title="Typická past" type="caution">Dítě kreslí „co ví" místo „co vidí". Např. nakreslí všechny stěny krychle jako čtverce, protože ví, že jsou čtvercové — ale v prostorovém zobrazení některé vypadají jako rovnoběžníky. Pomáhá porovnávání s fotkou nebo skutečným předmětem.</Aside>
 
-<Aside title="Dulezite" type="danger">Zobrazeni telesa neni umelecka kresba. Ma pravidla: rovnobezne hrany zustanou rovnobezne, urcite hrany se zkracuji, neviditelne hrany se kresli carkhovane. Tato pravidla je treba dodrzovat.</Aside>
+<Aside title="Důležité" type="danger">Zobrazení tělesa není umělecká kresba. Má pravidla: rovnoběžné hrany zůstanou rovnoběžné, určité hrany se zkracují, neviditelné hrany se kreslí čárkovaně. Tato pravidla je třeba dodržovat.</Aside>
 
 ## Souvislosti
 
-- <Badge text="MAT" /> bod 15 (zakladni telesa) — dite musi znat telesa, aby je mohlo zobrazit
-- <Badge text="MAT" /> bod 16 (site teles) — sit a zobrazeni jsou dva ruzne zpusoby, jak zachytit teleso na papir
-- <Badge text="PUK" /> (vytvarna vychova) — perspektiva, kresba podle skutecnosti
-- <Badge text="JAS" /> (technika, svet prace) — technicke vykresy, plany
+- <Badge text="MAT" /> bod 15 (základní tělesa) — dítě musí znát tělesa, aby je mohlo zobrazit
+- <Badge text="MAT" /> bod 16 (sítě těles) — síť a zobrazení jsou dva různé způsoby, jak zachytit těleso na papír
+- <Badge text="PUK" /> (výtvarná výchova) — perspektiva, kresba podle skutečnosti
+- <Badge text="JAS" /> (technika, svět práce) — technické výkresy, plány
 
 ## Semafor
 
 <Skill>
-  <SkillItem level="none">Tema jsme zatim neotevreli. Dite nemelo prilezitost kreslit telesa na papir systematicky.</SkillItem>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost kreslit tělesa na papír systematicky.</SkillItem>
   <SkillItem level="novice">
-    Dite zkusi nakreslit teleso, ale vysledek neodpovida realite.
+    Dítě zkusí nakreslit těleso, ale výsledek neodpovídá realitě.
     <ul>
-      <li>Krychli kresli jako ctverec — bez prostoroveho dojmu</li>
-      <li>Nevi, jake hrany zkratit nebo naklonit</li>
-      <li>Nerozlisuje viditelne a neviditelne hrany</li>
-      <li>Kresba je neprehledna, hrany se kriziz nesrozumitelne</li>
+      <li>Krychli kreslí jako čtverec — bez prostorového dojmu</li>
+      <li>Neví, jaké hrany zkrátit nebo naklonit</li>
+      <li>Nerozlišuje viditelné a neviditelné hrany</li>
+      <li>Kresba je nepřehledná, hrany se kříží nesrozumitelně</li>
     </ul>
   </SkillItem>
   <SkillItem level="adept">
-    Dite zvlada zakladni zobrazeni, u slozitejsich teles jeste tapa.
+    Dítě zvládá základní zobrazení, u složitějších těles ještě tápe.
     <ul>
-      <li>Nakresli krychli a kvader s prostorovym dojmem</li>
-      <li>Dodrzuje rovnobeznost hran</li>
-      <li>Neviditelne hrany naznaci carkhovane</li>
-      <li>U hranolu a jehlanu jeste obcas chybuje v proporcich</li>
+      <li>Nakreslí krychli a kvádr s prostorovým dojmem</li>
+      <li>Dodržuje rovnoběžnost hran</li>
+      <li>Neviditelné hrany naznačí čárkovaně</li>
+      <li>U hranolů a jehlanů ještě občas chybuje v proporcích</li>
     </ul>
   </SkillItem>
   <SkillItem level="master">
-    Dite kresli telesa presne a prehledne, vcetne slozitejsich utvaru.
+    Dítě kreslí tělesa přesně a přehledně, včetně složitějších útvarů.
     <ul>
-      <li>Zobrazuje krychli, kvader, hranol, jehlan, valec v rovnobeznem promitani</li>
-      <li>Dodrzuje pravidla (uhly, zkracovani, carkhovani)</li>
-      <li>Kresba je prehledna, presna a srozumitelna i pro druheho cloveka</li>
-      <li>Dokaze nakreslit i kombinaci teles (napr. dum = kvader + hranol)</li>
+      <li>Zobrazuje krychli, kvádr, hranol, jehlan, válec v rovnoběžném promítání</li>
+      <li>Dodržuje pravidla (úhly, zkracování, čárkování)</li>
+      <li>Kresba je přehledná, přesná a srozumitelná i pro druhého člověka</li>
+      <li>Dokáže nakreslit i kombinaci těles (např. dům = kvádr + hranol)</li>
     </ul>
   </SkillItem>
 </Skill>

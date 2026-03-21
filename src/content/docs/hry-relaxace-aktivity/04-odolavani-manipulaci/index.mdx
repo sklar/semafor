@@ -1,5 +1,7 @@
 ---
-title: "04. Odolávání manipulaci"
+number: 4
+title: "Odolávání manipulaci"
+description: "Odolává manipulaci a je schopen se jí bránit nenásilnou komunikací."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Odolává manipulaci a je schopen se jí bránit nenásilnou komunikací." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

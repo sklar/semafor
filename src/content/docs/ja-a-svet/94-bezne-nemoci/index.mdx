@@ -1,5 +1,7 @@
 ---
-title: "94. Běžné nemoci"
+number: 94
+title: "Běžné nemoci"
+description: "Rozpozná příznaky běžných nemocí a popíše způsoby jejich léčby, nastíní jejich možné příčiny."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Rozpozná příznaky běžných nemocí a popíše způsoby jejich léčby, nastíní jejich možné příčiny." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

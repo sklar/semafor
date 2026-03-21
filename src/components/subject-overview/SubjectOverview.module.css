@@ -1,0 +1,12 @@
+.container {
+	--_safari-offset: 4px;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	justify-content: space-between;
+	margin: calc(-1 * var(--_safari-offset));
+	margin-block-end: calc(1rem - var(--_safari-offset));
+	overflow-x: auto;
+	padding: var(--_safari-offset);
+}

@@ -1,5 +1,7 @@
 ---
-title: "128. Bezpečnost při práci"
+number: 128
+title: "Bezpečnost při práci"
+description: "Při všech činnostech používá bezpečně a účinně materiály, nástroje a vybavení a dodržuje vymezená pravidla."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Při všech činnostech používá bezpečně a účinně materiály, nástroje a vybavení a dodržuje vymezená pravidla." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

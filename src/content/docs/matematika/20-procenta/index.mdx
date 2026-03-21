@@ -1,8 +1,10 @@
 ---
-title: "20. Procenta"
+number: 20
+title: "Procenta"
+description: "Řeší aplikační úlohy na procenta."
 sidebar:
   order: 0
-  label: "Prehled"
+  label: "Přehled"
 ---
 
 import { Aside, Badge } from '@astrojs/starlight/components'
@@ -11,72 +13,72 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Resi aplikacni ulohy na procenta." />
+<Banner text={frontmatter.description} />
 
-## Co to znamena?
+## Co to znamená?
 
-Dite rozumi **procentum** a dokaze je pouzit v beznem zivote. Procenta jsou vsude — slevy v obchode, uroky v bance, DPH na uctence, vysledky voleb, statistiky o pocasi, vyziva na obalech potravin. Kdyz dite rozumi procentum, rozumi penezum, mediim i svetu kolem sebe.
+Dítě rozumí **procentům** a dokáže je použít v běžném životě. Procenta jsou všude — slevy v obchodě, úroky v bance, DPH na účtence, výsledky voleb, statistiky o počasí, výživa na obalech potravin. Když dítě rozumí procentům, rozumí penězům, médiím i světu kolem sebe.
 
-**Procento** je jednoduchy nastroj: znamena „ze sta". 25 % = 25 ze 100 = ctvrtina. Ale aplikace jsou neskutecne siroku — od jednoduchych slev po slozeny urok, od statistiky po daně. Dite se uci nejen *pocitat* procenta, ale hlavne **rozumet, co procenta rikaji** — a co mozná nerikaji.
+**Procento** je jednoduchý nástroj: znamená „ze sta". 25 % = 25 ze 100 = čtvrtina. Ale aplikace jsou neskutečně široké — od jednoduchých slev po složený úrok, od statistiky po daně. Dítě se učí nejen *počítat* procenta, ale hlavně **rozumět, co procenta říkají** — a co možná neříkají.
 
-Klicove je propojeni s pomery a zlomky: 50 % = 1/2 = 0,5. Dite, ktere plynule preskakuje mezi procenty, zlomky a desktinnymi cisly, ma obrovskou vyhodu ve vsech dalsich oborech.
+Klíčové je propojení s poměry a zlomky: 50 % = 1/2 = 0,5. Dítě, které plynule přeskakuje mezi procenty, zlomky a desetinnými čísly, má obrovskou výhodu ve všech dalších oborech.
 
-## Kdy se tomu venovat?
+## Kdy se tomu věnovat?
 
-| Rocnik | Doporuceni |
+| Ročník | Doporučení |
 |--------|-----------|
-| **6.** | **Zacnete zde.** Co je procento, zakladni prepocty, jednoduche slevy. Propojeni se zlomky a desetinnymi cisly. |
-| **7.–8.** | **Prohlubujte.** Zaklad, procentova cast, pocet procent. Zvyseni a snizeni o procenta. DPH, uroky, statistika. |
-| **9.** | Slozeny urok, opakovat procentni zmeny, procenta v datech a mediich. Kriticke mysleni o statistikach. |
+| **6.** | **Začněte zde.** Co je procento, základní přepočty, jednoduché slevy. Propojení se zlomky a desetinnými čísly. |
+| **7.–8.** | **Prohlubujte.** Základ, procentová část, počet procent. Zvýšení a snížení o procenta. DPH, úroky, statistika. |
+| **9.** | Složený úrok, opakované procentní změny, procenta v datech a médiích. Kritické myšlení o statistikách. |
 
-<Aside title="Prerekvizity" type="tip">Prace se zlomky a desetinnymi cisly (procenta jsou vlastne zlomky se jmenovatelem 100). Nasobeni a deleni desetinnych cisel.</Aside>
+<Aside title="Prerekvizity" type="tip">Práce se zlomky a desetinnými čísly (procenta jsou vlastně zlomky se jmenovatelem 100). Násobení a dělení desetinných čísel.</Aside>
 
-## Poznamky
+## Poznámky
 
-<Aside title="Procenta jsou jazyk penez">Slevy, dane, uroky, inflace — vsechno se vyjadruje v procentech. Dite, ktere rozumi procentum, rozumi financnimu svetu. Pouzivejte realne priklady z nakupovani a sporeni.</Aside>
+<Aside title="Procenta jsou jazyk peněz">Slevy, daně, úroky, inflace — všechno se vyjadřuje v procentech. Dítě, které rozumí procentům, rozumí finančnímu světu. Používejte reálné příklady z nakupování a spoření.</Aside>
 
-<Aside title="Tri zakladni typy uloh">1) Kolik je X % z Y? (sleva) 2) Kolik procent je X z Y? (podil) 3) Z ceho je X rovno Y %? (zaklad). Kazda uloha na procenta je jedna z techto tri — pomaha to zorientovat se.</Aside>
+<Aside title="Tři základní typy úloh">1) Kolik je X % z Y? (sleva) 2) Kolik procent je X z Y? (podíl) 3) Z čeho je X rovno Y %? (základ). Každá úloha na procenta je jedna z těchto tří — pomáhá to zorientovat se.</Aside>
 
-<Aside title="Typicka past" type="caution">Zvyseni o 20 % a nasledne snizeni o 20 % NEDAVA puvodni cislo! 100 + 20 % = 120. 120 − 20 % = 96 (ne 100!). Protoze 20 % ze 120 je vic nez 20 % ze 100. Toto je casta chyba i u dospelych.</Aside>
+<Aside title="Typická past" type="caution">Zvýšení o 20 % a následné snížení o 20 % NEDÁVÁ původní číslo! 100 + 20 % = 120. 120 − 20 % = 96 (ne 100!). Protože 20 % ze 120 je víc než 20 % ze 100. Toto je častá chyba i u dospělých.</Aside>
 
-<Aside title="Dulezite" type="danger">Procenta bez kontextu nemaji smysl. „Prodej vzrostl o 50 %" zni skvele — ale pokud slo z 2 kusu na 3, neni to zadny zazrak. Vzdy se ptejte: 50 % z CEHO?</Aside>
+<Aside title="Důležité" type="danger">Procenta bez kontextu nemají smysl. „Prodej vzrostl o 50 %" zní skvěle — ale pokud šlo z 2 kusů na 3, není to žádný zázrak. Vždy se ptejte: 50 % z ČEHO?</Aside>
 
 ## Souvislosti
 
-- <Badge text="MAT" /> bod 1 (pocetni operace) — nasobeni, deleni, zlomky a desetinna cisla
-- <Badge text="MAT" /> bod 19 (pomer a meritko) — procenta jsou specialni pripad pomeru
-- <Badge text="MAT" /> bod 22 (reseni problemu) — slovni ulohy s procenty
-- <Badge text="JAS" /> (ekonomika, obcanska vychova — dane, volby, statistiky)
+- <Badge text="MAT" /> bod 1 (početní operace) — násobení, dělení, zlomky a desetinná čísla
+- <Badge text="MAT" /> bod 19 (poměr a měřítko) — procenta jsou speciální případ poměru
+- <Badge text="MAT" /> bod 22 (řešení problémů) — slovní úlohy s procenty
+- <Badge text="JAS" /> (ekonomika, občanská výchova — daně, volby, statistiky)
 
 ## Semafor
 
 <Skill>
-  <SkillItem level="none">Tema jsme zatim neotevreli. Dite nemelo prilezitost pracovat s procenty.</SkillItem>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost pracovat s procenty.</SkillItem>
   <SkillItem level="novice">
-    Dite vi, co procento je, ale v praxi tapa.
+    Dítě ví, co procento je, ale v praxi tápe.
     <ul>
-      <li>Rika, ze 50 % je polovina, ale u jinych hodnot si neni jiste</li>
-      <li>Neumi spocitat X % z daneho cisla</li>
-      <li>Zameni zaklad, procentovou cast a pocet procent</li>
-      <li>Nepropoji procenta se zlomky a desetinnymi cisly</li>
+      <li>Říká, že 50 % je polovina, ale u jiných hodnot si není jisté</li>
+      <li>Neumí spočítat X % z daného čísla</li>
+      <li>Zamění základ, procentovou část a počet procent</li>
+      <li>Nepropojí procenta se zlomky a desetinnými čísly</li>
     </ul>
   </SkillItem>
   <SkillItem level="adept">
-    Dite pocita s procenty v jednoduchych situacich, u slozitejsich potrebuje pomoc.
+    Dítě počítá s procenty v jednoduchých situacích, u složitějších potřebuje pomoc.
     <ul>
-      <li>Spocita slevu v obchode (X % z ceny)</li>
-      <li>Prevede procenta na zlomky a desetinna cisla a naopak</li>
-      <li>Rozlisi tri zakladni typy uloh na procenta</li>
-      <li>U slozenych uloh (zvyseni + snizeni, slozeny urok) jeste chybuje</li>
+      <li>Spočítá slevu v obchodě (X % z ceny)</li>
+      <li>Převede procenta na zlomky a desetinná čísla a naopak</li>
+      <li>Rozliší tři základní typy úloh na procenta</li>
+      <li>U složených úloh (zvýšení + snížení, složený úrok) ještě chybuje</li>
     </ul>
   </SkillItem>
   <SkillItem level="master">
-    Dite samostatne a plynule pracuje s procenty v ruznych kontextech.
+    Dítě samostatně a plynule pracuje s procenty v různých kontextech.
     <ul>
-      <li>Resi vsechny typy uloh na procenta vcetne slozenych</li>
-      <li>Pracuje se slozenym urokem a opakovanymi procentnimi zmenami</li>
-      <li>Kriticky hodtnot procentualni udaje v mediich a reklame</li>
-      <li>Plynule preskakuje mezi procenty, zlomky a desetinnymi cisly</li>
+      <li>Řeší všechny typy úloh na procenta včetně složených</li>
+      <li>Pracuje se složeným úrokem a opakovanými procentními změnami</li>
+      <li>Kriticky hodnotí procentuální údaje v médiích a reklamě</li>
+      <li>Plynule přeskakuje mezi procenty, zlomky a desetinnými čísly</li>
     </ul>
   </SkillItem>
 </Skill>

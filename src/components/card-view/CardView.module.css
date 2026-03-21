@@ -1,0 +1,78 @@
+/* @see https://github.com/withastro/starlight/blob/main/packages/starlight/user-components/CardGrid.astro */
+.grid {
+	display: grid;
+	grid-template-columns: 100%;
+	gap: 1rem;
+
+	@media (min-width: 50rem) {
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+	}
+}
+
+/* @see https://github.com/withastro/starlight/blob/main/packages/starlight/user-components/LinkCard.astro  */
+.card {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 0.5rem;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	box-shadow: var(--sl-shadow-sm);
+	position: relative;
+	margin-block-start: 0;
+	transition: opacity 0.15s ease;
+
+	a {
+		text-decoration: none;
+	}
+
+	/* a11y fix for https://github.com/withastro/starlight/issues/487 */
+	a::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+	}
+
+	&:not([data-muted]) {
+		&:hover {
+			background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+			border-color: var(--sl-color-gray-2);
+
+			svg {
+				color: var(--sl-color-white);
+			}
+		}
+	}
+
+	&[data-muted] {
+		opacity: 0.35;
+	}
+}
+
+.stack {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	& > * {
+		line-height: var(--sl-line-height-headings);
+	}
+}
+
+.title {
+	color: var(--sl-color-white);
+	font-weight: 600;
+	font-size: var(--sl-text-lg);
+}
+
+.description {
+	color: var(--sl-color-gray-3);
+	line-height: 1.5;
+}
+
+.icon {
+	aspect-ratio: 1;
+	block-size: 1.333em;
+	color: var(--sl-color-gray-3);
+}

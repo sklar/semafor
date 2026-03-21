@@ -2,29 +2,11 @@
 title: "Dějepis"
 ---
 
-import { CardGrid, LinkCard } from '@astrojs/starlight/components'
+import TopicCards from '@/components/TopicCards.astro'
+import { parseTopics } from '@/lib/topics'
+import { getSubAreaSlugs } from '@/lib/sidebar'
 
-<CardGrid>
-	<LinkCard href="/ja-a-svet/39-poselstvi-dejin/" title="39. Poselství dějin" description="Rozumí poselství dějin, charakterizuje základní epochy." />
-	<LinkCard href="/ja-a-svet/40-casova-osa/" title="40. Časová osa" description="Orientuje se na časové ose a propojuje ji s příběhy." />
-	<LinkCard href="/ja-a-svet/41-historicke-pribehy-v-souvislostech/" title="41. Historické příběhy v souvislostech" description="Konkrétní historické příběhy nahlíží v rámci souvislostí." />
-	<LinkCard href="/ja-a-svet/42-pocatky-lidske-spolecnosti/" title="42. Počátky lidské společnosti" description="Rozumí poselství dějin -- pravěk; orientuje se na časové ose." />
-	<LinkCard href="/ja-a-svet/43-pravek-v-souvislostech/" title="43. Pravěk v souvislostech" description="Historické příběhy pravěku nahlíží v rámci souvislostí." />
-	<LinkCard href="/ja-a-svet/44-nejstarsi-civilizace/" title="44. Nejstarší civilizace" description="Rozumí poselství dějin -- starověk; orientuje se na časové ose." />
-	<LinkCard href="/ja-a-svet/45-starovek-v-souvislostech/" title="45. Starověk v souvislostech" description="Historické příběhy starověku nahlíží v rámci souvislostí." />
-	<LinkCard href="/ja-a-svet/46-stredovek-poselstvi/" title="46. Středověk — poselství" description="Rozumí poselství dějin -- středověk." />
-	<LinkCard href="/ja-a-svet/47-stredovek-casova-osa/" title="47. Středověk — časová osa" description="Orientuje se na časové ose -- středověk." />
-	<LinkCard href="/ja-a-svet/48-stredovek-v-souvislostech/" title="48. Středověk v souvislostech" description="Historické příběhy středověku nahlíží v rámci souvislostí." />
-	<LinkCard href="/ja-a-svet/49-nova-doba-poselstvi/" title="49. Nová doba — poselství" description="Rozumí poselství dějin -- počátky nové doby." />
-	<LinkCard href="/ja-a-svet/50-nova-doba-casova-osa/" title="50. Nová doba — časová osa" description="Orientuje se na časové ose -- nová doba." />
-	<LinkCard href="/ja-a-svet/51-nova-doba-v-souvislostech/" title="51. Nová doba v souvislostech" description="Historické příběhy nové doby nahlíží v rámci souvislostí." />
-	<LinkCard href="/ja-a-svet/52-modernizace-poselstvi/" title="52. Modernizace — poselství" description="Rozumí poselství dějin -- modernizace." />
-	<LinkCard href="/ja-a-svet/53-modernizace-casova-osa/" title="53. Modernizace — časová osa" description="Orientuje se na časové ose -- modernizace." />
-	<LinkCard href="/ja-a-svet/54-modernizace-v-souvislostech/" title="54. Modernizace v souvislostech" description="Historické příběhy modernizace nahlíží v rámci souvislostí." />
-	<LinkCard href="/ja-a-svet/55-moderni-doba-poselstvi/" title="55. Moderní doba — poselství" description="Rozumí poselství dějin -- moderní doba." />
-	<LinkCard href="/ja-a-svet/56-moderni-doba-casova-osa/" title="56. Moderní doba — časová osa" description="Orientuje se na časové ose -- moderní doba." />
-	<LinkCard href="/ja-a-svet/57-moderni-doba-v-souvislostech/" title="57. Moderní doba v souvislostech" description="Historické příběhy moderní doby nahlíží v rámci souvislostí." />
-	<LinkCard href="/ja-a-svet/58-rozdeleny-svet-poselstvi/" title="58. Rozdělený svět — poselství" description="Rozumí poselství dějin -- rozdělený svět." />
-	<LinkCard href="/ja-a-svet/59-rozdeleny-svet-casova-osa/" title="59. Rozdělený svět — časová osa" description="Orientuje se na časové ose -- rozdělený svět." />
-	<LinkCard href="/ja-a-svet/60-rozdeleny-svet-v-souvislostech/" title="60. Rozdělený svět v souvislostech" description="Historické příběhy rozděleného světa nahlíží v rámci souvislostí." />
-</CardGrid>
+export const slugs = getSubAreaSlugs('ja-a-svet/dejepis')
+export const topics = parseTopics(import.meta.glob('./*/*.mdx', { eager: true })).filter(t => slugs.includes(t.slug))
+
+<TopicCards topics={topics} subject="ja-a-svet" />

@@ -1,5 +1,7 @@
 ---
-title: "107. Mapa světa"
+number: 107
+title: "Mapa světa"
+description: "Orientuje se na mapě světa a konkrétní zeměpisné reálie nahlíží v rámci souvislostí v předmětu JaS"
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Orientuje se na mapě světa a konkrétní zeměpisné reálie nahlíží v rámci souvislostí v předmětu JaS" />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

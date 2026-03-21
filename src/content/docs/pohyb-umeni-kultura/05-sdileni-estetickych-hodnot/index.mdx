@@ -1,5 +1,7 @@
 ---
-title: "05. Sdílení estetických hodnot"
+number: 5
+title: "Sdílení estetických hodnot"
+description: "Sdílí estetické hodnoty s ostatními."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Sdílí estetické hodnoty s ostatními." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

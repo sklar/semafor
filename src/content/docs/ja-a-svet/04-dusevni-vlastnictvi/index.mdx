@@ -1,5 +1,7 @@
 ---
-title: "04. Duševní vlastnictví"
+number: 4
+title: "Duševní vlastnictví"
+description: "Pracuje s informacemi v souladu se zákony o duševním vlastnictví."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Pracuje s informacemi v souladu se zákony o duševním vlastnictví." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

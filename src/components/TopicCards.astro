@@ -1,0 +1,28 @@
+---
+import { CardGrid, LinkCard } from '@astrojs/starlight/components'
+import SubjectOverview from '@/components/subject-overview/SubjectOverview'
+import { topicHref } from '@/lib/href'
+import type { Topic } from '@/lib/topics'
+import { topicLabel } from '@/lib/topics'
+
+interface Props {
+	topics: Topic[]
+	subject: string
+}
+
+const { topics, subject } = Astro.props
+---
+
+<noscript>
+	<CardGrid>
+		{topics.map(topic => (
+			<LinkCard
+				href={topicHref(subject, topic.slug, 'all')}
+				title={topicLabel(topic)}
+				description={topic.description ?? ''}
+			/>
+		))}
+	</CardGrid>
+</noscript>
+
+<SubjectOverview client:load topics={topics} subject={subject} />

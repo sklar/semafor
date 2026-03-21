@@ -2,15 +2,11 @@
 title: "Fyzika"
 ---
 
-import { CardGrid, LinkCard } from '@astrojs/starlight/components'
+import TopicCards from '@/components/TopicCards.astro'
+import { parseTopics } from '@/lib/topics'
+import { getSubAreaSlugs } from '@/lib/sidebar'
 
-<CardGrid>
-	<LinkCard href="/ja-a-svet/61-meridla-a-veliciny/" title="61. Měřidla a veličiny" description="Umí používat měřidla, fyzikální jednotky a vztahy." />
-	<LinkCard href="/ja-a-svet/62-molekulove-slozeni-latek/" title="62. Molekulové složení látek" description="Rozumí molekulárnímu složení látek." />
-	<LinkCard href="/ja-a-svet/63-sily/" title="63. Síly" description="Rozpozná základní působící síly." />
-	<LinkCard href="/ja-a-svet/64-energie/" title="64. Energie" description="Rozumí základním energetickým přeměnám." />
-	<LinkCard href="/ja-a-svet/65-zvuk/" title="65. Zvuk" description="Rozumí principu vzniku zvukového zdroje." />
-	<LinkCard href="/ja-a-svet/66-elektricky-obvod/" title="66. Elektrický obvod" description="Rozumí principu sestavení elektrického obvodu." />
-	<LinkCard href="/ja-a-svet/67-materialy-v-elektrotechnice/" title="67. Materiály v elektrotechnice" description="Zná vlastnosti materiálů používaných v elektrotechnice." />
-	<LinkCard href="/ja-a-svet/68-svetlo/" title="68. Světlo" description="Chápe, jak se šíří světlo v různém prostředí." />
-</CardGrid>
+export const slugs = getSubAreaSlugs('ja-a-svet/fyzika')
+export const topics = parseTopics(import.meta.glob('./*/*.mdx', { eager: true })).filter(t => slugs.includes(t.slug))
+
+<TopicCards topics={topics} subject="ja-a-svet" />

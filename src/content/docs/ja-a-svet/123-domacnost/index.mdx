@@ -1,5 +1,7 @@
 ---
-title: "123. Domácnost"
+number: 123
+title: "Domácnost"
+description: "Ovládá jednoduché pracovní postupy při základních činnostech v domácnosti a orientuje se v návodech k obsluze běžných domácích spotřebičů, provádí drobnou domácí údržbu."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Ovládá jednoduché pracovní postupy při základních činnostech v domácnosti a orientuje se v návodech k obsluze běžných domácích spotřebičů, provádí drobnou domácí údržbu." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

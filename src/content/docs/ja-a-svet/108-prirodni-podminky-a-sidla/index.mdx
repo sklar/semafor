@@ -1,5 +1,7 @@
 ---
-title: "108. Přírodní podmínky a sídla"
+number: 108
+title: "Přírodní podmínky a sídla"
+description: "Na základě rozložení přírodních podmínek je schopen vyvodit a posoudit vlivy na život v lidských sídlech."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Na základě rozložení přírodních podmínek je schopen vyvodit a posoudit vlivy na život v lidských sídlech." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

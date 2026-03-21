@@ -1,5 +1,7 @@
 ---
-title: "06. Prezentace informací"
+number: 6
+title: "Prezentace informací"
+description: "Zpracuje a prezentuje na uživatelské úrovni informace v textové, grafické a multimediální formě."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Zpracuje a prezentuje na uživatelské úrovni informace v textové, grafické a multimediální formě." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

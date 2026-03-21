@@ -1,5 +1,7 @@
 ---
-title: "01. Komplexní dílo jako sebevyjádření"
+number: 1
+title: "Komplexní dílo jako sebevyjádření"
+description: "Tvoří komplexní dílo jako své sebevyjádření."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Tvoří komplexní dílo jako své sebevyjádření." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

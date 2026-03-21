@@ -1,5 +1,7 @@
 ---
-title: "84. Skupiny živočichů"
+number: 84
+title: "Skupiny živočichů"
+description: "Rozliší základní skupiny živočichů a popíše stavbu jejich těla."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Rozliší základní skupiny živočichů a popíše stavbu jejich těla." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

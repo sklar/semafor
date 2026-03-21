@@ -1,5 +1,7 @@
 ---
-title: "02. Zaokrouhlování a odhady"
+number: 2
+title: "Zaokrouhlování a odhady"
+description: "Zaokrouhluje a provádí odhady s danou přesností, účelně využívá kalkulátor."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Zaokrouhluje a provádí odhady s danou přesností, účelně využívá kalkulátor." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

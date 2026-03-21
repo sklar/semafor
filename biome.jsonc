@@ -95,6 +95,23 @@
 					}
 				}
 			}
+		},
+		{
+			// Solid components + collocated CSS modules use PascalCase
+			"includes": ["src/components/*/*.tsx", "src/components/*/*.module.css"],
+			"linter": {
+				"rules": {
+					"style": {
+						"useFilenamingConvention": {
+							"level": "error",
+							"options": {
+								"requireAscii": true,
+								"filenameCases": ["PascalCase"]
+							}
+						}
+					}
+				}
+			}
 		}
 	]
 }

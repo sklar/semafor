@@ -1,5 +1,7 @@
 ---
-title: "12. Školní samospráva"
+number: 12
+title: "Školní samospráva"
+description: "Volí si oblast a způsob aktivity ve školní samosprávě."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Volí si oblast a způsob aktivity ve školní samosprávě." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

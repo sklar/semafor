@@ -1,8 +1,10 @@
 ---
-title: "22. Reseni problemu"
+number: 22
+title: "Řešení problémů"
+description: "Analyzuje a řeší jednoduché problémy v oboru celých a racionálních čísel."
 sidebar:
   order: 0
-  label: "Prehled"
+  label: "Přehled"
 ---
 
 import { Aside, Badge } from '@astrojs/starlight/components'
@@ -11,73 +13,73 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Analyzuje a resi jednoduche problemy v oboru celych a racionalnich cisel." />
+<Banner text={frontmatter.description} />
 
-## Co to znamena?
+## Co to znamená?
 
-Dite dokaze **rozebrat problem**, vymyslet **postup reseni** a dovest ho **do konce** — a to v oboru celych a racionalnich cisel (cela cisla, zlomky, desetinna cisla, zaporna cisla). Nejde o konkretni typ ulohy, ale o **obecnou schopnost resit problemy** matematicky.
+Dítě dokáže **rozebrat problém**, vymyslet **postup řešení** a dovést ho **do konce** — a to v oboru celých a racionálních čísel (celá čísla, zlomky, desetinná čísla, záporná čísla). Nejde o konkrétní typ úlohy, ale o **obecnou schopnost řešit problémy** matematicky.
 
-Klicove slovo je „analyzuje" — dite nesaha po prvním napadu, ale **premysli**: co je zadano, co hledam, jaky postup zvolicovat, existuje vic cest? A po vyreseni: **dava vysledek smysl**, muzulyslet i jinak?
+Klíčové slovo je „analyzuje" — dítě nesáhá po prvním nápadu, ale **přemýšlí**: co je zadáno, co hledám, jaký postup zvolit, existuje víc cest? A po vyřešení: **dává výsledek smysl**, můžu to řešit i jinak?
 
-Tohle je meta-dovednost — umi-li dite resit problemy, zvladne jakoukoli konkretni ulohu. Neumi-li, ani znalost vzorcu nepomuze. Proto je reseni problemu zakladem matematickeho mysleni — a vlastne mysleni vubec.
+Tohle je meta-dovednost — umí-li dítě řešit problémy, zvládne jakoukoli konkrétní úlohu. Neumí-li, ani znalost vzorců nepomůže. Proto je řešení problémů základem matematického myšlení — a vlastně myšlení vůbec.
 
-## Kdy se tomu venovat?
+## Kdy se tomu věnovat?
 
-| Rocnik | Doporuceni |
+| Ročník | Doporučení |
 |--------|-----------|
-| **6.** | **Zacnete zde.** Jednoduche slovni ulohy, systematicky postup (co vim, co hledam, jak na to). Odhad a kontrola. |
-| **7.–8.** | **Prohlubujte.** Vicekrokove ulohy, vice moznych postupu. Ulohy se zlomky, procenty, pomery. Argumentace a zduvodneni. |
-| **9.** | Komplexni problemy kombinujici vic oblasti matematiky. Optimalizace, strategie, kriticke mysleni. |
+| **6.** | **Začněte zde.** Jednoduché slovní úlohy, systematický postup (co vím, co hledám, jak na to). Odhad a kontrola. |
+| **7.–8.** | **Prohlubujte.** Vícekrokové úlohy, více možných postupů. Úlohy se zlomky, procenty, poměry. Argumentace a zdůvodnění. |
+| **9.** | Komplexní problémy kombinující víc oblastí matematiky. Optimalizace, strategie, kritické myšlení. |
 
-<Aside title="Prerekvizity" type="tip">Bezpecne pocetni operace s celymi a racionalnichmi cisly. Zaklady zlomku, procent a pomeru. Schopnost cist text s porozumenim (slovni ulohy!).</Aside>
+<Aside title="Prerekvizity" type="tip">Bezpečné početní operace s celými a racionálními čísly. Základy zlomků, procent a poměrů. Schopnost číst text s porozuměním (slovní úlohy!).</Aside>
 
-## Poznamky
+## Poznámky
 
-<Aside title="Postup je dulezitejsi nez vysledek">U reseni problemu hodnodte postup, ne jen konecne cislo. Dite, ktere zvolilo dobrý postup, ale udelalo pocetni chybu, je na tom lip nez dite, ktere se trefilo nahodou.</Aside>
+<Aside title="Postup je důležitější než výsledek">U řešení problémů hodnoťte postup, ne jen konečné číslo. Dítě, které zvolilo dobrý postup, ale udělalo početní chybu, je na tom líp než dítě, které se trefilo náhodou.</Aside>
 
-<Aside title="Vic cest k cili">Vetsina uloh ma vic moznych postupu. Nechte dite najít svuj a pak ukazte jiny. Porovnani postupu rozviji flexibilitu mysleni — a to je presne to, co chceme.</Aside>
+<Aside title="Víc cest k cíli">Většina úloh má víc možných postupů. Nechte dítě najít svůj a pak ukažte jiný. Porovnání postupů rozvíjí flexibilitu myšlení — a to je přesně to, co chceme.</Aside>
 
-<Aside title="Typicka past" type="caution">Dite precte ulohu, okamzite zacne pocitat — a pocita spatne, protoze si neujasnilo, co vlastne hleda. Navyknete dite na postup: 1) precti, 2) co vim?, 3) co hledam?, 4) nacrt/schema, 5) postup, 6) vypocet, 7) kontrola.</Aside>
+<Aside title="Typická past" type="caution">Dítě přečte úlohu, okamžitě začne počítat — a počítá špatně, protože si neujasnilo, co vlastně hledá. Navykněte dítě na postup: 1) přečti, 2) co vím?, 3) co hledám?, 4) nákrt/schéma, 5) postup, 6) výpočet, 7) kontrola.</Aside>
 
-<Aside title="Dulezite" type="danger">Frustrace je soucast procesu. Kdyz dite nevi, jak dal — to je moment uceni. Nedavejte reseni hned. Ptejte se: „Co uz vis? Co bys mohl zkusit? Co kdybys to zkusil jinak?" Nechte dite zazit radost z vlastniho objevu.</Aside>
+<Aside title="Důležité" type="danger">Frustrace je součást procesu. Když dítě neví, jak dál — to je moment učení. Nedávejte řešení hned. Ptejte se: „Co už víš? Co bys mohl zkusit? Co kdybys to zkusil jinak?" Nechte dítě zažít radost z vlastního objevu.</Aside>
 
 ## Souvislosti
 
-- <Badge text="MAT" /> bod 1 (pocetni operace) — zakladni nastroje pro reseni
-- <Badge text="MAT" /> bod 20 (procenta) — caste tema slovnich uloh
-- <Badge text="MAT" /> bod 21 (rovnice a soustavy) — rovnice jako nastroj reseni
-- <Badge text="MAT" /> bod 19 (pomer a meritko) — pomery v aplikacnich ulohach
-- <Badge text="JAS" /> (kriticke mysleni, logika, argumentace)
+- <Badge text="MAT" /> bod 1 (početní operace) — základní nástroje pro řešení
+- <Badge text="MAT" /> bod 20 (procenta) — časté téma slovních úloh
+- <Badge text="MAT" /> bod 21 (rovnice a soustavy) — rovnice jako nástroj řešení
+- <Badge text="MAT" /> bod 19 (poměr a měřítko) — poměry v aplikačních úlohách
+- <Badge text="JAS" /> (kritické myšlení, logika, argumentace)
 
 ## Semafor
 
 <Skill>
-  <SkillItem level="none">Tema jsme zatim neotevreli. Dite nemelo prilezitost resit matematicke problemy systematicky.</SkillItem>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost řešit matematické problémy systematicky.</SkillItem>
   <SkillItem level="novice">
-    Dite resi jednoduche ulohy, ale u slozitejsich nevii jak zacit.
+    Dítě řeší jednoduché úlohy, ale u složitějších neví, jak začít.
     <ul>
-      <li>Jednoduche jednokrokove ulohy vyresi, ale neumi vysvetlit postup</li>
-      <li>U vicekrokovych uloh se ztrati — nevi, co delat dal</li>
-      <li>Neodhcaduje vysledek predem, nekontroluje na konci</li>
-      <li>Vzdava se rychle, kdyz prvni pristup nefunguje</li>
+      <li>Jednoduché jednokrokové úlohy vyřeší, ale neumí vysvětlit postup</li>
+      <li>U vícekrokových úloh se ztratí — neví, co dělat dál</li>
+      <li>Neodhaduje výsledek předem, nekontroluje na konci</li>
+      <li>Vzdává se rychle, když první přístup nefunguje</li>
     </ul>
   </SkillItem>
   <SkillItem level="adept">
-    Dite ma zakladni strategii reseni a zvlada ulohy stredni obtiznosti.
+    Dítě má základní strategii řešení a zvládá úlohy střední obtížnosti.
     <ul>
-      <li>Analyzuje zadani — vi, co je dano a co hleda</li>
-      <li>Zvoli rozumny postup a dovedec ho do konce</li>
-      <li>Obcas zkontroluje vysledek, ale ne vzdy</li>
-      <li>U nejtezsiach uloh jeste potrebuje napovedu k prvnimu kroku</li>
+      <li>Analyzuje zadání — ví, co je dáno a co hledá</li>
+      <li>Zvolí rozumný postup a dovede ho do konce</li>
+      <li>Občas zkontroluje výsledek, ale ne vždy</li>
+      <li>U nejtěžších úloh ještě potřebuje nápovědu k prvnímu kroku</li>
     </ul>
   </SkillItem>
   <SkillItem level="master">
-    Dite samostatne analyzuje a resi i slozitejsi problemy.
+    Dítě samostatně analyzuje a řeší i složitější problémy.
     <ul>
-      <li>Systematicky analyzuje problem a planuje postup pred vypoctem</li>
-      <li>Zvoli efektivni strategii a dokonci reseni vcetne kontroly</li>
-      <li>Kdyz prvni pristup nefunguje, zkusi jiny</li>
-      <li>Dokaze vysledek interpretovat a zduvodnit</li>
+      <li>Systematicky analyzuje problém a plánuje postup před výpočtem</li>
+      <li>Zvolí efektivní strategii a dokončí řešení včetně kontroly</li>
+      <li>Když první přístup nefunguje, zkusí jiný</li>
+      <li>Dokáže výsledek interpretovat a zdůvodnit</li>
     </ul>
   </SkillItem>
 </Skill>

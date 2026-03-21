@@ -1,5 +1,7 @@
 ---
-title: "118. Konstrukce a modely"
+number: 118
+title: "Konstrukce a modely"
+description: "Sestaví podle návodu, náčrtu, plánu, jednoduchého programu daný model; navrhne a sestaví jednoduché konstrukční prvky, ověří a porovná jejich funkčnost, nosnost, stabilitu aj."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Sestaví podle návodu, náčrtu, plánu, jednoduchého programu daný model; navrhne a sestaví jednoduché konstrukční prvky, ověří a porovná jejich funkčnost, nosnost, stabilitu aj." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

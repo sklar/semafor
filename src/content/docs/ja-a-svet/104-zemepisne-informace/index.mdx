@@ -1,5 +1,7 @@
 ---
-title: "104. Zeměpisné informace"
+number: 104
+title: "Zeměpisné informace"
+description: "Umí vyhledat zeměpisné informace."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Umí vyhledat zeměpisné informace." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

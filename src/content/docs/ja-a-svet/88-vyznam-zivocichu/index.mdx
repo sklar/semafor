@@ -1,5 +1,7 @@
 ---
-title: "88. Význam živočichů"
+number: 88
+title: "Význam živočichů"
+description: "Zhodnotí význam živočichů v přírodě i pro člověka. Popíše význam zvířat pro lidskou stravu. Popíše odlišnost dopadů chovu zvířat a pěstování rostlin na životní prostředí."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Zhodnotí význam živočichů v přírodě i pro člověka. Popíše význam zvířat pro lidskou stravu. Popíše odlišnost dopadů chovu zvířat a pěstování rostlin na životní prostředí." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

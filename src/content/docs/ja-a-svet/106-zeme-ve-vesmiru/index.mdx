@@ -1,5 +1,7 @@
 ---
-title: "106. Země ve vesmíru"
+number: 106
+title: "Země ve vesmíru"
+description: "Zná základní informace o Zemi a její postavení ve vesmíru"
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Zná základní informace o Zemi a její postavení ve vesmíru" />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

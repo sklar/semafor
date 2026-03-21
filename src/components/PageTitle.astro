@@ -1,4 +1,6 @@
 ---
+import { formatTopicNumber } from '@/lib/topics'
+
 const { starlightRoute } = Astro.locals
 const { sidebar } = starlightRoute
 
@@ -60,6 +62,12 @@ const crumbs: Crumb[] = [
 ]
 
 const showBreadcrumbs = currentPath !== '/'
+
+const { number } = starlightRoute.entry.data
+const pageTitle =
+	number != null
+		? `${formatTopicNumber(number)}. ${starlightRoute.entry.data.title}`
+		: starlightRoute.entry.data.title
 ---
 
 {showBreadcrumbs && (
@@ -75,7 +83,7 @@ const showBreadcrumbs = currentPath !== '/'
 	</nav>
 )}
 
-<h1 id="_top">{starlightRoute.entry.data.title}</h1>
+<h1 id="_top">{pageTitle}</h1>
 
 <style>
 	ul {

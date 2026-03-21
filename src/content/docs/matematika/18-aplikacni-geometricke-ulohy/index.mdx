@@ -1,8 +1,10 @@
 ---
-title: "18. Aplikacni geometricke ulohy"
+number: 18
+title: "Aplikační geometrické úlohy"
+description: "Analyzuje a řeší aplikační geometrické úlohy."
 sidebar:
   order: 0
-  label: "Prehled"
+  label: "Přehled"
 ---
 
 import { Aside, Badge } from '@astrojs/starlight/components'
@@ -11,73 +13,73 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Analyzuje a resi aplikacni geometricke ulohy." />
+<Banner text={frontmatter.description} />
 
-## Co to znamena?
+## Co to znamená?
 
-Dite dokaze pouzit geometrii k **reseni praktickych problemu** — zmerit, spocitat, navrhnout, naplnovat. Nejde o abstraktni priklady z ucebnice, ale o **realne situace**: kolik barvy potrebuju na zed? Kolik betonu na zaklady? Vejde se skrin do pokoje? Jak daleko je to napric parkem?
+Dítě dokáže použít geometrii k **řešení praktických problémů** — změřit, spočítat, navrhnout, naplánovat. Nejde o abstraktní příklady z učebnice, ale o **reálné situace**: kolik barvy potřebuju na zeď? Kolik betonu na základy? Vejde se skříň do pokoje? Jak daleko je to napříč parkem?
 
-Aplikacni ulohy spojuji vic geometrickych dovednosti dohromady — dite musi **analyzovat situaci** (co je zadano, co hledam), **zvolit postup** (jaky vzorec, jaky geometricky princip) a **provest vypocet** (presne a s kontrolou). Casto je treba kombinovat vic kroku — napr. nejdriv spocitat obsah, pak ho vynasobit cenou za metr ctverecni.
+Aplikační úlohy spojují víc geometrických dovedností dohromady — dítě musí **analyzovat situaci** (co je zadáno, co hledám), **zvolit postup** (jaký vzorec, jaký geometrický princip) a **provést výpočet** (přesně a s kontrolou). Často je třeba kombinovat víc kroků — např. nejdřív spočítat obsah, pak ho vynásobit cenou za metr čtvereční.
 
-Klicove je, ze dite **rozumi, co pocita a proc** — nejen mechanicky dosazuje do vzorcu, ale vi, jaky geometricky princip pouziva a zda ma vysledek smysl.
+Klíčové je, že dítě **rozumí, co počítá a proč** — nejen mechanicky dosazuje do vzorců, ale ví, jaký geometrický princip používá a zda má výsledek smysl.
 
-## Kdy se tomu venovat?
+## Kdy se tomu věnovat?
 
-| Rocnik | Doporuceni |
+| Ročník | Doporučení |
 |--------|-----------|
-| **6.** | **Zacnete zde.** Jednoduche ulohy — mereni, obvody, obsahy obdelniku a ctverce. Dite se uci prevest realnou situaci do geometrickeho modelu. |
-| **7.–8.** | **Prohlubujte.** Obsahy trojuhelniku, lichobezniku, kruhu. Povrchy a objemy teles. Pythagorova veta v aplikacich. Ulohy o vice krocich. |
-| **9.** | Komplexni ulohy — kombinace rovinne a prostorove geometrie, optimalizace, navrhovani, technicke aplikace. |
+| **6.** | **Začněte zde.** Jednoduché úlohy — měření, obvody, obsahy obdélníku a čtverce. Dítě se učí převést reálnou situaci do geometrického modelu. |
+| **7.–8.** | **Prohlubujte.** Obsahy trojúhelníku, lichoběžníku, kruhu. Povrchy a objemy těles. Pythagorova věta v aplikacích. Úlohy o více krocích. |
+| **9.** | Komplexní úlohy — kombinace rovinné a prostorové geometrie, optimalizace, navrhování, technické aplikace. |
 
-<Aside title="Prerekvizity" type="tip">Znalost zakladnich geometrickych tvaru a teles, vzorce pro obvody, obsahy, povrchy a objemy. Schopnost prevest jednotky (cm na m, m² na cm²).</Aside>
+<Aside title="Prerekvizity" type="tip">Znalost základních geometrických tvarů a těles, vzorce pro obvody, obsahy, povrchy a objemy. Schopnost převést jednotky (cm na m, m² na cm²).</Aside>
 
-## Poznamky
+## Poznámky
 
-<Aside title="Realita je nejlepsi ucebnice">Nechte dite merit a pocitat skutecne veci — pokoj, zahradu, plot, zed. Ulohy z reality jsou motivujicejsi a dite lip chape, proc geometrii potrebuje.</Aside>
+<Aside title="Realita je nejlepší učebnice">Nechte dítě měřit a počítat skutečné věci — pokoj, zahradu, plot, zeď. Úlohy z reality jsou motivující a dítě líp chápe, proč geometrii potřebuje.</Aside>
 
-<Aside title="Nacrt je pulka reseni">U kazde aplikacni ulohy by dite melo zacit nacrtem — nakreslit situaci, zapsat zname rozmery, oznacit hledanou velicinu. Nacrt pomaha videt, co je zadano a co pocitat.</Aside>
+<Aside title="Náčrt je půlka řešení">U každé aplikační úlohy by dítě mělo začít náčrtem — nakreslit situaci, zapsat známé rozměry, označit hledanou veličinu. Náčrt pomáhá vidět, co je zadáno a co počítat.</Aside>
 
-<Aside title="Typicka past" type="caution">Dite zapomene prevest jednotky — pocita v centimetrech, ale vysledek ma byt v metrech ctverecnich. Nebo zameni obvod a obsah. Prevod jednotek a kontrola, „co vlastne pocitam", jsou klicove.</Aside>
+<Aside title="Typická past" type="caution">Dítě zapomene převést jednotky — počítá v centimetrech, ale výsledek má být v metrech čtverečních. Nebo zamění obvod a obsah. Převod jednotek a kontrola, „co vlastně počítám", jsou klíčové.</Aside>
 
-<Aside title="Dulezite" type="danger">Vysledek musi davat smysl. Pokud dite spocita, ze na vymalovani pokoje potrebuje 0,3 litru barvy nebo 3 000 litru, neco je spatne. Odhadnete vysledek predem — a kontrolujte na konci.</Aside>
+<Aside title="Důležité" type="danger">Výsledek musí dávat smysl. Pokud dítě spočítá, že na vymalování pokoje potřebuje 0,3 litru barvy nebo 3 000 litrů, něco je špatně. Odhadněte výsledek předem — a kontrolujte na konci.</Aside>
 
 ## Souvislosti
 
-- <Badge text="MAT" /> bod 14 (obvody a obsahy) — zakladni vypocty, ktere aplikacni ulohy vyuzivaji
-- <Badge text="MAT" /> bod 15 (telesa — povrchy a objemy) — prostorove aplikace
-- <Badge text="MAT" /> bod 19 (pomer a meritko) — meritka map a planu v geometrickych ulohach
-- <Badge text="JAS" /> (svet prace, technika) — prakticke aplikace geometrie v beznem zivote
-- <Badge text="PUK" /> (telesna vychova) — mereni hrist, atletickych drah, sportovnich parametru
+- <Badge text="MAT" /> bod 14 (obvody a obsahy) — základní výpočty, které aplikační úlohy využívají
+- <Badge text="MAT" /> bod 15 (tělesa — povrchy a objemy) — prostorové aplikace
+- <Badge text="MAT" /> bod 19 (poměr a měřítko) — měřítka map a plánů v geometrických úlohách
+- <Badge text="JAS" /> (svět práce, technika) — praktické aplikace geometrie v běžném životě
+- <Badge text="PUK" /> (tělesná výchova) — měření hřišť, atletických drah, sportovních parametrů
 
 ## Semafor
 
 <Skill>
-  <SkillItem level="none">Tema jsme zatim neotevreli. Dite nemelo prilezitost resit prakticke geometricke ulohy.</SkillItem>
+  <SkillItem level="none">Téma jsme zatím neotevřeli. Dítě nemělo příležitost řešit praktické geometrické úlohy.</SkillItem>
   <SkillItem level="novice">
-    Dite resi jednoduche ulohy, ale potrebuje hodne vedeni.
+    Dítě řeší jednoduché úlohy, ale potřebuje hodně vedení.
     <ul>
-      <li>U jednoduche ulohy (obvod obdelniku) spocita vysledek, ale neumi samo zvolit postup</li>
-      <li>Nenarysuje si nacrt situace — zacina pocitat „naslepo"</li>
-      <li>Zameni obvod a obsah nebo zapomene prevest jednotky</li>
-      <li>Nedokaze posoudit, zda ma vysledek smysl</li>
+      <li>U jednoduché úlohy (obvod obdélníku) spočítá výsledek, ale neumí samo zvolit postup</li>
+      <li>Nenarýsuje si náčrt situace — začíná počítat „naslepo"</li>
+      <li>Zamění obvod a obsah nebo zapomene převést jednotky</li>
+      <li>Nedokáže posoudit, zda má výsledek smysl</li>
     </ul>
   </SkillItem>
   <SkillItem level="adept">
-    Dite zvlada jednoduche aplikacni ulohy samostatne, u slozitejsich potrebuje napovedu.
+    Dítě zvládá jednoduché aplikační úlohy samostatně, u složitějších potřebuje nápovědu.
     <ul>
-      <li>Nakresli nacrt a zapise znama data</li>
-      <li>Zvoli spravny postup pro jednoduche ulohy (obsah, obvod, objem)</li>
-      <li>U vicekrokovych uloh obcas ztrati nit — nevida dalsi krok</li>
-      <li>Vysledek obcas zkontroluje, ale ne vzdy</li>
+      <li>Nakreslí náčrt a zapíše známá data</li>
+      <li>Zvolí správný postup pro jednoduché úlohy (obsah, obvod, objem)</li>
+      <li>U vícekrokových úloh občas ztratí nit — nevidí další krok</li>
+      <li>Výsledek občas zkontroluje, ale ne vždy</li>
     </ul>
   </SkillItem>
   <SkillItem level="master">
-    Dite samostatne analyzuje a resi i slozitejsi aplikacni ulohy.
+    Dítě samostatně analyzuje a řeší i složitější aplikační úlohy.
     <ul>
-      <li>Analyzuje situaci, nakresli nacrt, naplnuje reseni</li>
-      <li>Kombinuje vic geometrickych poznatku v jedne uloze</li>
-      <li>Prevadi jednotky spravne a kontroluje smysluplnost vysledku</li>
-      <li>Dokaze ulohu formulovat i sam — vidi geometrii v realnych situacich</li>
+      <li>Analyzuje situaci, nakreslí náčrt, naplánuje řešení</li>
+      <li>Kombinuje víc geometrických poznatků v jedné úloze</li>
+      <li>Převádí jednotky správně a kontroluje smysluplnost výsledku</li>
+      <li>Dokáže úlohu formulovat i samo — vidí geometrii v reálných situacích</li>
     </ul>
   </SkillItem>
 </Skill>

@@ -1,5 +1,7 @@
 ---
-title: "78. Houby a potrava"
+number: 78
+title: "Houby a potrava"
+description: "Popíše kdy a kde najít jedlé houby a jak je upravit pro lidskou potravu."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Popíše kdy a kde najít jedlé houby a jak je upravit pro lidskou potravu." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

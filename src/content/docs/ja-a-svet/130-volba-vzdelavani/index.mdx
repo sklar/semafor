@@ -1,5 +1,7 @@
 ---
-title: "130. Volba vzdělávání"
+number: 130
+title: "Volba vzdělávání"
+description: "Posoudí své možnosti při rozhodování o volbě vhodného dalšího vzdělávání a umí při tom využít různé zdroje informací."
 sidebar:
   order: 0
   label: "Přehled"
@@ -11,7 +13,7 @@ import Banner from '@/components/Banner.astro'
 import Skill from '@/components/Skill.astro'
 import SkillItem from '@/components/SkillItem.astro'
 
-<Banner text="Posoudí své možnosti při rozhodování o volbě vhodného dalšího vzdělávání a umí při tom využít různé zdroje informací." />
+<Banner text={frontmatter.description} />
 
 ## Co to znamená?
 

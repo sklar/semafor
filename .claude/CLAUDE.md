@@ -6,7 +6,7 @@ Knowledge base built with Astro Starlight. Full spec in [SPEC.md](SPEC.md).
 
 - **Package manager**: pnpm
 - **Language**: TypeScript (strict mode)
-- **Framework**: Astro 5 + Starlight
+- **Framework**: Astro 5 + Starlight + Solid.js 1.x
 - **Linting/Formatting**: Ultracite (Biome)
 - **Locale**: Czech (`cs`) — root locale, no multilingual setup
 
@@ -26,12 +26,34 @@ Knowledge base built with Astro Starlight. Full spec in [SPEC.md](SPEC.md).
 
 ## Custom Components
 
-Astro components live directly in `src/components/`. Solid (interactive) components use a component-folder pattern: `src/components/<component>/`.
+Astro components live directly in `src/components/`. Solid (interactive) components use a component-folder pattern: `src/components/<name>/`, each with `*.module.css` using Starlight design tokens.
 
-- `src/components/Banner.astro` — displays original ŠVP outcome text
-- `src/components/Skill.astro` + `SkillItem.astro` — traffic-light indicator (levels: `none`/`novice`/`adept`/`master`)
-- `src/components/SiteTitle.astro` — logo + site name in header
-- `src/components/grade-filter/` — single-select grade radio group (Solid, presentational)
+**Astro:**
+- `Banner.astro` — displays original ŠVP outcome text
+- `Skill.astro` + `SkillItem.astro` — traffic-light indicator (levels: `none`/`novice`/`adept`/`master`)
+- `SiteTitle.astro` — logo + site name in header
+- `TopicCards.astro` — progressive enhancement wrapper for SubjectOverview
+- Starlight overrides: `Footer`, `Hero`, `PageTitle`, `Sidebar`, `SidebarSublist`, `SidebarRestorePoint`, `Copyright`
+
+**Solid:**
+- `subject-overview/` — main interactive wrapper composing all below
+- `card-view/` — topic card grid
+- `table-view/` — topic table with grade columns
+- `grade-filter/` — single-select grade radio group + `grade.ts` types
+- `view-toggle/` — cards/table radio toggle + `view.ts` types
+
+## Lib Utilities
+
+- `src/lib/topics.ts` — `Topic` interface, `parseTopics()`
+- `src/lib/href.ts` — `topicHref()` link generation
+- `src/lib/sidebar.ts` — `getSubAreaSlugs()` for JaS sub-area filtering
+
+## Testing
+
+Vitest + `@vitest/browser-playwright` + `@solidjs/testing-library`.
+
+- Unit: `tests/unit/` → `pnpm test`
+- E2E: `tests/e2e/` → `pnpm test.e2e`
 
 ## MDX — Known Issues
 

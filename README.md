@@ -10,6 +10,7 @@ formal Czech curriculum (ŠVP) and everyday home education practice.
 ## 🧰 Stack
 
 - [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/)
+- [Solid](https://www.solidjs.com/) (client-side islands)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Biome](https://biomejs.dev/) (lint + format)
 
@@ -28,7 +29,9 @@ formal Czech curriculum (ŠVP) and everyday home education practice.
 │   │       ├── ja-a-svet/             # 131 topics
 │   │       ├── pohyb-umeni-kultura/   # 16 topics
 │   │       └── hry-relaxace-aktivity/ # 9 topics
+│   ├── lib/
 │   └── styles/
+├── tests/
 ├── astro.config.mjs
 └── package.json
 ```
@@ -42,6 +45,8 @@ formal Czech curriculum (ŠVP) and everyday home education practice.
 | `pnpm preview` | Preview production build |
 | `pnpm lint.check` | Check with Biome |
 | `pnpm lint.write` | Fix with Biome |
+| `pnpm test` | Run unit tests |
+| `pnpm test.e2e` | Run E2E tests |
 | `pnpm type.check` | Typecheck with `astro check` |
 
 ## 📄 License

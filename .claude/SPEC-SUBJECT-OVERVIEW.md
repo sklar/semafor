@@ -1,4 +1,4 @@
-# Subject Overview
+# Subject Overview — Implemented
 
 ## Overview
 
@@ -111,7 +111,6 @@ Each Solid component lives in its own folder under `src/components/<component>/`
 - Each card shows: title, optional description, link to topic page.
 - Grade filter determines which grade link the card points to (via `topicHref()`).
 - CSS module (`CardView.module.css`) with Starlight tokens.
-- Currently wrapped by temporary `CardViewIsland.tsx` (grade='all').
 
 ### `table-view/TableView.tsx`
 
@@ -129,7 +128,6 @@ Main interactive wrapper. Composes GradeFilter, ViewToggle, CardView, and TableV
 
 - Receives `topics: Topic[]` and `subject: string` props (serialized from Astro at build time).
 - Manages localStorage for grade + view state.
-- Replaces temporary `CardViewIsland.tsx` inside `TopicCards.astro`.
 
 ---
 
@@ -170,14 +168,14 @@ src/
 │   ├── TopicCards.astro                # progressive enhancement wrapper
 │   ├── card-view/
 │   │   ├── CardView.tsx
-│   │   ├── CardView.module.css
-│   │   └── CardViewIsland.tsx          # temporary, replaced by SubjectOverview
+│   │   └── CardView.module.css
 │   ├── grade-filter/
 │   │   ├── GradeFilter.tsx
 │   │   ├── GradeFilter.module.css
 │   │   └── grade.ts
 │   ├── subject-overview/
-│   │   └── SubjectOverview.tsx
+│   │   ├── SubjectOverview.tsx
+│   │   └── SubjectOverview.module.css
 │   ├── table-view/
 │   │   ├── TableView.tsx
 │   │   └── TableView.module.css
@@ -193,8 +191,14 @@ tests/
 ├── unit/
 │   ├── card-view.test.tsx
 │   ├── grade-filter.test.tsx
+│   ├── href.test.ts
+│   ├── sidebar.test.ts
+│   ├── subject-overview.test.tsx
+│   ├── table-view.test.tsx
 │   ├── topics.test.ts
 │   └── view-toggle.test.tsx
+├── e2e/
+│   └── subject-overview.spec.ts
 vitest.config.ts
 ```
 

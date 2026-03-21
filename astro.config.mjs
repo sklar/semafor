@@ -34,8 +34,11 @@ export default defineConfig({
 			}),
 		},
 	},
-	// @tailwindcss/vite ships Vite 7 types, Astro 5 bundles Vite 6
-	vite: { plugins: [/** @type {any} */ (tailwindcss())] },
+	vite: { plugins: [tailwindcss()] },
+	experimental: {
+		rustCompiler: true,
+		queuedRendering: { enabled: true },
+	},
 	integrations: [
 		solidJs(),
 		starlight({

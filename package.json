@@ -18,12 +18,13 @@
     "type.sync": "astro sync"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.6",
-    "@astrojs/solid-js": "6.0.0",
-    "@astrojs/starlight": "0.37.6",
-    "@astrojs/starlight-tailwind": "4.0.2",
+    "@astrojs/check": "0.9.8",
+    "@astrojs/compiler-rs": "0.1.6",
+    "@astrojs/solid-js": "6.0.1",
+    "@astrojs/starlight": "0.38.2",
+    "@astrojs/starlight-tailwind": "5.0.0",
     "@tailwindcss/vite": "4.1.18",
-    "astro": "5.17.2",
+    "astro": "6.0.8",
     "sharp": "0.34.5",
     "solid-js": "1.9.11",
     "tailwindcss": "4.1.18",
@@ -40,11 +41,11 @@
     "wrangler": "4.72.0"
   },
   "engines": {
-    "node": "20.20.0",
+    "node": "24.14.0",
     "pnpm": "10.29.3"
   },
   "volta": {
-    "node": "20.20.0",
+    "node": "24.14.0",
     "pnpm": "10.29.3"
   }
 }

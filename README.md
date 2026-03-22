@@ -43,6 +43,9 @@ formal Czech curriculum (ŠVP) and everyday home education practice.
 | `pnpm dev` | Start dev server at `localhost:4321` |
 | `pnpm build` | Build to `./dist/` |
 | `pnpm preview` | Preview production build |
+| `pnpm link.check` | Check all links with [lychee](https://lychee.cli.rs/) (`brew install lychee`) |
+| `pnpm link.check.internal` | Check internal links only (offline, fast) |
+| `pnpm link.check.external` | Check external links only |
 | `pnpm lint.check` | Check with Biome |
 | `pnpm lint.write` | Fix with Biome |
 | `pnpm test` | Run unit tests |

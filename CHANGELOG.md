@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026.03.22
+
+### CI
+
+- `329d2e3` Add [lychee link checker](https://github.com/lycheeverse/lychee/) — scheduled GH Action + local pnpm scripts
+
+
+
 ## 2026.03.21.1
 
 ### Chores

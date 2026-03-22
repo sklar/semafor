@@ -1,8 +1,9 @@
-// @ts-check
+import cloudflare from '@astrojs/cloudflare'
 import solidJs from '@astrojs/solid-js'
 import starlight from '@astrojs/starlight'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig, envField } from 'astro/config'
+import { starlightCloudflareCompat } from './src/plugins/starlight-cloudflare-compat'
 import { sidebar } from './src/sidebar.config'
 
 const site = process.env.SITE_URL
@@ -24,6 +25,11 @@ const analyticsHead =
 
 // https://astro.build/config
 export default defineConfig({
+	output: 'server',
+	adapter: cloudflare({
+		platformProxy: { enabled: true },
+		prerenderEnvironment: 'node',
+	}),
 	site,
 	env: {
 		schema: {
@@ -34,7 +40,7 @@ export default defineConfig({
 			}),
 		},
 	},
-	vite: { plugins: [tailwindcss()] },
+	vite: { plugins: [tailwindcss(), starlightCloudflareCompat()] },
 	experimental: {
 		rustCompiler: true,
 		queuedRendering: { enabled: true },

@@ -34,5 +34,7 @@ node_modules
 Thumbs.db
 
 # tests
+__screenshots__
+.vitest-attachments
 playwright-report
 test-results

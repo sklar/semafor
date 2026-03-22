@@ -116,6 +116,7 @@ export default defineConfig({
 			// overrrides for default components and styles
 			components: {
 				Footer: './src/components/Footer.astro',
+				Header: './src/components/Header.astro',
 				Hero: './src/components/Hero.astro',
 				PageTitle: './src/components/PageTitle.astro',
 				Sidebar: './src/components/Sidebar.astro',

@@ -6,7 +6,7 @@ Knowledge base built with Astro Starlight. Full spec in [SPEC.md](SPEC.md).
 
 - **Package manager**: pnpm
 - **Language**: TypeScript (strict mode)
-- **Framework**: Astro 5 + Starlight + Solid.js 1.x
+- **Framework**: Astro 6 + Starlight + Solid.js 1.x
 - **Linting/Formatting**: Ultracite (Biome)
 - **Locale**: Czech (`cs`) — root locale, no multilingual setup
 

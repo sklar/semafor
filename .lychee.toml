@@ -1,5 +1,61 @@
+########################
+# Rate limiting
+########################
+
+# Default is 128 — way too high, causes "connection refused" storms
+max_concurrency = 4
+
+max_retries = 3
+retry_wait_time = 5  # seconds between retries
+timeout = 30         # seconds (default 20)
+
+# Throttle per-host to avoid triggering rate limits
+host_request_interval = "200ms"
+
+########################
+# Redirects
+########################
+
+# YouTube search URLs redirect multiple times; default 10 is too low
+max_redirects = 20
+
+########################
+# Accepted status codes
+########################
+
+# Accept anything that isn't a client error (4xx) or server error (5xx)
+# Plus specific 4xx/5xx that are false positives
+accept = [
+  "200..=299", # success
+  "300..=399", # redirects
+  "401",       # unauthorized — paywall (matematika.cz)
+  "403",       # forbidden — bot protection (CF, etc.)
+  "429",       # too many requests — rate limiting
+  "503",       # service unavailable — temporary
+]
+
+########################
+# Request headers
+########################
+
+# Mimic curl to bypass basic bot detection (default "lychee/x.y.z" gets blocked)
+user_agent = "curl/8.4.0"
+
+########################
+# TLS
+########################
+
+# Skip TLS verification — we care about HTTP reachability, not cert validity
+# Many Czech sites have expired/mismatched certs but serve content fine
+insecure = true
+
+########################
+# Exclusions
+########################
+
 exclude = [
   "^https?://localhost",
   "^https?://127\\.0\\.0\\.1",
 ]
+exclude_all_private = true
 exclude_mail = true

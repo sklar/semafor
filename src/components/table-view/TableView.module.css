@@ -52,3 +52,10 @@
 		text-decoration: underline;
 	}
 }
+
+.colGrade input[type="checkbox"] {
+	cursor: pointer;
+	inline-size: 1.125rem;
+	block-size: 1.125rem;
+	accent-color: var(--sl-color-text-accent);
+}

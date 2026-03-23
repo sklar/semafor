@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026.03.23
+
+### Fixes
+
+- #69 `b37b638` Fix broken external links.
+- Replace/remove 404s, dead domains, expired TLS sites, dead YT videos,
+- tune lychee config to reduce false positives.
+
+
+
 ## 2026.03.22
 
 ### CI

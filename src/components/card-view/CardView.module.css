@@ -76,3 +76,11 @@
 	block-size: 1.333em;
 	color: var(--sl-color-gray-3);
 }
+
+.checkmark {
+	position: absolute;
+	inset-block-end: 0.5rem;
+	inset-inline-end: 0.5rem;
+	block-size: 1.333em;
+	color: var(--sl-color-text-accent);
+}

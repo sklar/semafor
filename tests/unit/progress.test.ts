@@ -148,3 +148,55 @@ describe('Progress API', () => {
 		expect(data.completed).toBe(true)
 	})
 })
+
+describe('progressSlug', () => {
+	test('constructs slug from subject, topic, and grade', async () => {
+		const { progressSlug } = await import('@/lib/progress')
+
+		expect(progressSlug('matematika', '01-pocetni-operace', '6-rocnik')).toBe(
+			'matematika/01-pocetni-operace/6-rocnik',
+		)
+	})
+})
+
+describe('isTopicCompleted', () => {
+	test('returns true when specific grade is completed', async () => {
+		const { isTopicCompleted } = await import('@/lib/progress')
+
+		const progress = { 'matematika/01/6-rocnik': true }
+
+		expect(
+			isTopicCompleted(progress, 'matematika', '01', '6-rocnik', [6, 7, 8, 9]),
+		).toBe(true)
+	})
+
+	test('returns true for "all" when every grade is completed', async () => {
+		const { isTopicCompleted } = await import('@/lib/progress')
+
+		const progress = {
+			'matematika/01/6-rocnik': true,
+			'matematika/01/7-rocnik': true,
+			'matematika/01/8-rocnik': true,
+			'matematika/01/9-rocnik': true,
+		}
+
+		expect(
+			isTopicCompleted(progress, 'matematika', '01', 'all', [6, 7, 8, 9]),
+		).toBe(true)
+	})
+
+	test('returns false for "all" when any grade is incomplete', async () => {
+		const { isTopicCompleted } = await import('@/lib/progress')
+
+		const progress = {
+			'matematika/01/6-rocnik': true,
+			'matematika/01/7-rocnik': false,
+			'matematika/01/8-rocnik': true,
+			'matematika/01/9-rocnik': true,
+		}
+
+		expect(
+			isTopicCompleted(progress, 'matematika', '01', 'all', [6, 7, 8, 9]),
+		).toBe(false)
+	})
+})

@@ -30,6 +30,7 @@ accept = [
   "300..=399", # redirects
   "401",       # unauthorized — paywall (matematika.cz)
   "403",       # forbidden — bot protection (CF, etc.)
+  "410",       # gone — permanent removal (e.g. nhs.uk)
   "429",       # too many requests — rate limiting
   "503",       # service unavailable — temporary
 ]
@@ -47,6 +48,7 @@ user_agent = "curl/8.4.0"
 
 # Skip TLS verification — we care about HTTP reachability, not cert validity
 # Many Czech sites have expired/mismatched certs but serve content fine
+# Note: only works on Linux (CI). macOS native TLS ignores this flag.
 insecure = true
 
 ########################
@@ -56,6 +58,7 @@ insecure = true
 exclude = [
   "^https?://localhost",
   "^https?://127\\.0\\.0\\.1",
+  "^https://www\\.youtube\\.com/results",  # search URLs are redirect loops requiring JS
 ]
 exclude_all_private = true
 exclude_mail = true

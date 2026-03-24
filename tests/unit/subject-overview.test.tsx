@@ -1,9 +1,44 @@
-import { cleanup, fireEvent, render, screen } from '@solidjs/testing-library'
+import {
+	cleanup,
+	fireEvent,
+	render,
+	screen,
+	waitFor,
+} from '@solidjs/testing-library'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { GRADE_STORAGE_KEY } from '@/components/grade-filter/grade'
 import SubjectOverview from '@/components/subject-overview/SubjectOverview'
 import { VIEW_STORAGE_KEY } from '@/components/view-toggle/view'
 import type { Topic } from '@/lib/topics'
+
+let mockSession: { user: { name: string } } | null = null
+let mockProgressData: Record<string, boolean> | undefined
+const mockMutateAsync = vi.fn().mockResolvedValue({})
+
+vi.mock('@/lib/auth-client', () => ({
+	authClient: {
+		useSession: () => () => ({
+			data: mockSession,
+			isPending: false,
+		}),
+	},
+}))
+
+vi.mock('@/lib/progress-hooks', () => ({
+	createProgressQuery: () => ({
+		get data() {
+			return mockProgressData
+		},
+		isLoading: false,
+		isError: false,
+	}),
+	createProgressMutation: () => ({
+		mutate: vi.fn(),
+		mutateAsync: mockMutateAsync,
+		isError: false,
+		isPending: false,
+	}),
+}))
 
 const TOPICS: Topic[] = [
 	{
@@ -31,6 +66,9 @@ describe('SubjectOverview', () => {
 	afterEach(() => {
 		cleanup()
 		localStorage.clear()
+		mockSession = null
+		mockProgressData = undefined
+		mockMutateAsync.mockReset().mockResolvedValue({})
 	})
 
 	describe('composition', () => {
@@ -180,6 +218,77 @@ describe('SubjectOverview', () => {
 				VIEW_STORAGE_KEY,
 				'table',
 			)
+		})
+	})
+
+	describe('progress tracking', () => {
+		test('shows checkmarks when authenticated with progress data', () => {
+			mockSession = { user: { name: 'Test' } }
+			mockProgressData = {
+				'matematika/01-pocetni-operace/6-rocnik': true,
+				'matematika/01-pocetni-operace/7-rocnik': true,
+				'matematika/01-pocetni-operace/8-rocnik': true,
+				'matematika/01-pocetni-operace/9-rocnik': true,
+			}
+
+			renderOverview()
+
+			expect(screen.queryAllByRole('img', { name: /hotovo/i })).toHaveLength(1)
+		})
+
+		test('shows no checkmarks when unauthenticated', () => {
+			mockSession = null
+			mockProgressData = undefined
+
+			renderOverview()
+
+			expect(screen.queryAllByRole('img', { name: /hotovo/i })).toHaveLength(0)
+		})
+
+		test('table view shows checkboxes when authenticated', () => {
+			mockSession = { user: { name: 'Test' } }
+			mockProgressData = {}
+
+			renderOverview()
+			fireEvent.click(screen.getByRole('radio', { name: 'Tabulka' }))
+
+			expect(screen.getAllByRole('checkbox')).toHaveLength(6)
+		})
+
+		test('clicking table checkbox calls mutation', () => {
+			mockSession = { user: { name: 'Test' } }
+			mockProgressData = {}
+
+			renderOverview()
+			fireEvent.click(screen.getByRole('radio', { name: 'Tabulka' }))
+
+			const checkbox = screen.getByRole('checkbox', {
+				name: '01. Početní operace s celými a racionálními čísly, 6. ročník',
+			})
+			fireEvent.click(checkbox)
+
+			expect(mockMutateAsync).toHaveBeenCalledWith({
+				slug: 'matematika/01-pocetni-operace/6-rocnik',
+				completed: true,
+			})
+		})
+
+		test('shows toast on mutation error', async () => {
+			mockSession = { user: { name: 'Test' } }
+			mockProgressData = {}
+			mockMutateAsync.mockRejectedValue(new Error('Network error'))
+
+			renderOverview()
+			fireEvent.click(screen.getByRole('radio', { name: 'Tabulka' }))
+
+			const checkbox = screen.getByRole('checkbox', {
+				name: '01. Početní operace s celými a racionálními čísly, 6. ročník',
+			})
+			fireEvent.click(checkbox)
+
+			await waitFor(() => {
+				expect(screen.getByRole('alert')).toBeDefined()
+			})
 		})
 	})
 })

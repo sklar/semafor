@@ -5,16 +5,16 @@ import style from './UserMenu.module.css'
 export default function UserMenu() {
 	const session = authClient.useSession()
 
+	const handleSignIn = () =>
+		authClient.signIn.social({ provider: 'google' }).catch(() => {})
+	const handleSignOut = () => authClient.signOut().catch(() => {})
+
 	return (
 		<div class={style.menu}>
 			<Show
 				when={session().data?.user}
 				fallback={
-					<button
-						type="button"
-						class={style.signIn}
-						onClick={() => authClient.signIn.social({ provider: 'google' })}
-					>
+					<button type="button" class={style.signIn} onClick={handleSignIn}>
 						Přihlásit se
 					</button>
 				}
@@ -22,11 +22,7 @@ export default function UserMenu() {
 				{(user) => (
 					<>
 						<span class={style.name}>{user().name}</span>
-						<button
-							type="button"
-							class={style.signOut}
-							onClick={() => authClient.signOut()}
-						>
+						<button type="button" class={style.signOut} onClick={handleSignOut}>
 							Odhlásit
 						</button>
 					</>

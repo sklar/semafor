@@ -8,6 +8,25 @@ import type { Accessor } from 'solid-js'
 
 type ProgressMap = Record<string, boolean>
 
+export class ProgressError extends Error {
+	status: number
+	constructor(status: number, message: string) {
+		super(message)
+		this.status = status
+	}
+}
+
+export async function checkResponse(response: Response): Promise<unknown> {
+	if (!response.ok) {
+		throw new ProgressError(response.status, `HTTP ${response.status}`)
+	}
+	try {
+		return await response.json()
+	} catch {
+		throw new ProgressError(response.status, 'Invalid JSON response')
+	}
+}
+
 /**
  * TanStack Query wrapper for fetching progress data.
  *
@@ -25,7 +44,9 @@ export function createProgressQuery(
 	return createQuery(() => ({
 		queryKey: ['progress', subject],
 		queryFn: () =>
-			fetch(`/api/progress?subject=${subject}`).then((r) => r.json()),
+			fetch(`/api/progress?${new URLSearchParams({ subject })}`).then(
+				checkResponse,
+			) as Promise<ProgressMap>,
 		enabled: !!session()?.data,
 	}))
 }
@@ -49,7 +70,7 @@ export function createProgressMutation(subject: string) {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(data),
-			}).then((r) => r.json()),
+			}).then(checkResponse),
 		onMutate: async (data) => {
 			await queryClient.cancelQueries({ queryKey: ['progress', subject] })
 
@@ -59,7 +80,7 @@ export function createProgressMutation(subject: string) {
 			])
 
 			queryClient.setQueryData<ProgressMap>(['progress', subject], (old) => ({
-				...old,
+				...(old ?? {}),
 				[data.slug]: data.completed,
 			}))
 

@@ -112,3 +112,28 @@ test('API error shows toast notification', async ({ page }) => {
 
 	await expect(page.getByRole('alert')).toBeVisible()
 })
+
+test('401 error shows session-expired toast', async ({ page }) => {
+	await mockAuthenticatedSession(page)
+
+	await page.route('**/api/progress', (route) => {
+		if (route.request().method() === 'POST') {
+			return route.fulfill({ status: 401, body: 'Unauthorized' })
+		}
+		return route.continue()
+	})
+
+	await page.goto('/matematika/')
+	await page
+		.getByRole('group', { name: 'Zobrazení' })
+		.getByText('Tabulka')
+		.click()
+	await expect(page.getByTestId('table-view')).toBeVisible()
+
+	const checkbox = page.getByRole('checkbox').first()
+	await checkbox.click()
+
+	const alert = page.getByRole('alert')
+	await expect(alert).toBeVisible()
+	await expect(alert).toContainText('Přihlášení vypršelo')
+})

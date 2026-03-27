@@ -11,8 +11,8 @@ vi.mock('@/lib/auth-client', () => ({
 			data: mockSession,
 			isPending: false,
 		}),
-		signIn: { social: vi.fn() },
-		signOut: vi.fn(),
+		signIn: { social: vi.fn().mockResolvedValue({}) },
+		signOut: vi.fn().mockResolvedValue({}),
 	},
 }))
 

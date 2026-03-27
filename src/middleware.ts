@@ -10,7 +10,7 @@ export const onRequest = defineMiddleware(async (ctx, next) => {
 			ctx.locals.auth = createAuth(ctx.locals.db)
 		}
 	} catch {
-		// cloudflare:workers unavailable during Node.js prerendering
+		// cloudflare:workers import fails during Node.js prerendering — expected.
 	}
 	return next()
 })

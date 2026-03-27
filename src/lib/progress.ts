@@ -2,6 +2,35 @@ import { and, eq, like } from 'drizzle-orm'
 import type { createDb } from '@/db'
 import { userProgress } from '@/db/schema'
 
+const SLUG_RE = /^[a-z0-9-]+(?:\/[a-z0-9-]+){1,2}\/[0-9]+-rocnik$/
+const SUBJECT_RE = /^[a-z0-9-]+(?:\/[a-z0-9-]+)?$/
+const GRADE_RE = /^[0-9]+-rocnik$/
+
+export function isProgressSlug(value: unknown): value is string {
+	return typeof value === 'string' && SLUG_RE.test(value)
+}
+
+export function isSubjectParam(value: unknown): value is string {
+	return typeof value === 'string' && value.length > 0 && SUBJECT_RE.test(value)
+}
+
+export function isGradeParam(value: unknown): value is string {
+	return typeof value === 'string' && GRADE_RE.test(value)
+}
+
+export function isProgressBody(
+	value: unknown,
+): value is { slug: string; completed: boolean } {
+	return (
+		typeof value === 'object' &&
+		value !== null &&
+		'slug' in value &&
+		'completed' in value &&
+		isProgressSlug((value as Record<string, unknown>).slug) &&
+		typeof (value as Record<string, unknown>).completed === 'boolean'
+	)
+}
+
 /**
  * Check if a topic is completed for the given grade.
  *

@@ -15,6 +15,15 @@ let mockSession: { user: { name: string } } | null = null
 let mockProgressData: Record<string, boolean> | undefined
 const mockMutateAsync = vi.fn().mockResolvedValue({})
 
+// ProgressError from the original (non-mocked) module for instanceof checks.
+class ProgressError extends Error {
+	status: number
+	constructor(status: number, message: string) {
+		super(message)
+		this.status = status
+	}
+}
+
 vi.mock('@/lib/auth-client', () => ({
 	authClient: {
 		useSession: () => () => ({
@@ -288,6 +297,25 @@ describe('SubjectOverview', () => {
 
 			await waitFor(() => {
 				expect(screen.getByRole('alert')).toBeDefined()
+			})
+		})
+
+		test('shows session-expired toast on 401 error', async () => {
+			mockSession = { user: { name: 'Test' } }
+			mockProgressData = {}
+			mockMutateAsync.mockRejectedValue(new ProgressError(401, 'HTTP 401'))
+
+			renderOverview()
+			fireEvent.click(screen.getByRole('radio', { name: 'Tabulka' }))
+
+			const checkbox = screen.getByRole('checkbox', {
+				name: '01. Početní operace s celými a racionálními čísly, 6. ročník',
+			})
+			fireEvent.click(checkbox)
+
+			await waitFor(() => {
+				const alert = screen.getByRole('alert')
+				expect(alert.textContent).toContain('Přihlášení vypršelo')
 			})
 		})
 	})

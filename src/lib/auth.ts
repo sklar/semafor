@@ -10,15 +10,19 @@ import type { createDb } from '@/db'
  * at runtime via the Cloudflare Workers environment.
  *
  * @param db - Drizzle D1 database instance from `createDb()`
- * @returns Better Auth instance with `.handler()` and `.api` methods
+ * @returns Better Auth instance, or `undefined` when OAuth credentials are missing
  */
 export function createAuth(db: ReturnType<typeof createDb>) {
+	if (!GOOGLE_CLIENT_ID || !GOOGLE_CLIENT_SECRET) {
+		return undefined
+	}
+
 	return betterAuth({
 		database: drizzleAdapter(db, { provider: 'sqlite' }),
 		socialProviders: {
 			google: {
-				clientId: GOOGLE_CLIENT_ID ?? '',
-				clientSecret: GOOGLE_CLIENT_SECRET ?? '',
+				clientId: GOOGLE_CLIENT_ID,
+				clientSecret: GOOGLE_CLIENT_SECRET,
 			},
 		},
 	})

@@ -23,13 +23,17 @@ tests/
 │   ├── topics.test.ts            # parseTopics, formatTopicNumber, topicLabel
 │   ├── href.test.ts              # topicHref link generation
 │   ├── sidebar.test.ts           # findGroupBySlug, getSubAreaSlugs
-│   ├── card-view.test.tsx        # topic card grid
-│   ├── table-view.test.tsx       # topic table with grade columns
+│   ├── card-view.test.tsx        # topic card grid + completion indicators
+│   ├── table-view.test.tsx       # topic table with grade columns + checkboxes
 │   ├── grade-filter.test.tsx     # grade radio group
 │   ├── view-toggle.test.tsx      # cards/table toggle
-│   └── subject-overview.test.tsx # integration: composition, localStorage, state
+│   ├── subject-overview.test.tsx # integration: composition, localStorage, progress
+│   ├── progress.test.ts          # progress API (GET/POST), progressSlug, isTopicCompleted
+│   ├── toast.test.tsx            # toast notifications
+│   └── user-menu.test.tsx        # sign-in/sign-out UI
 └── e2e/
-    └── subject-overview.spec.ts  # hydration, persistence, navigation
+    ├── subject-overview.spec.ts  # hydration, persistence, navigation
+    └── progress.spec.ts          # auth, checkboxes, error toasts
 ```
 
 ## 🧪 Unit Test Notes

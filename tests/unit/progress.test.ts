@@ -27,6 +27,68 @@ describe('Progress API', () => {
 		expect(response.status).toBe(401)
 	})
 
+	test('GET returns 400 for invalid subject format', async () => {
+		const mockAuth = {
+			api: {
+				getSession: () => Promise.resolve({ user: { id: 'user-1' } }),
+			},
+		}
+
+		const response = await GET(
+			mockCtx({
+				auth: mockAuth,
+				db: {},
+				url: new URL('http://localhost/api/progress?subject=../../x'),
+			}),
+		)
+
+		expect(response.status).toBe(400)
+	})
+
+	test('GET returns 400 for invalid grade format', async () => {
+		const mockAuth = {
+			api: {
+				getSession: () => Promise.resolve({ user: { id: 'user-1' } }),
+			},
+		}
+
+		const response = await GET(
+			mockCtx({
+				auth: mockAuth,
+				db: {},
+				url: new URL(
+					'http://localhost/api/progress?subject=matematika&grade=../../x',
+				),
+			}),
+		)
+
+		expect(response.status).toBe(400)
+	})
+
+	test('GET returns 500 on DB error', async () => {
+		const mockAuth = {
+			api: {
+				getSession: () => Promise.resolve({ user: { id: 'user-1' } }),
+			},
+		}
+		const mockDb = {
+			select: () => ({
+				from: () => ({
+					where: () => Promise.reject(new Error('DB error')),
+				}),
+			}),
+		}
+
+		const response = await GET(
+			mockCtx({
+				auth: mockAuth,
+				db: mockDb,
+			}),
+		)
+
+		expect(response.status).toBe(500)
+	})
+
 	test('GET returns progress map for subject', async () => {
 		const mockDb = {
 			select: () => ({
@@ -102,6 +164,87 @@ describe('Progress API', () => {
 		)
 
 		expect(response.status).toBe(401)
+	})
+
+	test('POST returns 400 for malformed JSON body', async () => {
+		const mockAuth = {
+			api: {
+				getSession: () => Promise.resolve({ user: { id: 'user-1' } }),
+			},
+		}
+
+		const response = await POST(
+			mockCtx({
+				auth: mockAuth,
+				db: {},
+				request: new Request('http://localhost/api/progress', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: 'not-json',
+				}),
+			}),
+		)
+
+		expect(response.status).toBe(400)
+	})
+
+	test('POST returns 400 for invalid body', async () => {
+		const mockAuth = {
+			api: {
+				getSession: () => Promise.resolve({ user: { id: 'user-1' } }),
+			},
+		}
+
+		const response = await POST(
+			mockCtx({
+				auth: mockAuth,
+				db: {},
+				request: new Request('http://localhost/api/progress', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						slug: '../../etc/passwd',
+						completed: true,
+					}),
+				}),
+			}),
+		)
+
+		expect(response.status).toBe(400)
+	})
+
+	test('POST returns 500 on DB error', async () => {
+		const mockAuth = {
+			api: {
+				getSession: () => Promise.resolve({ user: { id: 'user-1' } }),
+			},
+		}
+		const mockDb = {
+			insert: () => ({
+				values: () => ({
+					onConflictDoUpdate: () => ({
+						returning: () => Promise.reject(new Error('DB error')),
+					}),
+				}),
+			}),
+		}
+
+		const response = await POST(
+			mockCtx({
+				auth: mockAuth,
+				db: mockDb,
+				request: new Request('http://localhost/api/progress', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						slug: 'matematika/01-pocetni-operace/6-rocnik',
+						completed: true,
+					}),
+				}),
+			}),
+		)
+
+		expect(response.status).toBe(500)
 	})
 
 	test('POST upserts progress entry', async () => {

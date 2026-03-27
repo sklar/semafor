@@ -61,8 +61,13 @@ function SubjectOverviewInner(props: SubjectOverviewProps) {
 	const onToggle = async (slug: string, completed: boolean) => {
 		try {
 			await mutation.mutateAsync({ slug, completed })
-		} catch {
-			setToastMessage('Nepodařilo se uložit změnu')
+		} catch (err: unknown) {
+			const status = (err as { status?: number })?.status
+			if (status === 401) {
+				setToastMessage('Přihlášení vypršelo, přihlaste se znovu')
+			} else {
+				setToastMessage('Nepodařilo se uložit změnu')
+			}
 		}
 	}
 

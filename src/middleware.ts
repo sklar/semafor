@@ -2,15 +2,22 @@ import { defineMiddleware } from 'astro:middleware'
 import { createDb } from '@/db'
 import { createAuth } from '@/lib/auth'
 
-export const onRequest = defineMiddleware(async (ctx, next) => {
+async function getD1() {
 	try {
-		const { env } = await import('cloudflare:workers')
-		if (env.DB) {
-			ctx.locals.db = createDb(env.DB)
-			ctx.locals.auth = createAuth(ctx.locals.db)
-		}
+		const mod = await (Function(
+			'return import("cloudflare:workers")',
+		)() as Promise<{ env: { DB?: unknown } }>)
+		return mod.env.DB
 	} catch {
-		// cloudflare:workers import fails during Node.js prerendering — expected.
+		// Not in workerd (Node.js prerender / local dev without wrangler).
+	}
+}
+
+export const onRequest = defineMiddleware(async (ctx, next) => {
+	const db = await getD1()
+	if (db) {
+		ctx.locals.db = createDb(db)
+		ctx.locals.auth = createAuth(ctx.locals.db)
 	}
 	return next()
 })

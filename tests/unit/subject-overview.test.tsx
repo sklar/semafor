@@ -300,6 +300,31 @@ describe('SubjectOverview', () => {
 			})
 		})
 
+		test('shows toast when user goes offline', async () => {
+			renderOverview()
+
+			window.dispatchEvent(new Event('offline'))
+
+			await waitFor(() => {
+				const alert = screen.getByRole('alert')
+				expect(alert.textContent).toContain('Jste offline')
+			})
+		})
+
+		test('dismisses toast when user comes back online', async () => {
+			renderOverview()
+
+			window.dispatchEvent(new Event('offline'))
+			await waitFor(() => {
+				expect(screen.getByRole('alert')).toBeDefined()
+			})
+
+			window.dispatchEvent(new Event('online'))
+			await waitFor(() => {
+				expect(screen.queryByRole('alert')).toBeNull()
+			})
+		})
+
 		test('shows session-expired toast on 401 error', async () => {
 			mockSession = { user: { name: 'Test' } }
 			mockProgressData = {}

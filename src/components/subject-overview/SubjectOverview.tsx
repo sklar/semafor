@@ -1,5 +1,5 @@
 import { QueryClientProvider } from '@tanstack/solid-query'
-import { createSignal, Match, onMount, Switch } from 'solid-js'
+import { createSignal, Match, onCleanup, onMount, Switch } from 'solid-js'
 import CardView from '@/components/card-view/CardView'
 import GradeFilter from '@/components/grade-filter/GradeFilter'
 import type { Grade } from '@/components/grade-filter/grade'
@@ -76,6 +76,15 @@ function SubjectOverviewInner(props: SubjectOverviewProps) {
 		if (storedGrade && isGrade(storedGrade)) setGrade(storedGrade)
 		const storedView = localStorage.getItem(VIEW_STORAGE_KEY)
 		if (storedView && isView(storedView)) setView(storedView)
+
+		const onOffline = () => setToastMessage('Jste offline — změny se neuloží')
+		const onOnline = () => setToastMessage(undefined)
+		window.addEventListener('offline', onOffline)
+		window.addEventListener('online', onOnline)
+		onCleanup(() => {
+			window.removeEventListener('offline', onOffline)
+			window.removeEventListener('online', onOnline)
+		})
 	})
 
 	return (

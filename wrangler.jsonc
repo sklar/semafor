@@ -19,7 +19,8 @@
 		{
 			"binding": "DB",
 			"database_name": "semafor-db",
-			"database_id": "9d034a54-9eb2-4f90-8a8f-7dd03f0c89ef"
+			"database_id": "9d034a54-9eb2-4f90-8a8f-7dd03f0c89ef",
+			"migrations_dir": "drizzle/migrations"
 		}
 	]
 }

@@ -1,4 +1,8 @@
-import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } from 'astro:env/server'
+import {
+	BETTER_AUTH_URL,
+	GOOGLE_CLIENT_ID,
+	GOOGLE_CLIENT_SECRET,
+} from 'astro:env/server'
 import { betterAuth } from 'better-auth'
 import { drizzleAdapter } from 'better-auth/adapters/drizzle'
 import type { createDb } from '@/db'
@@ -18,6 +22,7 @@ export function createAuth(db: ReturnType<typeof createDb>) {
 	}
 
 	return betterAuth({
+		baseURL: BETTER_AUTH_URL,
 		database: drizzleAdapter(db, { provider: 'sqlite' }),
 		socialProviders: {
 			google: {

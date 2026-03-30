@@ -1,36 +1,51 @@
 /**
- * Workaround for Starlight + Cloudflare adapter dev mode incompatibility.
+ * Workarounds for Starlight + Cloudflare adapter dev mode.
  *
- * The Cloudflare adapter runs SSR inside workerd and pre-bundles dependencies
- * via Vite's `configEnvironment` hook. It excludes `virtual:@astrojs/*` from
- * the optimizer, but Starlight registers its virtual modules under a different
- * namespace (`virtual:starlight/*`). When the optimizer tries to bundle
- * `@astrojs/starlight/locals`, it fails because it can't resolve the
- * `virtual:starlight/*` imports that only exist at runtime.
+ * 1. Starlight virtual modules (`virtual:starlight/*`) aren't excluded from
+ *    the SSR/prerender optimizer — add them manually.
+ *    @see https://github.com/withastro/starlight/issues/2875
  *
- * This plugin adds the missing exclusions to the SSR and prerender
- * environments. Build is unaffected — only dev mode triggers the issue.
+ * 2. `cloudflare:workers` is only available in the workerd runtime. The
+ *    prerender environment (Node.js) can't resolve it, so we stub it with
+ *    an empty `env` — the middleware safely skips D1/auth setup when `env.DB`
+ *    is undefined.
  *
  * Remove once fixed upstream in Starlight or the Cloudflare adapter.
- *
- * @see https://github.com/withastro/starlight/issues/2875
  */
+
+const STUB_ID = '\0cloudflare-workers-stub'
+
 export function starlightCloudflareCompat() {
-	return {
-		name: 'starlight-cloudflare-compat',
-		configEnvironment(
-			name: string,
-			options: { optimizeDeps?: { exclude?: string[] } },
-		) {
-			if (['ssr', 'prerender'].includes(name)) {
-				options.optimizeDeps ??= {}
-				options.optimizeDeps.exclude ??= []
-				options.optimizeDeps.exclude.push(
-					'virtual:starlight/*',
-					'@astrojs/starlight',
-					'@astrojs/starlight/locals',
-				)
-			}
+	return [
+		{
+			name: 'starlight-cloudflare-compat:optimize-deps',
+			configEnvironment(
+				name: string,
+				options: { optimizeDeps?: { exclude?: string[] } },
+			) {
+				if (['ssr', 'prerender'].includes(name)) {
+					options.optimizeDeps ??= {}
+					options.optimizeDeps.exclude ??= []
+					options.optimizeDeps.exclude.push(
+						'virtual:starlight/*',
+						'@astrojs/starlight',
+						'@astrojs/starlight/locals',
+					)
+				}
+			},
 		},
-	}
+		{
+			name: 'starlight-cloudflare-compat:prerender-stub',
+			enforce: 'pre' as const,
+			applyToEnvironment(env: { name: string }) {
+				return env.name === 'prerender'
+			},
+			resolveId(id: string) {
+				if (id === 'cloudflare:workers') return STUB_ID
+			},
+			load(id: string) {
+				if (id === STUB_ID) return 'export const env = {};'
+			},
+		},
+	]
 }

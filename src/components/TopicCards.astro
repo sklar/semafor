@@ -25,4 +25,4 @@ const { topics, subject } = Astro.props
 	</CardGrid>
 </noscript>
 
-<SubjectOverview client:load topics={topics} subject={subject} />
+<SubjectOverview client:only="solid-js" topics={topics} subject={subject} />

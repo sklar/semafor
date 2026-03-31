@@ -23,10 +23,22 @@ const TOPICS: Topic[] = [
 
 const SUBJECT = 'matematika'
 
-function renderCardView(topics: Topic[], subject: string, initial: Grade) {
+function renderCardView(
+	topics: Topic[],
+	subject: string,
+	initial: Grade,
+	progress?: Record<string, boolean>,
+) {
 	const [grade, setGrade] = createSignal<Grade>(initial)
 
-	render(() => <CardView topics={topics} subject={subject} grade={grade()} />)
+	render(() => (
+		<CardView
+			topics={topics}
+			subject={subject}
+			grade={grade()}
+			progress={progress}
+		/>
+	))
 
 	return { setGrade }
 }
@@ -109,5 +121,80 @@ describe('CardView', () => {
 		const links = screen.getAllByRole('link')
 		expect(links[0].textContent).toContain('01.')
 		expect(links[1].textContent).toContain('02.')
+	})
+
+	test('shows no completion indicators when progress is undefined', () => {
+		renderCardView(TOPICS, SUBJECT, 'all')
+
+		expect(screen.queryAllByRole('img', { name: /hotovo/i })).toHaveLength(0)
+	})
+
+	test('shows completion indicator for completed topic', () => {
+		renderCardView(TOPICS, SUBJECT, '6', {
+			'matematika/01-pocetni-operace/6-rocnik': true,
+		})
+
+		expect(screen.queryAllByRole('img', { name: /hotovo/i })).toHaveLength(1)
+	})
+
+	test('hides completion indicator for incomplete topic', () => {
+		renderCardView(TOPICS, SUBJECT, '6', {
+			'matematika/01-pocetni-operace/6-rocnik': false,
+		})
+
+		expect(screen.queryAllByRole('img', { name: /hotovo/i })).toHaveLength(0)
+	})
+
+	test('shows completion indicator for "all" only when every grade is completed', () => {
+		renderCardView(TOPICS, SUBJECT, 'all', {
+			'matematika/01-pocetni-operace/6-rocnik': true,
+			'matematika/01-pocetni-operace/7-rocnik': true,
+			'matematika/01-pocetni-operace/8-rocnik': true,
+			'matematika/01-pocetni-operace/9-rocnik': true,
+		})
+
+		expect(screen.queryAllByRole('img', { name: /hotovo/i })).toHaveLength(1)
+	})
+
+	test('hides completion indicator for "all" when any grade is incomplete', () => {
+		renderCardView(TOPICS, SUBJECT, 'all', {
+			'matematika/01-pocetni-operace/6-rocnik': true,
+			'matematika/01-pocetni-operace/7-rocnik': false,
+			'matematika/01-pocetni-operace/8-rocnik': true,
+			'matematika/01-pocetni-operace/9-rocnik': true,
+		})
+
+		expect(screen.queryAllByRole('img', { name: /hotovo/i })).toHaveLength(0)
+	})
+
+	test('shows checkmarks only for completed topics in mixed set', () => {
+		renderCardView(TOPICS, SUBJECT, '6', {
+			'matematika/01-pocetni-operace/6-rocnik': true,
+			'matematika/02-zaokrouhlovani-a-odhady/6-rocnik': false,
+		})
+
+		expect(screen.queryAllByRole('img', { name: /hotovo/i })).toHaveLength(1)
+	})
+
+	test('muted cards show no completion indicator', () => {
+		// Topic 02 has grades [6,7] — grade 8 makes it muted
+		renderCardView(TOPICS, SUBJECT, '8', {
+			'matematika/02-zaokrouhlovani-a-odhady/8-rocnik': true,
+		})
+
+		expect(screen.queryAllByRole('img', { name: /hotovo/i })).toHaveLength(0)
+	})
+
+	test('completion indicator updates when grade changes', () => {
+		const { setGrade } = renderCardView(TOPICS, SUBJECT, '6', {
+			'matematika/01-pocetni-operace/6-rocnik': true,
+			'matematika/01-pocetni-operace/7-rocnik': false,
+		})
+
+		expect(screen.queryAllByRole('img', { name: /hotovo/i })).toHaveLength(1)
+
+		setGrade('7')
+
+		expect(screen.queryAllByRole('img', { name: /hotovo/i })).toHaveLength(0)
 	})
 })

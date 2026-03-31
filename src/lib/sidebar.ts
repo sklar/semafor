@@ -8,6 +8,20 @@ function isObject(entry: SidebarEntry): entry is SidebarObject {
 	return typeof entry !== 'string'
 }
 
+/**
+ * Find the parent sidebar group that contains an entry with the given slug.
+ *
+ * Searches recursively through nested sidebar items. Returns the group
+ * (has `items`) that directly contains a child matching the slug.
+ *
+ * @param items - Sidebar entries to search
+ * @param slug - Slug identifying the target entry
+ * @returns The parent group, or `undefined` if not found
+ *
+ * @example
+ * findGroupBySlug(sidebar, 'ja-a-svet/chemie')
+ * // => { label: 'Já a svět', items: [...] }
+ */
 export function findGroupBySlug(
 	items: SidebarEntry[],
 	slug: string,

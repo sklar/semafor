@@ -1,8 +1,9 @@
-// @ts-check
+import cloudflare from '@astrojs/cloudflare'
 import solidJs from '@astrojs/solid-js'
 import starlight from '@astrojs/starlight'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig, envField } from 'astro/config'
+import { starlightCloudflareCompat } from './src/plugins/starlight-cloudflare-compat'
 import { sidebar } from './src/sidebar.config'
 
 const site = process.env.SITE_URL
@@ -24,9 +25,35 @@ const analyticsHead =
 
 // https://astro.build/config
 export default defineConfig({
+	output: 'server',
+	adapter: cloudflare({
+		imageService: 'passthrough',
+		platformProxy: { enabled: true },
+		prerenderEnvironment: 'node',
+	}),
 	site,
 	env: {
 		schema: {
+			BETTER_AUTH_SECRET: envField.string({
+				context: 'server',
+				access: 'secret',
+				optional: true,
+			}),
+			BETTER_AUTH_URL: envField.string({
+				context: 'server',
+				access: 'secret',
+				optional: true,
+			}),
+			GOOGLE_CLIENT_ID: envField.string({
+				context: 'server',
+				access: 'secret',
+				optional: true,
+			}),
+			GOOGLE_CLIENT_SECRET: envField.string({
+				context: 'server',
+				access: 'secret',
+				optional: true,
+			}),
 			UMAMI_WEBSITE_ID: envField.string({
 				context: 'client',
 				access: 'public',
@@ -34,7 +61,7 @@ export default defineConfig({
 			}),
 		},
 	},
-	vite: { plugins: [tailwindcss()] },
+	vite: { plugins: [tailwindcss(), starlightCloudflareCompat()] },
 	experimental: {
 		rustCompiler: true,
 		queuedRendering: { enabled: true },
@@ -90,6 +117,7 @@ export default defineConfig({
 			// overrrides for default components and styles
 			components: {
 				Footer: './src/components/Footer.astro',
+				Header: './src/components/Header.astro',
 				Hero: './src/components/Hero.astro',
 				PageTitle: './src/components/PageTitle.astro',
 				Sidebar: './src/components/Sidebar.astro',

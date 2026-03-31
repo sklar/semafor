@@ -1,6 +1,6 @@
-import { cleanup, render, screen } from '@solidjs/testing-library'
+import { cleanup, fireEvent, render, screen } from '@solidjs/testing-library'
 import { createSignal } from 'solid-js'
-import { afterEach, describe, expect, test } from 'vitest'
+import { afterEach, describe, expect, test, vi } from 'vitest'
 import type { Grade } from '@/components/grade-filter/grade'
 import TableView from '@/components/table-view/TableView'
 import type { Topic } from '@/lib/topics'
@@ -23,10 +23,26 @@ const TOPICS: Topic[] = [
 
 const SUBJECT = 'matematika'
 
-function renderTableView(topics: Topic[], subject: string, initial: Grade) {
+function renderTableView(
+	topics: Topic[],
+	subject: string,
+	initial: Grade,
+	options?: {
+		progress?: Record<string, boolean>
+		onToggle?: (slug: string, completed: boolean) => void
+	},
+) {
 	const [grade, setGrade] = createSignal<Grade>(initial)
 
-	render(() => <TableView topics={topics} subject={subject} grade={grade()} />)
+	render(() => (
+		<TableView
+			topics={topics}
+			subject={subject}
+			grade={grade()}
+			progress={options?.progress}
+			onToggle={options?.onToggle}
+		/>
+	))
 
 	return { setGrade }
 }
@@ -153,6 +169,132 @@ describe('TableView', () => {
 		// Grade 6 should not be muted
 		const grade6Cells = table.querySelectorAll('[data-grade="6"]')
 		for (const cell of grade6Cells) {
+			expect(cell.hasAttribute('data-muted')).toBe(false)
+		}
+	})
+
+	// --- Progress checkboxes ---
+
+	test('shows no checkboxes when progress is undefined', () => {
+		renderTableView(TOPICS, SUBJECT, 'all')
+
+		expect(screen.queryAllByRole('checkbox')).toHaveLength(0)
+	})
+
+	test('renders checkboxes in available grade cells when progress provided', () => {
+		renderTableView(TOPICS, SUBJECT, 'all', { progress: {} })
+
+		// Topic 1: 4 grades + Topic 2: 2 grades = 6 checkboxes
+		expect(screen.getAllByRole('checkbox')).toHaveLength(6)
+	})
+
+	test('checkbox is checked when progress entry is true', () => {
+		renderTableView(TOPICS, SUBJECT, 'all', {
+			progress: { 'matematika/01-pocetni-operace/6-rocnik': true },
+		})
+
+		const checkbox = screen.getByRole('checkbox', {
+			name: '01. Početní operace s celými a racionálními čísly, 6. ročník',
+		})
+		expect((checkbox as HTMLInputElement).checked).toBe(true)
+	})
+
+	test('checkbox is unchecked when progress entry is false or missing', () => {
+		renderTableView(TOPICS, SUBJECT, 'all', {
+			progress: { 'matematika/01-pocetni-operace/6-rocnik': false },
+		})
+
+		const checkbox = screen.getByRole('checkbox', {
+			name: '01. Početní operace s celými a racionálními čísly, 6. ročník',
+		})
+		expect((checkbox as HTMLInputElement).checked).toBe(false)
+
+		// Missing entry — also unchecked
+		const missing = screen.getByRole('checkbox', {
+			name: '01. Početní operace s celými a racionálními čísly, 7. ročník',
+		})
+		expect((missing as HTMLInputElement).checked).toBe(false)
+	})
+
+	test('each checkbox has descriptive aria-label', () => {
+		renderTableView(TOPICS, SUBJECT, 'all', { progress: {} })
+
+		expect(
+			screen.getByRole('checkbox', {
+				name: '01. Početní operace s celými a racionálními čísly, 6. ročník',
+			}),
+		).toBeDefined()
+		expect(
+			screen.getByRole('checkbox', {
+				name: '02. Zaokrouhlování a odhady, 7. ročník',
+			}),
+		).toBeDefined()
+	})
+
+	test('unavailable grade cells show em dash even when progress provided', () => {
+		renderTableView(TOPICS, SUBJECT, 'all', { progress: {} })
+
+		// Topic 2 has grades [6,7] — grades 8,9 still show "—"
+		const rows = screen.getAllByRole('row')
+		const gradeCells = rows[2].querySelectorAll('td[data-grade]')
+		expect(gradeCells[2].textContent).toBe('—')
+		expect(gradeCells[3].textContent).toBe('—')
+	})
+
+	test('clicking unchecked checkbox calls onToggle with slug and true', () => {
+		const onToggle = vi.fn()
+		renderTableView(TOPICS, SUBJECT, 'all', { progress: {}, onToggle })
+
+		const checkbox = screen.getByRole('checkbox', {
+			name: '01. Početní operace s celými a racionálními čísly, 6. ročník',
+		})
+		fireEvent.click(checkbox)
+
+		expect(onToggle).toHaveBeenCalledWith(
+			'matematika/01-pocetni-operace/6-rocnik',
+			true,
+		)
+	})
+
+	test('clicking checked checkbox calls onToggle with slug and false', () => {
+		const onToggle = vi.fn()
+		renderTableView(TOPICS, SUBJECT, 'all', {
+			progress: { 'matematika/01-pocetni-operace/6-rocnik': true },
+			onToggle,
+		})
+
+		const checkbox = screen.getByRole('checkbox', {
+			name: '01. Početní operace s celými a racionálními čísly, 6. ročník',
+		})
+		fireEvent.click(checkbox)
+
+		expect(onToggle).toHaveBeenCalledWith(
+			'matematika/01-pocetni-operace/6-rocnik',
+			false,
+		)
+	})
+
+	test('grade links still present alongside checkboxes', () => {
+		renderTableView(TOPICS, SUBJECT, 'all', { progress: {} })
+
+		const rows = screen.getAllByRole('row')
+		const topic1Links = rows[1].querySelectorAll('td[data-grade] a')
+		expect(topic1Links).toHaveLength(4)
+		expect(topic1Links[0].getAttribute('href')).toBe(
+			'/matematika/01-pocetni-operace/6-rocnik',
+		)
+	})
+
+	test('checkbox cells get data-muted for non-selected grades', () => {
+		renderTableView(TOPICS, SUBJECT, '7', { progress: {} })
+
+		const table = screen.getByRole('table')
+		const grade6Cells = table.querySelectorAll('[data-grade="6"]')
+		for (const cell of grade6Cells) {
+			expect(cell.hasAttribute('data-muted')).toBe(true)
+		}
+		const grade7Cells = table.querySelectorAll('[data-grade="7"]')
+		for (const cell of grade7Cells) {
 			expect(cell.hasAttribute('data-muted')).toBe(false)
 		}
 	})
